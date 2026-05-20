@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sofian.global · IR Pitch consulting for Korea's global startup programs</title>
+  <title>Sofian Meguellati · IR Pitch consulting for Korea's global startup programs</title>
   <meta name="description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2019.">
-  <meta property="og:title" content="Sofian.global · IR Pitch consulting for Korea's global startup programs">
+  <meta property="og:title" content="Sofian Meguellati · IR Pitch consulting for Korea's global startup programs">
   <meta property="og:description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2019.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sofian.global · IR Pitch consulting for Korea's global startup programs">
+  <meta name="twitter:title" content="Sofian Meguellati · IR Pitch consulting for Korea's global startup programs">
   <meta name="twitter:description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2019.">
   <meta name="twitter:image" content="og-image.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -2278,11 +2278,17 @@
       if (ko) ko.classList.toggle('active', lang === 'ko');
     }
 
-    // On page load: check localStorage, default to 'en'
+    // On page load: respect saved toggle; else auto-detect from browser language
     (function() {
       var saved = null;
       try { saved = localStorage.getItem('lang'); } catch (e) {}
-      if (saved === 'ko') setLang('ko');
+      if (saved === 'en' || saved === 'ko') {
+        if (saved === 'ko') setLang('ko');
+        return;
+      }
+      // No saved preference — auto-detect from navigator.language
+      var browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (browserLang.indexOf('ko') === 0) setLang('ko');
     })();
 
     // Mobile nav: auto-close menu when a link is clicked
