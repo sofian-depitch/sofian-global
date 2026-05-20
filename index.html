@@ -1,0 +1,2254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofian.global · Global IR Pitch consulting for Korea's global startup programs</title>
+  <meta name="description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2019.">
+  <meta property="og:title" content="Sofian.global · Global IR Pitch consulting for Korea's global startup programs">
+  <meta property="og:description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2019.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sofian.global · Global IR Pitch consulting for Korea's global startup programs">
+  <meta name="twitter:description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2019.">
+  <meta name="twitter:image" content="og-image.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #00B4A0;
+      --teal-light: #00D4BD;
+      --teal-dark: #009688;
+      --bg: #ffffff;
+      --bg-alt: #f7f8fa;
+      --bg-card: #ffffff;
+      --bg-dark-section: #f0f2f5;
+      --text: #1a1a1a;
+      --text-secondary: #4a5568;
+      --text-muted: #718096;
+      --border: #e2e8f0;
+      --border-light: #edf2f7;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,0.1);
+      --radius: 12px;
+      --radius-lg: 20px;
+      --live: #00C853;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- LANGUAGE TOGGLE --- */
+    .lang-switch {
+      display: flex;
+      align-items: center;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2px;
+      gap: 2px;
+      margin-left: 16px;
+    }
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 6px;
+      background: transparent;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: all 0.2s;
+      white-space: nowrap;
+      font-family: inherit;
+    }
+    .lang-btn:hover { color: var(--text); }
+    .lang-btn.active {
+      background: var(--teal);
+      color: #fff;
+      box-shadow: 0 1px 4px rgba(0,180,160,0.3);
+    }
+    .lang-btn .flag { font-size: 1rem; line-height: 1; }
+
+    /* --- NAVBAR --- */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+    }
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-weight: 900;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--teal); }
+    .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--teal);
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      transition: all 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--teal-light);
+      color: #fff !important;
+      box-shadow: 0 4px 14px rgba(0,180,160,0.3);
+    }
+    .nav-kakao {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #FEE500;
+      color: #3C1E1E !important;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.875rem !important;
+      font-weight: 700 !important;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+    .nav-kakao:hover {
+      background: #FDD835;
+      color: #3C1E1E !important;
+      box-shadow: 0 4px 14px rgba(254,229,0,0.45);
+      transform: translateY(-1px);
+    }
+    .nav-kakao svg {
+      width: 16px;
+      height: 16px;
+      fill: #3C1E1E;
+    }
+    .nav-mobile-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+    /* --- SECTIONS --- */
+    section { padding: 100px 24px; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      color: #fff;
+      background: var(--teal);
+      padding: 5px 14px;
+      border-radius: 4px;
+      box-shadow: 0 0 14px rgba(0,180,160,0.2);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      line-height: 1.7;
+    }
+    .accent { color: var(--teal); }
+
+    /* --- HERO --- */
+    .hero {
+      padding-top: 140px;
+      padding-bottom: 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #f0faf8 0%, var(--bg) 100%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(0,180,160,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+      padding: 8px 18px;
+      margin-bottom: 28px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.1;
+      margin: 0 auto 24px;
+      max-width: 920px;
+      color: var(--text);
+      position: relative;
+      z-index: 1;
+    }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--teal), var(--teal-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 760px;
+      margin: 0 auto 40px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* CTA button */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 32px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background: var(--teal-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,180,160,0.25);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--teal);
+      border: 2px solid var(--teal);
+    }
+    .btn-outline:hover {
+      background: var(--teal);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+    .btn-kakao {
+      background: #FEE500;
+      color: #3C1E1E;
+    }
+    .btn-kakao:hover {
+      background: #FDD835;
+      color: #3C1E1E;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(254,229,0,0.4);
+    }
+    .btn-kakao svg.kakao-icon {
+      fill: #3C1E1E;
+      width: 20px;
+      height: 20px;
+    }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-large {
+      padding: 20px 40px;
+      font-size: 1.05rem;
+    }
+
+    /* Hero trust strip , greyscale logos, no captions */
+    .trust-strip-label {
+      margin-top: 56px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      position: relative;
+      z-index: 1;
+    }
+    .trust-strip {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 28px 44px;
+      max-width: 1040px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .trust-strip img {
+      height: 30px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      opacity: 0.85;
+      filter: saturate(0.9);
+      transition: opacity 0.25s, filter 0.25s, transform 0.25s;
+    }
+    .trust-strip img:hover {
+      opacity: 1;
+      filter: saturate(1);
+      transform: translateY(-1px);
+    }
+    .trust-strip img.logo-small { max-height: 24px; max-width: 84px; }
+    .trust-strip img.logo-wide { max-width: 150px; }
+    .trust-strip .logo-placeholder {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      padding: 0 14px;
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--text-muted);
+      opacity: 0.6;
+    }
+
+    /* --- NUMBERS BAR --- */
+    .numbers-bar {
+      padding: 56px 24px;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .numbers-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .number-stat .num {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 900;
+      color: var(--teal);
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+    .number-stat .label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 10px;
+      line-height: 1.5;
+    }
+
+    /* --- AUDIENCE / "Who this is for" --- */
+    .audience-block {
+      background: var(--bg-alt);
+    }
+    .audience-callout {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 36px 40px;
+      box-shadow: var(--shadow-sm);
+      max-width: 880px;
+      margin: 32px auto 0;
+    }
+    .audience-callout p {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: var(--text-secondary);
+    }
+
+    /* --- LIVE PROGRAMS --- */
+    .live-block { background: #fff; }
+    .live-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .live-pulse {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 14px 6px 12px;
+      background: rgba(0,200,83,0.08);
+      border: 1px solid rgba(0,200,83,0.2);
+      border-radius: 50px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #007a32;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+    .pulse-dot {
+      width: 9px;
+      height: 9px;
+      background: var(--live);
+      border-radius: 50%;
+      position: relative;
+    }
+    .pulse-dot::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      background: var(--live);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+      100% { transform: translate(-50%, -50%) scale(3.2); opacity: 0; }
+    }
+
+    .live-card {
+      background: linear-gradient(135deg, rgba(0,180,160,0.04), transparent);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-top: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .live-card .big-number {
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: var(--teal);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .live-card .big-label {
+      font-size: 1.05rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .live-card .partners-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .live-card .partners-flat {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.7;
+      font-weight: 500;
+    }
+    .live-card .partners-flat .sep {
+      color: var(--teal);
+      margin: 0 8px;
+      font-weight: 700;
+    }
+
+    /* Partners logo display */
+    .partners-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 28px 44px;
+      margin-top: 12px;
+    }
+    .partners-logos img {
+      height: 38px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      opacity: 0.85;
+      filter: saturate(0.9);
+      transition: opacity 0.25s, filter 0.25s, transform 0.25s;
+    }
+    .partners-logos img:hover {
+      opacity: 1;
+      filter: saturate(1);
+      transform: translateY(-1px);
+    }
+    .partners-logos img.logo-wide {
+      max-width: 170px;
+    }
+    .partners-logos img.logo-small {
+      max-height: 28px;
+      max-width: 100px;
+    }
+    /* CCEI logo normalization: wrap forces uniform visual footprint */
+    .ccei-wrap {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .partners-logos .ccei-wrap { width: 155px; height: 40px; }
+    .trust-strip .ccei-wrap { width: 145px; height: 34px; }
+    .rec-logo-mini .ccei-wrap { width: 130px; height: 30px; margin-bottom: 0; }
+    .rec-logo-wrap .ccei-wrap { width: 78px; height: 34px; }
+    .ccei-wrap img {
+      max-width: 100% !important;
+      max-height: 100% !important;
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain;
+    }
+    /* Daejeon = baseline. Scale up Gyeongbuk and Chungnam to balance their tighter source crops. */
+    .ccei-wrap img[src*="gyeongbuk"] {
+      transform: scale(1.2);
+      transform-origin: center;
+    }
+    .ccei-wrap img[src*="Chungnam"] {
+      max-width: 75% !important;
+      max-height: 65% !important;
+      transform: scale(1.3);
+      transform-origin: center;
+    }
+    /* NIPA and KITA logos have built-in whitespace, scale them up to balance the row. */
+    .partners-logos img[src*="nipa"],
+    .partners-logos img[src*="kita"],
+    .trust-strip img[src*="nipa"],
+    .trust-strip img[src*="kita"] {
+      transform: scale(1.18);
+      transform-origin: center;
+    }
+
+    /* Flag banner */
+    .flag-banner {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(0,180,160,0.05);
+      border: 1px solid rgba(0,180,160,0.18);
+      border-radius: 50px;
+      padding: 8px 16px 8px 18px;
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+    .flag-banner .flag-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .flag-banner .flags {
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      line-height: 1;
+    }
+    .partners-logos .logo-text {
+      display: inline-flex;
+      align-items: center;
+      height: 38px;
+      padding: 0 14px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      border: 1px dashed var(--border);
+      border-radius: 6px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    /* --- TRACK RECORD --- */
+    .track-block {
+      background: var(--bg-alt);
+    }
+    .track-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-top: 32px;
+      box-shadow: var(--shadow-sm);
+    }
+    .track-card .big-number {
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      font-weight: 900;
+      color: var(--teal);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .track-card .big-label {
+      font-size: 1.05rem;
+      color: var(--text);
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+    .track-card .partners-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .track-card .partners-flat {
+      font-size: 1.05rem;
+      color: var(--text);
+      line-height: 1.85;
+      font-weight: 500;
+    }
+    .track-card .partners-flat .sep {
+      color: var(--teal);
+      margin: 0 8px;
+      font-weight: 700;
+    }
+
+    /* --- COMBINED PROGRAMS SECTION (compact 2-col) --- */
+    .programs-section { background: var(--bg-alt); }
+    .programs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .program-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      transition: all 0.3s;
+    }
+    .program-card:hover {
+      border-color: rgba(0,180,160,0.25);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .program-card.is-live {
+      background: linear-gradient(135deg, rgba(0,180,160,0.05), transparent);
+      border-color: rgba(0,180,160,0.2);
+    }
+    .program-card .pc-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      align-self: flex-start;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      padding: 5px 12px 5px 14px;
+      border: 1px solid var(--border);
+      border-radius: 50px;
+    }
+    .program-card.is-live .pc-tag {
+      color: #007a32;
+      background: rgba(0,200,83,0.08);
+      border-color: rgba(0,200,83,0.25);
+      padding-left: 10px;
+    }
+    .program-card .pc-stat .num {
+      font-size: clamp(2.4rem, 5vw, 3.2rem);
+      font-weight: 900;
+      color: var(--teal);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .program-card .pc-stat .label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.45;
+    }
+    .program-card .pc-flags {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding-top: 4px;
+      border-top: 1px dashed var(--border-light);
+      padding-top: 18px;
+    }
+    .program-card .pc-flags .pcf-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+    .program-card .pc-flags .pcf-flags {
+      font-size: 1.05rem;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .program-card .pc-partners-label {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: -6px;
+    }
+    .program-card .partners-logos {
+      gap: 18px 26px;
+      margin-top: 0;
+    }
+    .program-card .partners-logos img {
+      height: 28px;
+      max-width: 100px;
+      opacity: 0.5;
+    }
+    .program-card .partners-logos img.logo-wide { max-width: 130px; }
+    .program-card .partners-logos img.logo-small { max-height: 22px; max-width: 76px; }
+    .program-card .partners-logos .ccei-wrap { width: 120px; height: 32px; }
+
+    @media (max-width: 768px) {
+      .programs-grid { grid-template-columns: 1fr; gap: 16px; }
+      .program-card { padding: 24px 20px; gap: 16px; }
+    }
+
+    /* --- SESSION STRUCTURE --- */
+    .session-lead {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      max-width: 760px;
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+    .session-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .session-step {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      overflow: hidden;
+    }
+    .session-step:hover {
+      border-color: rgba(0,180,160,0.3);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .session-step .step-num-big {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      font-size: 52px;
+      font-weight: 900;
+      color: rgba(0,0,0,0.04);
+      line-height: 1;
+      letter-spacing: -2px;
+      user-select: none;
+      pointer-events: none;
+    }
+    .session-step .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(0,180,160,0.08);
+      color: var(--teal);
+      font-size: 0.8rem;
+      font-weight: 800;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .session-step h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      line-height: 1.4;
+      color: var(--text);
+    }
+    .session-step .step-time {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--teal);
+      background: rgba(0,180,160,0.08);
+      padding: 4px 11px;
+      border-radius: 50px;
+      letter-spacing: 0.04em;
+      margin-bottom: 14px;
+    }
+    .session-step p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .needs-block {
+      margin-top: 56px;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 32px 36px;
+    }
+    .needs-block h4 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .needs-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px 28px;
+    }
+    .needs-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+    .needs-list li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      background: rgba(0,180,160,0.12);
+      border-radius: 50%;
+      margin-top: 3px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' viewBox='0 0 24 24' fill='none' stroke='%2300B4A0' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* --- WORKSHOPS --- */
+    .workshops-block { background: var(--bg-alt); }
+    .workshop-formats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .workshop-format {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 22px 24px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .workshop-format:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .workshop-format h3 {
+      font-size: 0.98rem;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--text);
+      line-height: 1.35;
+    }
+    .workshop-format p {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      line-height: 1.55;
+    }
+
+    /* Masterclass agenda: 3 parts */
+    .masterclass-agenda {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .masterclass-part {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px 26px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .masterclass-part:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .masterclass-part .mp-num {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 0.62rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: rgba(0,180,160,0.08);
+      padding: 4px 10px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+    .masterclass-part h3 {
+      font-size: 1.02rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: var(--text);
+      line-height: 1.35;
+    }
+    .masterclass-part p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .masterclass-part .mp-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 7px;
+      margin-top: 4px;
+    }
+    .masterclass-part .mp-list li {
+      font-size: 0.86rem;
+      color: var(--text-secondary);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.45;
+    }
+    .masterclass-part .mp-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+    .video-wrapper {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      margin-top: 56px;
+      display: block;
+      text-decoration: none;
+      cursor: pointer;
+      background: #000;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-wrapper img.video-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s, filter 0.4s;
+    }
+    .video-wrapper:hover img.video-thumb {
+      transform: scale(1.02);
+      filter: brightness(0.8);
+    }
+    .video-wrapper .play-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 88px;
+      height: 88px;
+      background: rgba(0,0,0,0.65);
+      border: 2px solid rgba(255,255,255,0.85);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      backdrop-filter: blur(4px);
+    }
+    .video-wrapper:hover .play-overlay {
+      background: var(--teal);
+      border-color: #fff;
+      transform: translate(-50%, -50%) scale(1.08);
+      box-shadow: 0 0 40px rgba(0,180,160,0.5);
+    }
+    .video-wrapper .play-overlay svg {
+      width: 36px;
+      height: 36px;
+      fill: #fff;
+      margin-left: 5px;
+    }
+    .video-wrapper .video-label {
+      position: absolute;
+      bottom: 18px;
+      left: 22px;
+      right: 22px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .video-wrapper .video-label svg {
+      width: 18px;
+      height: 18px;
+    }
+    .video-caption {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: 16px;
+      font-style: italic;
+    }
+    .format-notes {
+      margin-top: 32px;
+      padding: 24px 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .format-notes h4 {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .format-notes ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .format-notes li {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.55;
+    }
+    .format-notes li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 5px;
+      height: 5px;
+      background: var(--teal);
+      border-radius: 50%;
+    }
+
+    /* --- COACH INTRO --- */
+    .coach-block {
+      background: #fff;
+    }
+    .coach-content {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 56px;
+      margin-top: 48px;
+      align-items: start;
+    }
+    .coach-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      border: 3px solid var(--border);
+      box-shadow: var(--shadow-md);
+    }
+    .pillars {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .pillar {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px 28px;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+    }
+    .pillar:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .pillar h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--text);
+      letter-spacing: -0.3px;
+    }
+    .pillar p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .linkedin-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(10,102,194,0.5);
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-top: 18px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .linkedin-btn:hover {
+      background: #0A66C2;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 14px rgba(10,102,194,0.4);
+    }
+    .kakao-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #FEE500;
+      color: #3C1E1E;
+      text-decoration: none;
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 18px;
+      margin-right: 8px;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    }
+    .kakao-btn:hover {
+      background: #FDD835;
+      color: #3C1E1E;
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 4px 14px rgba(254,229,0,0.45);
+    }
+    .kakao-btn svg { width: 16px; height: 16px; fill: #3C1E1E; }
+
+    /* --- RECOGNITION --- */
+    .recognition-block {
+      background: var(--bg-alt);
+    }
+    .recognition-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .recognition-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .recognition-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(0,180,160,0.3);
+      box-shadow: var(--shadow-md);
+    }
+    .recognition-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, #1a1a1a 0%, #0d3d34 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+    }
+    .recognition-img::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(0,180,160,0.15), transparent 60%);
+    }
+    .recognition-img.has-photo {
+      background: #000;
+    }
+    .recognition-img.has-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+    .recognition-img.has-photo::before { display: none; }
+    .recognition-img.has-logo img {
+      max-width: 60%;
+      max-height: 60%;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+      position: relative;
+      z-index: 1;
+    }
+    .recognition-card .rec-body {
+      padding: 18px 20px;
+    }
+    .recognition-card .rec-logo-mini {
+      height: 28px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+    .recognition-card .rec-logo-mini img {
+      max-height: 100%;
+      max-width: 140px;
+      object-fit: contain;
+      opacity: 0.9;
+      transition: opacity 0.25s;
+    }
+    .recognition-card:hover .rec-logo-mini img { opacity: 1; }
+    .recognition-card .rec-year {
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .recognition-card h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+    }
+    .recognition-logo-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 40px;
+    }
+    .recognition-logo-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      transition: all 0.3s;
+      display: grid;
+      grid-template-columns: 64px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+    .recognition-logo-item:hover {
+      border-color: rgba(0,180,160,0.3);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+    .recognition-logo-item .rec-logo-wrap {
+      width: 64px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .recognition-logo-item .rec-logo-wrap img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      opacity: 0.9;
+      transition: opacity 0.25s;
+    }
+    .recognition-logo-item:hover .rec-logo-wrap img { opacity: 1; }
+    .recognition-logo-item .rec-yr {
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--teal);
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* --- TESTIMONIALS GRID (compact) --- */
+    .testimonials-block { background: #fff; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .testimonial-mini {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 22px 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .testimonial-mini:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0,180,160,0.25);
+      box-shadow: var(--shadow-md);
+    }
+    .testimonial-mini blockquote {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: var(--text);
+      font-weight: 500;
+      font-style: normal;
+    }
+    .testimonial-mini blockquote::before {
+      content: '\201C';
+      font-size: 1.8rem;
+      line-height: 0;
+      vertical-align: -0.35em;
+      color: var(--teal);
+      margin-right: 4px;
+      font-weight: 700;
+    }
+    .testimonial-mini cite {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-light);
+      font-style: normal;
+    }
+    .testimonial-mini .tm-logo {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 4px;
+      font-size: 0.5rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-align: center;
+      line-height: 1.1;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+    .testimonial-mini .tm-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .testimonial-mini .tm-name {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.25;
+    }
+    .testimonial-mini .tm-role {
+      display: block;
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      line-height: 1.25;
+    }
+
+    @media (max-width: 980px) {
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .testimonials-grid { grid-template-columns: 1fr; gap: 12px; }
+      .testimonial-mini { padding: 20px; }
+    }
+
+    /* --- FINAL CTA --- */
+    .final-cta-block {
+      background: linear-gradient(135deg, rgba(0,180,160,0.05), rgba(0,180,160,0.01));
+      border-top: 1px solid rgba(0,180,160,0.15);
+      border-bottom: 1px solid rgba(0,180,160,0.15);
+      text-align: center;
+    }
+    .final-cta-block h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+    .final-cta-block p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 660px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    /* --- FOOTER --- */
+    footer {
+      padding: 48px 24px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      background: var(--bg-alt);
+    }
+    .footer-brand {
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+    .footer-brand span { color: var(--teal); }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+      font-size: 0.85rem;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--teal); }
+    footer .copyright {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 900px) {
+      .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+      .coach-content { grid-template-columns: 1fr; gap: 32px; max-width: 480px; margin-left: auto; margin-right: auto; }
+      .coach-photo { max-width: 280px; margin: 0 auto; display: block; }
+      .recognition-grid { grid-template-columns: repeat(2, 1fr); }
+      .recognition-logo-row { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 16px; }
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 20px 24px;
+        gap: 16px;
+        border-bottom: 1px solid var(--border);
+      }
+      .nav-mobile-toggle { display: block; }
+      section { padding: 64px 16px; }
+      .hero { padding-top: 110px; padding-bottom: 56px; }
+      .hero h1 { letter-spacing: -1px; }
+      .trust-strip { gap: 24px 32px; margin-top: 48px; }
+      .trust-strip img { height: 26px; }
+      .numbers-bar { padding: 40px 16px; }
+      .numbers-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .session-step { padding: 22px 20px; }
+      .session-step h3 { font-size: 0.98rem; }
+      .session-step .step-num-big { font-size: 44px; top: 10px; right: 14px; }
+      .needs-block { padding: 24px 22px; }
+      .needs-list { grid-template-columns: 1fr; gap: 10px; }
+      .workshop-formats { grid-template-columns: 1fr; }
+      .recognition-grid { grid-template-columns: 1fr; }
+      .recognition-logo-row { grid-template-columns: 1fr; }
+      .pillar { padding: 22px 24px; }
+      /* Coach header (h2 + $2.5M banner) cleaner stacking */
+      .coach-block .container > div:first-of-type > h2 { margin-bottom: 8px !important; }
+      /* Final CTA cta-row stacks buttons */
+      .final-cta-block .cta-row { flex-direction: column; gap: 12px; }
+      .final-cta-block .cta-row .btn { width: 100%; max-width: 360px; justify-content: center; }
+      /* Footer legal: smaller on mobile so it fits */
+      .footer-legal { font-size: 0.68rem !important; line-height: 1.7 !important; padding: 0 8px; }
+      /* Recognition card image fits */
+      .recognition-img { aspect-ratio: 16 / 10; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">sofian<span>.global</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#programs" data-i18n="nav.track">Track record</a></li>
+        <li><a href="#recognition" data-i18n="nav.credentials">Credentials</a></li>
+        <li><a href="#coach" data-i18n="nav.coach">Coach</a></li>
+        <li><a href="#approach" data-i18n="nav.session">Session</a></li>
+        <li><a href="#workshops" data-i18n="nav.masterclass">Masterclass</a></li>
+        <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
+      </ul>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('en')" id="langEn"><span class="flag">&#127468;&#127463;</span> EN</button>
+        <button class="lang-btn" onclick="setLang('ko')" id="langKo"><span class="flag">&#127472;&#127479;</span> KR</button>
+      </div>
+      <button class="nav-mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- 1. HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-eyebrow">
+        <span class="pulse-dot" style="background: var(--teal);"></span>
+        <span data-i18n="hero.eyebrow">For Korean accelerator global programs</span>
+      </div>
+      <h1 data-i18n="hero.title">Global <em>IR Pitch consulting</em> for Korea's global startup programs.</h1>
+      <p class="subtitle" data-i18n="hero.subtitle">Supporting Korean accelerator programs that send startups abroad. I provide the 1:1 IR pitch consulting layer. Each session prepares one founder for the next demo day or investor meeting.</p>
+      <a href="https://calendly.com/depitchsofian/global-ir-consulting" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+        <span data-i18n="hero.cta">Book a discovery call</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <p class="trust-strip-label" data-i18n="hero.trust">Trusted by Korean institutional partners</p>
+      <div class="trust-strip" aria-label="Institutional partners">
+        <img src="logos-white/kised.png" alt="KISED" title="KISED">
+        <img src="logos-white/nipa.png" alt="NIPA" title="NIPA">
+        <img src="logos-white/kto.png" alt="KTO" title="KTO">
+        <img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis">
+        <img src="logos-white/kocca.png" alt="KOCCA" title="KOCCA">
+        <img src="logos-white/kita.png" alt="KITA" title="KITA">
+        <img src="logos-white/gbsa-logo-600x260.png" alt="GBSA" title="GBSA" class="logo-wide">
+        <img class="logo-color" src="logos-white/kvca.png" alt="KVCA" title="KVCA">
+        <img src="logos-white/kb-financial.png" alt="KB Holding" title="KB Holding">
+        <img class="logo-color" src="logos-white/KSPO_logo.png" alt="Korea Sports Promotion Foundation" title="Korea Sports Promotion Foundation">
+        <span class="ccei-wrap"><img class="logo-ccei" src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon CCEI"></span>
+        <span class="ccei-wrap"><img class="logo-ccei" src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI"></span>
+        <span class="ccei-wrap"><img class="logo-color logo-ccei" src="logos-white/Chungnam CCEI.svg" alt="Chungnam CCEI" title="Chungnam CCEI"></span>
+        <img src="logos-white/keri.png" alt="KERI" title="KERI" class="logo-small logo-color">
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. NUMBERS BAR -->
+  <section class="numbers-bar">
+    <div class="numbers-grid">
+      <div class="number-stat">
+        <div class="num">200+</div>
+        <div class="label" data-i18n="num.s1">Korean startups consulted</div>
+      </div>
+      <div class="number-stat">
+        <div class="num">20+</div>
+        <div class="label" data-i18n="num.s2">Korean partners</div>
+      </div>
+      <div class="number-stat">
+        <div class="num">13+</div>
+        <div class="label" data-i18n="num.s3">Years in global business</div>
+      </div>
+      <div class="number-stat">
+        <div class="num">4</div>
+        <div class="label" data-i18n="num.s4">Countries operated from<br><span style="font-size: 0.75rem; color: var(--text-muted);">Paris &middot; Singapore &middot; Seoul &middot; Tokyo</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROGRAMS (live + delivered, combined compact) -->
+  <section class="programs-section">
+    <div class="container">
+      <p class="section-label" data-i18n="prog.label">Track record</p>
+      <h2 class="section-title" data-i18n="prog.title">Programs <span class="accent">live</span> and delivered.</h2>
+
+      <div class="programs-grid">
+        <!-- LIVE -->
+        <article class="program-card is-live" id="programs">
+          <span class="pc-tag" data-i18n="prog.liveTag"><span class="pulse-dot"></span> 2026 &middot; Live</span>
+          <div class="pc-stat">
+            <div class="num">75</div>
+            <div class="label" data-i18n="prog.liveLabel">Korean startups in active 1:1 IR consulting cycles</div>
+          </div>
+          <div class="pc-flags">
+            <span class="pcf-label" data-i18n="prog.liveMarkets">Target markets</span>
+            <span class="pcf-flags" aria-label="France, Singapore, China">&#127467;&#127479; &#127480;&#127468; &#127464;&#127475;</span>
+          </div>
+          <div class="pc-partners-label" data-i18n="prog.livePartners">Programs from</div>
+          <div class="partners-logos">
+            <img src="logos-white/kised.png" alt="KISED" title="KISED">
+            <img src="logos-white/kto.png" alt="KTO" title="KTO">
+            <img class="logo-color" src="logos-white/KSPO_logo.png" alt="Korea Sports Promotion Foundation" title="Korea Sports Promotion Foundation">
+            <img src="logos-white/gbsa-logo-600x260.png" alt="GBSA" title="GBSA" class="logo-wide">
+            <span class="ccei-wrap"><img class="logo-color logo-ccei" src="logos-white/Chungnam CCEI.svg" alt="Chungnam CCEI" title="Chungnam CCEI"></span>
+          </div>
+        </article>
+
+        <!-- DELIVERED -->
+        <article class="program-card" id="track-record">
+          <span class="pc-tag" data-i18n="prog.dlvTag">2022 &ndash; 2025 &middot; Delivered</span>
+          <div class="pc-stat">
+            <div class="num">131</div>
+            <div class="label" data-i18n="prog.dlvLabel">Korean startups, all 1:1 IR pitch consulting sessions</div>
+          </div>
+          <div class="pc-flags">
+            <span class="pcf-label" data-i18n="prog.dlvMarkets">Markets reached</span>
+            <span class="pcf-flags" aria-label="France, United Kingdom, Singapore, Japan, China, Thailand, Vietnam, UAE, United States, Australia">&#127467;&#127479; &#127468;&#127463; &#127480;&#127468; &#127471;&#127477; &#127464;&#127475; &#127481;&#127469; &#127483;&#127475; &#127462;&#127466; &#127482;&#127480; &#127462;&#127482;</span>
+          </div>
+          <div class="pc-partners-label" data-i18n="prog.dlvPartners">Partner organisations</div>
+          <div class="partners-logos">
+            <img src="logos-white/kised.png" alt="KISED" title="KISED">
+            <img src="logos-white/nipa.png" alt="NIPA" title="NIPA">
+            <img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis">
+            <img src="logos-white/kto.png" alt="KTO" title="KTO">
+            <img src="logos-white/kocca.png" alt="KOCCA" title="KOCCA">
+            <img src="logos-white/keri.png" alt="KERI" title="KERI" class="logo-small logo-color">
+            <img src="logos-white/gbsa-logo-600x260.png" alt="GBSA" title="GBSA" class="logo-wide">
+            <span class="ccei-wrap"><img class="logo-ccei" src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon CCEI"></span>
+            <span class="ccei-wrap"><img class="logo-ccei" src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI"></span>
+            <img src="logos-white/kita.png" alt="KITA" title="KITA">
+            <img src="logos-white/kb-financial.png" alt="KB Holding" title="KB Holding">
+            <img src="logos-white/korea-investment.png" alt="Korea Investment Accelerator" title="Korea Investment Accelerator" class="logo-wide">
+            <img class="logo-color" src="logos-white/kvca.png" alt="KVCA" title="KVCA">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. OFFICIAL RECOGNITION & MEDIA -->
+  <section class="recognition-block" id="recognition">
+    <div class="container">
+      <p class="section-label" data-i18n="recog.label">Official recognition</p>
+      <h2 class="section-title" data-i18n="recog.title">Official roles, MOUs, <span class="accent">and media appearances</span>.</h2>
+
+      <div class="recognition-grid">
+        <div class="recognition-card">
+          <div class="recognition-img has-photo">
+            <img src="Global Committee Member, Daejeon CCEI.JPG" alt="Sofian at Daejeon CCEI Global Committee" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <div class="rec-logo-mini"><span class="ccei-wrap"><img class="logo-ccei" src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI"></span></div>
+            <div class="rec-year">2024</div>
+            <h4 data-i18n="recog.c1">Global Committee Member, Daejeon CCEI</h4>
+          </div>
+        </div>
+        <div class="recognition-card">
+          <div class="recognition-img has-photo">
+            <img src="MOU, Gyeongbuk CCEI.jpg" alt="MOU signing with Gyeongbuk CCEI" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <div class="rec-logo-mini"><span class="ccei-wrap"><img class="logo-ccei" src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI"></span></div>
+            <div class="rec-year">2024</div>
+            <h4 data-i18n="recog.c2">MOU, Gyeongbuk CCEI</h4>
+          </div>
+        </div>
+        <div class="recognition-card">
+          <div class="recognition-img has-photo">
+            <img src="TBS interview on Global Business Etiquettes.jpeg" alt="TBS interview on Global Business Etiquettes" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <div class="rec-logo-mini"><img class="logo-color" src="logos-white/Logo_TBS.svg.png" alt="TBS"></div>
+            <div class="rec-year">2023</div>
+            <h4 data-i18n="recog.c3">TBS interview on Global Business Etiquettes</h4>
+          </div>
+        </div>
+        <div class="recognition-card">
+          <div class="recognition-img has-photo">
+            <img src="World Business Angels Investors Week, Seoul Chapter.jpg" alt="World Business Angels Investors Week, Seoul Chapter" loading="lazy">
+          </div>
+          <div class="rec-body">
+            <div class="rec-logo-mini"><img class="logo-color" src="logos-white/wba week.jpg" alt="WBAF" style="filter: none; opacity: 1;"></div>
+            <div class="rec-year">2023</div>
+            <h4 data-i18n="recog.c4">World Business Angels Investors Week, Seoul Chapter</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="recognition-logo-row">
+        <div class="recognition-logo-item">
+          <div class="rec-logo-wrap"><img src="logos-white/sungkyunkwan-university.png" alt="Sungkyunkwan University"></div>
+          <div>
+            <span class="rec-yr">2023</span>
+            <span data-i18n="recog.r1">Lecture at Sungkyunkwan University MBA Program</span>
+          </div>
+        </div>
+        <div class="recognition-logo-item">
+          <div class="rec-logo-wrap"><img class="logo-color" src="logos-white/cjfoods.png" alt="CJ Foods"></div>
+          <div>
+            <span class="rec-yr">2022</span>
+            <span data-i18n="recog.r2">Open Innovation seminar at CJ Foods</span>
+          </div>
+        </div>
+        <div class="recognition-logo-item">
+          <div class="rec-logo-wrap"><img class="logo-color" src="logos-white/GS_logo.svg.png" alt="GS Holding"></div>
+          <div>
+            <span class="rec-yr">2022</span>
+            <span data-i18n="recog.r3">Open Innovation seminar at GS Holding</span>
+          </div>
+        </div>
+        <div class="recognition-logo-item">
+          <div class="rec-logo-wrap"><img src="logos-white/shinhan-futures-lab.png" alt="Shinhan Future's Lab"></div>
+          <div>
+            <span class="rec-yr">2022</span>
+            <span data-i18n="recog.r4">Global Partner, Shinhan Future's Lab</span>
+          </div>
+        </div>
+        <div class="recognition-logo-item">
+          <div class="rec-logo-wrap"><img src="logos-white/korea-investment.png" alt="Korea Investment Accelerator"></div>
+          <div>
+            <span class="rec-yr">2022</span>
+            <span data-i18n="recog.r5">MOU, Korea Investment Accelerator</span>
+          </div>
+        </div>
+        <div class="recognition-logo-item">
+          <div class="rec-logo-wrap"><img src="logos-white/hanyang-university.png" alt="Hanyang University"></div>
+          <div>
+            <span class="rec-yr">2019</span>
+            <span data-i18n="recog.r6">MOU, Hanyang University Startup Support Foundation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONSULTANT INTRODUCTION -->
+  <section class="coach-block" id="coach">
+    <div class="container">
+      <p class="section-label" data-i18n="coach.label">Pitch Coach introduction</p>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 16px;">
+        <h2 class="section-title" data-i18n="coach.title" style="margin-bottom: 0;">Sofian <span class="accent">Meguellati</span>.</h2>
+        <div style="display: inline-flex; align-items: center; gap: 14px; background: linear-gradient(135deg, rgba(0,180,160,0.08), rgba(0,180,160,0.02)); border: 1px solid rgba(0,180,160,0.25); border-radius: 14px; padding: 14px 20px;">
+          <div style="font-size: 1.7rem; font-weight: 900; color: var(--teal); letter-spacing: -1px; line-height: 1;">$2.5M+</div>
+          <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.4;" data-i18n="coach.outcome">raised in pre-seed with global VCs<br>by startups I have consulted over the last 12 months</div>
+        </div>
+      </div>
+
+      <div class="coach-content">
+        <div>
+          <img src="sofian pic pitchsprintjp.jpeg" alt="Sofian Meguellati, international pitch consultant" class="coach-photo" loading="lazy">
+          <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="kakao-btn"><svg viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg><span data-i18n="coach.kakao">Chat on KakaoTalk</span></a>
+          <a href="https://www.linkedin.com/in/sofianmeguellati/" target="_blank" rel="noopener" class="linkedin-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span data-i18n="coach.linkedin">Connect on LinkedIn</span></a>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <h3 data-i18n="coach.p1Title">CEO of Hack40, a global startup accelerator</h3>
+            <p data-i18n="coach.p1Body">Founder of Hack40, active in Paris, Singapore, Seoul, and Tokyo. 13+ years building and running multi-million dollar businesses across these markets (3 years living in Korea).</p>
+          </div>
+          <div class="pillar">
+            <h3 data-i18n="coach.p2Title">Bridges Korean business style and global investor expectations</h3>
+            <p data-i18n="coach.p2Body">I connect Korean startup communication style with what international VCs, corporates, and judges actually respond to.</p>
+          </div>
+          <div class="pillar">
+            <h3 data-i18n="coach.p3Title">Large network of VCs and corporate partners globally</h3>
+            <p data-i18n="coach.p3Body">Active across Asia and Europe in VC and corporate innovation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. HOW A 1:1 SESSION WORKS -->
+  <section id="approach">
+    <div class="container">
+      <p class="section-label" data-i18n="sess.label">How a 1:1 session works</p>
+      <h2 class="section-title" data-i18n="sess.title">The session <span class="accent">structure</span>.</h2>
+      <p class="session-lead" data-i18n="sess.lead">Each session starts with the content. 60 minutes per session, 1 to 3 sessions per startup. Built for clear improvement before the next pitch.</p>
+
+      <div class="session-steps">
+        <div class="session-step">
+          <div class="step-num-big">01</div>
+          <div class="step-num">01</div>
+          <h3 data-i18n="sess.s1Title">Live pitch review</h3>
+          <span class="step-time">10 min</span>
+          <p data-i18n="sess.s1Body">Startup pitches live with a timer. I track timing, structure, content gaps, and slide weaknesses in real time.</p>
+        </div>
+        <div class="session-step">
+          <div class="step-num-big">02</div>
+          <div class="step-num">02</div>
+          <h3 data-i18n="sess.s2Title">Pitch structure review</h3>
+          <span class="step-time">10 min</span>
+          <p data-i18n="sess.s2Body">Agree on the right pitch shape for their stage and audience (VC, business development, corporate, demo day). Remove what weakens the pitch.</p>
+        </div>
+        <div class="session-step">
+          <div class="step-num-big">03</div>
+          <div class="step-num">03</div>
+          <h3 data-i18n="sess.s3Title">Content, slides, delivery feedback</h3>
+          <span class="step-time">20 min</span>
+          <p data-i18n="sess.s3Body">Slide by slide review: opening, problem, growth numbers, market size, the ask, layout.</p>
+        </div>
+        <div class="session-step">
+          <div class="step-num-big">04</div>
+          <div class="step-num">04</div>
+          <h3 data-i18n="sess.s4Title">Q&amp;A live practice</h3>
+          <span class="step-time">15 min</span>
+          <p data-i18n="sess.s4Body">Startup defends the pitch under investor-style questioning. We rebuild weak answers and prepare strong ones.</p>
+        </div>
+        <div class="session-step">
+          <div class="step-num-big">05</div>
+          <div class="step-num">05</div>
+          <h3 data-i18n="sess.s5Title">Action items &amp; next steps</h3>
+          <span class="step-time">5 min</span>
+          <p data-i18n="sess.s5Body">Startup leaves with a written list of fixes for the next pitch. No confusion about what comes next.</p>
+        </div>
+      </div>
+
+      <div class="needs-block">
+        <h4 data-i18n="sess.needsTitle">What startups typically need work on</h4>
+        <ul class="needs-list">
+          <li data-i18n="sess.n0">Don't start with company profile or CEO resume. Start with context, problem, solution.</li>
+          <li data-i18n="sess.n1">One slide, one message (no mixing problem, solution and traction on the same page)</li>
+          <li data-i18n="sess.n2">Plain language over technical jargon (investors aren't engineers)</li>
+          <li data-i18n="sess.n3">A tagline that defines what you do in one line (recognizable category in 1 second)</li>
+          <li data-i18n="sess.n4">Market size tied to a believable go-to-market (capture logic, not just TAM)</li>
+          <li data-i18n="sess.n5">Show your competitive edge early (not hidden behind technical details)</li>
+          <li data-i18n="sess.n6">Funding ask with amount, use of funds, and 12–18 month milestones</li>
+          <li data-i18n="sess.n7">All traction on one strong slide (not spread across many slides)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. GROUP WORKSHOPS -->
+  <section class="workshops-block" id="workshops">
+    <div class="container">
+      <p class="section-label" data-i18n="ws.label">Masterclass</p>
+      <h2 class="section-title" data-i18n="ws.title">Global Pitch <span class="accent">Masterclass</span>.</h2>
+      <p class="session-lead" data-i18n="ws.lead">How to build a pitch for global audiences. Localized for the market your delegation targets, whether Europe, Singapore, US, or beyond. A 1 to 2 hour session for the whole group, before each startup starts 1:1 consulting.</p>
+
+      <div class="workshop-formats">
+        <div class="workshop-format">
+          <h3 data-i18n="ws.c1Title">The 10-slide pitch framework</h3>
+          <p data-i18n="ws.c1Body">The 4 main parts, slide by slide, from start to end.</p>
+        </div>
+        <div class="workshop-format">
+          <h3 data-i18n="ws.c2Title">What hooks vs. what loses an audience</h3>
+          <p data-i18n="ws.c2Body">Interest is earned every 30 seconds: what hooks them, what loses them.</p>
+        </div>
+        <div class="workshop-format">
+          <h3 data-i18n="ws.c3Title">Slide design and the 2-deck rule</h3>
+          <p data-i18n="ws.c3Body">One slide, one message, plus the live deck vs. email attachment deck rule.</p>
+        </div>
+        <div class="workshop-format">
+          <h3 data-i18n="ws.c4Title">Q&amp;A live practice and appendix slides</h3>
+          <p data-i18n="ws.c4Body">One-sentence answers, redirect, and what to keep in the appendix.</p>
+        </div>
+        <div class="workshop-format">
+          <h3 data-i18n="ws.c5Title">10 techniques to become a great pitcher</h3>
+          <p data-i18n="ws.c5Body">From &ldquo;pitch like the first time&rdquo; to stage rules: body, voice, eye contact.</p>
+        </div>
+        <div class="workshop-format">
+          <h3 data-i18n="ws.c6Title">Cultural calibration: Korean startup style vs. global investor expectations</h3>
+          <p data-i18n="ws.c6Body">Business etiquette differences and how to connect Korean style with global VC expectations.</p>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-top: 48px; margin-bottom: 16px;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--border); border-radius: 50px; padding: 8px 16px 8px 14px; box-shadow: var(--shadow-sm);">
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-style: normal;" data-i18n="ws.featured">As featured at</span>
+          <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span style="font-size: 0.82rem; font-weight: 700; color: var(--text);">Google for Startups</span>
+        </div>
+      </div>
+      <a class="video-wrapper" href="https://www.youtube.com/watch?v=kjg6_KK1WeE" target="_blank" rel="noopener" title="Watch the group pitch workshop on YouTube" style="margin-top: 0;">
+        <img class="video-thumb" src="https://img.youtube.com/vi/kjg6_KK1WeE/maxresdefault.jpg" alt="Group pitch workshop, example session" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/kjg6_KK1WeE/hqdefault.jpg';">
+        <div class="play-overlay">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <div class="video-label">
+          <svg viewBox="0 0 24 24" fill="#FF0000"><path d="M23.498 6.186a2.998 2.998 0 0 0-2.112-2.122C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.386.519A2.998 2.998 0 0 0 .502 6.186C0 8.078 0 12 0 12s0 3.922.502 5.814a2.998 2.998 0 0 0 2.112 2.122c1.881.519 9.386.519 9.386.519s7.505 0 9.386-.519a2.998 2.998 0 0 0 2.112-2.122C24 15.922 24 12 24 12s0-3.922-.502-5.814zM9.546 15.568V8.432L15.818 12l-6.272 3.568z"/></svg>
+          <span data-i18n="ws.play">Watch on YouTube</span>
+        </div>
+      </a>
+
+      <div class="format-notes">
+        <h4 data-i18n="ws.fmtTitle">Format notes</h4>
+        <ul>
+          <li data-i18n="ws.f1">Duration: 1 to 2 hours</li>
+          <li data-i18n="ws.f2">Group size: 10 to 40 startups per session</li>
+          <li data-i18n="ws.f3">Delivery: in-person in Seoul, hybrid, or fully remote</li>
+          <li data-i18n="ws.f4">Working language: English</li>
+          <li data-i18n="ws.f5">Works alongside 1:1 IR consulting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. TESTIMONIALS, iMessage format -->
+  <section class="testimonials-block" id="testimonials">
+    <div class="container">
+      <p class="section-label" data-i18n="testim.label">Testimonials</p>
+      <h2 class="section-title" data-i18n="testim.title">What startups <span class="accent">say</span>.</h2>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q1">Sofian provided invaluable insights on how to approach the European market.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/bottless.jpeg" alt="Bottless"></div>
+            <div>
+              <span class="tm-name">Chiwon Yi</span>
+              <span class="tm-role" data-i18n="testim.r1">CEO, Bottless</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q2">That 1-hour session was priceless and really helped us build our global strategy.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/apoc.webp" alt="apoc"></div>
+            <div>
+              <span class="tm-name">Ellie Lee</span>
+              <span class="tm-role" data-i18n="testim.r2">CMO, apoc</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q3">The coaching is practical, insightful, and really helps transform a pitch. I felt more confident presenting to investors.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/atems.png" alt="ATEMs"></div>
+            <div>
+              <span class="tm-name">Jeong-Im</span>
+              <span class="tm-role" data-i18n="testim.r3">CEO, ATEMs</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q4">The coaching helped me understand that improvement comes not from adding more, but from &ldquo;subtracting&rdquo; and refining.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/sml-biopharm.png" alt="SML Biopharm"></div>
+            <div>
+              <span class="tm-name">Yeong-Chan Ahn</span>
+              <span class="tm-role" data-i18n="testim.r4">Director, SML Biopharm</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q5">Recommendable and efficient way to make immediate impact to improve pitching.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/genemedicine.png" alt="GeneMedicine"></div>
+            <div>
+              <span class="tm-name">Jason Bae</span>
+              <span class="tm-role" data-i18n="testim.r5">CEO, GeneMedicine</span>
+            </div>
+          </cite>
+        </div>
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q6">Expect one of the best coaching sessions in building the most convincing pitch decks.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/voinosis.png" alt="Voinosis"></div>
+            <div>
+              <span class="tm-name">Eun Shin</span>
+              <span class="tm-role" data-i18n="testim.r6">CEO, Voinosis</span>
+            </div>
+          </cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FINAL CTA -->
+  <section class="final-cta-block">
+    <div class="container">
+      <h2 data-i18n="cta.title">Looking forward to your <span class="accent">next program</span>.</h2>
+      <p data-i18n="cta.subtitle">30-minute call to review your program, your startups, and the IR consulting that fits. From there, you decide the next steps. I look forward to supporting your next delegation.</p>
+      <div class="cta-row">
+        <a href="https://calendly.com/depitchsofian/global-ir-consulting" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <span data-i18n="cta.button">Book the 30-min call</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
+          <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
+          <span data-i18n="cta.kakao">Connect on Kakao</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. FOOTER -->
+  <footer>
+    <p class="footer-brand">sofian<span>.global</span></p>
+    <div class="footer-links">
+      <a href="mailto:sofian@hack40.com">sofian@hack40.com</a>
+      <a href="https://www.linkedin.com/in/sofianmeguellati/" target="_blank" rel="noopener">LinkedIn</a>
+      <span><span data-i18n="footer.kakao">KakaoTalk</span>: <strong style="color: var(--text);">sofianmegue</strong></span>
+    </div>
+    <p class="copyright" data-i18n="footer.copy">&copy; 2026 Sofian Meguellati &middot; All rights reserved</p>
+    <p class="footer-legal" style="font-size: 0.74rem; color: var(--text-muted); margin-top: 14px; line-height: 1.7; max-width: 820px; margin-left: auto; margin-right: auto;" data-i18n="footer.legal">
+      <strong style="color: var(--text-secondary);">Carte Blanche SAS</strong> &nbsp;|&nbsp; CEO: Sofian Meguellati &nbsp;|&nbsp; SIREN 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France
+    </p>
+  </footer>
+
+  <script>
+    // English originals are scraped from the HTML on load (single source of truth).
+    // Only Korean translations need to be maintained here.
+    var englishOriginals = {};
+
+    var koTranslations = {
+      // Nav
+      'nav.track': '실적',
+      'nav.coach': '코치',
+      'nav.credentials': '공식 활동',
+      'nav.session': '세션 구조',
+      'nav.masterclass': '세미나',
+      'nav.testimonials': '추천사',
+
+      // Hero
+      'hero.eyebrow': '한국 액셀러레이터의 글로벌 프로그램을 위해',
+      'hero.title': '한국 스타트업의 해외 진출을 위한 <em>글로벌 IR 피칭 컨설팅</em>.',
+      'hero.subtitle': '해외 진출을 추진하는 한국 액셀러레이터 프로그램을 지원합니다. 저는 1:1 IR 피칭 컨설팅을 담당하며, 각 세션은 다음 데모데이 또는 투자자 미팅을 준비합니다.',
+      'hero.cta': '미팅 신청하기',
+      'hero.kakao': '또는 카카오톡으로 문의',
+      'hero.trust': '한국 주요 기관이 신뢰하는 파트너십',
+
+      // Numbers bar
+      'num.s1': '한국 스타트업 지도 실적',
+      'num.s2': '한국 파트너 기관',
+      'num.s3': '글로벌 비즈니스 경력',
+      'num.s4': '활동 거점 국가<br><span style="font-size: 0.75rem; color: var(--text-muted);">파리 &middot; 싱가포르 &middot; 서울 &middot; 도쿄</span>',
+
+      // Programs
+      'prog.label': '실적',
+      'prog.title': '진행 중 및 <span class="accent">완료된</span> 프로그램.',
+      'prog.liveTag': '<span class="pulse-dot"></span> 2026 &middot; 진행 중',
+      'prog.liveLabel': '현재 1:1 IR 피칭 컨설팅 진행 중인 한국 스타트업',
+      'prog.liveMarkets': '진출 대상 시장',
+      'prog.livePartners': '진행 프로그램',
+      'prog.dlvTag': '2022 &ndash; 2025 &middot; 완료',
+      'prog.dlvLabel': '한국 스타트업 (전원 1:1 IR 피칭 컨설팅 진행)',
+      'prog.dlvMarkets': '진출 시장',
+      'prog.dlvPartners': '파트너 기관',
+
+      // Consultant
+      'coach.label': '피칭 코치 소개',
+      'coach.title': 'Sofian <span class="accent">Meguellati</span>.',
+      'coach.p1Title': '글로벌 스타트업 액셀러레이터 Hack40의 CEO',
+      'coach.p1Body': '파리, 싱가포르, 서울, 도쿄에서 활동하는 글로벌 액셀러레이터 Hack40의 창업자. 13년 이상에 걸쳐 이들 시장에서 수백만 달러 규모의 비즈니스를 구축하고 운영해 왔습니다 (서울 3년 거주).',
+      'coach.p2Title': '한국 비즈니스 스타일을 글로벌 투자자 기대치와 연결',
+      'coach.p2Body': '한국 스타트업의 커뮤니케이션 스타일을 해외 VC, 기업, 심사위원이 실제로 반응하는 방식과 연결합니다.',
+      'coach.p3Title': '글로벌 VC 및 기업 파트너 네트워크',
+      'coach.p3Body': '아시아 및 유럽 전역의 VC와 기업 오픈이노베이션 분야에서 활동 중.',
+      'coach.kakao': '카카오톡으로 문의',
+      'coach.linkedin': 'LinkedIn으로 연결하기',
+
+      // Recognition
+      'recog.label': '공식 활동',
+      'recog.title': '공식 직책, MOU, <span class="accent">미디어 출연</span>.',
+      'recog.c1': '대전창조경제혁신센터 글로벌위원회 위원',
+      'recog.c2': '경북창조경제혁신센터 MOU',
+      'recog.c3': 'TBS 글로벌 비즈니스 에티켓 인터뷰',
+      'recog.c4': 'World Business Angels Investors Week, 서울 챕터',
+      'recog.r1': '성균관대학교 MBA 프로그램 강연',
+      'recog.r2': 'CJ Foods 오픈이노베이션 세미나',
+      'recog.r3': 'GS Holding 오픈이노베이션 세미나',
+      'recog.r4': "신한 Future's Lab 글로벌 파트너",
+      'recog.r5': 'Korea Investment Accelerator MOU',
+      'recog.r6': '한양대학교 창업지원단 MOU',
+
+      // Session
+      'sess.label': '1:1 세션 진행 방식',
+      'sess.title': '세션 <span class="accent">구조</span>.',
+      'sess.lead': '모든 세션은 콘텐츠 중심으로 진행됩니다. 세션당 60분, 스타트업당 1~3회 진행. 다음 피칭 전 명확한 개선을 위해 설계되었습니다.',
+      'sess.s1Title': '라이브 피칭 리뷰',
+      'sess.s1Body': '스타트업이 타이머와 함께 실제 환경에서 피칭합니다. 타이밍, 구조, 콘텐츠 누락, 슬라이드 약점을 실시간으로 점검합니다.',
+      'sess.s2Title': '피칭 구조 리뷰',
+      'sess.s2Body': '단계와 대상(VC, 사업개발, 기업, 데모데이)에 맞는 피칭 구조에 합의합니다. 피칭을 약화시키는 요소를 제거합니다.',
+      'sess.s3Title': '콘텐츠, 슬라이드, 전달 피드백',
+      'sess.s3Body': '슬라이드별 리뷰: 오프닝, 문제, 성장 수치, 시장 규모, 핵심 요청, 레이아웃.',
+      'sess.s4Title': 'Q&amp;A 라이브 연습',
+      'sess.s4Body': '투자자 스타일 질문에 스타트업이 피칭을 방어합니다. 약한 답변은 재구성하고 강한 답변은 사전에 준비합니다.',
+      'sess.s5Title': '액션 아이템 및 다음 단계',
+      'sess.s5Body': '스타트업은 다음 피칭을 위한 수정 사항이 기록된 리스트와 함께 세션을 마칩니다. 다음 작업에 대한 혼선은 없습니다.',
+      'sess.needsTitle': '스타트업이 일반적으로 개선해야 할 부분',
+      'sess.n0': '회사 소개나 CEO 이력으로 시작하지 말 것. 배경, 문제, 솔루션으로 시작하기.',
+      'sess.n7': '모든 트랙션을 한 장의 강력한 슬라이드에 (여러 슬라이드에 흩어놓지 않기)',
+      'sess.n1': '한 슬라이드, 하나의 메시지 (문제·솔루션·트랙션을 한 페이지에 섞지 않기)',
+      'sess.n2': '기술 용어 대신 일반 언어 사용 (투자자는 엔지니어가 아닙니다)',
+      'sess.n3': '한 줄로 정의되는 태그라인 (1초 안에 카테고리가 인식되도록)',
+      'sess.n4': '시장 규모와 현실적인 GTM의 연결 (단순 TAM이 아닌 점유 논리)',
+      'sess.n5': '경쟁 우위를 앞쪽에 보여주기 (기술 세부사항 뒤에 숨기지 않기)',
+      'sess.n6': '펀딩 요청: 금액, 사용처, 12~18개월 마일스톤',
+
+      // Workshops / Masterclass
+      'ws.label': '세미나',
+      'ws.title': '글로벌 피칭 <span class="accent">세미나</span>.',
+      'ws.lead': '글로벌 청중을 위한 피칭을 만드는 법. 귀 기관의 대표단이 진출하는 시장에 맞춰 현지화 (유럽, 싱가포르, 미국 등). 1~2시간 그룹 세션 후, 각 스타트업이 1:1 컨설팅을 시작합니다.',
+      'ws.c1Title': '10장 슬라이드 피칭 프레임워크',
+      'ws.c1Body': '4가지 핵심 구성 요소를 처음부터 끝까지 슬라이드별로.',
+      'ws.c2Title': '청중을 사로잡는 것 vs 잃는 것',
+      'ws.c2Body': '30초마다 다시 얻어내야 하는 청중의 관심, 무엇이 사로잡고 무엇이 잃는가.',
+      'ws.c3Title': '슬라이드 디자인과 2-덱 룰',
+      'ws.c3Body': '한 슬라이드, 하나의 메시지, 그리고 라이브 덱 vs 이메일 첨부 덱 룰.',
+      'ws.c4Title': 'Q&amp;A 라이브 연습과 부록 슬라이드',
+      'ws.c4Body': '한 문장 답변, 화법 전환, 그리고 부록에 보관할 항목.',
+      'ws.c5Title': '뛰어난 발표자가 되는 10가지 기법',
+      'ws.c5Body': '&ldquo;처음처럼 피칭하기&rdquo;부터 스테이지 룰까지: 신체, 음성, 시선.',
+      'ws.c6Title': '문화적 조율: 한국 스타트업 스타일 vs 글로벌 투자자 기대치',
+      'ws.c6Body': '비즈니스 에티켓 차이, 그리고 한국 스타일을 글로벌 VC 기대치와 연결하는 방법.',
+      'ws.play': '클릭하여 재생',
+      'ws.featured': '진행 실적',
+      'ws.fmtTitle': '진행 정보',
+      'ws.f1': '진행 시간: 1~2시간',
+      'ws.f2': '그룹 규모: 세션당 10~40개사',
+      'ws.f3': '진행 방식: 서울 대면, 하이브리드, 또는 완전 원격',
+      'ws.f4': '진행 언어: 영어',
+      'ws.f5': '1:1 IR 컨설팅과 병행 진행 가능',
+
+      // Testimonials
+      'testim.label': '추천사',
+      'testim.title': '스타트업의 <span class="accent">후기</span>.',
+      'coach.outcome': '최근 12개월간 제가 컨설팅한 스타트업이<br>글로벌 VC로부터 프리시드 단계 투자 유치',
+      'testim.q1': '유럽 시장 진출에 대한 매우 귀중한 인사이트를 제공해 주셨습니다.',
+      'testim.r1': 'CEO, Bottless',
+      'testim.q2': '1시간 세션은 매우 가치 있었으며 글로벌 전략 구축에 실제로 큰 도움이 되었습니다.',
+      'testim.r2': 'CMO, apoc',
+      'testim.q3': '코칭은 실용적이고 인사이트가 풍부하며 피칭을 실제로 바꿔놓습니다. 투자자 앞에서 더욱 자신감을 갖게 되었습니다.',
+      'testim.r3': 'CEO, ATEMs',
+      'testim.q4': '개선은 더 추가하는 것이 아니라 &ldquo;덜어내고&rdquo; 다듬는 것에서 온다는 점을 코칭을 통해 이해하게 되었습니다.',
+      'testim.r4': '이사, SML Biopharm',
+      'testim.q5': '피칭 개선에 즉각적인 효과를 가져오는, 추천할 만한 효율적인 방법입니다.',
+      'testim.r5': 'CEO, GeneMedicine',
+      'testim.q6': '가장 설득력 있는 피칭 덱을 만들기 위한 최고 수준의 코칭 세션이라고 기대하셔도 좋습니다.',
+      'testim.r6': 'CEO, Voinosis',
+
+      // CTA
+      'cta.title': '귀 기관의 <span class="accent">다음 프로그램</span>을 기대합니다.',
+      'cta.subtitle': '30분 미팅에서 귀 기관의 프로그램, 스타트업, 적합한 IR 컨설팅을 함께 검토합니다. 다음 단계는 귀 기관이 결정하시면 됩니다. 귀 기관의 다음 대표단을 지원할 수 있기를 기대합니다.',
+      'cta.button': '30분 미팅 신청하기',
+      'cta.kakao': '카카오톡으로 문의',
+
+      // Footer
+      'footer.kakao': '카카오톡',
+      'footer.copy': '&copy; 2026 Sofian Meguellati &middot; 모든 권리 보유',
+      'footer.legal': '<strong style="color: var(--text-secondary);">Carte Blanche SAS</strong> &nbsp;|&nbsp; 대표: Sofian Meguellati &nbsp;|&nbsp; SIREN 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France'
+    };
+
+    // On load: scrape all English originals from the HTML (single source of truth)
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      englishOriginals[el.getAttribute('data-i18n')] = el.innerHTML;
+    });
+
+    function setLang(lang) {
+      var source = (lang === 'ko') ? koTranslations : englishOriginals;
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var text = source[key];
+        if (text) el.innerHTML = text;
+      });
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+
+      // Update toggle button states
+      var en = document.getElementById('langEn');
+      var ko = document.getElementById('langKo');
+      if (en) en.classList.toggle('active', lang === 'en');
+      if (ko) ko.classList.toggle('active', lang === 'ko');
+    }
+
+    // On page load: check localStorage, default to 'en'
+    (function() {
+      var saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      if (saved === 'ko') setLang('ko');
+    })();
+  </script>
+
+
+</body>
+</html>
