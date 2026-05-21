@@ -785,7 +785,6 @@
     .session-lead {
       font-size: 1.1rem;
       color: var(--text-secondary);
-      font-style: italic;
       max-width: 760px;
       line-height: 1.7;
       margin-top: 20px;
@@ -873,7 +872,14 @@
       letter-spacing: 0.05em;
       text-transform: uppercase;
       color: var(--text);
-      margin-bottom: 20px;
+      margin-bottom: 14px;
+    }
+    .needs-lead {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+      margin-bottom: 24px;
+      max-width: 760px;
     }
     .needs-list {
       list-style: none;
@@ -1827,7 +1833,7 @@
           </div>
           <div class="pillar">
             <h3 data-i18n="coach.p2Title">Bridges Korean and global business styles</h3>
-            <p data-i18n="coach.p2Body">I connect Korean startup communication style with what international VCs, corporates, and judges actually respond to.</p>
+            <p data-i18n="coach.p2Body">I bridge what Korean startups actually pitch with what global investors are expecting.</p>
           </div>
           <div class="pillar">
             <h3 data-i18n="coach.p3Title">Large network of VCs and corporate partners globally</h3>
@@ -1932,16 +1938,19 @@
       </div>
 
       <div class="needs-block">
-        <h4 data-i18n="sess.needsTitle">What startups typically need work on</h4>
+        <h4 data-i18n="sess.needsTitle">Global pitch deck standards</h4>
+        <p class="needs-lead" data-i18n="sess.needsLead">Korean IR decks always include things global evaluators don't care about. A pitch is about capturing the audience, not showcasing your company technology.</p>
         <ul class="needs-list">
-          <li data-i18n="sess.n0">Don't start with company profile or CEO resume. Start with context, problem, solution.</li>
-          <li data-i18n="sess.n1">One slide, one message (no mixing problem, solution and traction on the same page)</li>
-          <li data-i18n="sess.n2">Plain language over technical jargon (investors aren't engineers)</li>
           <li data-i18n="sess.n3">A tagline that defines what you do in one line (recognizable category in 1 second)</li>
-          <li data-i18n="sess.n4">Market size tied to a believable go-to-market (capture logic, not just TAM)</li>
-          <li data-i18n="sess.n5">Show your competitive edge early (not hidden behind technical details)</li>
+          <li data-i18n="sess.n0">Start with context, problem, solution. Not company profile, CEO resume, or tech and patent showcase.</li>
+          <li data-i18n="sess.n9">Hit the problem fast. Skip lengthy descriptions of what the audience already knows.</li>
+          <li data-i18n="sess.n2">Plain language over technical jargon (investors aren't engineers)</li>
+          <li data-i18n="sess.n1">One slide, one message (no mixing problem, solution and traction on the same page)</li>
+          <li data-i18n="sess.n8">Big text on slides. If the audience is reading, they are not listening to you.</li>
+          <li data-i18n="sess.n4">Global market strategy. A clear plan for the target region (Europe, US, SEA), not generic "global expansion".</li>
+          <li data-i18n="sess.n5">Target market competitive analysis. Name the biggest competitor and beat them on one specific metric.</li>
+          <li data-i18n="sess.n7">All traction on one strong slide, ordered by credibility (revenue &gt; users &gt; MOUs &gt; awards)</li>
           <li data-i18n="sess.n6">Funding ask with amount, use of funds, and 12–18 month milestones</li>
-          <li data-i18n="sess.n7">All traction on one strong slide (not spread across many slides)</li>
         </ul>
       </div>
     </div>
@@ -2163,7 +2172,7 @@
       'coach.p1Title': '프랑스 본사 글로벌 스타트업 액셀러레이터 Hack40의 CEO',
       'coach.p1Body': '파리, 싱가포르, 서울, 도쿄에서 활동하는 글로벌 액셀러레이터 Hack40의 창업자. 13년 이상에 걸쳐 이들 시장에서 수백만 달러 규모의 비즈니스를 구축하고 운영해 왔습니다 (서울 3년 거주).',
       'coach.p2Title': '한국과 글로벌 비즈니스 스타일을 잇다',
-      'coach.p2Body': '한국 스타트업의 커뮤니케이션 스타일을 해외 VC, 기업, 심사위원이 실제로 반응하는 방식과 잇습니다.',
+      'coach.p2Body': '한국 스타트업이 실제로 피칭하는 방식과 글로벌 투자자가 기대하는 것을 잇습니다.',
       'coach.p3Title': '글로벌 VC 및 기업 파트너 네트워크',
       'coach.p3Body': '아시아 및 유럽 전역의 VC와 기업 오픈이노베이션 분야에서 활동 중.',
       'coach.kakao': '카카오톡으로 문의',
@@ -2197,14 +2206,17 @@
       'sess.s4Body': '투자자 스타일 질문에 스타트업이 피칭을 방어합니다. 약한 답변은 재구성하고 강한 답변은 사전에 준비합니다.',
       'sess.s5Title': '액션 아이템 및 다음 단계',
       'sess.s5Body': '스타트업은 다음 피칭을 위한 수정 사항이 기록된 리스트와 함께 세션을 마칩니다.',
-      'sess.needsTitle': '스타트업이 일반적으로 개선해야 할 부분',
-      'sess.n0': '회사 소개나 CEO 이력으로 시작하지 말 것. 배경, 문제, 솔루션으로 시작하기.',
-      'sess.n7': '모든 트랙션을 한 장의 강력한 슬라이드에 (여러 슬라이드에 흩어놓지 않기)',
+      'sess.needsTitle': '글로벌 피치덱 표준',
+      'sess.needsLead': '한국 IR 장표는 글로벌 평가자가 관심 없는 내용을 항상 포함합니다. 피칭은 회사의 기술을 자랑하는 것이 아니라 청중을 사로잡는 것입니다.',
+      'sess.n9': '문제를 빠르게 짚을 것. 청중이 이미 아는 내용을 길게 설명하지 말 것.',
+      'sess.n0': '배경, 문제, 솔루션으로 시작하기. 회사 소개, CEO 이력, 기술/특허 자랑이 아닌.',
+      'sess.n7': '모든 트랙션을 한 장의 강력한 슬라이드에, 신뢰도 순으로 (매출 > 사용자 > MOU > 수상)',
+      'sess.n8': '슬라이드 텍스트는 크게. 청중이 읽고 있으면 듣고 있지 않습니다.',
       'sess.n1': '한 슬라이드, 하나의 메시지 (문제·솔루션·트랙션을 한 페이지에 섞지 않기)',
       'sess.n2': '기술 용어 대신 일반 언어 사용 (투자자는 엔지니어가 아닙니다)',
       'sess.n3': '한 줄로 정의되는 태그라인 (1초 안에 카테고리가 인식되도록)',
-      'sess.n4': '시장 규모와 현실적인 GTM의 연결 (단순 TAM이 아닌 점유 논리)',
-      'sess.n5': '경쟁 우위를 앞쪽에 보여주기 (기술 세부사항 뒤에 숨기지 않기)',
+      'sess.n4': '글로벌 시장 전략. 진출 지역(유럽, 미국, 동남아 등)에 맞춘 명확한 계획, 막연한 "글로벌 진출"이 아닌.',
+      'sess.n5': '타겟 시장 경쟁 분석. 가장 큰 경쟁자를 직접 언급하고 하나의 구체적 지표로 이길 것.',
       'sess.n6': '펀딩 요청: 금액, 사용처, 12~18개월 마일스톤',
 
       // Workshops / Masterclass
