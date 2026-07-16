@@ -465,6 +465,110 @@
       font-weight: 400;
       line-height: 1.55;
     }
+    /* --- CASE STUDIES --- */
+    .case-block { background: var(--bg); }
+    .case-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .case-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 26px 24px;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .case-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .case-market {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--indigo);
+      background: rgba(79,70,229,0.07);
+      padding: 4px 12px;
+      border-radius: 50px;
+      margin-bottom: 16px;
+    }
+    .case-card h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 2px;
+      line-height: 1.3;
+    }
+    .case-logo { margin-bottom: 12px; }
+    .case-logo img {
+      height: 26px;
+      width: auto;
+      max-width: 165px;
+      object-fit: contain;
+      object-position: left center;
+      display: block;
+    }
+    .case-logo-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.15;
+    }
+    .case-name-ko { display: none; }
+    html[lang="ko"] .case-name-ko {
+      display: block;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: -2px 0 12px;
+    }
+    .case-sector {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .case-body {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .case-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .case-tag {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      padding: 5px 11px;
+      border-radius: 50px;
+    }
+    .case-logo.lg img { height: 32px; max-width: 180px; }
+    .case-logo.sm img { height: 21px; }
+    .case-points { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .case-points li {
+      font-size: 0.82rem;
+      line-height: 1.45;
+      color: var(--text-secondary);
+      padding-left: 14px;
+      position: relative;
+    }
+    .case-points li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--indigo);
+    }
+    .case-points strong { color: var(--text); font-weight: 700; }
     .sectors-block { margin-top: 44px; }
     .sectors-label {
       font-size: 0.72rem;
@@ -921,12 +1025,12 @@
     <div class="container">
       <p class="section-label" data-i18n="report.label">The deliverable</p>
       <h2 class="section-title" data-i18n="report.title">What's inside <span class="accent">each report</span>.</h2>
-      <p class="report-lead" data-i18n="report.lead">A comprehensive study built for each company's product and target market, delivered in presentation format. Made for market entry decisions and concrete first steps.</p>
+      <p class="report-lead" data-i18n="report.lead">A comprehensive study built from scratch for each company's product and target market, grounded in cited market data and direct outreach. Delivered as a detailed slide presentation, made for market entry decisions and concrete first steps.</p>
 
       <div class="report-cards">
         <div class="report-card">
           <h3 data-i18n="report.r1t">Market overview and trends</h3>
-          <p data-i18n="report.r1b">Market size, growth, and the trends that matter for the company's product in the target market.</p>
+          <p data-i18n="report.r1b">Market size, growth rates, and product-relevant trends, backed by cited industry data and named sources.</p>
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r2t">Target market segments</h3>
@@ -934,11 +1038,11 @@
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r3t">Market access and regulation</h3>
-          <p data-i18n="report.r3b">Entry routes, approvals, duties, and the regulatory path, mapped before money is spent.</p>
+          <p data-i18n="report.r3b">Entry routes, certifications, duties, and the regulatory path, mapped before money is spent.</p>
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r4t">Competitive landscape</h3>
-          <p data-i18n="report.r4b">Local and global competitors, their pricing and positioning, and the gap the company can target.</p>
+          <p data-i18n="report.r4b">Local and global competitors benchmarked by pricing, positioning, revenue, and HQ, plus the gap the company can target.</p>
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r5t">Potential partners and distributors</h3>
@@ -1036,6 +1140,84 @@
     </div>
   </section>
 
+  <!-- 4b. CASE STUDIES -->
+  <section class="case-block" id="case-studies">
+    <div class="container">
+      <p class="section-label" data-i18n="case.label">Case studies</p>
+      <h2 class="section-title" data-i18n="case.title">A few <span class="accent">recent studies</span>.</h2>
+      <p class="report-lead" data-i18n="case.lead">A few of the company-specific studies delivered, across different markets and sectors.</p>
+
+      <div class="case-cards">
+        <div class="case-card">
+          <span class="case-market">&#127480;&#127468; <span data-i18n="case.c1market">Singapore</span></span>
+          <div class="case-logo"><img src="logos-white/case-dabeeo.svg" alt="Dabeeo"></div>
+          <span class="case-name-ko">다비오</span>
+          <p class="case-sector" data-i18n="case.c1sector">Indoor mapping and digital signage</p>
+          <ul class="case-points">
+            <li data-i18n="case.c1p1"><strong>Market:</strong> Singapore smart-mall &amp; signage</li>
+            <li data-i18n="case.c1p2"><strong>Competitors:</strong> local players analysed</li>
+            <li data-i18n="case.c1p3"><strong>Partners:</strong> retail bodies &amp; malls, with contacts</li>
+          </ul>
+        </div>
+        <div class="case-card">
+          <span class="case-market">&#127480;&#127468; <span data-i18n="case.c2market">Singapore</span></span>
+          <div class="case-logo"><img src="logos-white/case-redtable.png" alt="Red Table"></div>
+          <span class="case-name-ko">레드테이블</span>
+          <p class="case-sector" data-i18n="case.c2sector">K-food restaurant booking platform</p>
+          <ul class="case-points">
+            <li data-i18n="case.c2p1"><strong>Market:</strong> Singapore dining, segmented</li>
+            <li data-i18n="case.c2p2"><strong>Competitors:</strong> local booking apps benchmarked</li>
+            <li data-i18n="case.c2p3"><strong>Partners:</strong> restaurant groups &amp; agencies, with contacts</li>
+          </ul>
+        </div>
+        <div class="case-card">
+          <span class="case-market">&#127462;&#127466; <span data-i18n="case.c3market">Middle East</span></span>
+          <div class="case-logo"><img src="logos-white/case-alicorn.png" alt="Alicorn"></div>
+          <span class="case-name-ko">알리콘</span>
+          <p class="case-sector" data-i18n="case.c3sector">IoT for smart offices and spaces</p>
+          <ul class="case-points">
+            <li data-i18n="case.c3p1"><strong>Market:</strong> UAE smart-office &amp; IoT, sized</li>
+            <li data-i18n="case.c3p2"><strong>Regulation:</strong> UAE IoT rules (TDRA, local presence)</li>
+            <li data-i18n="case.c3p3"><strong>Partners:</strong> named market-entry contacts</li>
+          </ul>
+        </div>
+        <div class="case-card">
+          <span class="case-market">&#127466;&#127482; <span data-i18n="case.c4market">Europe</span></span>
+          <div class="case-logo lg"><img src="logos-white/case-awesomelab.png" alt="Awesome Lab"></div>
+          <span class="case-name-ko">어썸랩</span>
+          <p class="case-sector" data-i18n="case.c4sector">Portable outdoor water heater</p>
+          <ul class="case-points">
+            <li data-i18n="case.c4p1"><strong>Market:</strong> Europe camping &amp; outdoor gear, sized</li>
+            <li data-i18n="case.c4p2"><strong>Entry:</strong> full ManoMano process, EU&ndash;Korea FTA</li>
+            <li data-i18n="case.c4p3"><strong>Partners:</strong> named market-entry contacts</li>
+          </ul>
+        </div>
+        <div class="case-card">
+          <span class="case-market">&#127467;&#127479;&#127468;&#127463; <span data-i18n="case.c5market">France / UK</span></span>
+          <div class="case-logo sm"><img src="logos-white/case-yeatu.png" alt="Yeatu"></div>
+          <span class="case-name-ko">예투</span>
+          <p class="case-sector" data-i18n="case.c5sector">Art investment and artist matching platform</p>
+          <ul class="case-points">
+            <li data-i18n="case.c5p1"><strong>Market:</strong> UK &amp; France art market, sized</li>
+            <li data-i18n="case.c5p2"><strong>Competitors:</strong> art-investment platforms benchmarked</li>
+            <li data-i18n="case.c5p3"><strong>Partners:</strong> galleries &amp; institutions, with contacts</li>
+          </ul>
+        </div>
+        <div class="case-card">
+          <span class="case-market">&#127462;&#127482; <span data-i18n="case.c6market">Australia</span></span>
+          <div class="case-logo"><img src="logos-white/case-sungwang.png" alt="Sungwang E&amp;F"></div>
+          <span class="case-name-ko">성왕이앤에프</span>
+          <p class="case-sector" data-i18n="case.c6sector">Eco-friendly wooden tableware</p>
+          <ul class="case-points">
+            <li data-i18n="case.c6p1"><strong>Market:</strong> Australia biodegradable tableware, sized</li>
+            <li data-i18n="case.c6p2"><strong>Certification:</strong> composting rules (AS 4736)</li>
+            <li data-i18n="case.c6p3"><strong>Competitors:</strong> local &amp; Amazon benchmarked</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- 5. FINAL CTA -->
   <section class="final-cta-block">
     <div class="container">
@@ -1066,12 +1248,12 @@
           <div class="faq-answer" data-i18n="faq.a1">12+ markets delivered so far: the US, France, the EU, the UK, Eastern Europe, the Middle East, Japan, China, Singapore, Vietnam, Thailand, and Australia. Each study is built for the specific target market.</div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="faq.q4">Do you specialize in specific industries?</summary>
+          <summary data-i18n="faq.q4">Which industries have you covered?</summary>
           <div class="faq-answer" data-i18n="faq.a4">Studies delivered since 2022 covered travel tech, deep tech, advanced materials, cleantech, agritech and food, medtech, beauty, fintech, IoT, AI and SaaS, B2B platforms, and web3. The report structure stays the same. The research is adapted to each product and target market.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q2">What language are the deliverables in?</summary>
-          <div class="faq-answer" data-i18n="faq.a2">Reports are delivered in English, in presentation format. Kick-off, review, and business matching meetings are also held in English, proven with Korean founders across 200+ sessions since 2019.</div>
+          <div class="faq-answer" data-i18n="faq.a2">Reports are delivered in English, in presentation format. Kick-off, review, and business matching meetings are also held in English, proven with Korean founders across 200+ sessions since 2022.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q3">How does invoicing work? Can you issue a Korean tax invoice (&#49464;&#44552;&#44228;&#49328;&#49436;)?</summary>
@@ -1114,7 +1296,7 @@
       'hero.subtitle': '기업별 맞춤 시장조사 보고서 1건과 2~3회의 파트너 미팅. 2022년부터 KTO, NIPA, Innopolis, 경북창조경제혁신센터, K-GLOBAL 프로그램에 제공해 왔습니다.',
       'hero.cta': '30분 상담 예약하기',
       'hero.cross': 'IR 피칭 컨설팅 보기',
-      'hero.trust': '시장조사 수행 파트너',
+      'hero.trust': '시장조사 제공 기관',
 
       // Numbers
       'num.s1': '시장조사 보고서 납품 (2022년 이후)',
@@ -1125,17 +1307,17 @@
       // Report
       'report.label': '산출물',
       'report.title': '보고서에 <span class="accent">담기는 내용</span>.',
-      'report.lead': '각 기업의 제품과 타겟 시장에 맞춰 처음부터 작성하는 종합 보고서입니다. 영문 PPT 형식으로 제공되며, 시장 진출 결정과 구체적인 첫 단계를 위한 자료입니다.',
+      'report.lead': '각 기업의 제품과 타겟 시장에 맞춰 처음부터 작성하는 종합 보고서입니다. 출처가 명확한 시장 데이터와 현지 접촉을 기반으로 하며, 상세한 슬라이드 형식으로 제공됩니다. 시장 진출 결정과 구체적인 첫 단계를 위한 자료입니다.',
       'report.r1t': '시장 개요 및 트렌드',
-      'report.r1b': '타겟 시장의 규모와 성장률, 그리고 제품과 직결되는 핵심 트렌드.',
+      'report.r1b': '타겟 시장의 규모와 성장률, 제품과 직결되는 트렌드를 출처가 명확한 업계 데이터로 정리합니다.',
       'report.r2t': '타겟 세그먼트',
-      'report.r2b': '세그먼트별 규모와 우선순위. 제품이 실제로 적합한 지점과 초기 고객.',
+      'report.r2b': '세그먼트별 규모와 우선순위를 분석해, 제품이 실제로 통하는 지점과 초기 고객을 짚어냅니다.',
       'report.r3t': '시장 진출 및 규제',
-      'report.r3b': '진출 경로, 인허가, 관세, 규제 절차를 투자 전에 미리 파악합니다.',
+      'report.r3b': '진출 경로, 인증, 인허가, 관세, 규제 절차를 투자 전에 미리 파악합니다.',
       'report.r4t': '경쟁 구도',
-      'report.r4b': '현지 및 글로벌 경쟁사, 가격과 포지셔닝, 그리고 공략 가능한 틈새.',
+      'report.r4b': '현지 및 글로벌 경쟁사를 가격, 포지셔닝, 매출, 본사 기준으로 분석하고, 공략 가능한 틈새를 찾습니다.',
       'report.r5t': '잠재 파트너 및 유통사',
-      'report.r5b': '사전 발굴과 사전 접촉을 마친 현지 파트너. 담당자 연락처와 관심도까지 포함.',
+      'report.r5b': '사전에 발굴하고 접촉을 마친 현지 파트너를 담당자 연락처와 관심도까지 함께 전달합니다.',
       'report.sectorsLabel': '2022년 이후 조사한 분야',
       'report.sec1': '여행·관광 테크',
       'report.sec2': '딥테크·로보틱스',
@@ -1163,6 +1345,40 @@
       'mkt.au': '호주',
 
       // Process
+      'case.label': '사례',
+      'case.title': '최근 <span class="accent">조사 사례</span>.',
+      'case.lead': '다양한 시장과 산업에서 진행한 기업별 맞춤 조사 사례입니다.',
+      'case.c1market': '싱가포르',
+      'case.c1sector': '실내 지도 및 디지털 사이니지',
+      'case.c1p1': '<strong>시장:</strong> 싱가포르 스마트몰·사이니지',
+      'case.c1p2': '<strong>경쟁사:</strong> 현지 업체 분석',
+      'case.c1p3': '<strong>파트너:</strong> 유통 협회·몰 운영사, 연락처 포함',
+      'case.c2market': '싱가포르',
+      'case.c2sector': 'K-푸드 레스토랑 예약 플랫폼',
+      'case.c2p1': '<strong>시장:</strong> 싱가포르 외식, 커뮤니티별 세분화',
+      'case.c2p2': '<strong>경쟁사:</strong> 현지 예약 앱 벤치마크',
+      'case.c2p3': '<strong>파트너:</strong> 레스토랑 그룹·에이전시, 연락처 포함',
+      'case.c3market': '중동',
+      'case.c3sector': '스마트 오피스·공간 IoT',
+      'case.c3p1': '<strong>시장:</strong> UAE 스마트 오피스·IoT 규모 산정',
+      'case.c3p2': '<strong>규제:</strong> UAE IoT 규정 (TDRA, 현지 법인)',
+      'case.c3p3': '<strong>파트너:</strong> 시장 진입 파트너, 연락처 포함',
+      'case.c4market': '유럽',
+      'case.c4sector': '휴대용 아웃도어 온수기',
+      'case.c4p1': '<strong>시장:</strong> 유럽 캠핑·아웃도어 장비 규모 산정',
+      'case.c4p2': '<strong>진입:</strong> ManoMano 입점 절차, 한-EU FTA',
+      'case.c4p3': '<strong>파트너:</strong> 시장 진입 파트너, 연락처 포함',
+      'case.c5market': '프랑스·영국',
+      'case.c5sector': '미술 투자 및 아티스트 매칭 플랫폼',
+      'case.c5p1': '<strong>시장:</strong> 영국·프랑스 미술 시장 규모 산정',
+      'case.c5p2': '<strong>경쟁사:</strong> 미술 투자 플랫폼 벤치마크',
+      'case.c5p3': '<strong>파트너:</strong> 갤러리·미술 기관, 연락처 포함',
+      'case.c6market': '호주',
+      'case.c6sector': '친환경 목재 식기',
+      'case.c6p1': '<strong>시장:</strong> 호주 생분해성 식기 규모 산정',
+      'case.c6p2': '<strong>인증:</strong> 퇴비화 인증 (AS 4736)',
+      'case.c6p3': '<strong>경쟁사:</strong> 현지·아마존 벤치마크',
+
       'process.label': '진행 방식',
       'process.title': '킥오프부터 <span class="accent">파트너 미팅까지</span>.',
       'process.lead': '기수당 약 12주의 고정 범위로, 프로그램 일정과 보고 기한에 맞춰 진행합니다.',
@@ -1180,7 +1396,7 @@
       'process.s4b': '보고서에서 발굴한 잠재 파트너와 2~3회의 미팅을 주선하고, 스타트업과 함께 진행합니다.',
 
       // Needs block
-      'needs.title': '프로그램 담당자를 위한 설계',
+      'needs.title': '프로그램 담당자를 위한 구성',
       'needs.lead': '2022년부터 7개 한국 액셀러레이터 및 정부지원사업을 거치며 다듬어진 포맷입니다. 조달, 보고, 기수 일정에 맞게 운영됩니다.',
       'needs.n1': '기업별 맞춤 보고서: 제품과 타겟 시장 기준',
       'needs.n2': '킥오프에서 범위, 예산, 일정 확정',
@@ -1192,7 +1408,7 @@
       // Final CTA
       'cta.title': '<span class="accent">시장조사 프로그램</span>을 계획 중이신가요?',
       'cta.subtitle': '30분 통화로 프로그램 범위, 타겟 시장, 일정을 조율해 보세요.',
-      'cta.button': '30분 미팅 신청하기',
+      'cta.button': '30분 상담 예약하기',
       'cta.kakao': '카카오톡으로 문의',
 
       // FAQ
@@ -1200,10 +1416,10 @@
       'faq.title': '자주 묻는 <span class="accent">질문</span>.',
       'faq.q1': '어떤 시장을 조사할 수 있나요?',
       'faq.a1': '지금까지 12개 이상의 시장을 조사했습니다: 미국, 프랑스, EU, 영국, 동유럽, 중동, 일본, 중국, 싱가포르, 베트남, 태국, 호주. 각 조사는 해당 타겟 시장에 맞춰 작성됩니다.',
-      'faq.q4': '특정 산업에 전문화되어 있나요?',
+      'faq.q4': '어떤 산업을 조사해 오셨나요?',
       'faq.a4': '2022년 이후 여행 테크, 딥테크, 첨단 소재, 클린테크, 애그테크·푸드, 메드테크, 뷰티, 핀테크, IoT, AI·SaaS, B2B 플랫폼, 웹3 분야를 조사했습니다. 보고서 구조는 동일하며, 조사는 각 제품과 타겟 시장에 맞춰 조정됩니다.',
       'faq.q2': '결과물은 어떤 언어로 제공되나요?',
-      'faq.a2': '보고서는 영문 PPT 형식으로 제공됩니다. 킥오프, 리뷰, 비즈니스 매칭 미팅도 영어로 진행하며, 2019년 이후 한국 창업자와 200회 이상의 세션으로 검증되었습니다.',
+      'faq.a2': '보고서는 영문 PPT 형식으로 제공됩니다. 킥오프, 리뷰, 비즈니스 매칭 미팅도 영어로 진행하며, 2022년 이후 한국 창업자와 200회 이상의 세션으로 검증되었습니다.',
       'faq.q3': '인보이스는 어떻게 발행되나요? 세금계산서 발행이 가능한가요?',
       'faq.a3': 'Carte Blanche SAS는 프랑스 법인으로, 세금계산서 대신 국제 상업 인보이스(international commercial invoice)를 발행합니다. 필요 시 귀 기관 앞으로 직접 발행할 수 있습니다. 정부지원사업의 경우, 계약 및 프로젝트 기간 중 요청되는 추가 행정 서류도 제공하며, 한국어 작성이 필요한 서류도 준비합니다.',
 
