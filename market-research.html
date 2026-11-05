@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sofian Meguellati · Global Market Research for Korean startup programs</title>
-  <meta name="description" content="Comprehensive market research and business matching for Korean startups going overseas. 50+ reports delivered since 2022 for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-GLOBAL programs.">
+  <meta name="description" content="Market research and business matching for Korean startups going overseas. 50+ reports and 130+ business matching meetings since 2022, for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-Global programs.">
   <meta property="og:title" content="Sofian Meguellati · Global Market Research for Korean startup programs">
-  <meta property="og:description" content="Comprehensive market research and business matching for Korean startups going overseas. 50+ reports delivered since 2022 for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-GLOBAL programs.">
+  <meta property="og:description" content="Market research and business matching for Korean startups going overseas. 50+ reports and 130+ business matching meetings since 2022, for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-Global programs.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sofian.global/market-research">
   <meta property="og:image" content="https://sofian.global/og-image-market-research.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sofian Meguellati · Global Market Research for Korean startup programs">
-  <meta name="twitter:description" content="Comprehensive market research and business matching for Korean startups going overseas. 50+ reports delivered since 2022 for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-GLOBAL programs.">
+  <meta name="twitter:description" content="Market research and business matching for Korean startups going overseas. 50+ reports and 130+ business matching meetings since 2022, for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-Global programs.">
   <meta name="twitter:image" content="https://sofian.global/og-image-market-research.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -20,7 +20,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -53,7 +54,7 @@
     html[lang="ko"] { word-break: keep-all; }
 
     body {
-      font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -151,6 +152,27 @@
       transform: translateY(0) scale(0.96);
       transition-duration: 0.1s;
     }
+    .nav-links a.nav-poc {
+      background: #B45309;
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(217,119,6,0.18);
+      transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+    }
+    .nav-links a.nav-poc:hover {
+      background: #92400E;
+      color: #fff !important;
+      box-shadow: 0 4px 16px rgba(217,119,6,0.35);
+      transform: translateY(-1px);
+    }
+    .nav-links a.nav-poc:active {
+      transform: translateY(0) scale(0.96);
+      transition-duration: 0.1s;
+    }
+    /* Nav with 2 service buttons: labels on one line, secondary links hidden when space runs out */
+    .nav-links a { white-space: nowrap; }
 
     /* Cross-page fade for the service switcher */
     #pageFade {
@@ -569,6 +591,33 @@
       background: var(--indigo);
     }
     .case-points strong { color: var(--text); font-weight: 700; }
+    .case-card .case-sector-title { margin-bottom: 14px; }
+    .delivered-block .case-card { display: flex; flex-direction: column; align-items: flex-start; }
+    .delivered-block .case-points { margin-bottom: 18px; }
+    .delivered-block { background: var(--bg-alt); }
+    .delivered-block .case-card { overflow: hidden; }
+    .case-cover {
+      align-self: stretch;
+      margin: -26px -24px 18px;
+      aspect-ratio: 2.2 / 1;
+      background: var(--bg-alt);
+      overflow: hidden;
+    }
+    .case-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .case-meet {
+      align-self: stretch;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .case-meet-label {
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
     .sectors-block { margin-top: 44px; }
     .sectors-label {
       font-size: 0.72rem;
@@ -595,7 +644,7 @@
     }
 
     /* --- PROCESS STEPS --- */
-    .process-block { background: var(--bg-alt); }
+    .process-block { background: var(--bg); }
     .session-lead {
       font-size: 1.1rem;
       color: var(--text-secondary);
@@ -788,7 +837,7 @@
       color: var(--indigo);
       font-weight: 400;
       line-height: 1;
-      transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .faq-item[open] summary::after {
       transform: translateY(-50%) rotate(45deg);
@@ -799,8 +848,9 @@
       line-height: 1.7;
       font-size: 0.96rem;
       overflow: hidden;
-      transition: height 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: height 0.28s cubic-bezier(0.4, 0, 0.2, 1), padding-bottom 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .faq-item.is-closing summary::after { content: '+'; transform: translateY(-50%) rotate(0deg); }
 
     /* --- FOOTER --- */
     footer {
@@ -885,6 +935,7 @@
       .nav-links.open li:nth-child(3) { transition-delay: 0.11s; }
       .nav-links.open li:nth-child(4) { transition-delay: 0.14s; }
       .nav-links.open li:nth-child(5) { transition-delay: 0.17s; }
+      .nav-links.open li:nth-child(6) { transition-delay: 0.20s; }
       .nav-mobile-toggle {
         display: block;
         transition: transform 0.25s ease;
@@ -930,6 +981,96 @@
       .final-cta-block .cta-row .btn { width: 100%; max-width: 360px; justify-content: center; }
       .footer-legal { font-size: 0.68rem !important; line-height: 1.7 !important; padding: 0 8px; }
     }
+
+    /* Korean typography: values measured on Korean sites (research, Nov 2026) */
+    html[lang="ko"] { word-break: keep-all; overflow-wrap: break-word; }
+    html[lang="ko"] body { line-height: 1.7; }
+    html[lang="ko"] .section-label { font-size: 13px; letter-spacing: 0; }
+    html[lang="ko"] .section-title { font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+    html[lang="ko"] .hero h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; }
+    @media (max-width: 640px) {
+      html[lang="ko"] .hero h1 { font-size: 2rem; }
+      html[lang="ko"] .section-title { font-size: 1.625rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    .hero-email { font-size: 0.88rem; color: var(--text-muted); margin: 14px 0 0; position: relative; z-index: 1; }
+    .hero-email a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* --- Partner logos in tiles, in color --- */
+    .logo-tiles { list-style: none; margin: 18px auto 0; padding: 0; max-width: 1100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; position: relative; z-index: 1; }
+    .logo-tiles li { flex: 0 0 calc((100% - 48px) / 5); height: 84px; display: flex; align-items: center; justify-content: center; min-width: 0; padding: 0 18px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+    .logo-tiles li:hover { transform: translateY(-2px); border-color: rgba(79,70,229,0.3); box-shadow: var(--shadow-md); }
+    .logo-tiles img { display: block; max-height: 34px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+    .logo-tiles img.logo-small { max-height: 26px; }
+    .logo-tiles img.logo-wide { max-height: 40px; }
+    .logo-tiles img.logo-tall { max-height: 54px; }
+    .logo-tiles img[src*="nipa"], .logo-tiles img[src*="kita"] { transform: scale(1.18); }
+    .logo-tiles .ccei-wrap { width: 100%; max-width: 150px; height: 36px; }
+    /* Optical balance: some source files are wide or carry extra whitespace */
+    .logo-tiles img[src*="kised"] { max-height: 30px; }
+    .logo-tiles img[src*="kb-financial"] { max-height: 28px; }
+    .logo-tiles img[src*="nipa"] { max-height: 40px; }
+    .logo-tiles img[src*="kto"] { max-height: 38px; }
+    .logo-tiles img.logo-small { max-height: 30px; }
+    @media (max-width: 768px) {
+      .logo-tiles { gap: 8px; margin-top: 16px; }
+      .logo-tiles li { flex-basis: calc((100% - 16px) / 3); height: 64px; padding: 0 10px; }
+      .logo-tiles img { max-height: 26px; }
+      .logo-tiles img.logo-small { max-height: 20px; }
+      .logo-tiles img.logo-wide { max-height: 30px; }
+      .logo-tiles img.logo-tall { max-height: 40px; }
+      .logo-tiles .ccei-wrap { height: 28px; }
+      .logo-tiles img[src*="kised"], .logo-tiles img[src*="kb-financial"] { max-height: 22px; }
+      .logo-tiles img[src*="nipa"] { max-height: 32px; }
+      .logo-tiles img[src*="kto"] { max-height: 30px; }
+      .logo-tiles img.logo-small { max-height: 24px; }
+    }
+
+    /* Hero: KakaoTalk next to the booking button */
+    @media (min-width: 961px) { .hero-copy .hero-ctas { justify-content: flex-start; } }
+    @media (max-width: 768px) {
+      .hero .hero-ctas { flex-direction: column; gap: 10px; }
+      .hero .hero-ctas .btn { width: 100%; max-width: 360px; justify-content: center; }
+    }
+    /* Line breaks: balanced titles, no word left alone on a last line */
+    h1, h2, h3, h4, summary { text-wrap: balance; }
+    p, li, .faq-answer, .label { text-wrap: pretty; }
+
+    /* --- HEADER: 4 links, thin separator, the two other services as outline chips, one filled "Book a call" --- */
+    .nav-links { gap: 22px; }
+    .nav-links li.nav-svc-group { display: flex; align-items: center; gap: 8px; padding-left: 20px; border-left: 1px solid var(--border); }
+    .nav-links a.nav-svc, .nav-links a.nav-svc:hover, .nav-links a.nav-svc:active { background: #fff; color: var(--text) !important; box-shadow: none; transform: none; }
+    .nav-links a.nav-svc { display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border: 1px solid var(--border); border-radius: 10px; font-weight: 600 !important; transition: border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links a.nav-svc:hover { border-color: #cbd5e1; box-shadow: 0 2px 8px rgba(16,24,40,0.06); }
+    .nav-links a.nav-svc::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links a.nav-svc.nav-ir::before { background: #00B4A0; }
+    .nav-links a.nav-svc.nav-mr::before { background: #4F46E5; }
+    .nav-links a.nav-svc.nav-poc::before { background: #D97706; }
+    /* Hover: a soft tint of each service colour that fades in */
+    .nav-links a.nav-svc:hover::before { transform: scale(1.3); }
+    .nav-links a.nav-svc.nav-ir:hover { background: rgb(0 180 160 / 0.07); border-color: rgb(0 180 160 / 0.4); }
+    .nav-links a.nav-svc.nav-mr:hover { background: rgb(79 70 229 / 0.06); border-color: rgb(79 70 229 / 0.35); }
+    .nav-links a.nav-svc.nav-poc:hover { background: rgb(217 119 6 / 0.07); border-color: rgb(217 119 6 / 0.4); }
+    .nav-links a.nav-cta { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 10px; background: var(--indigo); color: #fff !important; font-weight: 700 !important; box-shadow: none; transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links a.nav-cta:hover { background: var(--indigo-dark); color: #fff !important; box-shadow: 0 4px 14px rgba(79,70,229,0.3); transform: translateY(-1px); }
+    .lang-btn.active { background: #1a1a1a; color: #fff; box-shadow: none; }
+    .lang-btn { transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links li > a:not(.nav-svc):not(.nav-cta) { transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    @media (max-width: 1180px) and (min-width: 769px) { .nav-links .nav-hide-md { display: none; } }
+    @media (max-width: 1000px) and (min-width: 769px) { .nav-links .nav-hide-sm { display: none; } }
+    @media (max-width: 900px) and (min-width: 769px) {
+      .nav-links .nav-hide-xs { display: none; }
+      .nav-links { gap: 14px; }
+      .nav-links li.nav-svc-group { padding-left: 14px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { align-items: stretch; }
+      .nav-links li.nav-svc-group { flex-wrap: wrap; padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--border); }
+      .nav-links a.nav-cta { display: flex; justify-content: center; padding: 13px 18px; }
+    }
   </style>
 </head>
 <body>
@@ -958,11 +1099,15 @@
     <div class="nav-inner">
       <a href="/" class="nav-logo">sofian<span>.global</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#track-record" data-i18n="nav.track">Track record</a></li>
-        <li><a href="#report" data-i18n="nav.report">The report</a></li>
-        <li><a href="#process" data-i18n="nav.process">Process</a></li>
-        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
-        <li><a href="/" class="nav-ir" data-i18n="nav.ir">IR Pitch Consulting</a></li>
+        <li class="nav-hide-xs"><a href="#track-record" data-i18n="nav.track">Track record</a></li>
+        <li class="nav-hide-md"><a href="#report" data-i18n="nav.report">The report</a></li>
+        <li class="nav-hide-md"><a href="#process" data-i18n="nav.process">Process</a></li>
+        <li class="nav-hide-sm"><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-svc-group">
+          <a href="/" class="nav-ir nav-svc" data-i18n="nav.ir">IR Pitch Consulting</a>
+          <a href="global-poc" class="nav-poc nav-svc" data-i18n="nav.poc">Global POC</a>
+        </li>
+        <li><a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.cta">Book a call</a></li>
       </ul>
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLang('en')" id="langEn"><span class="flag">&#127468;&#127463;</span><span class="lang-code">EN</span></button>
@@ -977,24 +1122,31 @@
     <div class="container">
       <div class="hero-eyebrow">
         <span class="pulse-dot"></span>
-        <span data-i18n="hero.eyebrow">Now booking 2026 market research programs</span>
+        <span data-i18n="hero.eyebrow">Now booking 2027 market research programs</span>
       </div>
       <h1 data-i18n="hero.title"><em>Global market research</em> for Korean startups going overseas.</h1>
-      <p class="subtitle" data-i18n="hero.subtitle">One tailored market study and 2 to 3 partner meetings per company. Delivered since 2022 for KTO, NIPA, Innopolis, Gyeongbuk CCEI and K-GLOBAL programs.</p>
-      <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
-        <span data-i18n="hero.cta">Book a discovery call</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="/" class="hero-cross"><span data-i18n="hero.cross">Explore IR pitch consulting</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <p class="subtitle" data-i18n="hero.subtitle">One tailored market study and 2 to 3 business matching meetings per company.<br>Delivered since 2022 for KTO, NIPA, Innopolis, Gyeongbuk CCEI and <span style="white-space: nowrap;">K-Global programs.</span></p>
+      <div class="cta-row hero-ctas">
+        <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <span data-i18n="hero.cta">Book a 30-min call</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
+          <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
+          <span data-i18n="cta.kakao">Chat on KakaoTalk</span>
+        </a>
+      </div>
+      <p class="hero-email" data-i18n="hero.email">Or write to <a href="mailto:sofian@hack40.com">sofian@hack40.com</a></p>
+      <a href="/" class="hero-cross"><span data-i18n="hero.cross">See IR pitch consulting</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 
       <p class="trust-strip-label" data-i18n="hero.trust">Market research delivered for</p>
-      <div class="trust-strip" aria-label="Market research program partners">
-        <img src="logos-white/kto.png" alt="KTO" title="KTO">
-        <img src="logos-white/nipa.png" alt="NIPA" title="NIPA">
-        <img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis">
-        <img src="logos-white/msit.webp" alt="Ministry of Science and ICT" title="Ministry of Science and ICT (K-GLOBAL)" class="logo-tall">
-        <span class="ccei-wrap"><img src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI"></span>
-      </div>
+      <ul class="logo-tiles" aria-label="Market research program partners">
+        <li><img src="logos-white/kto.png" alt="KTO" title="KTO"></li>
+        <li><img src="logos-white/nipa.png" alt="NIPA" title="NIPA"></li>
+        <li><img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis"></li>
+        <li><img src="logos-white/msit.webp" alt="Ministry of Science and ICT" title="Ministry of Science and ICT (K-Global)" class="logo-tall"></li>
+        <li><span class="ccei-wrap"><img src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI"></span></li>
+      </ul>
     </div>
   </section>
 
@@ -1025,16 +1177,16 @@
     <div class="container">
       <p class="section-label" data-i18n="report.label">The deliverable</p>
       <h2 class="section-title" data-i18n="report.title">What's inside <span class="accent">each report</span>.</h2>
-      <p class="report-lead" data-i18n="report.lead">A comprehensive study built from scratch for each company's product and target market, grounded in cited market data and direct outreach. Delivered as a detailed slide presentation, made for market entry decisions and concrete first steps.</p>
+      <p class="report-lead" data-i18n="report.lead">Each study is written for one company, its product and its target market. It uses cited market data and direct contact with local companies. You receive it as a detailed slide deck.</p>
 
       <div class="report-cards">
         <div class="report-card">
           <h3 data-i18n="report.r1t">Market overview and trends</h3>
-          <p data-i18n="report.r1b">Market size, growth rates, and product-relevant trends, backed by cited industry data and named sources.</p>
+          <p data-i18n="report.r1b">Market size, growth and the trends that matter for the product, with named sources.</p>
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r2t">Target market segments</h3>
-          <p data-i18n="report.r2b">Segment sizing and prioritization: where the product actually fits and who buys first.</p>
+          <p data-i18n="report.r2b">The size of each segment, where the product fits best, and who is likely to buy first.</p>
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r3t">Market access and regulation</h3>
@@ -1042,11 +1194,11 @@
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r4t">Competitive landscape</h3>
-          <p data-i18n="report.r4b">Local and global competitors benchmarked by pricing, positioning, revenue, and HQ, plus the gap the company can target.</p>
+          <p data-i18n="report.r4b">Local and global competitors compared on price, positioning, revenue and headquarters, and the gap the company can use.</p>
         </div>
         <div class="report-card">
           <h3 data-i18n="report.r5t">Potential partners and distributors</h3>
-          <p data-i18n="report.r5b">Pre-identified and pre-contacted local partners, with named contacts and their level of interest.</p>
+          <p data-i18n="report.r5b">Local partners contacted before delivery, with the contact person and their level of interest.</p>
         </div>
       </div>
 
@@ -1069,7 +1221,7 @@
       </div>
 
       <div class="sectors-block">
-        <p class="sectors-label" data-i18n="report.marketsLabel">Markets reached since 2022</p>
+        <p class="sectors-label" data-i18n="report.marketsLabel">Markets researched since 2022</p>
         <div class="sector-chips">
           <span class="sector-chip">&#127482;&#127480; <span data-i18n="mkt.us">United States</span></span>
           <span class="sector-chip">&#127467;&#127479; <span data-i18n="mkt.fr">France</span></span>
@@ -1082,6 +1234,73 @@
           <span class="sector-chip">&#127483;&#127475; <span data-i18n="mkt.vn">Vietnam</span></span>
           <span class="sector-chip">&#127481;&#127469; <span data-i18n="mkt.th">Thailand</span></span>
           <span class="sector-chip">&#127462;&#127482; <span data-i18n="mkt.au">Australia</span></span>
+          <span class="sector-chip"><span data-i18n="mkt.ee">Eastern Europe</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b. DELIVERED THIS YEAR -->
+  <section class="case-block delivered-block" id="delivered">
+    <div class="container">
+      <p class="section-label" data-i18n="dlv.label">Delivered in 2026</p>
+      <h2 class="section-title" data-i18n="dlv.title">The <span class="accent">2026</span> cohort.</h2>
+      <p class="report-lead" data-i18n="dlv.lead">3 Korean startups in a 2026 tourism program. Each received a study built on its own questions, a review meeting, and 2 business matching meetings with partners from the report.</p>
+
+      <div class="case-cards">
+        <div class="case-card">
+          <div class="case-cover"><img src="case-covers/standardseoul.jpg" alt="Standard Seoul model and products" loading="lazy"></div>
+          <span class="case-market">&#127482;&#127480; <span data-i18n="dlv.c2market">United States</span></span>
+          <div class="case-logo lg"><img src="logos-white/case-standardseoul.png" alt="Standard Seoul"></div>
+          <h3 class="case-sector-title" data-i18n="dlv.c2sector">Korean skincare brand</h3>
+          <ul class="case-points">
+            <li data-i18n="dlv.c2p1"><strong>Market:</strong> Korean beauty demand in US retail, and what comparable Korean brands publish on their US sales.</li>
+            <li data-i18n="dlv.c2p2"><strong>Retail:</strong> how US chains buy and shelve skincare, regional differences, and how brands entered Olive Young US.</li>
+            <li data-i18n="dlv.c2p3"><strong>Entry:</strong> US claim wording, packaging and sizes, pop-ups, and a first 90-day&nbsp;plan.</li>
+          </ul>
+          <div class="case-meet">
+            <p class="case-meet-label" data-i18n="dlv.meet">Business matching</p>
+            <div class="case-tags">
+              <span class="case-tag" data-i18n="dlv.c2m1">Beauty market-entry specialist</span>
+              <span class="case-tag" data-i18n="dlv.c2m2">US K-beauty retailer</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-cover"><img src="case-covers/allkpop.jpg" alt="K-pop fans at a BTS landmark by the sea" loading="lazy"></div>
+          <span class="case-market">&#127482;&#127480; <span data-i18n="dlv.c3market">United States</span></span>
+          <div class="case-logo"><img src="logos-white/case-allkpop.png" alt="allkpop"></div>
+          <h3 class="case-sector-title" data-i18n="dlv.c3sector">K-pop media, Korea visit vouchers</h3>
+          <ul class="case-points">
+            <li data-i18n="dlv.c3p1"><strong>Demand:</strong> American visitors to Korea, and what US fans of Korean content want from the trip.</li>
+            <li data-i18n="dlv.c3p2"><strong>Spending:</strong> what American travelers pay for in Korea, and how media readers become paying buyers.</li>
+            <li data-i18n="dlv.c3p3"><strong>Entry:</strong> venue partners, social channels, payment, pre-trip partners, and a first 90-day&nbsp;plan.</li>
+          </ul>
+          <div class="case-meet">
+            <p class="case-meet-label" data-i18n="dlv.meet">Business matching</p>
+            <div class="case-tags">
+              <span class="case-tag" data-i18n="dlv.c3m1">Foreign creator platform in Seoul</span>
+              <span class="case-tag" data-i18n="dlv.c3m2">Seoul creator network</span>
+            </div>
+          </div>
+        </div>
+        <div class="case-card">
+          <div class="case-cover"><img src="case-covers/travut.jpg" alt="Korean craft gallery, from TRAVUT" loading="lazy"></div>
+          <span class="case-market">&#127467;&#127479; <span data-i18n="dlv.c1market">France</span></span>
+          <div class="case-logo lg"><img src="logos-white/case-travut.png" alt="TRAVUT"></div>
+          <h3 class="case-sector-title" data-i18n="dlv.c1sector">Luxury tailor-made travel in Korea</h3>
+          <ul class="case-points">
+            <li data-i18n="dlv.c1p1"><strong>Demand:</strong> French travelers to Korea, the high-end French buyer, and the booking season.</li>
+            <li data-i18n="dlv.c1p2"><strong>Positioning:</strong> Korea against Japan on experience and price, French agency objections, and competitors.</li>
+            <li data-i18n="dlv.c1p3"><strong>Channels:</strong> who sells Korea in France, luxury travel networks, and travel buyers inside luxury brands.</li>
+          </ul>
+          <div class="case-meet">
+            <p class="case-meet-label" data-i18n="dlv.meet">Business matching</p>
+            <div class="case-tags">
+              <span class="case-tag" data-i18n="dlv.c1m1">Paris tour operator</span>
+              <span class="case-tag" data-i18n="dlv.c1m2">Paris luxury travel agency</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1091,8 +1310,8 @@
   <section class="process-block" id="process">
     <div class="container">
       <p class="section-label" data-i18n="process.label">Process</p>
-      <h2 class="section-title" data-i18n="process.title">From kick-off to <span class="accent">partner meetings</span>.</h2>
-      <p class="session-lead" data-i18n="process.lead">A fixed scope over roughly 12 weeks per cohort, aligned with your program timeline and reporting deadlines.</p>
+      <h2 class="section-title" data-i18n="process.title">What happens in <span class="accent">the 12 weeks</span>.</h2>
+      <p class="session-lead" data-i18n="process.lead">The scope is fixed, and I plan the schedule around your program calendar and reporting deadlines.</p>
 
       <div class="session-steps">
         <div class="session-step">
@@ -1100,38 +1319,38 @@
           <span class="step-num">01</span>
           <h3 data-i18n="process.s1t">Kick-off meeting</h3>
           <span class="step-time" data-i18n="process.s1time">Week 1</span>
-          <p data-i18n="process.s1b">A structured interview with each startup: product and assets, international strategy, target market, competition, barriers to entry, and regulation. It defines exactly what the research must answer.</p>
+          <p data-i18n="process.s1b">An interview with each startup about its product and assets, international strategy, target market, competitors, barriers to entry and regulation. Together we set the questions the study must answer.</p>
         </div>
         <div class="session-step">
           <span class="step-num-big">02</span>
           <span class="step-num">02</span>
           <h3 data-i18n="process.s2t">Research and report</h3>
           <span class="step-time" data-i18n="process.s2time">Weeks 2 to 8</span>
-          <p data-i18n="process.s2b">In-depth research into the target market, delivered as a comprehensive report in presentation format.</p>
+          <p data-i18n="process.s2b">I research the target market and contact potential partners. You receive the report as an English slide deck.</p>
         </div>
         <div class="session-step">
           <span class="step-num-big">03</span>
           <span class="step-num">03</span>
           <h3 data-i18n="process.s3t">Review meeting</h3>
           <span class="step-time" data-i18n="process.s3time">Week 9</span>
-          <p data-i18n="process.s3b">Walkthrough of the findings with the startup and the program team, and agreement on the market entry next steps.</p>
+          <p data-i18n="process.s3b">We go through the findings with the startup and your program team, and agree on the next steps for market entry.</p>
         </div>
         <div class="session-step">
           <span class="step-num-big">04</span>
           <span class="step-num">04</span>
           <h3 data-i18n="process.s4t">Business matching</h3>
           <span class="step-time" data-i18n="process.s4time">Weeks 10 to 12</span>
-          <p data-i18n="process.s4b">2 to 3 meetings arranged and conducted with potential partners from the report, together with the startup.</p>
+          <p data-i18n="process.s4b">I set up 2 to 3 meetings with potential partners from the report, and I attend them with the startup.</p>
         </div>
       </div>
 
       <div class="needs-block">
         <h4 data-i18n="needs.title">Built for program managers</h4>
-        <p class="needs-lead" data-i18n="needs.lead">The format has been refined across 7 Korean accelerator and government programs since 2022. It fits procurement, reporting, and cohort timelines.</p>
+        <p class="needs-lead" data-i18n="needs.lead">I have run this format in 7 Korean accelerator and government programs since 2022. It fits public procurement and your reporting calendar.</p>
         <ul class="needs-list">
           <li data-i18n="needs.n1">One report per company, tailored to its product and target market</li>
-          <li data-i18n="needs.n2">Fixed scope, budget, and timeline agreed at kick-off</li>
-          <li data-i18n="needs.n3">English deliverables in presentation format</li>
+          <li data-i18n="needs.n2">Fixed scope, budget and timeline, set in the contract</li>
+          <li data-i18n="needs.n3">English deliverables, as a slide deck</li>
           <li data-i18n="needs.n4">2 to 3 business matching meetings per company</li>
           <li data-i18n="needs.n5">International invoicing accepted by Korean program operators</li>
           <li data-i18n="needs.n6">Runs alongside IR pitch consulting when the program needs both</li>
@@ -1140,12 +1359,30 @@
     </div>
   </section>
 
-  <!-- 4b. CASE STUDIES -->
+  <!-- 5. FINAL CTA -->
+  <section class="final-cta-block">
+    <div class="container">
+      <h2 data-i18n="cta.title">Planning a <span class="accent">market research program</span>?</h2>
+      <p data-i18n="cta.subtitle">In a 30-minute call, we go through your target markets and the number of companies.</p>
+      <div class="cta-row">
+        <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <span data-i18n="cta.button">Book a 30-min call</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
+          <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
+          <span data-i18n="cta.kakao">Chat on KakaoTalk</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5b. CASE STUDIES -->
   <section class="case-block" id="case-studies">
     <div class="container">
       <p class="section-label" data-i18n="case.label">Case studies</p>
-      <h2 class="section-title" data-i18n="case.title">A few <span class="accent">recent studies</span>.</h2>
-      <p class="report-lead" data-i18n="case.lead">A few of the company-specific studies delivered, across different markets and sectors.</p>
+      <h2 class="section-title" data-i18n="case.title">Highlights from <span class="accent">past studies</span>.</h2>
+      <p class="report-lead" data-i18n="case.lead">6 studies from past programs, in different markets and sectors.</p>
 
       <div class="case-cards">
         <div class="case-card">
@@ -1155,7 +1392,7 @@
           <p class="case-sector" data-i18n="case.c1sector">Indoor mapping and digital signage</p>
           <ul class="case-points">
             <li data-i18n="case.c1p1"><strong>Market:</strong> Singapore smart-mall &amp; signage</li>
-            <li data-i18n="case.c1p2"><strong>Competitors:</strong> local players analysed</li>
+            <li data-i18n="case.c1p2"><strong>Competitors:</strong> local players analyzed</li>
             <li data-i18n="case.c1p3"><strong>Partners:</strong> retail bodies &amp; malls, with contacts</li>
           </ul>
         </div>
@@ -1188,7 +1425,7 @@
           <p class="case-sector" data-i18n="case.c4sector">Portable outdoor water heater</p>
           <ul class="case-points">
             <li data-i18n="case.c4p1"><strong>Market:</strong> Europe camping &amp; outdoor gear, sized</li>
-            <li data-i18n="case.c4p2"><strong>Entry:</strong> full ManoMano process, EU&ndash;Korea FTA</li>
+            <li data-i18n="case.c4p2"><strong>Entry:</strong> full listing process on ManoMano (European DIY marketplace), EU-Korea&nbsp;FTA</li>
             <li data-i18n="case.c4p3"><strong>Partners:</strong> named market-entry contacts</li>
           </ul>
         </div>
@@ -1218,24 +1455,6 @@
     </div>
   </section>
 
-  <!-- 5. FINAL CTA -->
-  <section class="final-cta-block">
-    <div class="container">
-      <h2 data-i18n="cta.title">Planning a <span class="accent">market research program</span>?</h2>
-      <p data-i18n="cta.subtitle">Book a 30-minute call to align on your program scope, target markets, and timeline.</p>
-      <div class="cta-row">
-        <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
-          <span data-i18n="cta.button">Book the 30-min call</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
-          <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
-          <span data-i18n="cta.kakao">Connect on Kakao</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- 6. FAQ -->
   <section class="faq-block" id="faq">
     <div class="container">
@@ -1245,19 +1464,23 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary data-i18n="faq.q1">Which target markets can you cover?</summary>
-          <div class="faq-answer" data-i18n="faq.a1">12+ markets delivered so far: the US, France, the EU, the UK, Eastern Europe, the Middle East, Japan, China, Singapore, Vietnam, Thailand, and Australia. Each study is built for the specific target market.</div>
+          <div class="faq-answer" data-i18n="faq.a1">I have delivered studies on 12+ markets so far: the US, France, the EU, the UK, Eastern Europe, the UAE, Japan, China, Singapore, Vietnam, Thailand and Australia. Each study is built for one target market.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q4">Which industries have you covered?</summary>
-          <div class="faq-answer" data-i18n="faq.a4">Studies delivered since 2022 covered travel tech, deep tech, advanced materials, cleantech, agritech and food, medtech, beauty, fintech, IoT, AI and SaaS, B2B platforms, and web3. The report structure stays the same. The research is adapted to each product and target market.</div>
+          <div class="faq-answer" data-i18n="faq.a4">Studies delivered since 2022 covered travel tech, deep tech, advanced materials, cleantech, agritech and food, medtech, beauty, fintech, IoT, AI and SaaS, B2B platforms, and web3. The report structure stays the same, and I adapt the research to each product and target market.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q2">What language are the deliverables in?</summary>
-          <div class="faq-answer" data-i18n="faq.a2">Reports are delivered in English, in presentation format. Kick-off, review, and business matching meetings are also held in English, proven with Korean founders across 200+ sessions since 2022.</div>
+          <div class="faq-answer" data-i18n="faq.a2">Reports are in English, as a slide deck. The kick-off, review and business matching meetings are also in English. I&nbsp;have coached 240+ Korean startups in English since 2022.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q3">How does invoicing work? Can you issue a Korean tax invoice (&#49464;&#44552;&#44228;&#49328;&#49436;)?</summary>
-          <div class="faq-answer" data-i18n="faq.a3">Carte Blanche SAS is a French company, so I issue an international commercial invoice rather than a Korean tax invoice (&#49464;&#44552;&#44228;&#49328;&#49436;). The invoice can be issued directly to your organization. For government-funded programs, I also provide the additional administrative documents requested during the contract and project period, including documents prepared in Korean.</div>
+          <div class="faq-answer" data-i18n="faq.a3">Contracts and invoices go through Carte Blanche SAS, my French company. I&nbsp;invoice your organization directly, with an international commercial invoice instead of a Korean tax invoice (&#49464;&#44552;&#44228;&#49328;&#49436;). Korean program operators already accept it. For government-funded programs, I also provide the administrative documents requested during the contract and project period, including documents in Korean.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q5">Can I get a written quote?</summary>
+          <div class="faq-answer" data-i18n="faq.a5">Yes. After the call, I send a quote based on the number of companies and target markets, with the documents your contract needs.</div>
         </details>
       </div>
     </div>
@@ -1288,34 +1511,37 @@
       'nav.report': '보고서 구성',
       'nav.process': '진행 방식',
       'nav.faq': 'FAQ',
+      'nav.cta': '상담 신청',
       'nav.ir': 'IR 피칭 컨설팅',
+      'nav.poc': '글로벌 POC',
 
       // Hero
-      'hero.eyebrow': '2026년 시장조사 프로그램 접수 중',
-      'hero.title': '한국 스타트업의 해외 진출을 위한<br><em>글로벌 시장조사</em>.',
-      'hero.subtitle': '기업별 맞춤 시장조사 보고서 1건과 2~3회의 파트너 미팅. 2022년부터 KTO, NIPA, Innopolis, 경북창조경제혁신센터, K-GLOBAL 프로그램에 제공해 왔습니다.',
-      'hero.cta': '30분 상담 예약하기',
+      'hero.eyebrow': '2027년 시장조사 프로그램 상담 접수 중',
+      'hero.title': '한국 스타트업의 해외 진출을 위한<br><em>글로벌 시장조사</em>',
+      'hero.subtitle': '기업별 맞춤 시장조사 보고서 1건과 비즈니스 매칭 미팅 2~3회를 제공합니다.<br>2022년부터 한국관광공사, 정보통신산업진흥원(NIPA), 연구개발특구진흥재단, 경북창조경제혁신센터, <span style="white-space: nowrap;">K-Global 프로그램과</span> 함께해 왔습니다.',
+      'hero.cta': '30분 상담 신청하기',
+      'hero.email': '이메일 문의: <a href="mailto:sofian@hack40.com">sofian@hack40.com</a>',
       'hero.cross': 'IR 피칭 컨설팅 보기',
-      'hero.trust': '시장조사 제공 기관',
+      'hero.trust': '시장조사를 함께한 기관',
 
       // Numbers
-      'num.s1': '시장조사 보고서 납품 (2022년 이후)',
+      'num.s1': '2022년 이후 납품한 시장조사 보고서',
       'num.s2': '조사 대상 시장<br><span style="font-size: 0.95rem;" aria-label="미국, 프랑스, 영국, EU, UAE, 일본, 중국, 싱가포르, 베트남, 태국, 호주">&#127482;&#127480; &#127467;&#127479; &#127468;&#127463; &#127466;&#127482; &#127462;&#127466; &#127471;&#127477; &#127464;&#127475; &#127480;&#127468; &#127483;&#127475; &#127481;&#127469; &#127462;&#127482;</span>',
       'num.s3': '액셀러레이터 및 정부지원사업',
-      'num.s4': '비즈니스 매칭 미팅 주선',
+      'num.s4': '주선한 비즈니스 매칭 미팅',
 
       // Report
       'report.label': '산출물',
-      'report.title': '보고서에 <span class="accent">담기는 내용</span>.',
-      'report.lead': '각 기업의 제품과 타겟 시장에 맞춰 처음부터 작성하는 종합 보고서입니다. 출처가 명확한 시장 데이터와 현지 접촉을 기반으로 하며, 상세한 슬라이드 형식으로 제공됩니다. 시장 진출 결정과 구체적인 첫 단계를 위한 자료입니다.',
+      'report.title': '보고서에 <span class="accent">담기는 내용</span>',
+      'report.lead': '기업 한 곳의 제품과 타깃 시장만을 위해 작성하는 보고서입니다. 출처를 밝힌 시장 데이터와 현지 기업과의 직접 접촉을 바탕으로 하며, 상세한 슬라이드 형식으로 제공합니다.',
       'report.r1t': '시장 개요 및 트렌드',
-      'report.r1b': '타겟 시장의 규모와 성장률, 제품과 직결되는 트렌드를 출처가 명확한 업계 데이터로 정리합니다.',
-      'report.r2t': '타겟 세그먼트',
-      'report.r2b': '세그먼트별 규모와 우선순위를 분석해, 제품이 실제로 통하는 지점과 초기 고객을 짚어냅니다.',
+      'report.r1b': '타깃 시장의 규모와 성장률, 제품과 직결되는 트렌드를 출처가 명확한 업계 데이터로 정리합니다.',
+      'report.r2t': '타깃 세그먼트',
+      'report.r2b': '세그먼트별 규모와 우선순위를 분석해, 제품이 가장 잘 맞는 지점과 초기 고객을 짚어냅니다.',
       'report.r3t': '시장 진출 및 규제',
-      'report.r3b': '진출 경로, 인증, 인허가, 관세, 규제 절차를 투자 전에 미리 파악합니다.',
+      'report.r3b': '진출 경로, 인증, 인허가, 관세, 규제 절차를 본격적으로 비용을 들이기 전에 미리 파악합니다.',
       'report.r4t': '경쟁 구도',
-      'report.r4b': '현지 및 글로벌 경쟁사를 가격, 포지셔닝, 매출, 본사 기준으로 분석하고, 공략 가능한 틈새를 찾습니다.',
+      'report.r4b': '현지 및 글로벌 경쟁사를 가격, 포지셔닝, 매출, 본사 소재지 기준으로 비교하고, 공략 가능한 틈새를 찾습니다.',
       'report.r5t': '잠재 파트너 및 유통사',
       'report.r5b': '사전에 발굴하고 접촉을 마친 현지 파트너를 담당자 연락처와 관심도까지 함께 전달합니다.',
       'report.sectorsLabel': '2022년 이후 조사한 분야',
@@ -1331,23 +1557,24 @@
       'report.sec10': 'AI·SaaS',
       'report.sec11': 'B2B 플랫폼',
       'report.sec12': '웹3·콘텐츠',
-      'report.marketsLabel': '2022년 이후 진출한 시장',
+      'report.marketsLabel': '2022년 이후 조사한 시장',
       'mkt.us': '미국',
       'mkt.fr': '프랑스',
       'mkt.uk': '영국',
-      'mkt.eu': '유럽연합',
-      'mkt.ae': '아랍에미리트',
+      'mkt.eu': 'EU',
+      'mkt.ae': 'UAE',
       'mkt.jp': '일본',
       'mkt.cn': '중국',
       'mkt.sg': '싱가포르',
       'mkt.vn': '베트남',
       'mkt.th': '태국',
       'mkt.au': '호주',
+      'mkt.ee': '동유럽',
 
       // Process
       'case.label': '사례',
-      'case.title': '최근 <span class="accent">조사 사례</span>.',
-      'case.lead': '다양한 시장과 산업에서 진행한 기업별 맞춤 조사 사례입니다.',
+      'case.title': '지난 조사 <span class="accent">하이라이트</span>',
+      'case.lead': '지난 프로그램에서 진행한 다양한 시장과 산업의 조사 6건입니다.',
       'case.c1market': '싱가포르',
       'case.c1sector': '실내 지도 및 디지털 사이니지',
       'case.c1p1': '<strong>시장:</strong> 싱가포르 스마트몰·사이니지',
@@ -1355,18 +1582,18 @@
       'case.c1p3': '<strong>파트너:</strong> 유통 협회·몰 운영사, 연락처 포함',
       'case.c2market': '싱가포르',
       'case.c2sector': 'K-푸드 레스토랑 예약 플랫폼',
-      'case.c2p1': '<strong>시장:</strong> 싱가포르 외식, 커뮤니티별 세분화',
+      'case.c2p1': '<strong>시장:</strong> 싱가포르 외식 시장 세분화',
       'case.c2p2': '<strong>경쟁사:</strong> 현지 예약 앱 벤치마크',
       'case.c2p3': '<strong>파트너:</strong> 레스토랑 그룹·에이전시, 연락처 포함',
       'case.c3market': '중동',
       'case.c3sector': '스마트 오피스·공간 IoT',
       'case.c3p1': '<strong>시장:</strong> UAE 스마트 오피스·IoT 규모 산정',
-      'case.c3p2': '<strong>규제:</strong> UAE IoT 규정 (TDRA, 현지 법인)',
+      'case.c3p2': '<strong>규제:</strong> UAE IoT 규정(TDRA, 현지 법인)',
       'case.c3p3': '<strong>파트너:</strong> 시장 진입 파트너, 연락처 포함',
       'case.c4market': '유럽',
       'case.c4sector': '휴대용 아웃도어 온수기',
       'case.c4p1': '<strong>시장:</strong> 유럽 캠핑·아웃도어 장비 규모 산정',
-      'case.c4p2': '<strong>진입:</strong> ManoMano 입점 절차, 한-EU FTA',
+      'case.c4p2': '<strong>진입:</strong> ManoMano(유럽 DIY 온라인 마켓) 입점 절차, 한-EU FTA',
       'case.c4p3': '<strong>파트너:</strong> 시장 진입 파트너, 연락처 포함',
       'case.c5market': '프랑스·영국',
       'case.c5sector': '미술 투자 및 아티스트 매칭 플랫폼',
@@ -1376,57 +1603,85 @@
       'case.c6market': '호주',
       'case.c6sector': '친환경 목재 식기',
       'case.c6p1': '<strong>시장:</strong> 호주 생분해성 식기 규모 산정',
-      'case.c6p2': '<strong>인증:</strong> 퇴비화 인증 (AS 4736)',
+      'case.c6p2': '<strong>인증:</strong> 퇴비화 인증(AS 4736)',
       'case.c6p3': '<strong>경쟁사:</strong> 현지·아마존 벤치마크',
 
+      'dlv.label': '2026년 제공 실적',
+      'dlv.title': '<span class="accent">2026년</span> 참여 기업',
+      'dlv.lead': '2026년 관광 분야 프로그램에 참여한 한국 스타트업 3개사의 사례입니다. 기업마다 자체 질문에 맞춘 조사 보고서, 결과 리뷰 미팅, 보고서에서 발굴한 파트너와의 비즈니스 매칭 미팅 2회를 제공했습니다.',
+      'dlv.meet': '비즈니스 매칭',
+      'dlv.c1market': '프랑스',
+      'dlv.c1sector': '한국 럭셔리 맞춤형 여행',
+      'dlv.c1p1': '<strong>수요:</strong> 프랑스인 방한객, 프랑스 고소득 구매층, 예약 시즌.',
+      'dlv.c1p2': '<strong>포지셔닝:</strong> 경험과 가격 측면의 한국 대 일본 비교, 프랑스 여행사가 제기하는 우려, 경쟁사.',
+      'dlv.c1p3': '<strong>채널:</strong> 프랑스에서 한국 여행 상품을 판매하는 곳, 럭셔리 여행 네트워크, 럭셔리 브랜드 내 여행 구매 담당자.',
+      'dlv.c1m1': '파리 투어 오퍼레이터',
+      'dlv.c1m2': '파리 럭셔리 여행사',
+      'dlv.c2market': '미국',
+      'dlv.c2sector': '한국 스킨케어 브랜드',
+      'dlv.c2p1': '<strong>시장:</strong> 미국 소매 유통의 K-뷰티 수요와 비교 대상 한국 브랜드가 공개한 미국 매출.',
+      'dlv.c2p2': '<strong>유통:</strong> 미국 체인의 스킨케어 매입·진열 방식, 지역별 차이, 올리브영 US 입점 사례.',
+      'dlv.c2p3': '<strong>진입:</strong> 미국 표시·광고 문구, 패키징·용량, 팝업 스토어, 첫 90일 실행 계획.',
+      'dlv.c2m1': '뷰티 시장 진입 전문가',
+      'dlv.c2m2': '미국 K-뷰티 리테일러',
+      'dlv.c3market': '미국',
+      'dlv.c3sector': 'K-pop 미디어, 한국 방문 바우처',
+      'dlv.c3p1': '<strong>수요:</strong> 미국인 방한객, 미국 한류 팬이 한국 여행에서 원하는 것.',
+      'dlv.c3p2': '<strong>소비:</strong> 미국 여행객이 한국에서 지출하는 분야, 미디어 독자가 유료 구매자가 되는 경로.',
+      'dlv.c3p3': '<strong>진입:</strong> 현장 파트너, 소셜 채널, 결제, 출국 전 접점 파트너, 첫 90일 실행 계획.',
+      'dlv.c3m1': '서울 외국인 크리에이터 플랫폼',
+      'dlv.c3m2': '서울 크리에이터 네트워크',
+
       'process.label': '진행 방식',
-      'process.title': '킥오프부터 <span class="accent">파트너 미팅까지</span>.',
-      'process.lead': '기수당 약 12주의 고정 범위로, 프로그램 일정과 보고 기한에 맞춰 진행합니다.',
+      'process.title': '<span class="accent">12주</span> 동안의 진행 과정',
+      'process.lead': '범위는 사전에 확정하고, 진행 일정은 귀 기관의 사업 일정과 보고 기한에 맞춥니다.',
       'process.s1t': '킥오프 미팅',
       'process.s1time': '1주 차',
-      'process.s1b': '각 스타트업과 진행하는 구조화된 인터뷰: 제품과 자산, 글로벌 전략, 타겟 시장, 경쟁 구도, 진입 장벽, 규제. 조사가 답해야 할 항목을 명확히 정의합니다.',
+      'process.s1b': '각 스타트업과 인터뷰를 진행해 제품과 보유 자산, 해외 전략, 타깃 시장, 경쟁사, 진입 장벽, 규제를 확인합니다. 조사로 답할 질문을 함께 확정합니다.',
       'process.s2t': '조사 및 보고서 작성',
       'process.s2time': '2~8주 차',
-      'process.s2b': '타겟 시장을 심층 조사하고, 종합 보고서를 영문 PPT 형식으로 전달합니다.',
+      'process.s2b': '타깃 시장을 조사하고 잠재 파트너에게 직접 연락합니다. 보고서는 영문 PPT로 제공합니다.',
       'process.s3t': '리뷰 미팅',
       'process.s3time': '9주 차',
-      'process.s3b': '스타트업 및 프로그램 담당자와 함께 결과를 검토하고 시장 진출 다음 단계를 확정합니다.',
+      'process.s3b': '스타트업, 귀 기관 담당자와 함께 결과를 검토하고, 시장 진출을 위한 다음 단계를 확정합니다.',
       'process.s4t': '비즈니스 매칭',
       'process.s4time': '10~12주 차',
-      'process.s4b': '보고서에서 발굴한 잠재 파트너와 2~3회의 미팅을 주선하고, 스타트업과 함께 진행합니다.',
+      'process.s4b': '보고서에서 발굴한 잠재 파트너와의 미팅을 2~3회 주선하고, 미팅에는 스타트업과 함께 참석합니다.',
 
       // Needs block
       'needs.title': '프로그램 담당자를 위한 구성',
-      'needs.lead': '2022년부터 7개 한국 액셀러레이터 및 정부지원사업을 거치며 다듬어진 포맷입니다. 조달, 보고, 기수 일정에 맞게 운영됩니다.',
-      'needs.n1': '기업별 맞춤 보고서: 제품과 타겟 시장 기준',
-      'needs.n2': '킥오프에서 범위, 예산, 일정 확정',
-      'needs.n3': '영문 산출물, PPT 형식',
-      'needs.n4': '기업당 비즈니스 매칭 미팅 2~3회',
-      'needs.n5': '한국 프로그램 운영사에서 인정된 국제 인보이스',
-      'needs.n6': '필요 시 IR 피칭 컨설팅과 병행 운영 가능',
+      'needs.lead': '2022년부터 한국의 액셀러레이터 프로그램과 정부지원사업 7건에서 운영해 온 방식입니다. 조달 절차와 사업 보고 일정에 맞춰 진행합니다.',
+      'needs.n1': '기업별로 제품과 타깃 시장에 맞춘 보고서를 작성합니다.',
+      'needs.n2': '범위, 예산, 일정은 계약 단계에서 확정합니다.',
+      'needs.n3': '산출물은 영문 PPT로 제공합니다.',
+      'needs.n4': '기업당 비즈니스 매칭 미팅을 2~3회 진행합니다.',
+      'needs.n5': '국제 인보이스로 발행하며, 한국 운영 기관에서 정산 처리한 실적이 있습니다.',
+      'needs.n6': '필요 시 IR 피칭 컨설팅과 함께 운영할 수 있습니다.',
 
       // Final CTA
       'cta.title': '<span class="accent">시장조사 프로그램</span>을 계획 중이신가요?',
-      'cta.subtitle': '30분 통화로 프로그램 범위, 타겟 시장, 일정을 조율해 보세요.',
-      'cta.button': '30분 상담 예약하기',
-      'cta.kakao': '카카오톡으로 문의',
+      'cta.subtitle': '30분 상담에서 타깃 시장과 참여 기업 수를 함께 확인합니다.',
+      'cta.button': '30분 상담 신청하기',
+      'cta.kakao': '카카오톡으로 문의하기',
 
       // FAQ
       'faq.label': 'FAQ',
-      'faq.title': '자주 묻는 <span class="accent">질문</span>.',
+      'faq.title': '자주 묻는 <span class="accent">질문</span>',
       'faq.q1': '어떤 시장을 조사할 수 있나요?',
-      'faq.a1': '지금까지 12개 이상의 시장을 조사했습니다: 미국, 프랑스, EU, 영국, 동유럽, 중동, 일본, 중국, 싱가포르, 베트남, 태국, 호주. 각 조사는 해당 타겟 시장에 맞춰 작성됩니다.',
-      'faq.q4': '어떤 산업을 조사해 오셨나요?',
-      'faq.a4': '2022년 이후 여행 테크, 딥테크, 첨단 소재, 클린테크, 애그테크·푸드, 메드테크, 뷰티, 핀테크, IoT, AI·SaaS, B2B 플랫폼, 웹3 분야를 조사했습니다. 보고서 구조는 동일하며, 조사는 각 제품과 타겟 시장에 맞춰 조정됩니다.',
-      'faq.q2': '결과물은 어떤 언어로 제공되나요?',
-      'faq.a2': '보고서는 영문 PPT 형식으로 제공됩니다. 킥오프, 리뷰, 비즈니스 매칭 미팅도 영어로 진행하며, 2022년 이후 한국 창업자와 200회 이상의 세션으로 검증되었습니다.',
+      'faq.a1': '지금까지 12개 이상의 시장을 조사했습니다. 미국, 프랑스, EU, 영국, 동유럽, UAE, 일본, 중국, 싱가포르, 베트남, 태국, 호주입니다. 각 조사는 타깃 시장 한 곳에 맞춰 작성합니다.',
+      'faq.q4': '어떤 산업을 조사했나요?',
+      'faq.a4': '2022년 이후 여행 테크, 딥테크, 첨단 소재, 클린테크, 애그테크·푸드, 메드테크, 뷰티, 핀테크, IoT, AI·SaaS, B2B 플랫폼, 웹3 분야를 조사했습니다. 보고서 구조는 같고, 조사 내용은 제품과 타깃 시장에 맞춰 조정합니다.',
+      'faq.q2': '산출물은 어떤 언어로 제공되나요?',
+      'faq.a2': '보고서는 영문 PPT로 제공합니다. 킥오프, 리뷰, 비즈니스 매칭 미팅도 영어로 진행합니다. 2022년부터 240개사 이상의 한국 스타트업을 영어로 코칭한 실적이 있습니다.',
       'faq.q3': '인보이스는 어떻게 발행되나요? 세금계산서 발행이 가능한가요?',
-      'faq.a3': 'Carte Blanche SAS는 프랑스 법인으로, 세금계산서 대신 국제 상업 인보이스(international commercial invoice)를 발행합니다. 필요 시 귀 기관 앞으로 직접 발행할 수 있습니다. 정부지원사업의 경우, 계약 및 프로젝트 기간 중 요청되는 추가 행정 서류도 제공하며, 한국어 작성이 필요한 서류도 준비합니다.',
+      'faq.a3': '계약 체결과 인보이스 발행은 제 프랑스 법인 Carte Blanche SAS 명의로 합니다. 세금계산서 대신 국제 상업 인보이스(international commercial invoice)를 귀 기관 앞으로 직접 발행하며, 한국 운영 기관에서 정산 처리한 실적이 있습니다. 정부지원사업의 경우 계약 및 사업 기간 중 요청하시는 행정 서류도 제공하며, 한국어로 작성해야 하는 서류도 준비합니다.',
+      'faq.q5': '견적서를 받을 수 있나요?',
+      'faq.a5': '네. 상담 후 참여 기업 수와 타깃 시장에 맞춘 견적서를 보내 드리며, 계약에 필요한 서류도 함께 준비합니다.',
 
       // Footer
       'footer.kakao': '카카오톡',
-      'footer.copy': '&copy; 2026 Sofian Meguellati &middot; 모든 권리 보유',
-      'footer.legal': '<strong style="color: var(--text-secondary);">Carte Blanche SAS</strong> &nbsp;|&nbsp; 대표: Sofian Meguellati &nbsp;|&nbsp; 프랑스 사업자등록번호 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France'
+      'footer.copy': '&copy; 2026 Sofian Meguellati &middot; All rights reserved',
+      'footer.legal': '<strong style="color: var(--text-secondary);">Carte Blanche SAS</strong> &nbsp;|&nbsp; 대표: Sofian Meguellati &nbsp;|&nbsp; 프랑스 사업자등록번호(SIREN) 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France'
     };
 
     // On load: scrape all English originals from the HTML (single source of truth)
@@ -1479,44 +1734,53 @@
       });
     })();
 
-    // FAQ: smooth accordion open/close
+    // FAQ: smooth accordion open/close. Height and bottom padding move together, so a card
+    // closes in one continuous motion with no pause or jump at the end.
     (function() {
+      var DURATION = 280;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       document.querySelectorAll('.faq-item').forEach(function(item) {
         var sum = item.querySelector('summary');
         var ans = item.querySelector('.faq-answer');
         if (!sum || !ans) return;
+        var timer = null;
+        function clean() { ans.style.height = ''; ans.style.paddingBottom = ''; }
 
         sum.addEventListener('click', function(e) {
           e.preventDefault();
-          var isOpen = item.hasAttribute('open');
-
-          if (isOpen) {
-            // Close: animate from current height to 0
+          clearTimeout(timer);
+          if (reduce) {
+            item.classList.remove('is-closing'); clean();
+            if (item.hasAttribute('open')) item.removeAttribute('open'); else item.setAttribute('open', '');
+            return;
+          }
+          if (item.hasAttribute('open') && !item.classList.contains('is-closing')) {
+            // Close: from the current height (padding included) down to 0
+            item.classList.add('is-closing');
             ans.style.height = ans.offsetHeight + 'px';
-            ans.offsetHeight; // force reflow
-            requestAnimationFrame(function() {
-              ans.style.height = '0px';
-            });
-            var onClose = function() {
-              item.removeAttribute('open');
-              ans.style.height = '';
-              ans.removeEventListener('transitionend', onClose);
-            };
-            ans.addEventListener('transitionend', onClose);
-          } else {
-            // Open: set open, animate from 0 to scrollHeight
-            item.setAttribute('open', '');
-            var target = ans.scrollHeight;
+            ans.offsetHeight; // commit the start value
+            ans.style.paddingBottom = '0px';
             ans.style.height = '0px';
-            ans.offsetHeight; // force reflow
-            requestAnimationFrame(function() {
-              ans.style.height = target + 'px';
-            });
-            var onOpen = function() {
-              ans.style.height = '';
-              ans.removeEventListener('transitionend', onOpen);
-            };
-            ans.addEventListener('transitionend', onOpen);
+            timer = setTimeout(function() {
+              item.removeAttribute('open');
+              item.classList.remove('is-closing');
+              clean();
+            }, DURATION);
+          } else {
+            // Open (or re-open while closing): from the current height up to the full answer
+            var start = item.hasAttribute('open') ? ans.offsetHeight : 0;
+            item.classList.remove('is-closing');
+            item.setAttribute('open', '');
+            clean();
+            var target = ans.scrollHeight;
+            ans.style.transition = 'none';          // place the start state without animating it
+            ans.style.height = start + 'px';
+            if (!start) ans.style.paddingBottom = '0px';
+            ans.offsetHeight; // commit the start value
+            ans.style.transition = '';
+            ans.style.paddingBottom = '';
+            ans.style.height = target + 'px';
+            timer = setTimeout(clean, DURATION);
           }
         });
       });
@@ -1526,7 +1790,7 @@
     (function() {
       var fade = document.getElementById('pageFade');
       if (!fade) return;
-      document.querySelectorAll('a.nav-mr, a.nav-ir, a.nav-logo, a.hero-cross').forEach(function(a) {
+      document.querySelectorAll('a.nav-mr, a.nav-ir, a.nav-poc, a.nav-logo, a.hero-cross').forEach(function(a) {
         a.addEventListener('click', function(e) {
           var href = a.getAttribute('href');
           if (!href || href.charAt(0) === '#') return;

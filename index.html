@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sofian Meguellati · IR Pitch consulting for Korea's global startup programs</title>
-  <meta name="description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2022.">
-  <meta property="og:title" content="Sofian Meguellati · IR Pitch consulting for Korea's global startup programs">
-  <meta property="og:description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2022.">
+  <title>Sofian Meguellati · IR pitch consulting for Korea's global startup programs</title>
+  <meta name="description" content="1:1 IR pitch consulting delivered for KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 240+ Korean startups coached since 2022.">
+  <meta property="og:title" content="Sofian Meguellati · IR pitch consulting for Korea's global startup programs">
+  <meta property="og:description" content="1:1 IR pitch consulting delivered for KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 240+ Korean startups coached since 2022.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sofian.global/">
-  <meta property="og:image" content="https://sofian.global/og-image.png">
+  <meta property="og:image" content="https://sofian.global/og-image-ir-202611.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sofian Meguellati · IR Pitch consulting for Korea's global startup programs">
-  <meta name="twitter:description" content="1:1 IR consulting trusted by KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 200+ Korean startups consulted since 2022.">
-  <meta name="twitter:image" content="https://sofian.global/og-image.png">
+  <meta name="twitter:title" content="Sofian Meguellati · IR pitch consulting for Korea's global startup programs">
+  <meta name="twitter:description" content="1:1 IR pitch consulting delivered for KISED, NIPA, Innopolis, KTO, KOCCA, GBSA and Korea's regional CCEIs. 240+ Korean startups coached since 2022.">
+  <meta name="twitter:image" content="https://sofian.global/og-image-ir-202611.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -51,7 +52,7 @@
     html[lang="ko"] { word-break: keep-all; }
 
     body {
-      font-family: 'Inter', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family: 'Inter', 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -161,6 +162,30 @@
     .nav-links a.nav-mr:active {
       transform: translateY(0) scale(0.96);
       transition-duration: 0.1s;
+    }
+    .nav-links a.nav-poc {
+      background: #B45309;
+      color: #fff !important;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(217,119,6,0.18);
+      transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
+    }
+    .nav-links a.nav-poc:hover {
+      background: #92400E;
+      color: #fff !important;
+      box-shadow: 0 4px 16px rgba(217,119,6,0.35);
+      transform: translateY(-1px);
+    }
+    .nav-links a.nav-poc:active {
+      transform: translateY(0) scale(0.96);
+      transition-duration: 0.1s;
+    }
+    /* Nav with 2 service buttons: labels on one line, secondary links hidden when space runs out */
+    .nav-links a { white-space: nowrap; }
+    @media (min-width: 769px) {
+      .nav-links { gap: 22px; }
     }
 
     /* Cross-page fade for the service switcher */
@@ -1619,10 +1644,11 @@
       line-height: 1.7;
       font-size: 0.96rem;
       overflow: hidden;
-      transition: height 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: height 0.28s cubic-bezier(0.4, 0, 0.2, 1), padding-bottom 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
+    .faq-item.is-closing summary::after { content: '+'; transform: translateY(-50%) rotate(0deg); }
     .faq-item summary::after {
-      transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .faq-item[open] summary::after {
       transform: translateY(-50%) rotate(45deg);
@@ -1717,6 +1743,7 @@
       .nav-links.open li:nth-child(5) { transition-delay: 0.17s; }
       .nav-links.open li:nth-child(6) { transition-delay: 0.20s; }
       .nav-links.open li:nth-child(7) { transition-delay: 0.23s; }
+      .nav-links.open li:nth-child(8) { transition-delay: 0.26s; }
       .nav-mobile-toggle {
         display: block;
         transition: transform 0.25s ease;
@@ -1770,6 +1797,188 @@
       /* Recognition card image fits */
       .recognition-img { aspect-ratio: 16 / 10; }
     }
+
+    /* Korean typography: values measured on Korean sites (research, Nov 2026) */
+    html[lang="ko"] { word-break: keep-all; overflow-wrap: break-word; }
+    html[lang="ko"] body { line-height: 1.7; }
+    html[lang="ko"] .section-label { font-size: 13px; letter-spacing: 0; }
+    html[lang="ko"] .section-title { font-weight: 800; letter-spacing: -0.02em; line-height: 1.3; }
+    html[lang="ko"] .hero h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.25; }
+    @media (max-width: 640px) {
+      html[lang="ko"] .hero h1 { font-size: 2rem; }
+      html[lang="ko"] .section-title { font-size: 1.625rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    .session-spec { margin: 40px 0 0; }
+    .hero-email { font-size: 0.88rem; color: var(--text-muted); margin: 14px 0 0; position: relative; z-index: 1; }
+    .hero-email a { color: inherit; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* --- HERO: stage photo with a pinned figure (copy left, photo right on desktop) --- */
+    .hero-media { position: relative; margin: 48px auto 0; max-width: 560px; z-index: 1; }
+    .hero-photo { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden; background: #d9dfe5; box-shadow: var(--shadow-lg); }
+    .hero-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+    .hero-badge { position: absolute; top: 14px; left: 14px; max-width: calc(100% - 28px); display: flex; align-items: center; gap: 10px; margin: 0; padding: 8px 12px 8px 10px; background: #fff; border-radius: 10px; box-shadow: var(--shadow-md); font-size: 0.75rem; font-weight: 600; line-height: 1.3; color: var(--text); text-align: left; }
+    .hero-badge img { height: 20px; width: auto; flex-shrink: 0; }
+    .hero-proof { position: absolute; left: 14px; bottom: -26px; z-index: 2; width: 220px; padding: 14px 18px 15px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-lg); text-align: left; animation: proof-rise 0.8s cubic-bezier(.2, .7, .2, 1) 0.3s backwards; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+    .hero-proof:hover { transform: translateY(-3px); border-color: rgba(0,180,160,0.3); box-shadow: 0 16px 34px rgba(16,24,40,0.16); }
+    .hero-proof strong { display: block; font-size: 2rem; font-weight: 900; letter-spacing: -1.5px; line-height: 1; color: var(--teal); margin-bottom: 6px; }
+    .hero-proof span { display: block; font-size: 0.8rem; line-height: 1.45; color: var(--text-secondary); }
+    @keyframes proof-rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    @media (min-width: 961px) {
+      .hero-grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: 64px; align-items: center; }
+      .hero-copy { text-align: left; }
+      .hero h1 { font-size: clamp(2.4rem, 4vw, 3.3rem); margin: 0 0 22px; max-width: none; }
+      .hero .subtitle { margin: 0 0 34px; max-width: 34em; }
+      .hero-media { margin: 0; max-width: none; }
+      .hero-photo { aspect-ratio: 1 / 1; }
+      .hero-badge { left: auto; right: 16px; top: 16px; }
+      .hero-proof { left: -36px; bottom: 36px; }
+    }
+    @media (max-width: 768px) {
+      .hero-media { margin-top: 40px; }
+      .hero-photo { border-radius: 16px; }
+      .hero-badge { top: 10px; left: 10px; padding: 6px 10px 6px 8px; font-size: 0.69rem; gap: 8px; }
+      .hero-badge img { height: 18px; }
+      .hero-proof { left: 12px; bottom: -24px; width: auto; max-width: 230px; padding: 12px 14px 13px; }
+      .hero-proof strong { font-size: 1.5rem; margin-bottom: 4px; }
+      .hero-proof span { font-size: 0.75rem; }
+    }
+
+    /* --- Partner logos in tiles, in color --- */
+    .logo-tiles { list-style: none; margin: 18px auto 0; padding: 0; max-width: 1100px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; position: relative; z-index: 1; }
+    .logo-tiles li { flex: 0 0 calc((100% - 48px) / 5); height: 84px; display: flex; align-items: center; justify-content: center; min-width: 0; padding: 0 18px; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s; }
+    .logo-tiles li:hover { transform: translateY(-2px); border-color: rgba(0,180,160,0.3); box-shadow: var(--shadow-md); }
+    .logo-tiles img { display: block; max-height: 34px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+    .logo-tiles img.logo-small { max-height: 26px; }
+    .logo-tiles img.logo-wide { max-height: 40px; }
+    .logo-tiles img.logo-tall { max-height: 54px; }
+    .logo-tiles img[src*="nipa"], .logo-tiles img[src*="kita"] { transform: scale(1.18); }
+    .logo-tiles .ccei-wrap { width: 100%; max-width: 150px; height: 36px; }
+    /* Optical balance: some source files are wide or carry extra whitespace */
+    .logo-tiles img[src*="kised"] { max-height: 30px; }
+    .logo-tiles img[src*="kb-financial"] { max-height: 28px; }
+    .logo-tiles img[src*="nipa"] { max-height: 40px; }
+    .logo-tiles img[src*="kto"] { max-height: 38px; }
+    .logo-tiles img.logo-small { max-height: 30px; }
+    @media (max-width: 768px) {
+      .logo-tiles { gap: 8px; margin-top: 16px; }
+      .logo-tiles li { flex-basis: calc((100% - 16px) / 3); height: 64px; padding: 0 10px; }
+      .logo-tiles img { max-height: 26px; }
+      .logo-tiles img.logo-small { max-height: 20px; }
+      .logo-tiles img.logo-wide { max-height: 30px; }
+      .logo-tiles img.logo-tall { max-height: 40px; }
+      .logo-tiles .ccei-wrap { height: 28px; }
+      .logo-tiles img[src*="kised"], .logo-tiles img[src*="kb-financial"] { max-height: 22px; }
+      .logo-tiles img[src*="nipa"] { max-height: 32px; }
+      .logo-tiles img[src*="kto"] { max-height: 30px; }
+      .logo-tiles img.logo-small { max-height: 24px; }
+    }
+
+    /* --- RECOGNITION: 2x2 compact cards, photo on the left --- */
+    .recognition-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .recognition-card { flex-direction: row; align-items: center; gap: 22px; padding: 14px 22px 14px 14px; border-radius: var(--radius-lg); }
+    .recognition-img { flex: 0 0 184px; width: 184px; border-radius: 10px; }
+    .recognition-card .rec-body { padding: 0; min-width: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; column-gap: 12px; }
+    .recognition-card .rec-logo-mini { margin-bottom: 10px; }
+    .recognition-card .rec-year { margin-bottom: 10px; padding-left: 12px; border-left: 1px solid var(--border); justify-self: start; }
+    .recognition-card h4 { grid-column: 1 / -1; font-size: 1rem; }
+    .recognition-card .rec-link-text { grid-column: 1 / -1; }
+    @media (max-width: 1000px) {
+      .recognition-card { gap: 18px; }
+      .recognition-img { flex-basis: 140px; width: 140px; }
+    }
+    @media (max-width: 768px) {
+      .recognition-grid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .recognition-card { gap: 14px; padding: 12px 14px 12px 12px; align-items: flex-start; }
+      .recognition-img { flex-basis: 104px; width: 104px; }
+      .recognition-card .rec-logo-mini { height: 24px; margin-bottom: 6px; }
+      .recognition-card .rec-logo-mini .ccei-wrap { width: 100px; height: 24px; }
+      .recognition-card .rec-year { margin-bottom: 6px; }
+      .recognition-card h4 { font-size: 0.92rem; }
+      .recognition-card .rec-link-text { margin-top: 6px; }
+    }
+
+    /* --- THREE SERVICES STRIP: a colour band that leads to the other service pages --- */
+    .svcb { position: relative; z-index: 1; }
+    .svcb-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .svcb-panel { position: relative; display: flex; align-items: center; justify-content: center; gap: 22px; min-height: 120px; padding: 24px 32px; color: #fff; text-decoration: none; overflow: hidden; }
+    .svcb-panel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255,255,255,0.12), rgba(255,255,255,0) 55%); pointer-events: none; }
+    .svcb-ir { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); }
+    .svcb-mr { background: linear-gradient(135deg, #6366F1, #4F46E5); }
+    .svcb-poc { background: linear-gradient(135deg, #D97706, #B45309); }
+    .svcb-text { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; max-width: 250px; }
+    .svcb-name { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.3px; line-height: 1.25; }
+    .svcb-line { font-size: 0.86rem; font-weight: 500; line-height: 1.45; opacity: 0.92; }
+    .svcb-go, .svcb-here { position: relative; z-index: 1; flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; border-radius: 50px; font-size: 0.82rem; font-weight: 700; white-space: nowrap; }
+    .svcb-go { padding: 10px 16px; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.14); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .svcb-go svg { width: 15px; height: 15px; transition: transform 0.25s ease; }
+    .svcb-mr .svcb-go { color: #4F46E5; }
+    .svcb-poc .svcb-go { color: #B45309; }
+    .svcb-here { padding: 9px 14px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.4); }
+    .svcb-dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+    a.svcb-panel { transition: filter 0.25s ease; }
+    a.svcb-panel:hover { filter: brightness(1.08); }
+    a.svcb-panel:hover .svcb-go { transform: translateX(4px); box-shadow: 0 8px 22px rgba(0,0,0,0.2); }
+    a.svcb-panel:hover .svcb-go svg { transform: translateX(3px); }
+    a.svcb-panel:focus-visible { outline: 3px solid #fff; outline-offset: -7px; }
+    @media (max-width: 1100px) and (min-width: 769px) {
+      .svcb-panel { flex-direction: column; align-items: flex-start; justify-content: center; gap: 14px; padding: 24px 28px; }
+    }
+    @media (max-width: 768px) {
+      .svcb-strip { grid-template-columns: minmax(0, 1fr); }
+      .svcb-panel { justify-content: space-between; min-height: 0; gap: 14px; padding: 18px 16px; }
+      .svcb-text { max-width: none; }
+      .svcb-name { font-size: 1.02rem; }
+      .svcb-line { font-size: 0.8rem; }
+      .svcb-go { padding: 8px 13px; font-size: 0.78rem; }
+      .svcb-here { padding: 7px 11px; font-size: 0.74rem; }
+    }
+
+    /* Hero: KakaoTalk next to the booking button */
+    @media (min-width: 961px) { .hero-copy .hero-ctas { justify-content: flex-start; } }
+    @media (max-width: 768px) {
+      .hero .hero-ctas { flex-direction: column; gap: 10px; }
+      .hero .hero-ctas .btn { width: 100%; max-width: 360px; justify-content: center; }
+    }
+    /* Line breaks: balanced titles, no word left alone on a last line */
+    h1, h2, h3, h4, summary { text-wrap: balance; }
+    p, li, .faq-answer, .label { text-wrap: pretty; }
+
+    /* --- HEADER: 4 links, thin separator, the two other services as outline chips, one filled "Book a call" --- */
+    .nav-links { gap: 22px; }
+    .nav-links li.nav-svc-group { display: flex; align-items: center; gap: 8px; padding-left: 20px; border-left: 1px solid var(--border); }
+    .nav-links a.nav-svc, .nav-links a.nav-svc:hover, .nav-links a.nav-svc:active { background: #fff; color: var(--text) !important; box-shadow: none; transform: none; }
+    .nav-links a.nav-svc { display: inline-flex; align-items: center; gap: 8px; padding: 7px 13px; border: 1px solid var(--border); border-radius: 10px; font-weight: 600 !important; transition: border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links a.nav-svc:hover { border-color: #cbd5e1; box-shadow: 0 2px 8px rgba(16,24,40,0.06); }
+    .nav-links a.nav-svc::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links a.nav-svc.nav-ir::before { background: #00B4A0; }
+    .nav-links a.nav-svc.nav-mr::before { background: #4F46E5; }
+    .nav-links a.nav-svc.nav-poc::before { background: #D97706; }
+    /* Hover: a soft tint of each service colour that fades in */
+    .nav-links a.nav-svc:hover::before { transform: scale(1.3); }
+    .nav-links a.nav-svc.nav-ir:hover { background: rgb(0 180 160 / 0.07); border-color: rgb(0 180 160 / 0.4); }
+    .nav-links a.nav-svc.nav-mr:hover { background: rgb(79 70 229 / 0.06); border-color: rgb(79 70 229 / 0.35); }
+    .nav-links a.nav-svc.nav-poc:hover { background: rgb(217 119 6 / 0.07); border-color: rgb(217 119 6 / 0.4); }
+    .nav-links a.nav-cta { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 10px; background: var(--teal); color: #fff !important; font-weight: 700 !important; box-shadow: none; transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links a.nav-cta:hover { background: var(--teal-dark); color: #fff !important; box-shadow: 0 4px 14px rgba(0,180,160,0.3); transform: translateY(-1px); }
+    .lang-btn.active { background: #1a1a1a; color: #fff; box-shadow: none; }
+    .lang-btn { transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    .nav-links li > a:not(.nav-svc):not(.nav-cta) { transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+    @media (max-width: 1180px) and (min-width: 769px) { .nav-links .nav-hide-md { display: none; } }
+    @media (max-width: 1000px) and (min-width: 769px) { .nav-links .nav-hide-sm { display: none; } }
+    @media (max-width: 900px) and (min-width: 769px) {
+      .nav-links .nav-hide-xs { display: none; }
+      .nav-links { gap: 14px; }
+      .nav-links li.nav-svc-group { padding-left: 14px; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { align-items: stretch; }
+      .nav-links li.nav-svc-group { flex-wrap: wrap; padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--border); }
+      .nav-links a.nav-cta { display: flex; justify-content: center; padding: 13px 18px; }
+    }
   </style>
 </head>
 <body>
@@ -1798,13 +2007,15 @@
     <div class="nav-inner">
       <a href="#" class="nav-logo">sofian<span>.global</span></a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#programs" data-i18n="nav.track">Track record</a></li>
-        <li><a href="#recognition" data-i18n="nav.credentials">Credentials</a></li>
-        <li><a href="#coach" data-i18n="nav.coach">Coach</a></li>
-        <li><a href="#approach" data-i18n="nav.session">Session</a></li>
-        <li><a href="#workshops" data-i18n="nav.masterclass">Seminar</a></li>
-        <li><a href="#testimonials" data-i18n="nav.testimonials">Testimonials</a></li>
-        <li><a href="market-research" class="nav-mr" data-i18n="nav.research">Market Research</a></li>
+        <li class="nav-hide-xs"><a href="#programs" data-i18n="nav.track">Track record</a></li>
+        <li class="nav-hide-md"><a href="#coach" data-i18n="nav.coach">Coach</a></li>
+        <li class="nav-hide-md"><a href="#approach" data-i18n="nav.session">Session</a></li>
+        <li class="nav-hide-sm"><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        <li class="nav-svc-group">
+          <a href="market-research" class="nav-mr nav-svc" data-i18n="nav.research">Market Research</a>
+          <a href="global-poc" class="nav-poc nav-svc" data-i18n="nav.poc">Global POC</a>
+        </li>
+        <li><a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.cta">Book a call</a></li>
       </ul>
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLang('en')" id="langEn"><span class="flag">&#127468;&#127463;</span><span class="lang-code">EN</span></button>
@@ -1817,36 +2028,54 @@
   <!-- 1. HERO -->
   <section class="hero">
     <div class="container">
-      <div class="hero-eyebrow">
-        <span class="pulse-dot" style="background: var(--teal);"></span>
-        <span data-i18n="hero.eyebrow">Now booking Fall 2026 delegations</span>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot" style="background: var(--teal);"></span>
+            <span data-i18n="hero.eyebrow">Now booking 2027 programs</span>
+          </div>
+          <h1 data-i18n="hero.title"><em>IR pitch consulting</em> for Korea's global startup programs.</h1>
+          <p class="subtitle" data-i18n="hero.subtitle">Many Korean startups pitch abroad with a deck built for Korean investors.<br>I coach each startup in your program 1:1, so their pitch works with global investors.</p>
+          <div class="cta-row hero-ctas">
+            <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+              <span data-i18n="hero.cta">Book a 30-min call</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
+              <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
+              <span data-i18n="cta.kakao">Chat on KakaoTalk</span>
+            </a>
+          </div>
+          <p class="hero-email" data-i18n="hero.email">Or write to <a href="mailto:sofian@hack40.com">sofian@hack40.com</a></p>
+          <a href="market-research" class="hero-cross"><span data-i18n="hero.cross">See market research and business matching</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+        <figure class="hero-media">
+          <div class="hero-photo">
+            <img src="photos/hero-kstartup.jpg" width="880" height="880" fetchpriority="high" alt="Sofian Meguellati on stage at the K-Startup VivaTech preparation seminar">
+            <p class="hero-badge"><img src="logos-white/kised.png" alt="KISED"><span data-i18n="hero.photo">K-Startup VivaTech preparation seminar</span></p>
+          </div>
+          <div class="hero-proof"><strong>112</strong><span data-i18n="hero.card1">Korean startups coached 1:1 in&nbsp;2026</span></div>
+        </figure>
       </div>
-      <h1 data-i18n="hero.title"><em>IR Pitch consulting</em> for Korea's global startup programs.</h1>
-      <p class="subtitle" data-i18n="hero.subtitle">Without global pitch standards, startups fail to convince international investors and miss opportunities abroad. I help your delegation deliver what they expect.</p>
-      <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
-        <span data-i18n="hero.cta">Book a discovery call</span>
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <a href="market-research" class="hero-cross"><span data-i18n="hero.cross">Explore global market research</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
 
-      <p class="trust-strip-label" data-i18n="hero.trust">Trusted by Korean institutional partners</p>
-      <div class="trust-strip" aria-label="Institutional partners">
-        <img src="logos-white/kised.png" alt="KISED" title="KISED">
-        <img src="logos-white/nipa.png" alt="NIPA" title="NIPA">
-        <img src="logos-white/kto.png" alt="KTO" title="KTO">
-        <img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis">
-        <img src="logos-white/kocca.png" alt="KOCCA" title="KOCCA">
-        <img src="logos-white/kita.png" alt="KITA" title="KITA">
-        <img src="logos-white/gbsa-logo-600x260.png" alt="GBSA" title="GBSA" class="logo-wide">
-        <img class="logo-color" src="logos-white/kvca.png" alt="KVCA" title="KVCA">
-        <img src="logos-white/kb-financial.png" alt="KB Holding" title="KB Holding">
-        <img class="logo-color" src="logos-white/KSPO_logo.png" alt="Korea Sports Promotion Foundation" title="Korea Sports Promotion Foundation">
-        <span class="ccei-wrap"><img class="logo-ccei" src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon CCEI"></span>
-        <span class="ccei-wrap"><img class="logo-ccei" src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI"></span>
-        <span class="ccei-wrap"><img class="logo-color logo-ccei" src="logos-white/Chungnam CCEI.svg" alt="Chungnam CCEI" title="Chungnam CCEI"></span>
-        <img src="logos-white/keri.png" alt="KERI" title="KERI" class="logo-small logo-color">
-        <img src="logos-white/kosme.png" alt="KOSME" title="KOSME">
-      </div>
+      <p class="trust-strip-label" data-i18n="hero.trust">IR pitch consulting delivered for</p>
+      <ul class="logo-tiles" aria-label="Institutional partners">
+        <li><img src="logos-white/kised.png" alt="KISED" title="KISED"></li>
+        <li><img src="logos-white/nipa.png" alt="NIPA" title="NIPA"></li>
+        <li><img src="logos-white/kto.png" alt="KTO" title="KTO"></li>
+        <li><img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis"></li>
+        <li><img src="logos-white/kocca.png" alt="KOCCA" title="KOCCA"></li>
+        <li><img src="logos-white/kita.png" alt="KITA" title="KITA"></li>
+        <li><img src="logos-white/gbsa-logo-600x260.png" alt="GBSA" title="GBSA" class="logo-wide"></li>
+        <li><img class="logo-color" src="logos-white/kvca.png" alt="KVCA" title="KVCA"></li>
+        <li><img src="logos-white/kb-financial.png" alt="KB Holding" title="KB Holding"></li>
+        <li><img class="logo-color" src="logos-white/KSPO_logo.png" alt="Korea Sports Promotion Foundation" title="Korea Sports Promotion Foundation"></li>
+        <li><span class="ccei-wrap"><img class="logo-ccei" src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon CCEI"></span></li>
+        <li><span class="ccei-wrap"><img class="logo-ccei" src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI"></span></li>
+        <li><span class="ccei-wrap"><img class="logo-color logo-ccei" src="logos-white/Chungnam CCEI.svg" alt="Chungnam CCEI" title="Chungnam CCEI"></span></li>
+        <li><img src="logos-white/keri.png" alt="KERI" title="KERI" class="logo-small logo-color"></li>
+        <li><img src="logos-white/kosme.png" alt="KOSME" title="KOSME"></li>
+      </ul>
     </div>
   </section>
 
@@ -1854,7 +2083,7 @@
   <section class="numbers-bar">
     <div class="numbers-grid">
       <div class="number-stat">
-        <div class="num">200+</div>
+        <div class="num">240+</div>
         <div class="label" data-i18n="num.s1">Korean startups coached</div>
       </div>
       <div class="number-stat">
@@ -1866,31 +2095,49 @@
         <div class="label" data-i18n="num.s3">Years in global business</div>
       </div>
       <div class="number-stat">
-        <div class="num">4</div>
-        <div class="label" data-i18n="num.s4">Countries operated from<br><span style="font-size: 0.75rem; color: var(--text-muted);">Paris &middot; Singapore &middot; Seoul &middot; Tokyo</span></div>
+        <div class="num">$2.5M+</div>
+        <div class="label" data-i18n="num.s4">Raised from global VCs at pre-seed by startups I coached in the last 12 months</div>
       </div>
     </div>
   </section>
+
+  <!-- 2b. THREE SERVICES STRIP: one colour per service page, links to the two other pages -->
+  <div class="svcb" id="services" role="navigation" aria-label="Services">
+    <div class="svcb-strip">
+      <div class="svcb-panel svcb-ir" aria-current="page">
+        <span class="svcb-text"><span class="svcb-name" data-i18n="nav.ir">IR Pitch Consulting</span><span class="svcb-line" data-i18n="svc.irShort">1:1 pitch coaching and seminars</span></span>
+        <span class="svcb-here"><span class="svcb-dot" aria-hidden="true"></span><span data-i18n="svc.here">You are here</span></span>
+      </div>
+      <a class="svcb-panel svcb-mr" href="market-research">
+        <span class="svcb-text"><span class="svcb-name" data-i18n="nav.research">Market Research</span><span class="svcb-line" data-i18n="svc.mrShort">Market studies and business matching</span></span>
+        <span class="svcb-go"><span data-i18n="svc.visit">Visit page</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+      <a class="svcb-panel svcb-poc" href="global-poc">
+        <span class="svcb-text"><span class="svcb-name" data-i18n="nav.poc">Global POC</span><span class="svcb-line" data-i18n="svc.pocShort">POC coaching and full POC programs</span></span>
+        <span class="svcb-go"><span data-i18n="svc.visit">Visit page</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+      </a>
+    </div>
+  </div>
 
   <!-- 3. PROGRAMS (live + delivered, combined compact) -->
   <section class="programs-section">
     <div class="container">
       <p class="section-label" data-i18n="prog.label">Track record</p>
-      <h2 class="section-title" data-i18n="prog.title">Programs <span class="accent">live</span> and delivered.</h2>
+      <h2 class="section-title" data-i18n="prog.title">Current and <span class="accent">past programs</span>.</h2>
 
       <div class="programs-grid">
         <!-- LIVE -->
         <article class="program-card is-live" id="programs">
           <span class="pc-tag" data-i18n="prog.liveTag"><span class="pulse-dot"></span> 2026 &middot; Live</span>
           <div class="pc-stat">
-            <div class="num">92</div>
-            <div class="label" data-i18n="prog.liveLabel">Korean startups in active 1:1 IR consulting cycles</div>
+            <div class="num">112</div>
+            <div class="label" data-i18n="prog.liveLabel">Korean startups received 1:1 IR pitch consulting in 2026</div>
           </div>
           <div class="pc-flags">
             <span class="pcf-label" data-i18n="prog.liveMarkets">Target markets</span>
-            <span class="pcf-flags" aria-label="France, Singapore, China, United States">&#127467;&#127479; &#127480;&#127468; &#127464;&#127475; &#127482;&#127480;</span>
+            <span class="pcf-flags" aria-label="France, Singapore, Japan, China, United States">&#127467;&#127479; &#127480;&#127468; &#127471;&#127477; &#127464;&#127475; &#127482;&#127480;</span>
           </div>
-          <div class="pc-partners-label" data-i18n="prog.livePartners">Programs from</div>
+          <div class="pc-partners-label" data-i18n="prog.livePartners">Partner organizations</div>
           <div class="partners-logos">
             <img src="logos-white/kised.png" alt="KISED" title="KISED">
             <img src="logos-white/kto.png" alt="KTO" title="KTO">
@@ -1903,16 +2150,16 @@
 
         <!-- DELIVERED -->
         <article class="program-card" id="track-record">
-          <span class="pc-tag" data-i18n="prog.dlvTag">2022 &ndash; 2025 &middot; Delivered</span>
+          <span class="pc-tag" data-i18n="prog.dlvTag">2022 to 2025 &middot; Delivered</span>
           <div class="pc-stat">
             <div class="num">131</div>
             <div class="label" data-i18n="prog.dlvLabel">Korean startups received 1:1 IR pitch consulting</div>
           </div>
           <div class="pc-flags">
-            <span class="pcf-label" data-i18n="prog.dlvMarkets">Markets reached</span>
+            <span class="pcf-label" data-i18n="prog.dlvMarkets">Target markets</span>
             <span class="pcf-flags" aria-label="France, United Kingdom, Singapore, Japan, China, Thailand, Vietnam, UAE, United States, Australia">&#127467;&#127479; &#127468;&#127463; &#127480;&#127468; &#127471;&#127477; &#127464;&#127475; &#127481;&#127469; &#127483;&#127475; &#127462;&#127466; &#127482;&#127480; &#127462;&#127482;</span>
           </div>
-          <div class="pc-partners-label" data-i18n="prog.dlvPartners">Partner organisations</div>
+          <div class="pc-partners-label" data-i18n="prog.dlvPartners">Partner organizations</div>
           <div class="partners-logos">
             <img src="logos-white/kised.png" alt="KISED" title="KISED">
             <img src="logos-white/nipa.png" alt="NIPA" title="NIPA">
@@ -1942,18 +2189,18 @@
       <div class="recognition-grid">
         <a class="recognition-card" href="https://www.ccnnews.co.kr/news/articleView.html?idxno=325806" target="_blank" rel="noopener">
           <div class="recognition-img has-photo">
-            <img src="Global Committee Member, Daejeon CCEI.JPG" alt="Sofian at Daejeon CCEI Global Committee" loading="lazy">
+            <img src="photos/rec-daejeon.jpg" width="640" height="480" alt="Sofian at Daejeon CCEI Global Committee" loading="lazy">
           </div>
           <div class="rec-body">
             <div class="rec-logo-mini"><span class="ccei-wrap"><img class="logo-ccei" src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI"></span></div>
             <div class="rec-year">2024</div>
             <h4 data-i18n="recog.c1">Global Committee Member, Daejeon CCEI</h4>
-            <span class="rec-link-text" data-i18n="recog.cReadArticle">Read article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+            <span class="rec-link-text" data-i18n="recog.cReadArticle">Read the article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
           </div>
         </a>
         <div class="recognition-card">
           <div class="recognition-img has-photo">
-            <img src="MOU, Gyeongbuk CCEI.jpg" alt="MOU signing with Gyeongbuk CCEI" loading="lazy">
+            <img src="photos/rec-gyeongbuk.jpg" width="640" height="480" alt="MOU signing with Gyeongbuk CCEI" loading="lazy">
           </div>
           <div class="rec-body">
             <div class="rec-logo-mini"><span class="ccei-wrap"><img class="logo-ccei" src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI"></span></div>
@@ -1963,23 +2210,23 @@
         </div>
         <a class="recognition-card" href="https://www.podbbang.com/channels/1779978/episodes/24773561" target="_blank" rel="noopener">
           <div class="recognition-img has-photo">
-            <img src="TBS interview on Global Business Etiquettes.jpeg" alt="TBS interview on Global Business Etiquettes" loading="lazy">
+            <img src="photos/rec-tbs.jpg" width="640" height="480" alt="TBS interview on global business etiquette" loading="lazy">
           </div>
           <div class="rec-body">
             <div class="rec-logo-mini"><img class="logo-color" src="logos-white/Logo_TBS.svg.png" alt="TBS"></div>
             <div class="rec-year">2023</div>
-            <h4 data-i18n="recog.c3">TBS interview on Global Business Etiquettes</h4>
-            <span class="rec-link-text" data-i18n="recog.cListenInterview">Listen to interview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+            <h4 data-i18n="recog.c3">TBS interview on global business etiquette</h4>
+            <span class="rec-link-text" data-i18n="recog.cListenInterview">Listen to the interview <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
           </div>
         </a>
         <div class="recognition-card">
           <div class="recognition-img has-photo">
-            <img src="World Business Angels Investors Week, Seoul Chapter.jpg" alt="World Business Angels Investors Week, Seoul Chapter" loading="lazy">
+            <img src="photos/rec-wbaw.jpg" width="640" height="480" alt="World Business Angels Investors Week, Seoul Chapter" loading="lazy">
           </div>
           <div class="rec-body">
             <div class="rec-logo-mini"><img class="logo-color" src="logos-white/wba week.jpg" alt="WBAF" style="filter: none; opacity: 1;"></div>
             <div class="rec-year">2023</div>
-            <h4 data-i18n="recog.c4">World Business Angels Investors Week, Seoul Chapter</h4>
+            <h4 data-i18n="recog.c4">Speaker, World Business Angels Investors Week, Seoul Chapter</h4>
           </div>
         </div>
       </div>
@@ -1989,13 +2236,9 @@
   <!-- 5. CONSULTANT INTRODUCTION -->
   <section class="coach-block" id="coach">
     <div class="container">
-      <p class="section-label" data-i18n="coach.label">Pitch Coach introduction</p>
+      <p class="section-label" data-i18n="coach.label">About the coach</p>
       <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; margin-bottom: 16px;">
         <h2 class="section-title" data-i18n="coach.title" style="margin-bottom: 0;">Sofian <span class="accent">Meguellati</span>.</h2>
-        <div style="display: inline-flex; align-items: center; gap: 14px; background: linear-gradient(135deg, rgba(0,180,160,0.08), rgba(0,180,160,0.02)); border: 1px solid rgba(0,180,160,0.25); border-radius: 14px; padding: 14px 20px;">
-          <div style="font-size: 1.7rem; font-weight: 900; color: var(--teal); letter-spacing: -1px; line-height: 1;">$2.5M+</div>
-          <div style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.4;" data-i18n="coach.outcome">raised in pre-seed with global VCs<br>by startups I have coached over the last 12 months</div>
-        </div>
       </div>
 
       <div class="coach-content">
@@ -2007,21 +2250,21 @@
         <div class="pillars">
           <div class="pillar">
             <h3 data-i18n="coach.p1Title">CEO of Hack40, a global startup accelerator</h3>
-            <p data-i18n="coach.p1Body">Founder of Hack40, active in Paris, Singapore, Seoul, and Tokyo. 13+ years building and running multi-million dollar businesses across these markets (3 years living in Korea).</p>
+            <p data-i18n="coach.p1Body">I founded Hack40, active in Paris, Singapore, Seoul and Tokyo. For 13+ years, I have built and run multi-million dollar businesses in these markets, including 3 years living in Korea.</p>
           </div>
           <div class="pillar">
-            <h3 data-i18n="coach.p2Title">Bridges Korean and global business styles</h3>
-            <p data-i18n="coach.p2Body">I bridge what Korean startups actually pitch with what global investors are expecting.</p>
+            <h3 data-i18n="coach.p2Title">Knows how Korean startups pitch and what global investors expect</h3>
+            <p data-i18n="coach.p2Body">In each session, I fix the gaps between the two, slide by slide.</p>
           </div>
           <div class="pillar">
-            <h3 data-i18n="coach.p3Title">Global network of 100+ international VCs, 50+ corporates, and judges I work with monthly</h3>
-            <p data-i18n="coach.p3Body">Active across Paris, Singapore, Seoul, Tokyo, and beyond.</p>
+            <h3 data-i18n="coach.p3Title">A network of 100+ international VCs and 50+ corporates</h3>
+            <p data-i18n="coach.p3Body">I work with them and with pitch competition judges every month.</p>
           </div>
         </div>
       </div>
 
       <div class="coach-creds" style="margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--border);">
-        <p class="section-label" data-i18n="coach.credsLabel" style="margin-bottom: 20px;">Speaking, lectures &amp; advisory</p>
+        <p class="section-label" data-i18n="coach.credsLabel" style="margin-bottom: 20px;">Talks and partnerships</p>
         <div class="recognition-logo-row">
           <div class="recognition-logo-item">
             <div class="rec-logo-wrap"><img src="logos-white/sungkyunkwan-university.png" alt="Sungkyunkwan University"></div>
@@ -2073,61 +2316,72 @@
   <!-- 6. HOW A 1:1 SESSION WORKS -->
   <section id="approach">
     <div class="container">
-      <p class="section-label" data-i18n="sess.label">How a 1:1 session works</p>
-      <h2 class="section-title" data-i18n="sess.title">The session <span class="accent">structure</span>.</h2>
-      <p class="session-lead" data-i18n="sess.lead">30 to 60 minutes per session, 1 to 3 sessions per startup. Built for clear improvement before the next pitch in global markets.</p>
+      <p class="section-label" data-i18n="sess.label">1:1 session</p>
+      <h2 class="section-title" data-i18n="sess.title">What happens in <span class="accent">a session</span>.</h2>
+      <p class="session-lead" data-i18n="sess.lead">30 to 60 minutes per session, 1 to 3 sessions per startup. The times below are for a 60-minute&nbsp;session.</p>
 
       <div class="session-steps">
         <div class="session-step">
           <div class="step-num-big">01</div>
           <div class="step-num">01</div>
           <h3 data-i18n="sess.s1Title">Live pitch review</h3>
-          <span class="step-time">10 min</span>
-          <p data-i18n="sess.s1Body">The startup presents the pitch in real conditions. I measure exactly how long it takes, and I watch it the way an investor does. I note every point where the audience loses attention.</p>
+          <span class="step-time" data-i18n="sess.time1">10 min</span>
+          <p data-i18n="sess.s1Body">The startup presents the pitch in real conditions. I&nbsp;time it, watch it the way an investor does, and note every point where the audience loses attention.</p>
         </div>
         <div class="session-step">
           <div class="step-num-big">02</div>
           <div class="step-num">02</div>
           <h3 data-i18n="sess.s2Title">Pitch structure review</h3>
-          <span class="step-time">10 min</span>
-          <p data-i18n="sess.s2Body">We put the slides in the right order for global investors. Context, problem, and solution come first, and technology comes later. This is the opposite of a typical Korean deck. Weaker parts move to the appendix, to use for Q&amp;A.</p>
+          <span class="step-time" data-i18n="sess.time2">10 min</span>
+          <p data-i18n="sess.s2Body">We put the slides in the right order for global investors. Context, problem and solution come first, and technology comes later. This is the opposite of a typical Korean deck. Weaker parts move to the appendix for Q&amp;A.</p>
         </div>
         <div class="session-step">
           <div class="step-num-big">03</div>
           <div class="step-num">03</div>
-          <h3 data-i18n="sess.s3Title">Content, slides, delivery feedback</h3>
-          <span class="step-time">20 min</span>
-          <p data-i18n="sess.s3Body">We check every slide. Every statement gets a number, and the main message goes into the slide title. I check every number with you, before an investor questions it. We rewrite weak sentences together.</p>
+          <h3 data-i18n="sess.s3Title">Slide-by-slide feedback</h3>
+          <span class="step-time" data-i18n="sess.time3">20 min</span>
+          <p data-i18n="sess.s3Body">Every claim gets a number, and the main message goes into the slide title. I&nbsp;check each number with the startup before an investor questions it. We rewrite weak sentences together.</p>
         </div>
         <div class="session-step">
           <div class="step-num-big">04</div>
           <div class="step-num">04</div>
-          <h3 data-i18n="sess.s4Title">Q&amp;A live practice</h3>
-          <span class="step-time">15 min</span>
-          <p data-i18n="sess.s4Body">The startup answers hard investor questions. We improve the weakest answers first, then write and practice each answer in less than 60 seconds. The hardest questions are answered on the slides, before anyone asks them.</p>
+          <h3 data-i18n="sess.s4Title">Live Q&amp;A practice</h3>
+          <span class="step-time" data-i18n="sess.time4">15 min</span>
+          <p data-i18n="sess.s4Body">The startup answers hard investor questions. We improve the weakest answers first, then write and practice each answer until it takes less than 60 seconds. The hardest questions are answered on the slides, before anyone asks them.</p>
         </div>
         <div class="session-step">
           <div class="step-num-big">05</div>
           <div class="step-num">05</div>
-          <h3 data-i18n="sess.s5Title">Action items &amp; next steps</h3>
-          <span class="step-time">5 min</span>
-          <p data-i18n="sess.s5Body">The startup leaves with a written report. It shows what to change on each slide, with the exact new words to use. It lists what already works well, to keep. And it gives a short list of things to do before the next pitch.</p>
+          <h3 data-i18n="sess.s5Title">Wrap-up and written report</h3>
+          <span class="step-time" data-i18n="sess.time5">5 min</span>
+          <p data-i18n="sess.s5Body">The report shows what to change on each slide, with the exact new words. It also notes what works and should stay, and gives a short to-do list for the next pitch.</p>
         </div>
+      </div>
+
+      <div class="format-notes session-spec">
+        <h4 data-i18n="sess.specTitle">Session format</h4>
+        <ul>
+          <li data-i18n="sess.sp1">Duration: 30 to 60 minutes per session</li>
+          <li data-i18n="sess.sp2">Sessions: 1 to 3 per startup</li>
+          <li data-i18n="sess.sp3">Delivery: in person in Seoul or online</li>
+          <li data-i18n="sess.sp4">Working language: English</li>
+          <li data-i18n="sess.sp5">Deliverable: a written report after each session</li>
+        </ul>
       </div>
 
       <div class="needs-block">
         <h4 data-i18n="sess.needsTitle">Global pitch deck standards</h4>
-        <p class="needs-lead" data-i18n="sess.needsLead">A global pitch deck follows different conventions than a Korean IR document. The standards below cover what matters most to international investors.</p>
+        <p class="needs-lead" data-i18n="sess.needsLead">A global pitch deck follows different conventions than a Korean IR document.</p>
         <ul class="needs-list">
           <li data-i18n="sess.nd1">One slide, one message</li>
           <li data-i18n="sess.nd2">Open with context, problem, then solution</li>
           <li data-i18n="sess.nd3">Show the wow before the technology</li>
           <li data-i18n="sess.nd4">Put the slide's message and number in the title</li>
-          <li data-i18n="sess.nd5">Write with certainty, no "trying" and "maybe"</li>
+          <li data-i18n="sess.nd5">Write with certainty, no "trying" or "maybe"</li>
           <li data-i18n="sess.nd6">Plain words, no jargon or acronyms</li>
-          <li data-i18n="sess.nd7">Put a big number behind every claim</li>
-          <li data-i18n="sess.nd8">Show a go-to-market plan for the region you pitch</li>
-          <li data-i18n="sess.nd9">Traction on one slide: ARR and growth, not MOUs</li>
+          <li data-i18n="sess.nd7">Back every claim with a number</li>
+          <li data-i18n="sess.nd8">Show a market entry plan for the region you pitch</li>
+          <li data-i18n="sess.nd9">Traction on one slide: revenue and growth, not MOUs</li>
           <li data-i18n="sess.nd10">Ask slide: amount, use of funds, milestones</li>
           <li data-i18n="sess.nd11">Show all money in USD, not Korean won</li>
         </ul>
@@ -2140,44 +2394,44 @@
     <div class="container">
       <p class="section-label" data-i18n="ws.label">Seminar</p>
       <h2 class="section-title" data-i18n="ws.title">Global Pitch <span class="accent">Seminar</span>.</h2>
-      <p class="session-lead" data-i18n="ws.lead">How to build a pitch for global audiences. Localized for the market your delegation targets, whether Europe, Singapore, US, or beyond. A 1 to 2 hour session for the whole group, before each startup starts 1:1 consulting.</p>
+      <p class="session-lead" data-i18n="ws.lead">A 1 to 2 hour seminar for all the startups in your program, before the 1:1 sessions start. I&nbsp;adapt the content to your target market, for example Europe, Singapore or the US.</p>
 
       <div class="workshop-formats">
         <div class="workshop-format">
           <h3 data-i18n="ws.c1Title">The 10-slide pitch framework</h3>
-          <p data-i18n="ws.c1Body">The 4 main parts, slide by slide, from start to end.</p>
+          <p data-i18n="ws.c1Body">The 4 main parts of a pitch, slide by slide.</p>
         </div>
         <div class="workshop-format">
-          <h3 data-i18n="ws.c2Title">What hooks vs. what loses an audience</h3>
-          <p data-i18n="ws.c2Body">Interest is earned every 30 seconds: what hooks them, what loses them.</p>
+          <h3 data-i18n="ws.c2Title">How to keep investors listening</h3>
+          <p data-i18n="ws.c2Body">An audience decides every 30 seconds whether to keep listening. We go through the moments where pitches usually lose them.</p>
         </div>
         <div class="workshop-format">
           <h3 data-i18n="ws.c3Title">Slide design and the 2-deck rule</h3>
-          <p data-i18n="ws.c3Body">One slide, one message, plus the live deck vs. email attachment deck rule.</p>
+          <p data-i18n="ws.c3Body">One slide, one message. And why you need a live deck and a separate deck to send by email.</p>
         </div>
         <div class="workshop-format">
-          <h3 data-i18n="ws.c4Title">Q&amp;A live practice and appendix slides</h3>
-          <p data-i18n="ws.c4Body">One-sentence answers, redirect, and what to keep in the appendix.</p>
+          <h3 data-i18n="ws.c4Title">Live Q&amp;A practice and appendix slides</h3>
+          <p data-i18n="ws.c4Body">Answer in one sentence, then bring the question back to your key message. Keep backup slides in the appendix.</p>
         </div>
         <div class="workshop-format">
-          <h3 data-i18n="ws.c5Title">10 techniques to become a great pitcher</h3>
-          <p data-i18n="ws.c5Body">From &ldquo;pitch like the first time&rdquo; to stage rules: body, voice, eye contact.</p>
+          <h3 data-i18n="ws.c5Title">10 techniques to present with confidence</h3>
+          <p data-i18n="ws.c5Body">Body language and voice on stage, and why each pitch should sound like the first time.</p>
         </div>
         <div class="workshop-format">
-          <h3 data-i18n="ws.c6Title">Cultural calibration: Korean startup style vs. global investor expectations</h3>
-          <p data-i18n="ws.c6Body">Business etiquette differences and how to connect Korean style with global VC expectations.</p>
+          <h3 data-i18n="ws.c6Title">What global investors expect from Korean founders</h3>
+          <p data-i18n="ws.c6Body">The business etiquette that matters in a first meeting with a foreign investor.</p>
         </div>
       </div>
 
       <div style="display: flex; justify-content: center; margin-top: 48px; margin-bottom: 16px;">
         <div style="display: inline-flex; align-items: center; gap: 8px; background: #fff; border: 1px solid var(--border); border-radius: 50px; padding: 8px 16px 8px 14px; box-shadow: var(--shadow-sm);">
-          <span style="font-size: 0.75rem; color: var(--text-muted); font-style: normal;" data-i18n="ws.featured">As featured at</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-style: normal;" data-i18n="ws.featured">Delivered at</span>
           <svg width="16" height="16" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18A10.96 10.96 0 0 0 1 12c0 1.77.42 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
           <span style="font-size: 0.82rem; font-weight: 700; color: var(--text);">Google for Startups</span>
         </div>
       </div>
-      <a class="video-wrapper" href="https://www.youtube.com/watch?v=kjg6_KK1WeE" target="_blank" rel="noopener" title="Watch the group pitch workshop on YouTube" style="margin-top: 0;">
-        <img class="video-thumb" src="https://img.youtube.com/vi/kjg6_KK1WeE/maxresdefault.jpg" alt="Group pitch workshop, example session" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/kjg6_KK1WeE/hqdefault.jpg';">
+      <a class="video-wrapper" href="https://www.youtube.com/watch?v=kjg6_KK1WeE" target="_blank" rel="noopener" title="Watch the seminar on YouTube" style="margin-top: 0;">
+        <img class="video-thumb" src="https://img.youtube.com/vi/kjg6_KK1WeE/maxresdefault.jpg" alt="Global pitch seminar, example session" onerror="this.onerror=null;this.src='https://img.youtube.com/vi/kjg6_KK1WeE/hqdefault.jpg';">
         <div class="play-overlay">
           <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
         </div>
@@ -2188,13 +2442,13 @@
       </a>
 
       <div class="format-notes">
-        <h4 data-i18n="ws.fmtTitle">Format notes</h4>
+        <h4 data-i18n="ws.fmtTitle">Seminar format</h4>
         <ul>
           <li data-i18n="ws.f1">Duration: 1 to 2 hours</li>
           <li data-i18n="ws.f2">Group size: 10 to 40 startups per session</li>
-          <li data-i18n="ws.f3">Delivery: in-person in Seoul, hybrid, or fully remote</li>
+          <li data-i18n="ws.f3">Delivery: in person in Seoul, hybrid or online</li>
           <li data-i18n="ws.f4">Working language: English</li>
-          <li data-i18n="ws.f5">Works alongside 1:1 IR consulting</li>
+          <li data-i18n="ws.f5">Works alongside 1:1 IR pitch consulting</li>
           <li data-i18n="ws.f6">Each participant receives my free global pitch deck e-book (87 pages in Korean)</li>
         </ul>
       </div>
@@ -2208,6 +2462,16 @@
       <h2 class="section-title" data-i18n="testim.title">What startups <span class="accent">say</span>.</h2>
 
       <div class="testimonials-grid">
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q4">The coaching helped me understand that improvement comes not from adding more, but from &ldquo;subtracting&rdquo; and refining.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/sml-biopharm.png" alt="SML Biopharm"></div>
+            <div>
+              <span class="tm-name">Yeong-Chan Ahn</span>
+              <span class="tm-role" data-i18n="testim.r4">Director, SML Biopharm</span>
+            </div>
+          </cite>
+        </div>
         <div class="testimonial-mini">
           <blockquote data-i18n="testim.q1">Sofian provided invaluable insights on how to approach the European market.</blockquote>
           <cite>
@@ -2229,32 +2493,12 @@
           </cite>
         </div>
         <div class="testimonial-mini">
-          <blockquote data-i18n="testim.q3">The coaching is practical, insightful, and really helps transform a pitch. I felt more confident presenting to investors.</blockquote>
+          <blockquote data-i18n="testim.q3">The coaching is practical, insightful, and really helps transform a pitch. I&nbsp;felt more confident presenting to investors.</blockquote>
           <cite>
             <div class="tm-logo"><img src="logos-white/atems.png" alt="ATEMs"></div>
             <div>
-              <span class="tm-name">Jeong-Im</span>
-              <span class="tm-role" data-i18n="testim.r3">CEO, ATEMs</span>
-            </div>
-          </cite>
-        </div>
-        <div class="testimonial-mini">
-          <blockquote data-i18n="testim.q4">The coaching helped me understand that improvement comes not from adding more, but from &ldquo;subtracting&rdquo; and refining.</blockquote>
-          <cite>
-            <div class="tm-logo"><img src="logos-white/sml-biopharm.png" alt="SML Biopharm"></div>
-            <div>
-              <span class="tm-name">Yeong-Chan Ahn</span>
-              <span class="tm-role" data-i18n="testim.r4">Director, SML Biopharm</span>
-            </div>
-          </cite>
-        </div>
-        <div class="testimonial-mini">
-          <blockquote data-i18n="testim.q5">Recommendable and efficient way to make immediate impact to improve pitching.</blockquote>
-          <cite>
-            <div class="tm-logo"><img src="logos-white/genemedicine.png" alt="GeneMedicine"></div>
-            <div>
-              <span class="tm-name">Jason Bae</span>
-              <span class="tm-role" data-i18n="testim.r5">CEO, GeneMedicine</span>
+              <span class="tm-name">Jeong-Im Woo</span>
+              <span class="tm-role" data-i18n="testim.r3">ATEMs</span>
             </div>
           </cite>
         </div>
@@ -2268,6 +2512,16 @@
             </div>
           </cite>
         </div>
+        <div class="testimonial-mini">
+          <blockquote data-i18n="testim.q5">Recommendable and efficient way to make immediate impact to improve pitching.</blockquote>
+          <cite>
+            <div class="tm-logo"><img src="logos-white/genemedicine.png" alt="GeneMedicine"></div>
+            <div>
+              <span class="tm-name">Jason Bae</span>
+              <span class="tm-role" data-i18n="testim.r5">CEO, GeneMedicine</span>
+            </div>
+          </cite>
+        </div>
       </div>
     </div>
   </section>
@@ -2276,15 +2530,15 @@
   <section class="final-cta-block">
     <div class="container">
       <h2 data-i18n="cta.title">Let's plan your <span class="accent">next program</span>.</h2>
-      <p data-i18n="cta.subtitle">Book a 30-minute call to align on your program timeline and the IR consulting that fits. Let's get your next delegation ready.</p>
+      <p data-i18n="cta.subtitle">In a 30-minute call, we go through your program dates and the number of startups.</p>
       <div class="cta-row">
         <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
-          <span data-i18n="cta.button">Book the 30-min call</span>
+          <span data-i18n="cta.button">Book a 30-min call</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
         <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
           <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
-          <span data-i18n="cta.kakao">Connect on Kakao</span>
+          <span data-i18n="cta.kakao">Chat on KakaoTalk</span>
         </a>
       </div>
     </div>
@@ -2299,23 +2553,27 @@
       <div class="faq-list">
         <details class="faq-item">
           <summary data-i18n="faq.q1">Will sessions be in English? Will Korean founders follow?</summary>
-          <div class="faq-answer" data-i18n="faq.a1">Yes. I have delivered 20+ seminars and 200+ 1:1 sessions in English with Korean founders, without translation issues. Working in English is also part of preparing your delegation for the global stage. International investors will not switch to Korean for them.</div>
+          <div class="faq-answer" data-i18n="faq.a1">Yes. I&nbsp;have run 20+ seminars and coached 240+ Korean startups 1:1 in English, without language problems. Working in English is also practice for the real pitch, because investors abroad will not switch to Korean.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q2">Why work with a non-Korean coach?</summary>
-          <div class="faq-answer" data-i18n="faq.a2">Korean startups already know how to pitch domestically. The gap is what global investors actually look for, and that is hard to see from inside Korea. I bring 13+ years across Paris, Singapore, Seoul, and Tokyo.</div>
+          <div class="faq-answer" data-i18n="faq.a2">Korean startups already know how to pitch in Korea. The gap is what global investors look for, and that is hard to see from inside Korea. I&nbsp;have done business in Europe and Asia for 13+ years, and I work with international VCs every month.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q3">How does invoicing work? Can you issue a Korean tax invoice (세금계산서)?</summary>
-          <div class="faq-answer" data-i18n="faq.a3">Carte Blanche SAS is a French company, so I issue an international commercial invoice rather than a Korean tax invoice (세금계산서). The invoice can be issued directly to your organization. For government-funded programs, I also provide the additional administrative documents requested during the contract and project period, including documents prepared in Korean.</div>
+          <div class="faq-answer" data-i18n="faq.a3">Contracts and invoices go through Carte Blanche SAS, my French company. I&nbsp;invoice your organization directly, with an international commercial invoice instead of a Korean tax invoice (&#49464;&#44552;&#44228;&#49328;&#49436;). Korean program operators already accept it. For government-funded programs, I also provide the administrative documents requested during the contract and project period, including documents in Korean.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq.q6">Can I get a written quote?</summary>
+          <div class="faq-answer" data-i18n="faq.a6">Yes. After the call, I send a quote based on the number of startups and sessions, with the documents your contract needs.</div>
         </details>
         <details class="faq-item">
           <summary data-i18n="faq.q4">Do you specialize in specific industries or stages?</summary>
-          <div class="faq-answer" data-i18n="faq.a4">Sector-agnostic, pre-seed to Series B. Coached startups across medtech, deep tech, hardware, consumer brands, AI/gaming, food tech, and B2B SaaS. The pitch deck fundamentals are the same. What changes is the target market angle, which I adapt per session.</div>
+          <div class="faq-answer" data-i18n="faq.a4">No. I&nbsp;coach startups in any sector and at any stage up to Series B. I&nbsp;have coached medtech, deep tech, hardware, consumer brands, AI and gaming, food tech and B2B SaaS startups. The deck basics stay the same, and I adapt the angle to each startup's target market.</div>
         </details>
         <details class="faq-item">
-          <summary data-i18n="faq.q5">Can you deliver in person in Seoul, or only remotely?</summary>
-          <div class="faq-answer" data-i18n="faq.a5">Both. I am in Seoul 3 to 4 times per year for in-person delegations. Remote sessions work just as well, proven across 200+ startups since 2022.</div>
+          <summary data-i18n="faq.q5">Can you deliver in person in Seoul, or only online?</summary>
+          <div class="faq-answer" data-i18n="faq.a5">Both. I&nbsp;come to Seoul 3 to 4 times a year for in-person sessions. Online sessions work equally well. I&nbsp;have coached 240+ Korean startups since 2022, in person and online.</div>
         </details>
       </div>
     </div>
@@ -2344,163 +2602,183 @@
       // Nav
       'nav.track': '실적',
       'nav.coach': '코치',
-      'nav.credentials': '공식 활동',
-      'nav.session': '세션 구조',
-      'nav.masterclass': '세미나',
+      'nav.session': '1:1 세션',
+      'nav.faq': 'FAQ',
+      'nav.cta': '상담 신청',
       'nav.research': '시장조사',
-      'nav.testimonials': '추천사',
+      'nav.poc': '글로벌 POC',
+      'nav.ir': 'IR 피칭 컨설팅',
+      'svc.here': '현재 페이지',
+      'svc.irShort': '1:1 피칭 코칭과 세미나',
+      'svc.mrShort': '시장조사와 비즈니스 매칭',
+      'svc.pocShort': 'POC 코칭과 POC 프로그램 운영',
+      'svc.visit': '바로가기',
 
       // Hero
-      'hero.eyebrow': '2026 가을 대표단 예약 진행 중',
-      'hero.title': '한국 스타트업의 해외 진출을 위한<br><em>IR 피칭 컨설팅</em>.',
-      'hero.subtitle': '글로벌 피칭 표준이 없으면 스타트업은 해외 투자자를 설득하지 못하고 해외에서 기회를 놓칩니다. 귀 기관의 대표단이 그들이 기대하는 것을 전달하도록 돕습니다.',
-      'hero.cta': '미팅 신청하기',
-      'hero.cross': '글로벌 시장조사 보기',
-      'hero.kakao': '또는 카카오톡으로 문의',
-      'hero.trust': '한국 주요 기관이 신뢰하는 파트너십',
+      'hero.eyebrow': '2027년 프로그램 상담 접수 중',
+      'hero.title': '한국 스타트업의 해외 진출을 위한<br><em>IR 피칭 컨설팅</em>',
+      'hero.subtitle': '한국 스타트업은 국내 투자자용 IR 자료로 해외 피칭에 나서는 경우가 많습니다.<br>귀 기관의 참여 기업을 한 곳씩 1:1로 코칭해, 각 기업의 피칭이 해외 투자자에게 통하도록 만듭니다.',
+      'hero.cta': '30분 상담 신청하기',
+      'hero.email': '이메일 문의: <a href="mailto:sofian@hack40.com">sofian@hack40.com</a>',
+      'hero.photo': 'K-Startup VivaTech 사전 준비 세미나',
+      'hero.card1': '2026년 1:1 코칭을 받은 한국 스타트업',
+      'hero.cross': '시장조사·비즈니스 매칭 보기',
+      'hero.trust': 'IR 피칭 컨설팅을 함께한 기관',
 
       // Numbers bar
       'num.s1': '코칭한 한국 스타트업',
       'num.s2': '한국 파트너 기관',
-      'num.s3': '글로벌 비즈니스 경력',
-      'num.s4': '활동 거점 국가<br><span style="font-size: 0.75rem; color: var(--text-muted);">파리 &middot; 싱가포르 &middot; 서울 &middot; 도쿄</span>',
+      'num.s3': '글로벌 비즈니스 경력(년)',
+      'num.s4': '최근 12개월간 코칭한 스타트업의 해외 VC 프리시드 투자 유치액',
 
       // Programs
       'prog.label': '실적',
-      'prog.title': '진행 중 및 <span class="accent">완료된</span> 프로그램.',
+      'prog.title': '진행 중인 프로그램과 <span class="accent">완료된 프로그램</span>',
       'prog.liveTag': '<span class="pulse-dot"></span> 2026 &middot; 진행 중',
-      'prog.liveLabel': '현재 1:1 IR 피칭 컨설팅 진행 중인 한국 스타트업',
+      'prog.liveLabel': '2026년 1:1 IR 피칭 컨설팅을 받은 한국 스타트업',
       'prog.liveMarkets': '진출 대상 시장',
-      'prog.livePartners': '진행 프로그램',
-      'prog.dlvTag': '2022 &ndash; 2025 &middot; 완료',
-      'prog.dlvLabel': '한국 스타트업이 1:1 IR 피칭 컨설팅을 진행',
-      'prog.dlvMarkets': '진출 시장',
+      'prog.livePartners': '파트너 기관',
+      'prog.dlvTag': '2022~2025 &middot; 완료',
+      'prog.dlvLabel': '1:1 IR 피칭 컨설팅을 받은 한국 스타트업',
+      'prog.dlvMarkets': '진출 대상 시장',
       'prog.dlvPartners': '파트너 기관',
 
       // Consultant
-      'coach.label': '피칭 코치 소개',
-      'coach.title': 'Sofian <span class="accent">Meguellati</span>.',
-      'coach.credsLabel': '강연 · 강의 · 자문',
-      'coach.p1Title': '프랑스 본사 글로벌 스타트업 액셀러레이터 Hack40의 CEO',
-      'coach.p1Body': '파리, 싱가포르, 서울, 도쿄에서 활동하는 글로벌 액셀러레이터 Hack40의 창업자. 13년 이상에 걸쳐 이들 시장에서 수백만 달러 규모의 비즈니스를 구축하고 운영해 왔습니다 (서울 3년 거주).',
-      'coach.p2Title': '한국과 글로벌 비즈니스 스타일을 잇다',
-      'coach.p2Body': '한국 스타트업이 실제로 피칭하는 방식과 글로벌 투자자가 기대하는 것을 잇습니다.',
-      'coach.p3Title': '매월 함께 일하는 100+ 해외 VC, 50+ 기업, 그리고 심사위원들의 글로벌 네트워크',
-      'coach.p3Body': '파리, 싱가포르, 서울, 도쿄 등지에서 활동 중.',
-      'coach.kakao': '카카오톡으로 문의',
-      'coach.linkedin': 'LinkedIn으로 연결하기',
+      'coach.label': '코치 소개',
+      'coach.title': 'Sofian <span class="accent">Meguellati</span>',
+      'coach.credsLabel': '강연 및 파트너십',
+      'coach.p1Title': '글로벌 스타트업 액셀러레이터 Hack40의 CEO',
+      'coach.p1Body': 'Hack40의 창업자로, 파리, 싱가포르, 서울, 도쿄에서 활동하고 있습니다. 13년 이상 이들 시장에서 수백만 달러 규모의 사업을 일구고 운영해 왔으며, 그중 3년은 한국에서 살았습니다.',
+      'coach.p2Title': '한국 스타트업의 피칭 방식과 해외 투자자의 눈높이를 모두 아는 코치',
+      'coach.p2Body': '세션마다 둘 사이의 차이를 슬라이드 단위로 바로잡습니다.',
+      'coach.p3Title': '해외 VC 100곳 이상, 기업 50곳 이상의 네트워크',
+      'coach.p3Body': '매달 이 네트워크는 물론, 피칭 대회 심사위원과도 함께 일합니다.',
+      'coach.kakao': '카카오톡으로 문의하기',
+      'coach.linkedin': 'LinkedIn 프로필 보기',
 
       // Recognition
       'recog.label': '공식 활동',
-      'recog.title': '공식 직책, MOU, <span class="accent">미디어 출연</span>.',
+      'recog.title': '공식 직책, MOU, <span class="accent">미디어 출연</span>',
       'recog.c1': '대전창조경제혁신센터 글로벌위원회 위원',
       'recog.c2': '경북창조경제혁신센터 MOU',
       'recog.c3': 'TBS 글로벌 비즈니스 에티켓 인터뷰',
-      'recog.c4': 'World Business Angels Investors Week, 서울 챕터',
+      'recog.c4': 'World Business Angels Investors Week 서울 챕터 연사',
       'recog.r1': '성균관대학교 MBA 프로그램 강연',
       'recog.cReadArticle': '기사 읽기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
       'recog.cListenInterview': '인터뷰 듣기 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>',
       'recog.r2': 'CJ Foods 오픈이노베이션 세미나',
       'recog.r3': 'GS Holding 오픈이노베이션 세미나',
-      'recog.r4': "신한 Future's Lab 글로벌 파트너",
-      'recog.r5': 'Korea Investment Accelerator MOU',
+      'recog.r4': '신한 퓨처스랩 글로벌 파트너',
+      'recog.r5': '한국투자액셀러레이터 MOU',
       'recog.r6': '한양대학교 창업지원단 MOU',
 
       // Session
-      'sess.label': '1:1 맞춤형 세션 진행 방식',
-      'sess.title': '세션 <span class="accent">구조</span>.',
-      'sess.lead': '세션당 30~60분, 스타트업당 1~3회 진행. 글로벌 시장 진출 전 명확한 개선을 위해 설계되었습니다.',
-      'sess.s1Title': '라이브 피칭 리뷰',
-      'sess.s1Body': '스타트업이 실제 환경에서 피칭을 진행하고, 저는 정확한 소요 시간을 측정합니다. 투자자의 시선으로 지켜보며, 청중의 집중이 흐트러지는 지점을 모두 기록합니다.',
+      'sess.label': '1:1 세션',
+      'sess.title': '<span class="accent">세션</span>은 이렇게 진행됩니다',
+      'sess.sp5': '산출물: 세션별 서면 보고서',
+      'sess.sp4': '진행 언어: 영어',
+      'sess.sp3': '진행 방식: 서울 대면 또는 온라인',
+      'sess.sp2': '진행 횟수: 스타트업당 1~3회',
+      'sess.sp1': '진행 시간: 세션당 30~60분',
+      'sess.specTitle': '1:1 세션 진행 개요',
+      'sess.time1': '10분',
+      'sess.time2': '10분',
+      'sess.time3': '20분',
+      'sess.time4': '15분',
+      'sess.time5': '5분',
+      'sess.lead': '세션당 30~60분, 스타트업당 1~3회 진행합니다. 아래 시간 배분은 60분 세션 기준입니다.',
+      'sess.s1Title': '실전 피칭 리뷰',
+      'sess.s1Body': '스타트업이 실전과 같은 조건으로 피칭합니다. 저는 시간을 재고, 투자자의 시선으로 지켜보며, 청중의 집중이 흐트러지는 지점을 모두 기록합니다.',
       'sess.s2Title': '피칭 구조 리뷰',
-      'sess.s2Body': '글로벌 투자자에게 맞는 순서로 슬라이드를 배치합니다. 배경, 문제, 솔루션을 먼저, 기술은 뒤에 둡니다. 일반적인 한국식 덱과는 반대 순서입니다. 설득력이 약한 부분은 부록으로 옮겨 Q&A에 활용합니다.',
-      'sess.s3Title': '콘텐츠, 슬라이드, 전달 피드백',
-      'sess.s3Body': '모든 슬라이드를 하나씩 점검합니다. 모든 주장에 숫자를 붙이고, 핵심 메시지는 슬라이드 제목으로 올립니다. 투자자가 문제 삼기 전에 모든 숫자를 하나씩 확인하고, 약한 문장은 함께 다시 씁니다.',
-      'sess.s4Title': 'Q&amp;A 라이브 연습',
-      'sess.s4Body': '스타트업이 투자자의 날카로운 질문에 답합니다. 가장 약한 답변부터 개선하고, 각 답변을 60초 이내로 작성해 연습합니다. 가장 어려운 질문은 묻기 전에 슬라이드에서 미리 답합니다.',
-      'sess.s5Title': '액션 아이템 및 다음 단계',
-      'sess.s5Body': '스타트업은 서면 보고서를 받고 마칩니다. 각 슬라이드에서 무엇을 바꿀지, 사용할 정확한 문구까지 제시합니다. 이미 잘 되어 있는 부분은 그대로 유지하도록 정리하고, 다음 피칭 전에 할 일 목록도 담습니다.',
+      'sess.s2Body': '해외 투자자에게 맞는 순서로 슬라이드를 배치합니다. 배경, 문제, 솔루션을 앞에 두고, 기술은 뒤로 보냅니다. 일반적인 한국식 덱과는 반대 순서입니다. 설득력이 약한 부분은 부록으로 옮겨 Q&A에 활용합니다.',
+      'sess.s3Title': '슬라이드별 피드백',
+      'sess.s3Body': '주장마다 숫자를 붙이고, 핵심 메시지는 슬라이드 제목으로 올립니다. 투자자가 문제 삼기 전에 숫자를 하나하나 같이 확인하고, 약한 문장도 함께 다시 씁니다.',
+      'sess.s4Title': '실전 Q&amp;A 연습',
+      'sess.s4Body': '스타트업이 투자자의 날카로운 질문에 답합니다. 가장 약한 답변부터 고치고, 답변마다 60초 안에 말할 수 있을 때까지 다듬고 연습합니다. 가장 어려운 질문은 투자자가 묻기 전에 슬라이드에 미리 답을 넣어 둡니다.',
+      'sess.s5Title': '마무리 및 서면 보고서',
+      'sess.s5Body': '보고서에는 슬라이드별로 바꿀 내용과 새로 쓸 정확한 문구, 그대로 둘 부분, 다음 피칭 전에 할 일 목록을 담습니다.',
       'sess.needsTitle': '글로벌 피치덱의 정석',
-      'sess.needsLead': '글로벌 피치덱은 한국식 IR 자료와는 다른 관례를 따릅니다. 아래 표준은 해외 투자자가 가장 중요하게 보는 핵심을 담았습니다.',
-      'sess.nd1': '한 슬라이드, 하나의 메시지',
-      'sess.nd2': '배경, 문제, 솔루션 순으로 시작',
-      'sess.nd3': '기술보다 와우 포인트를 먼저',
-      'sess.nd4': '핵심 메시지와 숫자를 슬라이드 제목에',
-      'sess.nd5': '‘아마’ ‘노력 중’ 대신 확신의 언어로',
-      'sess.nd6': '전문 용어와 약어 대신 쉬운 말로',
-      'sess.nd7': '모든 주장 뒤에 큰 숫자 하나',
-      'sess.nd8': '진출 지역에 맞춘 구체적인 GTM 계획',
-      'sess.nd9': '트랙션은 한 장에: MOU 말고 ARR과 성장률',
-      'sess.nd10': '투자 요청 슬라이드: 금액, 사용처, 마일스톤',
-      'sess.nd11': '모든 금액은 원화 말고 달러(USD)로',
+      'sess.needsLead': '글로벌 피치덱은 한국식 IR 자료와는 다른 관례를 따릅니다.',
+      'sess.nd1': '슬라이드 한 장에 메시지 하나만 담기',
+      'sess.nd2': '배경, 문제, 솔루션 순서로 시작하기',
+      'sess.nd3': '기술보다 와우 포인트를 먼저 보여 주기',
+      'sess.nd4': '슬라이드 제목에 핵심 메시지와 숫자 넣기',
+      'sess.nd5': '‘노력 중’, ‘아마’ 없이 확신 있게 쓰기',
+      'sess.nd6': '전문 용어와 약어 대신 쉬운 말 쓰기',
+      'sess.nd7': '모든 주장에 숫자 근거 달기',
+      'sess.nd8': '피칭하는 지역에 맞춘 구체적인 시장 진출 계획 보여 주기',
+      'sess.nd9': '트랙션은 한 장에, MOU가 아닌 매출과 성장률로 보여 주기',
+      'sess.nd10': '투자 요청 슬라이드에 금액, 자금 사용 계획, 마일스톤 담기',
+      'sess.nd11': '모든 금액은 원화가 아닌 달러(USD)로 표시하기',
 
       // Workshops / Masterclass
       'ws.label': '세미나',
-      'ws.title': '글로벌 피칭 <span class="accent">세미나</span>.',
-      'ws.lead': '글로벌 청중을 위한 피칭을 만드는 법. 귀 기관의 대표단이 진출하는 시장에 맞춰 현지화 (유럽, 싱가포르, 미국 등). 1~2시간 그룹 세션 후, 각 스타트업이 1:1 컨설팅을 시작합니다.',
+      'ws.title': '글로벌 피칭 <span class="accent">세미나</span>',
+      'ws.lead': '1:1 세션 시작 전, 참여 기업 전체를 대상으로 1~2시간 진행하는 세미나입니다. 유럽, 싱가포르, 미국 등 귀 기관의 타깃 시장에 맞춰 내용을 조정합니다.',
       'ws.c1Title': '10장 슬라이드 피칭 프레임워크',
-      'ws.c1Body': '4가지 핵심 구성 요소를 처음부터 끝까지 슬라이드별로.',
-      'ws.c2Title': '청중을 사로잡는 것 vs 잃는 것',
-      'ws.c2Body': '30초마다 다시 얻어내야 하는 청중의 관심, 무엇이 사로잡고 무엇이 잃는가.',
-      'ws.c3Title': '슬라이드 디자인과 2-덱 룰',
-      'ws.c3Body': '한 슬라이드, 하나의 메시지, 그리고 라이브 덱 vs 이메일 첨부 덱 룰.',
-      'ws.c4Title': 'Q&amp;A 라이브 연습과 부록 슬라이드',
-      'ws.c4Body': '한 문장 답변, 화법 전환, 그리고 부록에 보관할 항목.',
-      'ws.c5Title': '뛰어난 발표자가 되는 10가지 기법',
-      'ws.c5Body': '&ldquo;처음처럼 피칭하기&rdquo;부터 스테이지 룰까지: 신체, 음성, 시선.',
-      'ws.c6Title': '문화적 조율: 한국 스타트업 스타일 vs 글로벌 투자자 기대치',
-      'ws.c6Body': '비즈니스 에티켓 차이, 그리고 한국 스타일을 글로벌 VC 기대치와 잇는 방법.',
-      'ws.play': '클릭하여 재생',
+      'ws.c1Body': '피칭의 4가지 핵심 파트를 슬라이드별로 다룹니다.',
+      'ws.c2Title': '투자자의 관심을 붙잡는 법',
+      'ws.c2Body': '청중은 30초마다 계속 들을지 판단합니다. 피칭이 흔히 청중을 놓치는 순간을 하나씩 짚어봅니다.',
+      'ws.c3Title': '슬라이드 디자인과 발표용·송부용 덱 2개 원칙',
+      'ws.c3Body': '슬라이드 한 장에는 메시지 하나만 담습니다. 발표용 덱과 이메일 송부용 덱을 따로 만들어야 하는 이유도 다룹니다.',
+      'ws.c4Title': '실전 Q&amp;A 연습과 부록 슬라이드',
+      'ws.c4Body': '한 문장으로 답하고, 질문을 핵심 메시지로 다시 연결합니다. 예상 질문용 슬라이드는 부록에 준비합니다.',
+      'ws.c5Title': '자신감 있게 발표하는 10가지 기법',
+      'ws.c5Body': '무대 위 자세와 목소리, 그리고 매번 처음처럼 피칭해야 하는 이유를 다룹니다.',
+      'ws.c6Title': '해외 투자자가 한국 창업자에게 기대하는 것',
+      'ws.c6Body': '해외 투자자와의 첫 미팅에서 중요한 비즈니스 에티켓을 다룹니다.',
+      'ws.play': 'YouTube에서 보기',
       'ws.featured': '진행 실적',
-      'ws.fmtTitle': '진행 정보',
+      'ws.fmtTitle': '세미나 진행 개요',
       'ws.f1': '진행 시간: 1~2시간',
       'ws.f2': '그룹 규모: 세션당 10~40개사',
-      'ws.f3': '진행 방식: 서울 대면, 하이브리드, 또는 완전 원격',
+      'ws.f3': '진행 방식: 서울 대면, 온·오프라인 병행 또는 온라인',
       'ws.f4': '진행 언어: 영어',
-      'ws.f5': '1:1 IR 컨설팅과 병행 진행 가능',
-      'ws.f6': '참가자 전원에게 무료 글로벌 피치덱 이북 증정 (한국어, 87페이지)',
+      'ws.f5': '1:1 IR 피칭 컨설팅과 병행 가능',
+      'ws.f6': '참가자 전원에게 글로벌 피치덱 전자책(한국어, 87쪽) 무료 증정',
 
       // Testimonials
-      'testim.label': '추천사',
-      'testim.title': '스타트업의 <span class="accent">후기</span>.',
-      'coach.outcome': '최근 12개월간 제가 코칭한 스타트업이<br>글로벌 VC로부터 프리시드 단계 투자유치',
-      'testim.q1': '유럽 시장 진출에 대한 매우 귀중한 인사이트를 제공해 주셨습니다.',
-      'testim.r1': 'CEO, Bottless',
-      'testim.q2': '1시간 세션은 매우 가치 있었으며 글로벌 전략 구축에 실제로 큰 도움이 되었습니다.',
-      'testim.r2': 'CMO, apoc',
-      'testim.q3': '코칭은 실용적이고 인사이트가 풍부하며 피칭을 실제로 바꿔놓습니다. 투자자 앞에서 더욱 자신감을 갖게 되었습니다.',
-      'testim.r3': 'CEO, ATEMs',
-      'testim.q4': '개선은 더 추가하는 것이 아니라 &ldquo;덜어내고&rdquo; 다듬는 것에서 온다는 점을 코칭을 통해 이해하게 되었습니다.',
-      'testim.r4': '이사, SML Biopharm',
-      'testim.q5': '피칭 개선에 즉각적인 효과를 가져오는, 추천할 만한 효율적인 방법입니다.',
-      'testim.r5': 'CEO, GeneMedicine',
+      'testim.label': '후기',
+      'testim.title': '참여 기업의 <span class="accent">후기</span>',
+      'testim.q1': '유럽 시장에 어떻게 접근해야 하는지, 매우 값진 인사이트를 주셨습니다.',
+      'testim.r1': 'Bottless 대표',
+      'testim.q2': '1시간 세션이 정말 값졌고, 글로벌 전략을 세우는 데 큰 도움이 되었습니다.',
+      'testim.r2': 'apoc CMO',
+      'testim.q3': '코칭은 실용적이고 인사이트가 풍부하며, 피칭을 확실히 바꿔 줍니다. 투자자 앞에서 발표할 때 훨씬 자신감이 생겼습니다.',
+      'testim.r3': 'ATEMs',
+      'testim.q4': '코칭을 받으며, 피칭은 더하는 것이 아니라 &ldquo;덜어내고&rdquo; 다듬을 때 좋아진다는 것을 알게 되었습니다.',
+      'testim.r4': 'SML Biopharm 이사',
+      'testim.q5': '피칭을 바로 개선할 수 있는, 추천할 만한 효율적인 방법입니다.',
+      'testim.r5': 'GeneMedicine 대표',
       'testim.q6': '가장 설득력 있는 피치덱을 만들기 위한 최고 수준의 코칭 세션이라고 기대하셔도 좋습니다.',
-      'testim.r6': 'CEO, Voinosis',
+      'testim.r6': 'Voinosis 대표',
 
       // CTA
-      'cta.title': '<span class="accent">다음 프로그램</span>을 함께 준비합시다.',
-      'cta.subtitle': '30분 미팅을 예약하고 귀 기관의 프로그램 일정과 적합한 IR 컨설팅을 조율합시다. 다음 대표단을 함께 준비합시다.',
+      'cta.title': '<span class="accent">다음 프로그램</span>을 함께 준비하겠습니다',
+      'cta.subtitle': '30분 상담에서 프로그램 일정과 참여 기업 수를 함께 확인합니다.',
 
       // FAQ
-      'faq.label': '자주 묻는 질문',
-      'faq.title': '<span class="accent">자주 묻는 질문</span>.',
-      'faq.q1': '세션은 영어로 진행되나요? 한국 창업자가 잘 따라올 수 있나요?',
-      'faq.a1': '네. 한국 창업자와 영어로 20+ 세미나 및 200+ 1:1 세션을 진행해 왔으며, 통역 관련 문제는 없었습니다. 영어로 진행하는 것 또한 글로벌 무대를 준비하는 과정의 일부입니다. 해외 투자자들은 그들을 위해 한국어로 바꿔주지 않습니다.',
+      'faq.label': 'FAQ',
+      'faq.title': '<span class="accent">자주 묻는 질문</span>',
+      'faq.q1': '세션은 영어로 진행되나요? 한국 창업자도 잘 따라갈 수 있나요?',
+      'faq.a1': '네. 지금까지 영어로 세미나를 20회 이상 진행하고 한국 스타트업 240개사 이상을 1:1로 코칭했으며, 언어 문제는 없었습니다. 영어로 진행하는 것 자체가 실전 연습이기도 합니다. 해외 투자자가 한국어로 말해 주지는 않기 때문입니다.',
       'faq.q2': '왜 한국인이 아닌 코치와 일해야 하나요?',
-      'faq.a2': '한국 스타트업은 이미 국내에서 피칭하는 방법을 잘 알고 있습니다. 격차는 해외 투자자가 실제로 무엇을 보는가에 있으며, 그것은 한국 내부에서는 보기 어렵습니다. 저는 파리, 싱가포르, 서울, 도쿄에서 13년 이상의 경력을 가지고 있습니다.',
+      'faq.a2': '한국 스타트업은 이미 국내 피칭에 익숙합니다. 차이는 해외 투자자가 보는 기준에 있고, 이 기준은 한국 안에서는 파악하기 어렵습니다. 저는 13년 이상 유럽과 아시아에서 사업을 해 왔고, 매달 해외 VC와 함께 일합니다.',
       'faq.q3': '인보이스는 어떻게 발행되나요? 세금계산서 발행이 가능한가요?',
-      'faq.a3': 'Carte Blanche SAS는 프랑스 법인으로, 세금계산서 대신 국제 상업 인보이스(international commercial invoice)를 발행합니다. 필요 시 귀 기관 앞으로 직접 발행할 수 있습니다. 정부지원사업의 경우, 계약 및 프로젝트 기간 중 요청되는 추가 행정 서류도 제공하며, 한국어 작성이 필요한 서류도 준비합니다.',
-      'faq.q4': '특정 산업이나 단계에 전문화되어 있나요?',
-      'faq.a4': '산업 무관, 프리시드부터 시리즈 B까지. 메드테크, 딥테크, 하드웨어, 컨슈머 브랜드, AI/게이밍, 푸드테크, B2B SaaS 등 다양한 분야의 스타트업을 코칭해 왔습니다. 피치덱의 기본은 동일합니다. 달라지는 것은 타겟 시장에 맞는 앵글이며, 이는 세션마다 조정합니다.',
-      'faq.q5': '서울에서 대면 진행이 가능한가요, 아니면 원격만 가능한가요?',
-      'faq.a5': '둘 다 가능합니다. 연 3~4회 서울을 방문하여 대표단과 대면 진행합니다. 원격 세션도 동일하게 효과적이며, 2022년 이후 200+ 스타트업으로 입증되었습니다.',
-      'cta.button': '30분 미팅 신청하기',
-      'cta.kakao': '카카오톡으로 문의',
+      'faq.a3': '계약 체결과 인보이스 발행은 제 프랑스 법인 Carte Blanche SAS 명의로 합니다. 세금계산서 대신 국제 상업 인보이스(international commercial invoice)를 귀 기관 앞으로 직접 발행하며, 한국 운영 기관에서 정산 처리한 실적이 있습니다. 정부지원사업의 경우 계약 및 사업 기간 중 요청하시는 행정 서류도 제공하며, 한국어로 작성해야 하는 서류도 준비합니다.',
+      'faq.q4': '특정 산업이나 성장 단계만 코칭하나요?',
+      'faq.a4': '아니요. 프리시드부터 시리즈 B까지, 산업 구분 없이 코칭합니다. 메드테크, 딥테크, 하드웨어, 컨슈머 브랜드, AI·게임, 푸드테크, B2B SaaS 스타트업을 코칭해 왔습니다. 피치덱의 기본은 같고, 기업별 타깃 시장에 맞춰 메시지의 방향을 조정합니다.',
+      'faq.q5': '서울에서 대면으로 진행할 수 있나요, 아니면 온라인만 가능한가요?',
+      'faq.a5': '둘 다 가능합니다. 연 3~4회 서울을 방문해 대면으로 진행합니다. 온라인 세션도 효과는 같으며, 2022년부터 대면과 온라인으로 240개사 이상의 한국 스타트업을 코칭해 왔습니다.',
+      'faq.q6': '견적서를 받을 수 있나요?',
+      'faq.a6': '네. 상담 후 참여 기업 수와 세션 수에 맞춘 견적서를 보내 드리며, 계약에 필요한 서류도 함께 준비합니다.',
+      'cta.button': '30분 상담 신청하기',
+      'cta.kakao': '카카오톡으로 문의하기',
 
       // Footer
       'footer.kakao': '카카오톡',
-      'footer.copy': '&copy; 2026 Sofian Meguellati &middot; 모든 권리 보유',
-      'footer.legal': '<strong style="color: var(--text-secondary);">Carte Blanche SAS</strong> &nbsp;|&nbsp; 대표: Sofian Meguellati &nbsp;|&nbsp; 프랑스 사업자등록번호 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France'
+      'footer.copy': '&copy; 2026 Sofian Meguellati &middot; All rights reserved',
+      'footer.legal': '<strong style="color: var(--text-secondary);">Carte Blanche SAS</strong> &nbsp;|&nbsp; 대표: Sofian Meguellati &nbsp;|&nbsp; 프랑스 사업자등록번호(SIREN) 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France'
     };
 
     // On load: scrape all English originals from the HTML (single source of truth)
@@ -2553,44 +2831,53 @@
       });
     })();
 
-    // FAQ: smooth accordion open/close
+    // FAQ: smooth accordion open/close. Height and bottom padding move together, so a card
+    // closes in one continuous motion with no pause or jump at the end.
     (function() {
+      var DURATION = 280;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       document.querySelectorAll('.faq-item').forEach(function(item) {
         var sum = item.querySelector('summary');
         var ans = item.querySelector('.faq-answer');
         if (!sum || !ans) return;
+        var timer = null;
+        function clean() { ans.style.height = ''; ans.style.paddingBottom = ''; }
 
         sum.addEventListener('click', function(e) {
           e.preventDefault();
-          var isOpen = item.hasAttribute('open');
-
-          if (isOpen) {
-            // Close: animate from current height to 0
+          clearTimeout(timer);
+          if (reduce) {
+            item.classList.remove('is-closing'); clean();
+            if (item.hasAttribute('open')) item.removeAttribute('open'); else item.setAttribute('open', '');
+            return;
+          }
+          if (item.hasAttribute('open') && !item.classList.contains('is-closing')) {
+            // Close: from the current height (padding included) down to 0
+            item.classList.add('is-closing');
             ans.style.height = ans.offsetHeight + 'px';
-            ans.offsetHeight; // force reflow
-            requestAnimationFrame(function() {
-              ans.style.height = '0px';
-            });
-            var onClose = function() {
-              item.removeAttribute('open');
-              ans.style.height = '';
-              ans.removeEventListener('transitionend', onClose);
-            };
-            ans.addEventListener('transitionend', onClose);
-          } else {
-            // Open: set open, animate from 0 to scrollHeight
-            item.setAttribute('open', '');
-            var target = ans.scrollHeight;
+            ans.offsetHeight; // commit the start value
+            ans.style.paddingBottom = '0px';
             ans.style.height = '0px';
-            ans.offsetHeight; // force reflow
-            requestAnimationFrame(function() {
-              ans.style.height = target + 'px';
-            });
-            var onOpen = function() {
-              ans.style.height = '';
-              ans.removeEventListener('transitionend', onOpen);
-            };
-            ans.addEventListener('transitionend', onOpen);
+            timer = setTimeout(function() {
+              item.removeAttribute('open');
+              item.classList.remove('is-closing');
+              clean();
+            }, DURATION);
+          } else {
+            // Open (or re-open while closing): from the current height up to the full answer
+            var start = item.hasAttribute('open') ? ans.offsetHeight : 0;
+            item.classList.remove('is-closing');
+            item.setAttribute('open', '');
+            clean();
+            var target = ans.scrollHeight;
+            ans.style.transition = 'none';          // place the start state without animating it
+            ans.style.height = start + 'px';
+            if (!start) ans.style.paddingBottom = '0px';
+            ans.offsetHeight; // commit the start value
+            ans.style.transition = '';
+            ans.style.paddingBottom = '';
+            ans.style.height = target + 'px';
+            timer = setTimeout(clean, DURATION);
           }
         });
       });
@@ -2600,7 +2887,7 @@
     (function() {
       var fade = document.getElementById('pageFade');
       if (!fade) return;
-      document.querySelectorAll('a.nav-mr, a.nav-ir, a.nav-logo, a.hero-cross').forEach(function(a) {
+      document.querySelectorAll('a.nav-mr, a.nav-ir, a.nav-poc, a.nav-logo, a.hero-cross, a.svcb-panel').forEach(function(a) {
         a.addEventListener('click', function(e) {
           var href = a.getAttribute('href');
           if (!href || href.charAt(0) === '#') return;
