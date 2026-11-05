@@ -9,11 +9,11 @@
   <meta property="og:description" content="Global POC consulting for startup cohorts, or full POC program management with corporate partners. Delivered for KITA and Innopolis programs, with 32 startups coached in 2026.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://sofian.global/global-poc">
-  <meta property="og:image" content="https://sofian.global/og-image-global-poc.png">
+  <meta property="og:image" content="https://sofian.global/og-share-global-poc-2027.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sofian Meguellati · Global POC programs for Korean startups">
   <meta name="twitter:description" content="Global POC consulting for startup cohorts, or full POC program management with corporate partners. Delivered for KITA and Innopolis programs, with 32 startups coached in 2026.">
-  <meta name="twitter:image" content="https://sofian.global/og-image-global-poc.png">
+  <meta name="twitter:image" content="https://sofian.global/og-share-global-poc-2027.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
@@ -1207,6 +1207,11 @@
     .poc-examples .case-logo img { height: 26px; max-width: 130px; }
     .poc-examples .case-logo.round img { height: 40px; }
     .poc-examples .case-sector-title { font-size: 1.02rem; font-weight: 700; margin-bottom: 4px; }
+    /* Results of the KITA POCs, under the example cards */
+    .poc-results { display: flex; align-items: baseline; gap: 14px; margin-top: 22px; padding: 16px 20px; background: rgba(217,119,6,0.06); border: 1px solid rgba(217,119,6,0.22); border-radius: var(--radius); }
+    .poc-results-label { flex-shrink: 0; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #fff; background: var(--amber); padding: 4px 10px; border-radius: 5px; }
+    .poc-results p { font-size: 0.95rem; line-height: 1.6; font-weight: 600; color: var(--text); }
+    @media (max-width: 600px) { .poc-results { flex-direction: column; gap: 10px; } }
 
     /* --- CANVAS: the Global POC Canvas filled in, one compact sheet --- */
     .canvas-wrap { margin-top: 40px; }
@@ -1352,7 +1357,7 @@
         <span data-i18n="hero.eyebrow">Now booking 2027 POC programs</span>
       </div>
       <h1 data-i18n="hero.title"><em>Global POC</em> consulting and programs for Korean startups.</h1>
-      <p class="subtitle" data-i18n="hero.subtitle">Many Korean startups meet global corporates but leave without a POC.<br>I coach each startup in your program to a POC proposal a partner can accept, or run the full program with corporate partners.</p>
+      <p class="subtitle" data-i18n="hero.subtitle">Many Korean startups pitch global corporates with an investor deck, and leave without a POC.<br>I coach each startup in your program to a POC proposal a partner can accept, or run the full program with corporate partners.</p>
       <div class="cta-row hero-ctas">
         <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
           <span data-i18n="hero.cta">Book a 30-min call</span>
@@ -1401,7 +1406,7 @@
     <div class="container">
       <p class="section-label" data-i18n="offers.label">Formats</p>
       <h2 class="section-title" data-i18n="offers.title">Two ways to <span class="accent">work together</span>.</h2>
-      <p class="report-lead" data-i18n="offers.lead">Coaching only, or the whole program.</p>
+      <p class="report-lead" data-i18n="offers.lead">Coaching makes each startup ready for a partner. The full program also brings the partners.</p>
 
       <div class="format-cards">
         <div class="format-card f1">
@@ -1490,7 +1495,7 @@
 
       <div class="case-cards">
         <div class="case-card">
-          <div class="case-cover"><img src="case-covers/poc-hologram.jpg" alt="Hologram display kiosk" loading="lazy"></div>
+          <div class="case-cover"><img src="case-covers/poc-holo-table.jpg" alt="3D hovering hologram table" loading="lazy"></div>
           <div class="case-logo"><img src="logos-white/poc-ocbc.svg" alt="OCBC"></div>
           <h3 class="case-sector-title" data-i18n="ex.c1">3D hovering hologram startup with a Singapore bank</h3>
         </div>
@@ -1505,6 +1510,10 @@
           <h3 class="case-sector-title" data-i18n="ex.c3">Skin pigmentation measurement device, with a global consumer goods company</h3>
         </div>
       </div>
+      <div class="poc-results">
+        <span class="poc-results-label" data-i18n="ex.resLabel">Results</span>
+        <p data-i18n="ex.results">A first order in Singapore before the program ended, a scope extension under NDA, and one corporate partner that went on to work with 4 more Korean startups in its teams in Singapore, Japan and China.</p>
+      </div>
     </div>
   </section>
 
@@ -1513,7 +1522,7 @@
     <div class="container">
       <p class="section-label" data-i18n="canvas.label">The tool</p>
       <h2 class="section-title" data-i18n="canvas.title">The Global <span class="accent">POC Canvas</span>.</h2>
-      <p class="report-lead" data-i18n="canvas.lead">Every startup builds its POC plan on this one page. Your team receives each canvas, ready to share with the partner.</p>
+      <p class="report-lead" data-i18n="canvas.lead">Every startup builds its POC plan on this one page. Your team receives each canvas, ready to share with the partner. Partners run many POCs: a plan they can read on one page gets a faster answer.</p>
 
       <div class="canvas-wrap">
         <figure class="pcx" aria-label="Global POC Canvas">
@@ -1633,7 +1642,7 @@
       'nav.cta': '상담 신청',
       'hero.eyebrow': '2027년 POC 프로그램 상담 접수 중',
       'hero.title': '한국 스타트업을 위한<br><em>글로벌 POC</em> 컨설팅과 프로그램',
-      'hero.subtitle': '한국 스타트업은 해외 기업과 미팅을 해도 POC로 이어지지 않는 경우가 많습니다.<br>귀 기관의 참여 기업이 파트너가 수락할 수 있는 POC 제안을 만들도록 코칭하거나, 기업 파트너와 함께 프로그램 전체를 운영합니다.',
+      'hero.subtitle': '많은 한국 스타트업이 투자자용 IR 자료로 해외 기업에 피칭하고, POC 없이 돌아옵니다.<br>귀 기관의 참여 기업이 파트너가 수락할 수 있는 POC 제안을 만들도록 코칭하거나, 기업 파트너와 함께 프로그램 전체를 운영합니다.',
       'hero.cta': '30분 상담 신청하기',
       'cta.kakao': '카카오톡으로 문의하기',
       'hero.email': '이메일 문의: <a href="mailto:sofian@hack40.com">sofian@hack40.com</a>',
@@ -1645,7 +1654,7 @@
       'num.s4': '글로벌 네트워크의 기업 파트너',
       'offers.label': '방식',
       'offers.title': '함께하는 <span class="accent">두 가지 방식</span>',
-      'offers.lead': '코칭만 맡기거나, 프로그램 전체를 맡길 수 있습니다.',
+      'offers.lead': '코칭으로 참여 기업은 파트너를 만날 준비를 마칩니다. 프로그램 전체 운영에서는 기업 파트너까지 연결합니다.',
       'offers.mapLabel': '방식별 범위',
       'chip.f1': '방식 1',
       'chip.f2': '방식 2',
@@ -1686,9 +1695,11 @@
       'ex.c1': '3D 홀로그램 스타트업 × 싱가포르 은행',
       'ex.c2': '창고 내 결함 자동 검출 AI 스타트업 × 철도 차량 제조사',
       'ex.c3': '피부 색소 측정 기기 스타트업 × 글로벌 소비재 기업',
+      'ex.resLabel': '결과',
+      'ex.results': '프로그램 종료 전 싱가포르 첫 주문, NDA 체결 후 범위 확대, 그리고 한 기업 파트너가 싱가포르·일본·중국 팀에서 한국 스타트업 4곳과 이어간 추가 협업.',
       'canvas.label': '도구',
       'canvas.title': '글로벌 <span class="accent">POC 캔버스</span>',
-      'canvas.lead': '참여 기업마다 이 한 장에 POC 계획을 정리합니다. 귀 기관은 파트너와 바로 공유할 수 있는 기업별 캔버스를 받습니다.',
+      'canvas.lead': '참여 기업마다 이 한 장에 POC 계획을 정리합니다. 귀 기관은 파트너와 바로 공유할 수 있는 기업별 캔버스를 받습니다. 기업은 많은 POC를 검토하기 때문에, 한 장으로 읽히는 계획에 더 빨리 답합니다.',
       'canvas.b1': '<strong>Partner / Startup</strong>특정 기업 하나와 담당 부서, 국가.',
       'canvas.b2': '<strong>POC key stakeholders</strong>예산을 책임지는 스폰서, 첫 연락 담당자, 실제 사용자, 승인권자.',
       'canvas.b3': '<strong>POC current use case and objectives</strong>파트너의 문제와, POC가 증명해야 할 단 한 가지.',
