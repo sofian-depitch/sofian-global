@@ -145,18 +145,18 @@
       box-shadow: 0 4px 14px rgba(0,180,160,0.3);
     }
     .nav-links a.nav-mr {
-      background: #4F46E5;
+      background: #0369A1;
       color: #fff !important;
       padding: 8px 16px;
       border-radius: 8px;
       font-weight: 700 !important;
-      box-shadow: 0 2px 8px rgba(79,70,229,0.15);
+      box-shadow: 0 2px 8px rgba(3,105,161,0.15);
       transition: background 0.35s ease, box-shadow 0.35s ease, transform 0.25s ease;
     }
     .nav-links a.nav-mr:hover {
-      background: #6366F1;
+      background: #0284C7;
       color: #fff !important;
-      box-shadow: 0 4px 16px rgba(79,70,229,0.35);
+      box-shadow: 0 4px 16px rgba(3,105,161,0.35);
       transform: translateY(-1px);
     }
     .nav-links a.nav-mr:active {
@@ -1759,9 +1759,9 @@
         margin: 18px auto 0;
         padding: 9px 18px;
         border-radius: 50px;
-        background: rgba(79,70,229,0.08);
-        color: #4F46E5;
-        border: 1px solid rgba(79,70,229,0.22);
+        background: rgba(3,105,161,0.08);
+        color: #0369A1;
+        border: 1px solid rgba(3,105,161,0.22);
         font-size: 0.82rem;
         font-weight: 600;
         text-decoration: none;
@@ -1907,7 +1907,7 @@
     .svcb-panel { position: relative; display: flex; align-items: center; justify-content: center; gap: 22px; min-height: 120px; padding: 24px 32px; color: #fff; text-decoration: none; overflow: hidden; }
     .svcb-panel::after { content: ''; position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255,255,255,0.12), rgba(255,255,255,0) 55%); pointer-events: none; }
     .svcb-ir { background: linear-gradient(135deg, var(--teal), var(--teal-dark)); }
-    .svcb-mr { background: linear-gradient(135deg, #6366F1, #4F46E5); }
+    .svcb-mr { background: linear-gradient(135deg, #0284C7, #0369A1); }
     .svcb-poc { background: linear-gradient(135deg, #D97706, #B45309); }
     .svcb-text { position: relative; z-index: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; max-width: 250px; }
     .svcb-name { font-size: 1.15rem; font-weight: 800; letter-spacing: -0.3px; line-height: 1.25; }
@@ -1915,7 +1915,7 @@
     .svcb-go, .svcb-here { position: relative; z-index: 1; flex-shrink: 0; display: inline-flex; align-items: center; gap: 8px; border-radius: 50px; font-size: 0.82rem; font-weight: 700; white-space: nowrap; }
     .svcb-go { padding: 10px 16px; background: #fff; box-shadow: 0 4px 14px rgba(0,0,0,0.14); transition: transform 0.25s ease, box-shadow 0.25s ease; }
     .svcb-go svg { width: 15px; height: 15px; transition: transform 0.25s ease; }
-    .svcb-mr .svcb-go { color: #4F46E5; }
+    .svcb-mr .svcb-go { color: #0369A1; }
     .svcb-poc .svcb-go { color: #B45309; }
     .svcb-here { padding: 9px 14px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.4); }
     .svcb-dot { width: 7px; height: 7px; border-radius: 50%; background: #fff; }
@@ -1946,6 +1946,9 @@
     /* Line breaks: balanced titles, no word left alone on a last line */
     h1, h2, h3, h4, summary { text-wrap: balance; }
     p, li, .faq-answer, .label { text-wrap: pretty; }
+    /* Short and centred texts: balanced lines, so a line never ends on one or two lonely words */
+    p, li, summary, .faq-answer, .label, .svcb-line, .svcb-name, .hero-proof span { text-wrap: balance; }
+    @media (max-width: 768px) { .faq-answer { text-wrap: pretty; } }
 
     /* --- HEADER: 4 links, thin separator, the two other services as outline chips, one filled "Book a call" --- */
     .nav-links { gap: 22px; }
@@ -1955,12 +1958,12 @@
     .nav-links a.nav-svc:hover { border-color: #cbd5e1; box-shadow: 0 2px 8px rgba(16,24,40,0.06); }
     .nav-links a.nav-svc::before { content: ''; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
     .nav-links a.nav-svc.nav-ir::before { background: #00B4A0; }
-    .nav-links a.nav-svc.nav-mr::before { background: #4F46E5; }
+    .nav-links a.nav-svc.nav-mr::before { background: #0369A1; }
     .nav-links a.nav-svc.nav-poc::before { background: #D97706; }
     /* Hover: a soft tint of each service colour that fades in */
     .nav-links a.nav-svc:hover::before { transform: scale(1.3); }
     .nav-links a.nav-svc.nav-ir:hover { background: rgb(0 180 160 / 0.07); border-color: rgb(0 180 160 / 0.4); }
-    .nav-links a.nav-svc.nav-mr:hover { background: rgb(79 70 229 / 0.06); border-color: rgb(79 70 229 / 0.35); }
+    .nav-links a.nav-svc.nav-mr:hover { background: rgb(3 105 161 / 0.06); border-color: rgb(3 105 161 / 0.35); }
     .nav-links a.nav-svc.nav-poc:hover { background: rgb(217 119 6 / 0.07); border-color: rgb(217 119 6 / 0.4); }
     .nav-links a.nav-cta { display: inline-flex; align-items: center; padding: 9px 18px; border-radius: 10px; background: var(--teal); color: #fff !important; font-weight: 700 !important; box-shadow: none; transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
     .nav-links a.nav-cta:hover { background: var(--teal-dark); color: #fff !important; box-shadow: 0 4px 14px rgba(0,180,160,0.3); transform: translateY(-1px); }
@@ -1979,6 +1982,34 @@
       .nav-links li.nav-svc-group { flex-wrap: wrap; padding: 16px 0 0; border-left: 0; border-top: 1px solid var(--border); }
       .nav-links a.nav-cta { display: flex; justify-content: center; padding: 13px 18px; }
     }
+    /* Hero subtitle: each sentence is its own balanced block; flag rows balanced too */
+    .subtitle .sub-l { display: block; text-wrap: balance; }
+    .number-stat .label span[aria-label] { display: block; text-wrap: balance; }
+
+    /* CTAs: KakaoTalk first and email second (what Korean program managers use), the call as a small grey link */
+    .hero-ctas .btn, .final-cta-block .cta-row .btn { border-radius: 12px; padding: 14px 22px; font-size: 0.97rem; font-weight: 700; gap: 10px; transition: transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1), background-color 0.3s cubic-bezier(.4,0,.2,1), border-color 0.3s cubic-bezier(.4,0,.2,1); }
+    .hero-ctas .btn-kakao, .final-cta-block .cta-row .btn-kakao { background: #FEE500; color: #191600; box-shadow: 0 1px 2px rgba(16,24,40,0.06), 0 8px 18px rgba(234,208,0,0.28); }
+    .hero-ctas .btn-kakao:hover, .final-cta-block .cta-row .btn-kakao:hover { background: #FDDC00; color: #191600; transform: translateY(-1px); box-shadow: 0 10px 22px rgba(234,208,0,0.36); }
+    .btn-mail { background: #fff; color: var(--text); border: 1px solid var(--border); box-shadow: 0 1px 2px rgba(16,24,40,0.05); }
+    .btn-mail:hover { border-color: #cbd5e1; color: var(--text); transform: translateY(-1px); box-shadow: 0 8px 18px rgba(16,24,40,0.08); }
+    .btn-mail .mail-icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--teal); }
+    .cta-call { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font-size: 0.88rem; font-weight: 500; color: var(--text-muted); text-decoration: none; position: relative; z-index: 1; transition: color 0.3s cubic-bezier(.4,0,.2,1); }
+    .cta-call:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+    .cta-call .cal-icon { width: 16px; height: 16px; flex-shrink: 0; }
+    .final-cta-block .cta-call { margin-top: 18px; }
+
+    /* Header CTA: KakaoTalk, the channel Korean program managers use */
+    .nav-links a.nav-cta { display: inline-flex; align-items: center; gap: 8px; background: #FEE500; color: #191600 !important; }
+    .nav-links a.nav-cta:hover { background: #FDDC00; color: #191600 !important; box-shadow: 0 4px 14px rgba(234,208,0,0.35); }
+    .nav-links a.nav-cta .kakao-icon { width: 16px; height: 16px; fill: #3C1E1E; flex-shrink: 0; }
+    @media (max-width: 768px) { .nav-links a.nav-cta { display: flex; justify-content: center; } }
+    /* Email box: one click copies the address (office PCs in Korea often have no mail app); "Copy email" veil on hover, "Copied" after */
+    .btn-mail { position: relative; overflow: hidden; cursor: pointer; font-family: inherit; }
+    .btn-mail .mail-over { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: inherit; background: #111827; color: #fff; font-size: 0.92rem; font-weight: 700; opacity: 0; transition: opacity 0.25s cubic-bezier(.4,0,.2,1), background-color 0.2s; pointer-events: none; }
+    .btn-mail .mail-over svg { width: 16px; height: 16px; }
+    .btn-mail:hover .mail-over, .btn-mail:focus-visible .mail-over, .btn-mail.is-done .mail-over { opacity: 1; }
+    .btn-mail.is-done .mail-over { background: #047857; }
+    @media (hover: none) { .btn-mail:hover .mail-over { opacity: 0; } .btn-mail.is-done .mail-over { opacity: 1; } }
   </style>
 </head>
 <body>
@@ -2015,7 +2046,7 @@
           <a href="market-research" class="nav-mr nav-svc" data-i18n="nav.research">Market Research</a>
           <a href="poc" class="nav-poc nav-svc" data-i18n="nav.poc">Global POC</a>
         </li>
-        <li><a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="nav-cta" data-i18n="nav.cta">Book a call</a></li>
+        <li><a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="nav-cta"><svg class="kakao-icon" viewBox="0 0 256 256" aria-hidden="true"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg><span data-i18n="nav.cta">KakaoTalk</span></a></li>
       </ul>
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLang('en')" id="langEn"><span class="flag">&#127468;&#127463;</span><span class="lang-code">EN</span></button>
@@ -2035,18 +2066,19 @@
             <span data-i18n="hero.eyebrow">Now booking 2027 programs</span>
           </div>
           <h1 data-i18n="hero.title"><em>IR pitch consulting</em> for Korea's global startup programs.</h1>
-          <p class="subtitle" data-i18n="hero.subtitle">Many Korean startups pitch abroad with a deck built for Korean investors.<br>I coach each startup in your program 1:1, so their pitch works with global investors.</p>
+          <p class="subtitle" data-i18n="hero.subtitle"><span class="sub-l">Many Korean startups pitch abroad with a deck built for Korean investors.</span> <span class="sub-l">I coach each startup in your program 1:1, so their pitch works with global investors.</span></p>
           <div class="cta-row hero-ctas">
-            <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
-              <span data-i18n="hero.cta">Book a 30-min call</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
             <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
               <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
               <span data-i18n="cta.kakao">Chat on KakaoTalk</span>
             </a>
+            <button type="button" class="btn btn-mail btn-large" data-copy="sofian@hack40.com" data-done-en="Copied" data-done-ko="복사됨" aria-label="Copy the email address sofian@hack40.com">
+              <svg class="mail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+              <span>sofian@hack40.com</span>
+              <span class="mail-over" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="mail-over-txt" data-i18n="cta.copyEmail">Copy email</span></span>
+            </button>
           </div>
-          <p class="hero-email" data-i18n="hero.email">Or write to <a href="mailto:sofian@hack40.com">sofian@hack40.com</a></p>
+          <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="cta-call"><svg class="cal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg><span data-i18n="cta.callLink">Or book a 30-min call</span></a>
           <a href="market-research" class="hero-cross"><span data-i18n="hero.cross">See market research and business matching</span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <figure class="hero-media">
@@ -2340,21 +2372,21 @@
           <div class="step-num">03</div>
           <h3 data-i18n="sess.s3Title">Slide-by-slide feedback</h3>
           <span class="step-time" data-i18n="sess.time3">20 min</span>
-          <p data-i18n="sess.s3Body">Every claim gets a number, and the main message goes into the slide title. I&nbsp;check each number with the startup before an investor questions it. We rewrite weak sentences together.</p>
+          <p data-i18n="sess.s3Body">Every claim gets a number, and the main message goes into the slide title. I&nbsp;check each number with the startup before an investor questions it. We&nbsp;rewrite weak sentences together.</p>
         </div>
         <div class="session-step">
           <div class="step-num-big">04</div>
           <div class="step-num">04</div>
           <h3 data-i18n="sess.s4Title">Live Q&amp;A practice</h3>
           <span class="step-time" data-i18n="sess.time4">15 min</span>
-          <p data-i18n="sess.s4Body">The startup answers hard investor questions. We improve the weakest answers first, then write and practice each answer until it takes less than 60 seconds. The hardest questions are answered on the slides, before anyone asks them.</p>
+          <p data-i18n="sess.s4Body">The startup answers hard investor questions. We&nbsp;improve the weakest answers first, then write and practice each answer until it takes less than 60 seconds. The hardest questions are answered on the slides, before anyone&nbsp;asks&nbsp;them.</p>
         </div>
         <div class="session-step">
           <div class="step-num-big">05</div>
           <div class="step-num">05</div>
           <h3 data-i18n="sess.s5Title">Wrap-up and written report</h3>
           <span class="step-time" data-i18n="sess.time5">5 min</span>
-          <p data-i18n="sess.s5Body">The report shows what to change on each slide, with the exact new words. It also notes what works and should stay, and gives a short to-do list for the next pitch.</p>
+          <p data-i18n="sess.s5Body">The report shows what to change on each slide, with the exact new words. It&nbsp;also notes what works and should stay, and gives a short to-do list for the next pitch.</p>
         </div>
       </div>
 
@@ -2403,7 +2435,7 @@
         </div>
         <div class="workshop-format">
           <h3 data-i18n="ws.c2Title">How to keep investors listening</h3>
-          <p data-i18n="ws.c2Body">An audience decides every 30 seconds whether to keep listening. We go through the moments where pitches usually lose them.</p>
+          <p data-i18n="ws.c2Body">An audience decides every 30 seconds whether to keep listening. We&nbsp;go through the moments where pitches usually lose them.</p>
         </div>
         <div class="workshop-format">
           <h3 data-i18n="ws.c3Title">Slide design and the 2-deck rule</h3>
@@ -2530,17 +2562,19 @@
   <section class="final-cta-block">
     <div class="container">
       <h2 data-i18n="cta.title">Let's plan your <span class="accent">next program</span>.</h2>
-      <p data-i18n="cta.subtitle">In a 30-minute call, we go through your program dates and the number of startups.</p>
+      <p data-i18n="cta.subtitle">Send me your program dates and the number of startups, on KakaoTalk or by email.</p>
       <div class="cta-row">
-        <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="btn btn-primary btn-large">
-          <span data-i18n="cta.button">Book a 30-min call</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
         <a href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener" class="btn btn-kakao btn-large">
           <svg class="kakao-icon" viewBox="0 0 256 256"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg>
           <span data-i18n="cta.kakao">Chat on KakaoTalk</span>
         </a>
+        <button type="button" class="btn btn-mail btn-large" data-copy="sofian@hack40.com" data-done-en="Copied" data-done-ko="복사됨" aria-label="Copy the email address sofian@hack40.com">
+          <svg class="mail-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>
+          <span>sofian@hack40.com</span>
+          <span class="mail-over" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V6a2 2 0 0 1 2-2h9"/></svg><span class="mail-over-txt" data-i18n="cta.copyEmail">Copy email</span></span>
+        </button>
       </div>
+      <a href="https://calendly.com/depitchsofian/sofian-global" target="_blank" rel="noopener" class="cta-call"><svg class="cal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg><span data-i18n="cta.callLink">Or book a 30-min call</span></a>
     </div>
   </section>
 
@@ -2604,7 +2638,7 @@
       'nav.coach': '코치',
       'nav.session': '1:1 세션',
       'nav.faq': 'FAQ',
-      'nav.cta': '상담 신청',
+      'nav.cta': '카카오톡 문의',
       'nav.research': '시장조사',
       'nav.poc': '글로벌 POC',
       'nav.ir': 'IR 피칭 컨설팅',
@@ -2617,9 +2651,7 @@
       // Hero
       'hero.eyebrow': '2027년 프로그램 상담 접수 중',
       'hero.title': '한국 스타트업의 해외 진출을 위한<br><em>IR 피칭 컨설팅</em>',
-      'hero.subtitle': '한국 스타트업은 국내 투자자용 IR 자료로 해외 피칭에 나서는 경우가 많습니다.<br>귀 기관의 참여 기업을 한 곳씩 1:1로 코칭해, 각 기업의 피칭이 해외 투자자에게 통하도록 만듭니다.',
-      'hero.cta': '30분 상담 신청하기',
-      'hero.email': '이메일 문의: <a href="mailto:sofian@hack40.com">sofian@hack40.com</a>',
+      'hero.subtitle': '<span class="sub-l">한국 스타트업은 국내 투자자용 IR 자료로 해외 피칭에 나서는 경우가 많습니다.</span> <span class="sub-l">귀 기관의 참여 기업을 한 곳씩 1:1로 코칭해, 각 기업의 피칭이 해외 투자자에게 통하도록 만듭니다.</span>',
       'hero.photo': 'K-Startup VivaTech 사전 준비 세미나',
       'hero.card1': '2026년 1:1 코칭을 받은 한국 스타트업',
       'hero.cross': '시장조사·비즈니스 매칭 보기',
@@ -2755,7 +2787,7 @@
 
       // CTA
       'cta.title': '<span class="accent">다음 프로그램</span>을 함께 준비하겠습니다',
-      'cta.subtitle': '30분 상담에서 프로그램 일정과 참여 기업 수를 함께 확인합니다.',
+      'cta.subtitle': '프로그램 일정과 참여 기업 수를 카카오톡이나 이메일로 보내 주시면 됩니다.',
 
       // FAQ
       'faq.label': 'FAQ',
@@ -2772,8 +2804,9 @@
       'faq.a5': '둘 다 가능합니다. 연 3~4회 서울을 방문해 대면으로 진행합니다. 온라인 세션도 효과는 같으며, 2022년부터 대면과 온라인으로 240개사 이상의 한국 스타트업을 코칭해 왔습니다.',
       'faq.q6': '견적서를 받을 수 있나요?',
       'faq.a6': '네. 상담 후 참여 기업 수와 세션 수에 맞춘 견적서를 보내 드리며, 계약에 필요한 서류도 함께 준비합니다.',
-      'cta.button': '30분 상담 신청하기',
       'cta.kakao': '카카오톡으로 문의하기',
+      'cta.callLink': '또는 30분 상담 예약하기',
+      'cta.copyEmail': '이메일 복사',
 
       // Footer
       'footer.kakao': '카카오톡',
@@ -2899,7 +2932,32 @@
         });
       });
     })();
-  </script>
+  
+    // Email box: copy the address to the clipboard (no mail app needed)
+    (function() {
+      document.querySelectorAll('.btn-mail[data-copy]').forEach(function(b) {
+        var t = b.querySelector('.mail-over-txt'), timer = null;
+        b.addEventListener('click', function(e) {
+          e.preventDefault();
+          var v = b.getAttribute('data-copy');
+          function done() {
+            if (!b.classList.contains('is-done')) b.setAttribute('data-label', t.innerHTML);
+            t.innerHTML = b.getAttribute(document.documentElement.lang === 'ko' ? 'data-done-ko' : 'data-done-en');
+            b.classList.add('is-done');
+            clearTimeout(timer);
+            timer = setTimeout(function() { b.classList.remove('is-done'); t.innerHTML = b.getAttribute('data-label'); }, 1600);
+          }
+          function fallback() {
+            var ta = document.createElement('textarea'); ta.value = v; ta.setAttribute('readonly', '');
+            ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); } catch (err) {}
+            document.body.removeChild(ta); done();
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(v).then(done, fallback); else fallback();
+        });
+      });
+    })();
+</script>
 
 
 </body>
