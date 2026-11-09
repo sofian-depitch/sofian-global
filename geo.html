@@ -209,6 +209,12 @@
     html[lang="ko"] .markets-l { font-size: 13px; letter-spacing: 0.04em; }
     .markets-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; list-style: none; }
     .markets-list li { display: inline-flex; align-items: center; gap: 7px; font-size: 14.5px; font-weight: 500; color: var(--dark); white-space: nowrap; }
+    /* AI assistants band, right above the markets (Sofian, 9 Nov: show from the start that every AI is covered) */
+    .engines { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 26px; margin-top: 64px; }
+    .engines + .markets { margin-top: 22px; }
+    .engines-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; list-style: none; }
+    .engines-list li { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; letter-spacing: -0.005em; color: var(--ink); white-space: nowrap; }
+    .ai-ico { width: 19px; height: 19px; fill: currentColor; flex-shrink: 0; }
 
     /* Proof band under the hero (v4): the Korean track record before the problem */
     .sec.proof > .wrap { padding-top: 64px; padding-bottom: 72px; text-align: center; }
@@ -502,6 +508,9 @@
       .f-done { padding: 18px 18px; }
 
       .markets { flex-direction: column; gap: 14px; margin-top: 56px; }
+      .engines { flex-direction: column; gap: 14px; margin-top: 48px; }
+      .engines + .markets { margin-top: 30px; }
+      .engines-list { gap: 10px 18px; }
       .markets-list { gap: 10px 18px; }
       .sec.proof > .wrap { padding-top: 44px; padding-bottom: 52px; }
       .proof .logo-strip { margin-top: 26px; }
@@ -716,6 +725,16 @@
           <p class="f-note" data-i18n="form.note">Free · No account · Your report arrives within 48 hours</p>
         </div>
 
+        <div class="engines">
+          <p class="markets-l" id="enginesL" data-i18n="ai.label">The program measures</p>
+          <ul class="engines-list" aria-labelledby="enginesL">
+            <li><svg class="ai-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg><span>ChatGPT</span></li>
+            <li><svg class="ai-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg><span data-i18n="ai.aio">Google AI Overviews</span></li>
+            <li><svg class="ai-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></svg><span>Gemini</span></li>
+            <li><svg class="ai-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.3977 7.0896h-2.3106V.0676l-7.5094 6.3542V.1577h-1.1554v6.1966L4.4904 0v7.0896H1.6023v10.3976h2.8882V24l6.932-6.3591v6.2005h1.1554v-6.0469l6.9318 6.1807v-6.4879h2.8882V7.0896zm-3.4657-4.531v4.531h-5.355l5.355-4.531zm-13.2862.0676 4.8691 4.4634H5.6458V2.6262zM2.7576 16.332V8.245h7.8476l-6.1149 6.1147v1.9723H2.7576zm2.8882 5.0404v-3.8852h.0001v-2.6488l5.7763-5.7764v7.0111l-5.7764 5.2993zm12.7086.0248-5.7766-5.1509V9.0618l5.7766 5.7766v6.5588zm2.8882-5.0652h-1.733v-1.9723L13.3948 8.245h7.8478v8.087z"/></svg><span>Perplexity</span></li>
+            <li><svg class="ai-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg><span>Claude</span></li>
+          </ul>
+        </div>
         <div class="markets">
           <p class="markets-l" id="marketsL" data-i18n="mk.label">Measured from</p>
           <ul class="markets-list" aria-labelledby="marketsL">
@@ -852,7 +871,7 @@
             <div class="tl-state"><span class="chip" data-i18n="s1.state">Invisible</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
             <p class="tl-when" data-i18n="s1.when">Weeks 0 to 2</p>
             <h3 class="tl-title" data-i18n="s1.title">Diagnose</h3>
-            <p class="tl-do" data-i18n="s1.do">25&nbsp;buyer questions, asked 3&nbsp;times each from your market.</p>
+            <p class="tl-do" data-i18n="s1.do">25&nbsp;buyer questions, asked from your market on all 5&nbsp;AI assistants, several runs each.</p>
             <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s1.win">A baseline: who is named, what AI says about you, which sources it trusts</p></div>
             <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s1.goal">Know exactly where you stand</p></div>
           </li>
@@ -879,7 +898,7 @@
             <div class="tl-state"><span class="chip" data-i18n="s4.state">Findable</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
             <p class="tl-when" data-i18n="s4.when">Week 12</p>
             <h3 class="tl-title" data-i18n="s4.title">Decide what comes next</h3>
-            <p class="tl-do" data-i18n="s4.do">Final review across ChatGPT, Google AI Overviews, Gemini and Perplexity.</p>
+            <p class="tl-do" data-i18n="s4.do">Final review on all 5 AI assistants: ChatGPT, Google AI Overviews, Gemini, Perplexity and Claude.</p>
             <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s4.win">Results against the baseline, a playbook, and the choice: extend, open another market, or stop</p></div>
             <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s4.goal">Named and described accurately where investors, buyers and partners search</p></div>
           </li>
@@ -889,7 +908,7 @@
         <div class="rhythm">
           <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg><div><p class="rh-w" data-i18n="rhy.monW">Every Monday</p><p class="rh-t" data-i18n="rhy.mon">An action pack: what moved, and up to 3 ranked actions</p></div></div>
           <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><div><p class="rh-w" data-i18n="rhy.friW">Every Friday</p><p class="rh-t" data-i18n="rhy.fri">The week's content, written in full, ready to publish</p></div></div>
-          <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><div><p class="rh-w" data-i18n="rhy.monthW">Every month</p><p class="rh-t" data-i18n="rhy.month">A site review and a 30-minute call</p></div></div>
+          <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><div><p class="rh-w" data-i18n="rhy.monthW">Every month</p><p class="rh-t" data-i18n="rhy.month">All 5 AI assistants measured, a site review and a 30-minute call</p></div></div>
         </div>
         <div class="fit roles">
           <div class="fit-col">
@@ -921,7 +940,7 @@
           <div class="get-col">
             <div class="get-h"><h3 data-i18n="get.freeT">Free AI visibility report</h3><span class="meta" data-i18n="get.freeM">within 48 hours</span></div>
             <ul class="checks">
-              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f1">5 buyer questions asked from your market</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f1">5 buyer questions asked on ChatGPT from your market</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f2">Your visibility snapshot and the competitors that show up</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f3">The sources AI cites</span></li>
               <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f4">Your 3 biggest gaps, with 1 example fix drafted</span></li>
@@ -1030,7 +1049,7 @@
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q5">Which AI assistants do you measure?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-              <div class="faq-answer" data-i18n="faq.a5">ChatGPT every week, under fixed conditions; Google AI Overviews, Gemini and Perplexity once a month. China is not included, because buyers there mostly use local AI assistants.</div>
+              <div class="faq-answer" data-i18n="faq.a5">All five from the baseline: ChatGPT, Google AI Overviews, Gemini, Perplexity and Claude. Then ChatGPT every week, under fixed conditions, and the four others every month. Claude is asked from a fresh account, since it cannot be used logged out. The free report covers ChatGPT. China is not included, because buyers there mostly use local AI assistants.</div>
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q6">Do you guarantee results?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -1178,6 +1197,8 @@
       'form.done3': '리포트는 48시간 안에 이메일로 보내 드립니다.',
       'form.note': '무료 · 회원가입 없음 · 48시간 안에 이메일로 발송',
       'mk.label': '현지 측정 시장',
+      'ai.label': '프로그램에서 측정하는 AI',
+      'ai.aio': 'Google AI 개요',
       'proof.n': '2022년부터 한국 스타트업 240개사 이상 코칭',
       'proof.label': '해외 진출 프로그램을 함께한 기관',
       'mk.us': '미국',
@@ -1234,7 +1255,7 @@
       's1.state': '보이지 않음',
       's1.when': '0~2주 차',
       's1.title': '진단',
-      's1.do': '바이어 질문 25개를 타깃 시장 현지에서 질문마다 3회씩 묻습니다.',
+      's1.do': '바이어 질문 25개를 타깃 시장 현지에서 5개 AI 모두에 질문마다 여러&nbsp;번 묻습니다.',
       's1.win': '기준선: 언급되는 기업, AI가 귀사를 소개하는&nbsp;방식, AI가 신뢰하는 출처',
       's1.goal': '현재 위치를 정확히 파악',
       's2.state': '인식됨',
@@ -1252,7 +1273,7 @@
       's4.state': '발견됨',
       's4.when': '12주 차',
       's4.title': '다음 단계 결정',
-      's4.do': 'ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity에서 최종 점검합니다.',
+      's4.do': 'ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity, Claude 5개 AI에서 최종 점검합니다.',
       's4.win': '기준선 대비 결과와 플레이북, 그리고 연장, 시장&nbsp;추가, 종료 중 선택',
       's4.goal': '투자자, 바이어, 파트너가 찾는 곳에서 귀사가 언급되고 정확하게 소개됨',
       'how.line': '매주 월요일, 무엇을&nbsp;고쳐야&nbsp;할지 알&nbsp;수&nbsp;있습니다.',
@@ -1261,7 +1282,7 @@
       'rhy.friW': '매주 금요일',
       'rhy.fri': '바로 게시할 수 있게 완성한 이번 주 콘텐츠',
       'rhy.monthW': '매월',
-      'rhy.month': '사이트 점검과 30분 리뷰 미팅',
+      'rhy.month': '5개 AI 측정, 사이트 점검, 30분 리뷰 미팅',
       'roles.meT': '제가 하는 일',
       'roles.meD': '귀사와 함께 질문 25개를 고르고, 매주 측정해 실행 항목의 우선순위를 정합니다. 페이지, 문구, 제안문은 모두 현지 언어로 작성합니다. 매주 월요일에는 무엇이 게시되었고 무엇이 남았는지, AI가 이를 반영했는지 확인합니다.',
       'roles.youT': '귀사 팀이 하는 일',
@@ -1273,7 +1294,7 @@
       'get.title': '무료 리포트가 먼저, <span class="plat br">12주 프로그램은 그다음</span>',
       'get.freeT': '무료 AI 가시성 리포트',
       'get.freeM': '48시간 안에',
-      'get.f1': '타깃 시장 현지에서 물은 바이어 질문 5개',
+      'get.f1': '타깃 시장 현지에서 ChatGPT에 물은 바이어 질문 5개',
       'get.f2': '귀사의 AI 가시성 현황과 함께 언급되는 경쟁사',
       'get.f3': 'AI가 인용하는 출처',
       'get.f4': '우선 개선 과제 3가지와 예시 개선안 초안 1건',
@@ -1327,7 +1348,7 @@
       'faq.q4': '아직 현지 유통사가 없어도 GEO가 도움이 되나요?',
       'faq.a4': '네, 이미 제품과 실적, 타깃 시장이 있다면 도움이 됩니다. 리포트는 그 시장의 AI가 신뢰하는 유통사, 디렉터리, 매체를 보여 주므로 현지 파트너를 고르는 데 참고가 됩니다. 아직 제품-시장 적합성(PMF)을 검증하는 단계라면 시장 진출의 기본부터 시작하시길 권합니다.',
       'faq.q5': '어떤 AI를 측정하나요?',
-      'faq.a5': 'ChatGPT는 매주 같은 조건으로 측정하고, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity는 매월 1회 확인합니다. 중국은 현지 바이어가 주로 중국 AI를 쓰기&nbsp;때문에 측정&nbsp;대상에서 제외합니다.',
+      'faq.a5': '기준선 측정부터 ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity, Claude 5개 AI를 모두 측정합니다. 이후 ChatGPT는 매주 같은 조건으로, 나머지 4개는 매월 측정합니다. Claude는 로그인 없이 쓸 수 없어 새 계정으로 묻습니다. 무료 리포트는 ChatGPT 기준입니다. 중국은 현지 바이어가 주로 중국 AI를 쓰기&nbsp;때문에 측정&nbsp;대상에서 제외합니다.',
       'faq.q6': '성과를 보장하나요?',
       'faq.a6': '아니요. AI 답변은 누구도 통제할 수 없습니다. 측정, 실행안, 작성 콘텐츠는 약속합니다. 첫 신호는 귀사의 새&nbsp;문구를 그대로 쓰거나 새&nbsp;페이지를 인용하는 AI&nbsp;답변이며, 몇 주에 걸쳐&nbsp;판단합니다.',
       'faq.q7': '비용은 얼마인가요?',
