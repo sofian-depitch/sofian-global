@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sofian Meguellati · GEO consulting for Korean companies expanding abroad</title>
-  <meta name="description" content="From invisible to findable in your target market. I measure what AI tells buyers about your company from that market, then get you cited and described accurately: the pages it reads, the local sources it trusts.">
+  <meta name="description" content="From invisible to findable in your target market. When investors, buyers and partners there look for a company like yours, they ask AI. If it does not name you, they will not find you.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="sofian.global">
   <meta property="og:url" content="https://sofian.global/geo">
@@ -194,6 +194,13 @@
     .pill-2 .pill-sep { margin-right: 16px; }
     .consent { display: flex; align-items: flex-start; justify-content: center; gap: 10px; max-width: 600px; margin: 16px auto 0; font-size: 14.5px; line-height: 1.5; color: var(--dark); text-align: left; cursor: pointer; }
     .consent input { flex-shrink: 0; width: 18px; height: 18px; margin-top: 1px; accent-color: var(--ink); cursor: pointer; }
+    /* "Other" market: a field for the country (Sofian, 9 Nov) */
+    .f-other { display: flex; align-items: center; justify-content: center; gap: 12px; max-width: 520px; margin: 14px auto 0; }
+    .f-other-l { flex-shrink: 0; font-size: 14.5px; font-weight: 500; color: var(--dark); }
+    .f-other-in { flex: 1 1 auto; min-width: 0; height: 46px; padding: 0 18px; background: #fff; border: 1px solid var(--hair); border-radius: 999px; outline: 0; font-size: 16px; color: var(--ink); }
+    .f-other-in::placeholder { color: #A1A1AA; opacity: 1; }
+    .f-other-in:focus { border-color: var(--hair-2); box-shadow: 0 0 0 4px rgba(11, 11, 12, 0.05); }
+    .f-other-in[aria-invalid="true"] { border-color: rgba(185, 28, 28, 0.55); }
     .f-err { margin-top: 12px; font-size: 14px; font-weight: 500; line-height: 1.45; color: var(--bad); text-align: center; }
     .f-note { margin-top: 16px; font-size: 14px; line-height: 1.5; color: var(--muted); text-align: center; text-wrap: balance; }
     .f-done { display: flex; align-items: flex-start; gap: 14px; padding: 20px 24px; background: #fff; border: 1px solid var(--hair); border-radius: 22px; text-align: left; outline: none; }
@@ -404,6 +411,18 @@
     .role { margin-top: 3px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
     .bio { margin-top: 22px; font-size: 15.5px; line-height: 1.7; color: var(--dark); }
     html[lang="ko"] .bio { line-height: 1.8; }
+    /* Testimonials (in v1, back on 9 Nov) */
+    .quotes { margin-top: 72px; }
+    .quote-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 22px; }
+    .quote { display: flex; flex-direction: column; justify-content: space-between; gap: 22px; padding: 30px 32px; background: #fff; border: 1px solid var(--hair); border-radius: 22px; }
+    .quote blockquote { font-size: 18.5px; font-weight: 500; line-height: 1.55; letter-spacing: -0.01em; color: var(--ink); quotes: "\201C" "\201D"; }
+    .quote blockquote::before { content: open-quote; }
+    .quote blockquote::after { content: close-quote; }
+    html[lang="ko"] .quote blockquote { line-height: 1.7; }
+    .quote figcaption { display: flex; align-items: center; gap: 12px; }
+    .quote figcaption img { flex-shrink: 0; width: 44px; height: 44px; padding: 4px; border: 1px solid var(--hair); border-radius: 12px; background: #fff; object-fit: contain; }
+    .quote-who { display: flex; flex-direction: column; font-size: 14px; line-height: 1.4; color: var(--muted); }
+    .quote-who strong { font-size: 15px; font-weight: 600; color: var(--ink); }
     .logo-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px 48px; margin: 32px auto 0; list-style: none; }
     .logo-strip li { display: flex; align-items: center; justify-content: center; min-width: 0; height: 48px; }
     .logo-strip img { width: auto; height: 30px; max-width: 132px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.92; transition: opacity 0.2s var(--ease); }
@@ -505,6 +524,8 @@
       .pill-2 .pill-back { order: 3; height: 52px; margin: 4px 6px 0 0; padding: 0 16px; background: #fff; border: 1px solid var(--hair); color: var(--dark); }
       .pill-2 .pill-btn { order: 4; flex: 1 1 0; }
       .consent { justify-content: flex-start; }
+      .f-other { flex-direction: column; align-items: stretch; gap: 8px; }
+      .f-other-l { padding-left: 6px; }
       .f-done { padding: 18px 18px; }
 
       .markets { flex-direction: column; gap: 14px; margin-top: 56px; }
@@ -571,6 +592,10 @@
       .person { padding: 24px 22px; border-radius: 20px; }
       .person img { width: 64px; height: 64px; }
       .bio { margin-top: 18px; }
+      .quotes { margin-top: 48px; }
+      .quote-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+      .quote { padding: 24px 22px; }
+      .quote blockquote { font-size: 17px; }
       .logo-strip { gap: 22px 30px; margin-top: 26px; }
       .logo-strip li { height: 36px; }
       .logo-strip img { height: 24px; max-width: 108px; }
@@ -675,7 +700,7 @@
       <div class="wrap">
         <p class="eyebrow" data-i18n="hero.eyebrow">GEO (AI search optimization) consulting for Korean companies expanding abroad</p>
         <h1 class="h1" data-i18n="hero.title"><span class="l reveal">From invisible to findable</span> <span class="l">in your target market</span></h1>
-        <p class="hero-sub" data-i18n="hero.sub">I measure what AI tells buyers about your company from that market, then get you cited and described accurately: the pages it reads, the local sources it trusts.</p>
+        <p class="hero-sub" data-i18n="hero.sub">When investors, buyers and partners in your target market look for a company like yours, they ask AI. If it does not name you, they will not find you. All your work in that market stays invisible, and the opportunities go to your competitors.</p>
 
         <div class="gf" id="diagnostic-form" data-geo-form>
           <form novalidate>
@@ -705,6 +730,10 @@
               </label>
               <button type="submit" class="btn btn-dark pill-btn"><span data-i18n="form.go">Get your free AI visibility report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
             </div>
+            <div class="f-other" data-other hidden>
+              <label class="f-other-l" for="geoCountry" data-i18n="form.country">Which country?</label>
+              <input class="f-other-in" id="geoCountry" name="country" type="text" autocomplete="country-name" placeholder="e.g. Canada" data-i18n-ph="form.countryPh" aria-describedby="geoErrCountry">
+            </div>
             <div class="pill pill-2" data-step="2" hidden>
               <button type="button" class="pill-back" data-back><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg><span data-i18n="form.back">Back</span></button>
               <span class="pill-sep" aria-hidden="true"></span>
@@ -715,6 +744,7 @@
             </div>
             <label class="consent" data-step="2" hidden><input type="checkbox" id="geoConsent" name="consent" aria-describedby="geoErrConsent"><span data-i18n="form.consent">I agree that my email is used to send this report.</span></label>
             <p class="f-err" id="geoErrUrl" data-err="url" role="alert" hidden data-i18n="form.errUrl">Enter your website address.</p>
+            <p class="f-err" id="geoErrCountry" data-err="country" role="alert" hidden data-i18n="form.errCountry">Enter the country.</p>
             <p class="f-err" id="geoErrEmail" data-err="email" role="alert" hidden data-i18n="form.errEmail">Enter a valid email address.</p>
             <p class="f-err" id="geoErrConsent" data-err="consent" role="alert" hidden data-i18n="form.errConsent">Please agree to the use of your email.</p>
           </form>
@@ -994,7 +1024,7 @@
       <div class="wrap">
         <div class="sec-head">
           <p class="eyebrow" data-i18n="who.eyebrow">Who you work with</p>
-          <h2 class="h2" data-i18n="who.title">A GEO consultant <span class="plat br">who knows Korean companies abroad</span></h2>
+          <h2 class="h2" data-i18n="who.title">GEO experts <span class="plat br">who know Korean companies abroad</span></h2>
           <p class="lead" data-i18n="who.lead">GEO is one step of a market entry. Since 2022 I have worked on the other steps with Korean companies: market research, business matching, PoCs, investor pitches. Tom&nbsp;Coquereau runs the AI visibility measurement.</p>
         </div>
         <div class="stats">
@@ -1020,6 +1050,19 @@
             </div>
             <p class="bio" data-i18n="team.tomBio">In enterprise software since 2014; founded Metriq (AI automation) and Tokamai (AI security). Runs the AI visibility measurement: the runs from each market, the archived answers, the cited sources.</p>
           </article>
+        </div>
+        <div class="quotes">
+          <p class="eyebrow" data-i18n="quotes.label">From founders I have coached</p>
+          <div class="quote-grid">
+            <figure class="quote">
+              <blockquote data-i18n="quotes.q1">Sofian provided invaluable insights on how to approach the European market.</blockquote>
+              <figcaption><img src="logos-white/bottless.jpeg" alt="Bottless"><span class="quote-who"><strong>Chiwon Yi</strong><span data-i18n="quotes.r1">CEO, Bottless</span></span></figcaption>
+            </figure>
+            <figure class="quote">
+              <blockquote data-i18n="quotes.q2">That 1-hour session was priceless and really helped us build our global strategy.</blockquote>
+              <figcaption><img src="logos-white/apoc.webp" alt="apoc"><span class="quote-who"><strong>Ellie Lee</strong><span data-i18n="quotes.r2">CMO, apoc</span></span></figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
@@ -1103,6 +1146,10 @@
                 </label>
                 <button type="submit" class="btn btn-dark pill-btn"><span data-i18n="form.go">Get your free AI visibility report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
               </div>
+              <div class="f-other" data-other hidden>
+                <label class="f-other-l" for="geoCountry2" data-i18n="form.country">Which country?</label>
+                <input class="f-other-in" id="geoCountry2" name="country" type="text" autocomplete="country-name" placeholder="e.g. Canada" data-i18n-ph="form.countryPh" aria-describedby="geoErrCountry2">
+              </div>
               <div class="pill pill-2" data-step="2" hidden>
                 <button type="button" class="pill-back" data-back><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg><span data-i18n="form.back">Back</span></button>
                 <span class="pill-sep" aria-hidden="true"></span>
@@ -1113,6 +1160,7 @@
               </div>
               <label class="consent" data-step="2" hidden><input type="checkbox" id="geoConsent2" name="consent" aria-describedby="geoErrConsent2"><span data-i18n="form.consent">I agree that my email is used to send this report.</span></label>
               <p class="f-err" id="geoErrUrl2" data-err="url" role="alert" hidden data-i18n="form.errUrl">Enter your website address.</p>
+              <p class="f-err" id="geoErrCountry2" data-err="country" role="alert" hidden data-i18n="form.errCountry">Enter the country.</p>
               <p class="f-err" id="geoErrEmail2" data-err="email" role="alert" hidden data-i18n="form.errEmail">Enter a valid email address.</p>
               <p class="f-err" id="geoErrConsent2" data-err="consent" role="alert" hidden data-i18n="form.errConsent">Please agree to the use of your email.</p>
             </form>
@@ -1147,10 +1195,10 @@
   </footer>
 
   <script>
-    // Free AI visibility report form: paste the Google Apps Script web app URL here (https://script.google.com/macros/s/.../exec,
-    // script in tasks/geo-leads-apps-script.gs). Each request becomes a row in the GEO leads sheet, plus an email alert.
-    // While it is empty, the form opens a pre-filled email to sofian@hack40.com instead.
-    var GEO_FORM_ENDPOINT = '';
+    // Free AI visibility report form: Formspree endpoint (form "GEO leads", created by Sofian on 9 Nov 2026).
+    // Each request is emailed to sofian@hack40.com and kept in the Formspree dashboard (CSV export).
+    // If it is emptied, or if a post fails, the form opens a pre-filled email to sofian@hack40.com instead.
+    var GEO_FORM_ENDPOINT = 'https://formspree.io/f/mjyyqyvp';
 
     // English originals are scraped from the HTML on load (single source of truth).
     // Only Korean translations need to be maintained here. Keys are shared by
@@ -1159,7 +1207,7 @@
 
     var koTranslations = {
       'meta.title': 'Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅',
-      'meta.desc': '보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장 현지에서 AI가 해외 바이어에게 귀사를 어떻게 소개하는지 측정하고, AI가 읽는 페이지를 개선하고 AI가 신뢰하는 현지 출처를 공략해 귀사가 인용되고 정확하게 소개되도록 만듭니다.',
+      'meta.desc': '보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다.',
       'nav.how': '진행 방식',
       'nav.get': '제공 내용',
       'nav.who': '함께 일하는 사람',
@@ -1169,7 +1217,7 @@
       'nav.lang': '언어',
       'hero.eyebrow': '한국 기업의 해외 진출을 위한 GEO(생성형 AI 검색 최적화) 컨설팅',
       'hero.title': '<span class="l reveal">보이지 않던 기업을,</span> <span class="l">타깃 시장에서 발견되는 기업으로</span>',
-      'hero.sub': '타깃 시장 현지에서 AI가 바이어에게 귀사를 어떻게 소개하는지&nbsp;측정합니다. 이어서 AI가 읽는 페이지를 개선하고 AI가 신뢰하는 현지&nbsp;출처를 공략해, 귀사가 인용되고 정확하게 소개되도록 만듭니다.',
+      'hero.sub': '타깃 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다. 그 시장에서 쌓아 온 노력은 보이지 않게 되고, 기회는 경쟁사에게 돌아갑니다.',
       'form.url': '웹사이트 주소',
       'form.urlPh': '회사 웹사이트 주소',
       'form.market': '타깃 시장',
@@ -1190,6 +1238,9 @@
       'form.send': '신청하기',
       'form.consent': '리포트 발송을 위한 이메일 수집·이용에 동의합니다.',
       'form.errUrl': '웹사이트 주소를 입력해 주세요.',
+      'form.country': '진출하려는 국가',
+      'form.countryPh': '예: 캐나다',
+      'form.errCountry': '국가를 입력해 주세요.',
       'form.errEmail': '올바른 이메일 주소를 입력해 주세요.',
       'form.errConsent': '이메일 수집·이용에 동의해 주세요.',
       'form.done1': '신청이 접수되었습니다.',
@@ -1327,7 +1378,7 @@
       'fit.notT': '먼저 할 일이 있는 경우',
       'fit.notD': '아직 제품-시장 적합성(PMF)을 검증하는 단계이거나 해외 진출 계획이 없다면, 시장 진출의 기본부터 시작하시길 권합니다.',
       'who.eyebrow': '함께 일하는 사람',
-      'who.title': 'GEO 컨설턴트, <span class="plat br">해외로 진출하는 한국&nbsp;기업을 잘 압니다</span>',
+      'who.title': 'GEO 전문가, <span class="plat br">해외로 진출하는 한국&nbsp;기업을 잘 압니다</span>',
       'who.lead': 'GEO는 시장 진출의 한 단계입니다. 2022년부터 한국 기업과 함께 시장조사, 비즈니스 매칭, POC(실증), IR&nbsp;피칭까지 나머지 단계를 진행해 왔습니다. AI 가시성 측정은 Tom&nbsp;Coquereau가 맡습니다.',
       'who.s1': '2022년부터 코칭한 한국&nbsp;스타트업',
       'who.s2': '한국 파트너 기관',
@@ -1337,6 +1388,11 @@
       'team.sofianBio': '13년 넘게 파리, 싱가포르, 서울, 도쿄에서 사업을 일구어 왔고, 2022년부터 한국&nbsp;스타트업 240개사&nbsp;이상을 코칭했습니다.',
       'team.tomRole': 'AI 가시성 전문가',
       'team.tomBio': '2014년부터 기업용 소프트웨어 분야에서 일해&nbsp;왔고, Metriq(AI&nbsp;자동화)와 Tokamai(AI&nbsp;보안)를 창업했습니다. 각&nbsp;시장&nbsp;현지에서의 측정부터 답변&nbsp;보관, 인용&nbsp;출처&nbsp;확인까지 AI&nbsp;가시성 측정을 총괄합니다.',
+      'quotes.label': '코칭을 받은 창업자들의 후기',
+      'quotes.q1': '유럽 시장에 어떻게 접근해야 하는지, 매우 값진 인사이트를 주셨습니다.',
+      'quotes.r1': 'Bottless 대표',
+      'quotes.q2': '1시간 세션이 정말 값졌고, 글로벌 전략을 세우는 데 큰 도움이 되었습니다.',
+      'quotes.r2': 'apoc CMO',
       'faq.label': 'FAQ',
       'faq.title': '자주 묻는 질문',
       'faq.q1': '리포트는 정말 무료인가요?',
@@ -1413,9 +1469,11 @@
         var sel = root.querySelector('select[name="market"]');
         if (!sel) return;
         var opt = sel.options[sel.selectedIndex];
-        root.querySelectorAll('.done-market').forEach(function(s) { s.textContent = opt ? opt.textContent.trim() : ''; });
+        var ctry = root.querySelector('input[name="country"]');
+        var other = (sel.value === 'OT' && ctry) ? ctry.value.trim() : '';
+        root.querySelectorAll('.done-market').forEach(function(s) { s.textContent = sel.value === 'OT' ? other : (opt ? opt.textContent.trim() : ''); });
         var line = root.querySelector('.f-done-mk');
-        if (line) line.hidden = (sel.value === 'OT');
+        if (line) line.hidden = (sel.value === 'OT' && !other);
       });
     }
 
@@ -1524,7 +1582,7 @@
     })();
 
     // Free diagnostic form, 2 steps, in the hero and in the final band. With GEO_FORM_ENDPOINT set,
-    // the fields are posted there (Google Apps Script web app); while it is empty, or if the post fails, a pre-filled
+    // the fields are posted there (Formspree, JSON response); while it is empty, or if the post fails, a pre-filled
     // email to sofian@hack40.com opens instead. Nothing is sent anywhere else.
     (function() {
       var MARKETS_EN = { US: 'United States', JP: 'Japan', SG: 'Singapore', FR: 'France', UK: 'United Kingdom', DE: 'Germany', AE: 'United Arab Emirates', VN: 'Vietnam', TH: 'Thailand', AU: 'Australia', OT: 'Other' };
@@ -1546,6 +1604,9 @@
         var market = form.elements.market;
         var email = form.elements.email;
         var consent = form.elements.consent;
+        var country = form.elements.country;
+        var other = root.querySelector('[data-other]');
+        var errCountry = root.querySelector('[data-err="country"]');
         var errUrl = root.querySelector('[data-err="url"]');
         var errEmail = root.querySelector('[data-err="email"]');
         var errConsent = root.querySelector('[data-err="consent"]');
@@ -1564,7 +1625,17 @@
           step1.forEach(function(el) { el.hidden = (n !== 1); });
           step2.forEach(function(el) { el.hidden = (n !== 2); });
           if (n === 1) { flag(email, errEmail, false, pill2); flag(consent, errConsent, false); }
+          syncOther();
         }
+        // "Other" market: the country field shows on step 1 only, while "Other" is selected
+        function syncOther() {
+          var on = (step === 1 && market.value === 'OT');
+          other.hidden = !on;
+          if (!on) flag(country, errCountry, false);
+        }
+        market.addEventListener('change', function() { syncOther(); if (market.value === 'OT') country.focus(); });
+        country.addEventListener('input', function() { if (!errCountry.hidden && country.value.trim()) flag(country, errCountry, false); });
+        syncOther();
 
         url.addEventListener('input', function() { if (!errUrl.hidden && urlOk(url.value)) flag(url, errUrl, false, pill1); });
         email.addEventListener('input', function() { if (!errEmail.hidden && emailOk(email.value)) flag(email, errEmail, false, pill2); });
@@ -1577,6 +1648,7 @@
           if (step === 1) {
             if (!urlOk(url.value)) { flag(url, errUrl, true, pill1); url.focus(); return; }
             flag(url, errUrl, false, pill1);
+            if (market.value === 'OT' && !country.value.trim()) { flag(country, errCountry, true); country.focus(); return; }
             show(2);
             email.focus();
             return;
@@ -1596,7 +1668,7 @@
             lang: lang,
             website: normUrl(url.value),
             code: market.value,
-            marketLocal: opt ? opt.textContent.trim() : market.value,
+            marketLocal: market.value === 'OT' ? country.value.trim() : (opt ? opt.textContent.trim() : market.value),
             email: email.value.trim(),
             page: window.location.href
           };
@@ -1633,7 +1705,7 @@
           sendBtn.disabled = true;
           var data = new FormData();
           data.append('website', f.website);
-          data.append('market', MARKETS_EN[f.code] || f.code);
+          data.append('market', f.code === 'OT' ? f.marketLocal : (MARKETS_EN[f.code] || f.code));
           data.append('email', f.email);
           data.append('language', f.lang);
           data.append('page_url', f.page);
