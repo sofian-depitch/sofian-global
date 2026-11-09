@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofian Meguellati · GEO consulting for Korean companies expanding abroad</title>
+  <meta name="description" content="From invisible to findable in your target market. I measure what AI tells buyers about your company from that market, then get you cited and described accurately: the pages it reads, the local sources it trusts.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="sofian.global">
+  <meta property="og:url" content="https://sofian.global/geo">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅">
+  <meta property="og:description" content="보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장 현지에서 측정한 무료 AI 가시성 리포트를 48시간 안에 보내 드립니다. 2022년부터 한국 스타트업 240개사 이상 코칭.">
+  <meta property="og:image" content="https://sofian.global/og-share-geo-2026.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="ChatGPT에 같은 질문을 했을 때의 답변 예시: 서울에서는 귀사가 나오지만, LA에서는 나오지 않습니다.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅">
+  <meta name="twitter:description" content="보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장 현지에서 측정한 무료 AI 가시성 리포트를 48시간 안에 보내 드립니다.">
+  <meta name="twitter:image" content="https://sofian.global/og-share-geo-2026.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <style>
+    /* GEO page v2 (9 Nov 2026): its own minimal design, black, white, greys and a platinum accent.
+       The other pages of sofian.global keep their own design system. */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    [hidden] { display: none !important; }
+
+    :root {
+      --bg: #F7F7F8;
+      --surface: #FFFFFF;
+      --ink: #0B0B0C;
+      --dark: #3F3F46;
+      --muted: #71717A;
+      --hair: #E4E4E7;
+      --hair-2: #D4D4D8;
+      --soft: #F1F1F3;
+      --panel: #EFEFF1;
+      --plat: #8E8E93;
+      --plat-grad: linear-gradient(95deg, #6E6E73 0%, #8E8E93 55%, #A8A8AE 100%);
+      /* Secondary accent, champagne gold (chosen by Sofian on 9 Nov 2026): only on the findable stage, the wins and the checks */
+      --gold: #A8873F;
+      --gold-tx: #856A32;
+      --gold-soft: rgba(168, 135, 63, 0.18);
+      --ok: #15803D;
+      --bad: #B91C1C;
+      --maxw: 1120px;
+      --pad: 24px;
+      --sec: 120px;
+      --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+    body {
+      font-family: 'Inter', 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', 'Segoe UI', sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--dark);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; line-height: 1.75; }
+    img, svg { display: block; }
+    a { color: inherit; }
+    button, input, select { font: inherit; color: inherit; }
+    ::selection { background: var(--ink); color: #fff; }
+    :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; border-radius: 6px; }
+    span[lang="ko"] { word-break: keep-all; }
+    .sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+    .sprite { position: absolute; width: 0; height: 0; overflow: hidden; }
+    .ico { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    .wrap { max-width: calc(var(--maxw) + 2 * var(--pad)); margin: 0 auto; padding: 0 var(--pad); }
+
+    /* Line breaks: balanced titles and short texts */
+    h1, h2, h3, summary, .eyebrow, .tag, .meta { text-wrap: balance; }
+    p, li, dd { text-wrap: pretty; }
+
+    /* --- TYPE --- */
+    h1, h2, h3 { color: var(--ink); font-weight: 600; }
+    .h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.04; letter-spacing: -0.038em; }
+    .h2 { font-size: clamp(30px, 4vw, 44px); line-height: 1.12; letter-spacing: -0.03em; max-width: 820px; }
+    .h3 { font-size: 22px; line-height: 1.3; letter-spacing: -0.018em; }
+    .plat { color: var(--plat); background-image: var(--plat-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 0.16em; }
+    .plat.br { margin-bottom: -0.16em; }
+    .eyebrow { display: block; font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    .lead { font-size: 19px; line-height: 1.6; color: var(--dark); }
+    html[lang="ko"] .h1 { font-size: clamp(32px, 5.1vw, 62px); line-height: 1.22; letter-spacing: -0.03em; }
+    html[lang="ko"] .h2 { line-height: 1.32; letter-spacing: -0.025em; }
+    html[lang="ko"] .h3 { letter-spacing: -0.012em; }
+    html[lang="ko"] .eyebrow { font-size: 13px; letter-spacing: 0.04em; }
+    html[lang="ko"] .lead { line-height: 1.75; }
+
+    /* --- PAGE FADE (between service pages, as on the rest of the site) --- */
+    #pageFade { position: fixed; inset: 0; z-index: 300; background: var(--bg); opacity: 0; pointer-events: none; transition: opacity 0.4s var(--ease); }
+    #pageFade.active { opacity: 1; pointer-events: auto; }
+
+    /* --- HEADER --- */
+    .hdr-wrap { position: sticky; top: 0; z-index: 50; background: rgba(255, 255, 255, 0.82); -webkit-backdrop-filter: saturate(180%) blur(16px); backdrop-filter: saturate(180%) blur(16px); border-bottom: 1px solid var(--hair); }
+    /* Same header type as the other sofian.global pages (logo, anchors, CTA, flag language switch, mobile menu),
+       without the links to the other offers; the KakaoTalk button becomes the free AI report CTA. */
+    .hdr { position: relative; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { margin-right: auto; font-size: 1.2rem; font-weight: 900; letter-spacing: -0.5px; color: var(--ink); text-decoration: none; white-space: nowrap; }
+    .logo span { color: var(--plat); }
+    .hdr-nav { display: flex; align-items: center; gap: 28px; }
+    .hdr-nav a { font-size: 0.875rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; transition: color 0.2s var(--ease); }
+    .hdr-nav a:hover { color: var(--ink); }
+    .hdr-nav a.hdr-cta { display: inline-flex; align-items: center; gap: 8px; padding: 9px 18px; border-radius: 10px; background: var(--ink); color: #fff; font-weight: 700; transition: background-color 0.2s var(--ease), transform 0.2s var(--ease); }
+    .hdr-nav a.hdr-cta:hover { background: #27272A; color: #fff; transform: translateY(-1px); }
+    .hdr-cta .ico { width: 16px; height: 16px; stroke-width: 2; }
+    .lang { display: flex; align-items: center; gap: 2px; margin-left: 16px; padding: 2px; background: #F4F4F5; border: 1px solid var(--hair); border-radius: 8px; }
+    .lang button { display: flex; align-items: center; gap: 4px; padding: 5px 10px; border: 0; border-radius: 6px; background: transparent; cursor: pointer; font-size: 0.75rem; font-weight: 600; line-height: 1.2; color: var(--muted); transition: background-color 0.3s var(--ease), color 0.3s var(--ease); }
+    .lang button:hover { color: var(--ink); }
+    .lang button.active { background: #1a1a1a; color: #fff; }
+    .lang .flag { font-size: 1rem; line-height: 1; }
+    .hdr-toggle { display: none; margin-left: 10px; padding: 4px 6px; border: 0; background: none; cursor: pointer; font-size: 1.5rem; line-height: 1; color: var(--ink); transition: transform 0.25s ease; }
+    .hdr-toggle[aria-expanded="true"] { transform: rotate(90deg); }
+
+    /* --- BUTTONS --- */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 22px; border: 1px solid transparent; border-radius: 999px; font-size: 15.5px; font-weight: 600; letter-spacing: -0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease); }
+    .btn .ico { width: 18px; height: 18px; stroke-width: 2; transition: transform 0.2s var(--ease); }
+    .btn:hover .ico { transform: translateX(2px); }
+    .btn-dark { background: var(--ink); color: #fff; }
+    .btn-dark:hover { background: #2A2A2E; }
+    .btn-dark:disabled { background: #52525B; cursor: progress; }
+    .btn-light { background: #fff; color: var(--ink); border-color: var(--hair); }
+    .btn-light:hover { border-color: var(--hair-2); }
+    .btn-sm { height: 38px; padding: 0 16px; font-size: 14px; }
+
+    /* --- SECTIONS --- */
+    .sec > .wrap { position: relative; padding-top: var(--sec); padding-bottom: var(--sec); }
+    .sec.rule > .wrap::before { content: ""; position: absolute; top: 0; left: var(--pad); right: var(--pad); height: 1px; background: var(--hair); }
+    .sec-head { max-width: 820px; margin-bottom: 64px; }
+    .sec-head .eyebrow { margin-bottom: 18px; }
+    .sec-head .lead { max-width: 700px; margin-top: 22px; }
+
+    /* --- 1. HERO --- */
+    .hero { position: relative; isolation: isolate; overflow: hidden; text-align: center; }
+    .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+      background:
+        radial-gradient(58% 62% at 50% 0%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0) 72%),
+        radial-gradient(36% 52% at 90% 20%, rgba(212, 212, 216, 0.42) 0%, rgba(212, 212, 216, 0) 72%),
+        radial-gradient(34% 48% at 8% 76%, rgba(228, 228, 231, 0.62) 0%, rgba(228, 228, 231, 0) 72%);
+      -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+      mask-image: linear-gradient(to bottom, #000 55%, transparent 100%); }
+    .hero > .wrap { padding-top: 104px; padding-bottom: 92px; }
+    .hero .eyebrow { margin-bottom: 26px; }
+    .hero h1 { max-width: 1080px; margin: 0 auto; }
+    .hero .h1 { font-size: clamp(40px, 6vw, 72px); }
+    /* Hero: the first line goes from almost invisible to solid ink, like the promise it states (Sofian, 9 Nov) */
+    .hero h1 .reveal { color: var(--ink); background-image: linear-gradient(90deg, #CDCDD2 0%, #A1A1AA 34%, #52525B 68%, #0B0B0C 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 0.16em; margin-bottom: -0.16em; }
+    html[lang="ko"] .hero h1 .reveal { background-image: linear-gradient(90deg, #CDCDD2 0%, #A1A1AA 50%, #71717A 100%); }
+    /* On phones the first line wraps: fade from top to bottom so "findable" still ends darkest */
+    @media (max-width: 767px) { html:not([lang="ko"]) .hero h1 .reveal { background-image: linear-gradient(180deg, #C4C4CA 0%, #8E8E93 45%, #27272A 100%); } }
+    .hero h1 .l { display: block; width: fit-content; max-width: 100%; margin: 0 auto; }
+    .hero-sub { max-width: 700px; margin: 28px auto 0; font-size: 19px; line-height: 1.6; color: var(--dark); text-wrap: balance; }
+    html[lang="ko"] .hero-sub { line-height: 1.7; }
+    /* Two-tone titles: the platinum part on its own line where the copy marks it (.br) */
+    .h2 .plat.br { display: block; width: fit-content; max-width: 100%; }
+    /* « from invisible to findable » in the How it works title: light to dark, like the hero (Sofian, 9 Nov) */
+    .h2 .reveal { color: var(--ink); background-image: linear-gradient(90deg, #CDCDD2 0%, #A1A1AA 34%, #52525B 68%, #0B0B0C 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; padding-bottom: 0.16em; }
+    .h2 .reveal.br { display: block; width: fit-content; max-width: 100%; margin-bottom: -0.16em; }
+    @media (max-width: 767px) { html[lang="ko"] .h2 .reveal { background-image: linear-gradient(180deg, #C4C4CA 0%, #8E8E93 45%, #27272A 100%); } }
+    .cta-panel .h2 .plat.br { margin-inline: auto; }
+
+    /* --- PILL FORM (hero and final CTA) --- */
+    .gf { max-width: 720px; margin: 44px auto 0; }
+    .pill { display: flex; align-items: center; height: 68px; padding: 8px 8px 8px 22px; background: #fff; border: 1px solid var(--hair); border-radius: 999px; box-shadow: 0 1px 2px rgba(11, 11, 12, 0.04); text-align: left; transition: border-color 0.2s var(--ease), box-shadow 0.2s var(--ease); }
+    .pill:focus-within { border-color: var(--hair-2); box-shadow: 0 0 0 4px rgba(11, 11, 12, 0.05); }
+    .pill.is-bad { border-color: rgba(185, 28, 28, 0.55); }
+    .pill-ico { width: 19px; height: 19px; color: var(--muted); }
+    .pill-in { flex: 1 1 auto; min-width: 0; height: 100%; padding: 0 12px; border: 0; outline: 0; background: transparent; font-size: 17px; color: var(--ink); }
+    .pill-in::placeholder { color: #A1A1AA; opacity: 1; }
+    .pill-sep { flex-shrink: 0; width: 1px; height: 30px; background: var(--hair); }
+    .pill-mk { position: relative; display: flex; flex-direction: column; justify-content: center; flex-shrink: 0; padding: 0 12px 0 16px; cursor: pointer; }
+    .pill-mk-l { font-size: 10.5px; font-weight: 600; line-height: 1.3; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
+    .pill-mk-v { position: relative; display: flex; align-items: center; }
+    .pill-mk select { -webkit-appearance: none; appearance: none; padding: 0 20px 0 0; border: 0; outline: 0; background: transparent; font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--ink); cursor: pointer; }
+    .pill-mk .ico { position: absolute; top: 50%; right: 0; width: 15px; height: 15px; margin-top: -7.5px; color: var(--muted); stroke-width: 2; pointer-events: none; }
+    html[lang="ko"] .pill-mk-l { font-size: 11.5px; letter-spacing: 0.02em; }
+    .pill-btn { flex-shrink: 0; height: 52px; margin-left: 4px; }
+    .pill-back { display: inline-flex; align-items: center; flex-shrink: 0; gap: 6px; height: 52px; margin-left: -10px; padding: 0 14px 0 6px; border: 0; border-radius: 999px; background: transparent; cursor: pointer; font-size: 14.5px; font-weight: 500; color: var(--muted); transition: color 0.2s var(--ease); }
+    .pill-back:hover { color: var(--ink); }
+    .pill-back .ico { width: 17px; height: 17px; stroke-width: 2; }
+    .pill-2 .pill-sep { margin-right: 16px; }
+    .consent { display: flex; align-items: flex-start; justify-content: center; gap: 10px; max-width: 600px; margin: 16px auto 0; font-size: 14.5px; line-height: 1.5; color: var(--dark); text-align: left; cursor: pointer; }
+    .consent input { flex-shrink: 0; width: 18px; height: 18px; margin-top: 1px; accent-color: var(--ink); cursor: pointer; }
+    .f-err { margin-top: 12px; font-size: 14px; font-weight: 500; line-height: 1.45; color: var(--bad); text-align: center; }
+    .f-note { margin-top: 16px; font-size: 14px; line-height: 1.5; color: var(--muted); text-align: center; text-wrap: balance; }
+    .f-done { display: flex; align-items: flex-start; gap: 14px; padding: 20px 24px; background: #fff; border: 1px solid var(--hair); border-radius: 22px; text-align: left; outline: none; }
+    .f-done-ico { display: grid; place-items: center; flex-shrink: 0; width: 28px; height: 28px; margin-top: 1px; border-radius: 50%; background: var(--ink); color: #fff; }
+    .f-done-ico .ico { width: 16px; height: 16px; stroke-width: 2.5; }
+    .f-done p { font-size: 16px; line-height: 1.6; color: var(--dark); }
+    .f-done p > span:first-child { font-weight: 600; color: var(--ink); }
+    .f-done strong { font-weight: 600; color: var(--ink); }
+
+    /* Markets band */
+    .markets { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 14px 26px; margin-top: 76px; }
+    .markets-l { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+    html[lang="ko"] .markets-l { font-size: 13px; letter-spacing: 0.04em; }
+    .markets-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 22px; list-style: none; }
+    .markets-list li { display: inline-flex; align-items: center; gap: 7px; font-size: 14.5px; font-weight: 500; color: var(--dark); white-space: nowrap; }
+
+    /* Proof band under the hero (v4): the Korean track record before the problem */
+    .sec.proof > .wrap { padding-top: 64px; padding-bottom: 72px; text-align: center; }
+    .proof-n { font-size: clamp(20px, 2vw, 24px); font-weight: 600; line-height: 1.35; letter-spacing: -0.015em; color: var(--ink); text-wrap: balance; }
+    .proof .eyebrow { margin-top: 10px; }
+    .proof .logo-strip { margin-top: 36px; }
+    .flag { font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif; font-size: 17px; line-height: 1; }
+
+    /* --- 2. PROBLEM --- */
+    .asks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .ask { padding: 22px 24px 26px; background: #fff; border: 1px solid var(--hair); border-radius: 22px 22px 22px 6px; }
+    .ask-who { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    html[lang="ko"] .ask-who { font-size: 13px; letter-spacing: 0.02em; }
+    .ask-who .ico { width: 16px; height: 16px; }
+    .ask-q { margin-top: 14px; font-size: 18.5px; font-weight: 500; line-height: 1.45; letter-spacing: -0.01em; color: var(--ink); }
+    html[lang="ko"] .ask-q { letter-spacing: -0.005em; line-height: 1.55; }
+    .prob-line { max-width: 860px; margin-top: 64px; font-size: clamp(20px, 2.1vw, 24px); line-height: 1.5; letter-spacing: -0.012em; color: var(--muted); text-wrap: balance; }
+    .prob-line strong { font-weight: 600; color: var(--ink); }
+    html[lang="ko"] .prob-line { line-height: 1.65; letter-spacing: -0.01em; }
+
+    .panel { margin-top: 72px; padding: 56px; background: var(--panel); border: 1px solid var(--hair); border-radius: 28px; }
+    .panel-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 24px; margin-bottom: 32px; }
+    .tag { display: inline-flex; align-items: center; min-height: 28px; padding: 3px 12px; background: rgba(255, 255, 255, 0.72); border: 1px dashed #C4C4CA; border-radius: 999px; font-size: 12.5px; font-weight: 500; line-height: 1.35; color: var(--muted); }
+    .ex-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: start; }
+    .mock { overflow: hidden; background: #fff; border: 1px solid var(--hair); border-radius: 18px; }
+    .mock-bar { display: flex; align-items: center; gap: 14px; min-height: 46px; padding: 10px 18px; border-bottom: 1px solid var(--hair); font-size: 13.5px; font-weight: 500; line-height: 1.4; color: var(--muted); }
+    .dots { display: inline-flex; flex-shrink: 0; gap: 6px; }
+    .dots i { width: 8px; height: 8px; border-radius: 50%; background: #DADADF; }
+    .ans { padding: 6px 0; list-style: none; }
+    .ans li { display: flex; align-items: center; gap: 14px; padding: 14px 20px; font-size: 16px; line-height: 1.4; color: var(--dark); }
+    .ans li + li { border-top: 1px solid #F0F0F2; }
+    .ans .n { display: grid; place-items: center; flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--soft); font-size: 12.5px; font-weight: 600; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .ans li.is-you { font-weight: 600; color: var(--ink); background: rgba(21, 128, 61, 0.05); }
+    .ans li.is-you .n { background: var(--ink); color: #fff; }
+    .ans li.is-you .ico { margin-left: auto; width: 20px; height: 20px; color: var(--ok); stroke-width: 2; }
+    .ans-absent { display: flex; align-items: center; gap: 10px; margin: 0 16px 16px; padding: 12px 14px; background: rgba(185, 28, 28, 0.03); border: 1px dashed rgba(185, 28, 28, 0.45); border-radius: 12px; font-size: 15px; font-weight: 600; line-height: 1.4; color: var(--bad); }
+    .ans-absent .ico { width: 19px; height: 19px; stroke-width: 2; }
+    .ans-c { margin-left: auto; padding: 2px 10px; border: 1px solid var(--hair); border-radius: 999px; font-size: 12.5px; font-weight: 500; line-height: 1.5; color: var(--muted); white-space: nowrap; }
+    .ans li.is-rival { color: var(--ink); font-weight: 600; }
+    .ans li.is-rival .ans-c { border-color: var(--ink); color: var(--ink); }
+    /* Real diagnostic card (v4): the answer on the left, the reading on the right */
+    .ex-lead { max-width: 820px; margin: -14px 0 28px; font-size: 16.5px; line-height: 1.6; color: var(--dark); }
+    html[lang="ko"] .ex-lead { line-height: 1.75; }
+    .ex-q { width: fit-content; max-width: 88%; margin: 18px 18px 8px auto; padding: 12px 16px; background: var(--soft); border-radius: 16px 16px 4px 16px; }
+    .ex-q p { font-size: 15.5px; font-weight: 500; line-height: 1.45; color: var(--ink); }
+    .ex-q .ex-q-ko { margin-top: 4px; font-size: 13.5px; font-weight: 400; color: var(--muted); }
+    html:not([lang="ko"]) .ex-q-ko { display: none; }
+    .ex-src { display: flex; align-items: center; gap: 8px; padding: 12px 20px 16px; border-top: 1px solid #F0F0F2; font-size: 13.5px; line-height: 1.4; color: var(--muted); }
+    .ex-src .ico { width: 16px; height: 16px; }
+    .ex-read { padding: 0 8px 0 12px; }
+    .ex-row { padding: 20px 0; border-top: 1px solid var(--hair-2); }
+    .ex-row:first-child { padding-top: 4px; border-top: 0; }
+    .ex-k { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    html[lang="ko"] .ex-k { font-size: 13px; letter-spacing: 0.02em; }
+    .ex-k .ico { width: 16px; height: 16px; stroke-width: 2; }
+    .ex-v { margin-top: 8px; font-size: 16px; line-height: 1.6; color: var(--ink); }
+    html[lang="ko"] .ex-v { line-height: 1.75; }
+
+    /* --- 3. SOLUTION --- */
+    .pillars { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; }
+    .pillar { position: relative; padding-top: 32px; border-top: 1px solid var(--hair); }
+    .pillar::before, .get-col::before { content: ""; position: absolute; top: -1px; left: 0; width: 40px; height: 2px; background: var(--gold); }
+    .pillar .ico { width: 26px; height: 26px; color: var(--ink); stroke-width: 1.5; }
+    .pillar h3 { margin-top: 22px; font-size: 20px; line-height: 1.3; letter-spacing: -0.015em; }
+    .pillar p { margin-top: 10px; font-size: 16px; line-height: 1.65; color: var(--dark); }
+    html[lang="ko"] .pillar p { line-height: 1.75; }
+
+    /* --- 4. HOW IT WORKS: the timeline --- */
+    .tl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(7, auto); column-gap: 40px; list-style: none; }
+    .tl-st { position: relative; display: grid; grid-row: span 7; grid-template-rows: subgrid; align-content: start; }
+    .tl-node { position: relative; z-index: 1; width: 20px; height: 20px; border: 2px solid; border-radius: 50%; }
+    .tl-st:not(:last-child)::after { content: ""; position: absolute; top: 9px; left: 10px; right: -50px; height: 2px; border-radius: 2px; }
+    .s1 .tl-node { background: #fff; border-color: #D4D4D8; }
+    .s2 .tl-node { background: #E4E4E7; border-color: #A1A1AA; }
+    .s3 .tl-node { background: #71717A; border-color: #52525B; }
+    .s4 .tl-node { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 5px var(--gold-soft); }
+    .s1::after { background: linear-gradient(90deg, #E4E4E7, #C8C8CD); }
+    .s2::after { background: linear-gradient(90deg, #C8C8CD, #8E8E93); }
+    .s3::after { background: linear-gradient(90deg, #8E8E93, var(--gold)); }
+    .tl-state { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-top: 28px; }
+    .chip { display: inline-flex; align-items: center; height: 26px; padding: 0 11px; border-radius: 999px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; white-space: nowrap; }
+    html[lang="ko"] .chip { font-size: 12.5px; letter-spacing: 0.01em; }
+    .s1 .chip { background: #FAFAFA; color: var(--muted); box-shadow: inset 0 0 0 1px var(--hair); }
+    .s2 .chip { background: #E4E4E7; color: #3F3F46; }
+    .s3 .chip { background: #52525B; color: #fff; }
+    .s4 .chip { background: var(--gold-tx); color: #fff; }
+    .meter { display: inline-flex; gap: 3px; }
+    .meter i { width: 10px; height: 6px; border-radius: 2px; background: #E4E4E7; }
+    .s1 .meter i:nth-child(-n+1), .s2 .meter i:nth-child(-n+2), .s3 .meter i:nth-child(-n+3) { background: var(--ink); }
+    .s4 .meter i { background: var(--gold); }
+    .tl-when { margin-top: 22px; font-size: 13px; font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .tl-title { margin-top: 4px; font-size: 20px; line-height: 1.3; letter-spacing: -0.015em; }
+    .tl-do { margin-top: 10px; font-size: 15px; line-height: 1.6; color: var(--dark); }
+    .tl-win { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hair); }
+    .tl-goal { margin-top: 16px; }
+    .tl-k { display: flex; align-items: center; gap: 7px; font-size: 11.5px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink); }
+    html[lang="ko"] .tl-k { font-size: 12.5px; letter-spacing: 0.02em; }
+    .tl-k .ico { width: 16px; height: 16px; stroke-width: 2; }
+    .tl-goal .tl-k { color: var(--muted); }
+    .tl-win .tl-k { color: var(--gold-tx); }
+    .tl-v { margin-top: 5px; font-size: 14.5px; line-height: 1.55; color: var(--dark); }
+    html[lang="ko"] .tl-do, html[lang="ko"] .tl-v { line-height: 1.7; }
+
+    /* Strong line between the timeline and the rhythm strip (v3) */
+    .how-line { max-width: 820px; margin-top: 88px; font-size: clamp(22px, 2.4vw, 28px); font-weight: 600; line-height: 1.35; letter-spacing: -0.02em; color: var(--ink); text-wrap: balance; }
+    html[lang="ko"] .how-line { line-height: 1.5; letter-spacing: -0.015em; }
+    .rhythm { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 28px; border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+    .rh { display: flex; gap: 14px; padding: 26px 28px; }
+    .rh:first-child { padding-left: 0; }
+    .rh + .rh { border-left: 1px solid var(--hair); }
+    .rh .ico { width: 20px; height: 20px; margin-top: 1px; color: var(--ink); }
+    .rh-w { font-size: 12px; font-weight: 600; line-height: 1.5; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    html[lang="ko"] .rh-w { font-size: 13px; letter-spacing: 0.02em; }
+    .rh-t { margin-top: 4px; font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--ink); }
+    .how-note { display: flex; align-items: flex-start; gap: 10px; max-width: 820px; margin-top: 24px; font-size: 14px; line-height: 1.6; color: var(--muted); }
+    .how-note .ico { width: 17px; height: 17px; margin-top: 2px; }
+    /* Quiet secondary link for companies already selling abroad (v3) */
+    .how-talk { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--hair); }
+    .how-talk-q { font-size: 16px; font-weight: 600; line-height: 1.45; color: var(--ink); }
+    .how-talk .btn { gap: 9px; }
+    .how-talk .btn svg.kk { width: 16px; height: 16px; fill: currentColor; flex-shrink: 0; }
+    .how-mail { display: inline-flex; align-items: center; gap: 7px; font-size: 14.5px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s var(--ease); }
+    .how-mail:hover { color: var(--ink); }
+    .how-mail .ico { width: 16px; height: 16px; }
+
+    /* --- 5. WHAT YOU GET --- */
+    .get { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
+    .get-col { position: relative; padding-top: 32px; border-top: 1px solid var(--hair); }
+    .get-h { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
+    .get-h h3 { font-size: 24px; line-height: 1.3; letter-spacing: -0.02em; }
+    .meta { display: inline-flex; align-items: center; min-height: 26px; padding: 2px 11px; background: #fff; border: 1px solid var(--hair); border-radius: 999px; font-size: 13px; font-weight: 500; line-height: 1.35; color: var(--dark); }
+    .checks { margin-top: 22px; list-style: none; }
+    .checks li { display: flex; align-items: flex-start; gap: 14px; padding: 16px 0; border-bottom: 1px solid var(--hair); font-size: 16.5px; line-height: 1.55; color: var(--ink); }
+    .checks .ico { width: 20px; height: 20px; margin-top: 2px; stroke-width: 2; color: var(--gold-tx); }
+    .get-cta { margin-top: 28px; }
+    .nums { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 32px; margin-top: 6px; }
+    .num { padding: 22px 0 20px; border-bottom: 1px solid var(--hair); }
+    .num-v { display: block; font-size: 52px; font-weight: 600; line-height: 1; letter-spacing: -0.045em; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .num-l { display: block; margin-top: 10px; font-size: 15px; line-height: 1.45; color: var(--dark); text-wrap: balance; }
+    .get-plus { margin-top: 22px; font-size: 16px; line-height: 1.6; color: var(--dark); }
+    /* Price line under the program tiles (v3) */
+    .get-price { margin-top: 26px; font-size: 18.5px; font-weight: 500; line-height: 1.5; letter-spacing: -0.01em; color: var(--ink); }
+    .get-price strong { font-weight: 700; }
+    .get-price + .get-plus { margin-top: 6px; }
+
+    .brief-panel { padding: 64px 56px; }
+    .brief { max-width: 780px; margin: 0 auto; }
+    .brief .mock-bar { justify-content: space-between; }
+    .brief-body { padding: 28px 32px 8px; }
+    .brief-h { font-size: 19px; line-height: 1.35; letter-spacing: -0.012em; }
+    .brief-line { margin-top: 6px; font-size: 15.5px; line-height: 1.6; color: var(--dark); }
+    .brief-rows { margin-top: 22px; list-style: none; }
+    .brief-rows li { display: grid; grid-template-columns: 28px 132px minmax(0, 1fr) auto; align-items: center; gap: 16px; padding: 16px 0; border-top: 1px solid var(--hair); }
+    .br-n { font-size: 13px; font-weight: 600; color: #A1A1AA; font-variant-numeric: tabular-nums; }
+    .br-ce { display: flex; flex-direction: column; gap: 1px; }
+    .br-c { font-size: 14.5px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+    .br-e { font-size: 13px; line-height: 1.4; color: var(--muted); }
+    .br-a { font-size: 15.5px; line-height: 1.5; color: var(--ink); }
+    .br-d { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 11px; border: 1px solid var(--hair); border-radius: 999px; font-size: 12.5px; font-weight: 500; color: var(--dark); white-space: nowrap; }
+    .br-d .ico { width: 14px; height: 14px; }
+    .brief-intro { max-width: 780px; margin: 0 auto 28px; }
+    /* Best fit, two short columns after the Monday brief (v3) */
+    .fit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; margin-top: 72px; }
+    .fit-col { padding-top: 24px; border-top: 1px solid var(--hair); }
+    .fit-k { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; line-height: 1.4; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); }
+    html[lang="ko"] .fit-k { font-size: 13px; letter-spacing: 0.02em; }
+    .fit-k .ico { width: 16px; height: 16px; stroke-width: 2; }
+    .fit-not .fit-k { color: var(--muted); }
+    /* Who does what, in How it works (v4) */
+    .fit.roles { margin-top: 36px; }
+    .fit.roles .fit-col { padding-top: 0; border-top: 0; }
+    .fit-d { margin-top: 12px; font-size: 16.5px; line-height: 1.6; color: var(--dark); }
+    html[lang="ko"] .fit-d { line-height: 1.75; }
+
+    /* --- 6. WHO YOU WORK WITH --- */
+    .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--hair); border-bottom: 1px solid var(--hair); }
+    .stat { padding: 36px 28px 34px; }
+    .stat:first-child { padding-left: 0; }
+    .stat + .stat { border-left: 1px solid var(--hair); }
+    .stat-v { display: block; font-size: clamp(44px, 4.8vw, 60px); font-weight: 600; line-height: 1; letter-spacing: -0.045em; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .stat-l { display: block; margin-top: 14px; font-size: 15px; line-height: 1.5; color: var(--dark); text-wrap: balance; }
+    .team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 88px; }
+    .person { padding: 32px; background: #fff; border: 1px solid var(--hair); border-radius: 22px; }
+    .person-top { display: flex; align-items: center; gap: 18px; }
+    .person img { flex-shrink: 0; width: 76px; height: 76px; border-radius: 50%; object-fit: cover; background: var(--soft); }
+    .person h3 { font-size: 20px; line-height: 1.3; letter-spacing: -0.015em; }
+    .role { margin-top: 3px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
+    .bio { margin-top: 22px; font-size: 15.5px; line-height: 1.7; color: var(--dark); }
+    html[lang="ko"] .bio { line-height: 1.8; }
+    .logo-strip { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px 48px; margin: 32px auto 0; list-style: none; }
+    .logo-strip li { display: flex; align-items: center; justify-content: center; min-width: 0; height: 48px; }
+    .logo-strip img { width: auto; height: 30px; max-width: 132px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.92; transition: opacity 0.2s var(--ease); }
+    .logo-strip li:hover img { opacity: 0.9; }
+    .logo-strip img.lg-xl { height: 46px; }
+    .logo-strip img.lg-sq { height: 40px; }
+    .logo-strip img.lg-mid { height: 34px; }
+    .logo-strip img.lg-sm { height: 26px; }
+    @media (min-width: 1024px) {
+      .logo-strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 36px 20px; }
+      .logo-strip img { max-width: 100%; }
+    }
+
+    /* --- 7. FAQ --- */
+    .faq { max-width: 760px; margin: 0 auto; }
+    .faq .h2 { margin-top: 18px; }
+    .faq-list { margin-top: 48px; border-top: 1px solid var(--hair); }
+    .faq-item { border-bottom: 1px solid var(--hair); }
+    .faq-item summary { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 24px 0; cursor: pointer; list-style: none; font-size: 17.5px; font-weight: 600; line-height: 1.45; letter-spacing: -0.01em; color: var(--ink); }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary .ico { color: var(--muted); stroke-width: 2; transition: transform 0.28s var(--ease); }
+    .faq-item[open]:not(.is-closing) summary .ico { transform: rotate(180deg); }
+    .faq-answer { overflow: hidden; text-wrap: pretty; padding: 0 44px 26px 0; font-size: 16px; line-height: 1.7; color: var(--dark); transition: height 0.28s var(--ease), padding-bottom 0.28s var(--ease); }
+    html[lang="ko"] .faq-answer { line-height: 1.8; }
+
+    /* --- 8. FINAL CTA --- */
+    .cta > .wrap { padding-bottom: var(--sec); }
+    .cta-panel { padding: 96px 48px; text-align: center; border: 1px solid var(--hair); border-radius: 32px; background: radial-gradient(90% 120% at 50% 0%, #FFFFFF 0%, #F3F3F5 52%, #ECECEF 100%); }
+    .cta-panel .h2 { max-width: 760px; margin: 0 auto; }
+    .cta-sub { max-width: 560px; margin: 20px auto 0; font-size: 18px; line-height: 1.6; color: var(--dark); text-wrap: balance; }
+    .cta-panel .gf { margin-top: 40px; }
+    .cta-kakao { display: inline-flex; align-items: center; gap: 8px; margin-top: 28px; padding-bottom: 1px; border-bottom: 1px solid transparent; font-size: 14.5px; font-weight: 500; color: var(--muted); text-decoration: none; transition: color 0.2s var(--ease), border-color 0.2s var(--ease); }
+    .cta-kakao:hover { color: var(--ink); border-bottom-color: currentColor; }
+    .cta-kakao svg { width: 16px; height: 16px; fill: currentColor; }
+
+    /* --- FOOTER --- */
+    .site-footer { border-top: 1px solid var(--hair); }
+    .site-footer > .wrap { padding-top: 48px; padding-bottom: 56px; }
+    .ft-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 32px; }
+    .ft-top .logo { margin-right: 0; font-size: 17px; }
+    .ft-contact { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--hair); font-size: 14px; color: var(--muted); }
+    .ft-contact a { color: var(--muted); text-decoration: none; transition: color 0.2s var(--ease); }
+    .ft-contact a:hover { color: var(--ink); }
+    .ft-contact strong { font-weight: 600; color: var(--dark); }
+    .ft-copy { margin-top: 18px; font-size: 13px; color: var(--muted); }
+    .ft-legal { margin-top: 6px; font-size: 12.5px; line-height: 1.7; color: var(--muted); }
+    .ft-legal strong { font-weight: 600; color: var(--dark); }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 1023px) {
+      .hdr-nav { gap: 22px; margin-right: 10px; }
+      /* Timeline: vertical, line on the left */
+      .tl { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; max-width: 640px; }
+      .tl-st { display: block; grid-row: auto; padding: 0 0 48px 46px; }
+      .tl-st:last-child { padding-bottom: 0; }
+      .tl-node { position: absolute; top: 3px; left: 0; }
+      .tl-st:not(:last-child)::after { top: 13px; bottom: -13px; left: 9px; right: auto; width: 2px; height: auto; }
+      .s1::after { background: linear-gradient(180deg, #E4E4E7, #C8C8CD); }
+      .s2::after { background: linear-gradient(180deg, #C8C8CD, #8E8E93); }
+      .s3::after { background: linear-gradient(180deg, #8E8E93, var(--gold)); }
+      .tl-state { margin-top: 0; }
+      .tl-when { margin-top: 14px; }
+      .tl-win { margin-top: 18px; padding-top: 16px; }
+    }
+    @media (max-width: 899px) {
+      .hdr-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 20px; padding: 22px var(--pad) 26px; background: rgba(255, 255, 255, 0.97); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border-bottom: 1px solid var(--hair); box-shadow: 0 12px 24px rgba(11, 11, 12, 0.06); }
+      .hdr-nav.open { display: flex; }
+      .hdr-nav a { font-size: 15px; }
+      .hdr-nav a.hdr-cta { justify-content: center; padding: 13px 18px; }
+      .lang { margin-left: auto; }
+      .hdr-toggle { display: block; }
+    }
+    @media (max-width: 767px) {
+      :root { --pad: 20px; --sec: 72px; }
+      body { font-size: 16px; }
+      .lead, .hero-sub { font-size: 17px; }
+      .sec-head { margin-bottom: 40px; }
+      .sec-head .lead { margin-top: 18px; }
+      .hdr { height: 60px; gap: 8px; }
+      .logo { font-size: 17px; }
+      .lang button { padding: 5px 8px; }
+      .hdr .btn-sm { height: 36px; padding: 0 14px; font-size: 13.5px; }
+      .hero > .wrap { padding-top: 56px; padding-bottom: 64px; }
+      .hero .eyebrow { margin-bottom: 20px; }
+      .hero-sub { margin-top: 20px; }
+
+      /* Pill form becomes a stacked card */
+      .gf { margin-top: 32px; }
+      .pill { flex-wrap: wrap; height: auto; padding: 6px; border-radius: 22px; }
+      .pill > .pill-ico { margin-left: 12px; }
+      .pill-in { flex: 1 1 0; height: 54px; }
+      .pill-sep { flex: 0 0 100%; width: auto; height: 1px; }
+      .pill-mk { flex: 1 1 100%; flex-direction: row; align-items: center; justify-content: space-between; height: 54px; padding: 0 12px; }
+      .pill-mk-l { font-size: 12px; }
+      .pill-btn { flex: 1 1 100%; height: 52px; margin: 4px 0 0; }
+      .pill-2 .pill-sep { display: none; }
+      .pill-2 .pill-ico { order: 1; }
+      .pill-2 .pill-in { order: 2; flex: 1 1 calc(100% - 48px); }
+      .pill-2 .pill-back { order: 3; height: 52px; margin: 4px 6px 0 0; padding: 0 16px; background: #fff; border: 1px solid var(--hair); color: var(--dark); }
+      .pill-2 .pill-btn { order: 4; flex: 1 1 0; }
+      .consent { justify-content: flex-start; }
+      .f-done { padding: 18px 18px; }
+
+      .markets { flex-direction: column; gap: 14px; margin-top: 56px; }
+      .markets-list { gap: 10px 18px; }
+      .sec.proof > .wrap { padding-top: 44px; padding-bottom: 52px; }
+      .proof .logo-strip { margin-top: 26px; }
+
+      .asks { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .ask { padding: 18px 20px 20px; }
+      .ask-q { margin-top: 10px; font-size: 17px; }
+      .prob-line { margin-top: 40px; }
+      .panel { margin-top: 48px; padding: 24px 16px; border-radius: 22px; }
+      .panel-head { margin-bottom: 20px; }
+      .panel-head .h3 { font-size: 20px; }
+      .ex-cards { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+      .ans li { padding: 13px 16px; }
+      .ans-absent { margin: 0 12px 12px; }
+      .ex-lead { margin: -6px 0 20px; font-size: 15.5px; }
+      .ex-q { max-width: 92%; margin: 14px 12px 6px auto; }
+      .ex-src { padding: 12px 16px 14px; }
+      .ex-read { padding: 8px 4px 0; }
+      .ex-row:first-child { padding-top: 10px; }
+
+      .pillars { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+      .pillar { padding-top: 26px; }
+      .pillar h3 { margin-top: 18px; }
+
+      .how-line { margin-top: 56px; }
+      .rhythm { grid-template-columns: minmax(0, 1fr); margin-top: 20px; }
+      .rh { padding: 20px 0; }
+      .rh + .rh { border-left: 0; border-top: 1px solid var(--hair); }
+      .how-talk { margin-top: 32px; padding-top: 24px; }
+      .how-talk-q { flex: 1 1 100%; }
+
+      .get { grid-template-columns: minmax(0, 1fr); gap: 56px; }
+      .get-h h3 { font-size: 22px; }
+      .num-v { font-size: 44px; }
+      .brief-panel { padding: 24px 12px; }
+      .brief .mock-bar { padding: 10px 14px; }
+      .brief-body { padding: 20px 18px 4px; }
+      .brief-h { font-size: 16px; white-space: nowrap; }
+      .brief-rows li { grid-template-columns: 24px minmax(0, 1fr); gap: 6px 10px; align-items: start; padding: 14px 0; }
+      .br-n { line-height: 1.6; }
+      .br-ce { flex-direction: row; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; }
+      .br-a, .br-d { grid-column: 2; }
+      .br-d { justify-self: start; margin-top: 4px; }
+      .brief-intro { margin-bottom: 18px; padding: 0 6px; font-size: 19px; }
+      .fit { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 48px; }
+      .fit-col { padding-top: 20px; }
+      .fit-d { font-size: 16px; }
+      .fit.roles { margin-top: 28px; gap: 24px; }
+
+      .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .stat { padding: 26px 0 24px 18px; }
+      .stat + .stat { border-left: 0; }
+      .stat:nth-child(odd) { padding-left: 0; padding-right: 14px; }
+      .stat:nth-child(even) { border-left: 1px solid var(--hair); }
+      .stat:nth-child(n+3) { border-top: 1px solid var(--hair); }
+      .stat-l { margin-top: 10px; font-size: 14.5px; }
+      .team { grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 56px; }
+      .person { padding: 24px 22px; border-radius: 20px; }
+      .person img { width: 64px; height: 64px; }
+      .bio { margin-top: 18px; }
+      .logo-strip { gap: 22px 30px; margin-top: 26px; }
+      .logo-strip li { height: 36px; }
+      .logo-strip img { height: 24px; max-width: 108px; }
+      .logo-strip img.lg-xl { height: 34px; }
+      .logo-strip img.lg-sq { height: 32px; }
+      .logo-strip img.lg-mid { height: 28px; }
+      .logo-strip img.lg-sm { height: 21px; }
+
+      .faq-list { margin-top: 32px; }
+      .faq-item summary { padding: 20px 0; font-size: 16.5px; }
+      .faq-answer { padding-right: 0; font-size: 15.5px; }
+
+      .cta-panel { padding: 56px 16px; border-radius: 24px; }
+      .cta-sub { font-size: 16.5px; }
+      .cta-panel .gf { margin-top: 32px; }
+
+      .ft-top { flex-direction: column; align-items: flex-start; }
+    }
+    @media (max-width: 380px) {
+      :root { --pad: 16px; }
+      .logo { font-size: 16px; }
+      .hdr .btn-sm { padding: 0 12px; font-size: 13px; }
+    }
+    @media (max-width: 379px) {
+      .brief-h { white-space: normal; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="pageFade" aria-hidden="true"></div>
+  <script>
+    // Fade the page in when arriving from another service page
+    (function() {
+      var f = document.getElementById('pageFade');
+      try {
+        if (sessionStorage.getItem('pageFade') === '1') {
+          sessionStorage.removeItem('pageFade');
+          f.classList.add('active');
+          setTimeout(function() { f.classList.remove('active'); }, 60);
+        }
+      } catch (e) {}
+      // Safety net: never leave the overlay stuck (background tabs, bfcache)
+      window.addEventListener('pageshow', function() {
+        setTimeout(function() { f.classList.remove('active'); }, 60);
+      });
+    })();
+  </script>
+
+  <!-- Line icons, drawn once and reused with <use> -->
+  <svg class="sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-check-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></symbol>
+    <symbol id="i-x-circle" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m15 9-6 6"/><path d="m9 9 6 6"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-trend" viewBox="0 0 24 24"><path d="M22 7 13.5 15.5 8.5 10.5 2 17"/><path d="M16 7h6v6"/></symbol>
+    <symbol id="i-package" viewBox="0 0 24 24"><path d="M16.5 9.4 7.55 4.24"/><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.29 7 12 12l8.71-5"/><path d="M12 22V12"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.99-5.54 10.19-7.4 11.8a1 1 0 0 1-1.2 0C9.54 20.19 4 14.99 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+    <symbol id="i-news" viewBox="0 0 24 24"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.38 3.62a1 1 0 0 1 3 3L7.37 18.64a2 2 0 0 1-.86.5l-2.87.84a.5.5 0 0 1-.62-.62l.84-2.87a2 2 0 0 1 .5-.86z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 24 24"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="hdr-wrap">
+    <div class="wrap hdr">
+      <a href="/" class="logo js-fade">sofian<span>.global</span></a>
+      <nav class="hdr-nav" id="hdrNav" onclick="if (event.target.closest('a')) { this.classList.remove('open'); var t = document.getElementById('hdrToggle'); if (t) t.setAttribute('aria-expanded', 'false'); }">
+        <a href="#how" data-i18n="nav.how">How it works</a>
+        <a href="#get" data-i18n="nav.get">What you get</a>
+        <a href="#who" data-i18n="nav.who">Who you work with</a>
+        <a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#diagnostic-form" class="hdr-cta js-to-form"><span data-i18n="nav.cta">Free AI report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </nav>
+      <div class="lang" role="group" aria-label="Language" data-i18n-aria="nav.lang">
+        <button type="button" id="langEn" class="active" aria-pressed="true"><span class="flag">&#127468;&#127463;</span><span>EN</span></button>
+        <button type="button" id="langKo" aria-pressed="false"><span class="flag">&#127472;&#127479;</span><span>KR</span></button>
+      </div>
+      <button type="button" class="hdr-toggle" id="hdrToggle" aria-label="Menu" data-i18n-aria="nav.menu" aria-expanded="false" aria-controls="hdrNav" onclick="var n = document.getElementById('hdrNav'); var o = n.classList.toggle('open'); this.setAttribute('aria-expanded', String(o));">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 1. HERO -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="hero.eyebrow">GEO (AI search optimization) consulting for Korean companies expanding abroad</p>
+        <h1 class="h1" data-i18n="hero.title"><span class="l reveal">From invisible to findable</span> <span class="l">in your target market</span></h1>
+        <p class="hero-sub" data-i18n="hero.sub">I measure what AI tells buyers about your company from that market, then get you cited and described accurately: the pages it reads, the local sources it trusts.</p>
+
+        <div class="gf" id="diagnostic-form" data-geo-form>
+          <form novalidate>
+            <div class="pill" data-step="1">
+              <svg class="ico pill-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+              <label class="sr" for="geoUrl" data-i18n="form.url">Website</label>
+              <input class="pill-in" id="geoUrl" name="website" type="url" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourcompany.com" data-i18n-ph="form.urlPh" aria-describedby="geoErrUrl">
+              <span class="pill-sep" aria-hidden="true"></span>
+              <label class="pill-mk">
+                <span class="pill-mk-l" id="geoMarketL" data-i18n="form.market">Target market</span>
+                <span class="pill-mk-v">
+                  <select id="geoMarket" name="market" aria-labelledby="geoMarketL">
+                    <option value="US" data-i18n="form.mUS">United States</option>
+                    <option value="JP" data-i18n="form.mJP">Japan</option>
+                    <option value="SG" data-i18n="form.mSG">Singapore</option>
+                    <option value="FR" data-i18n="form.mFR">France</option>
+                    <option value="UK" data-i18n="form.mUK">United Kingdom</option>
+                    <option value="DE" data-i18n="form.mDE">Germany</option>
+                    <option value="AE" data-i18n="form.mAE">UAE</option>
+                    <option value="VN" data-i18n="form.mVN">Vietnam</option>
+                    <option value="TH" data-i18n="form.mTH">Thailand</option>
+                    <option value="AU" data-i18n="form.mAU">Australia</option>
+                    <option value="OT" data-i18n="form.mOT">Other</option>
+                  </select>
+                  <svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg>
+                </span>
+              </label>
+              <button type="submit" class="btn btn-dark pill-btn"><span data-i18n="form.go">Get your free AI visibility report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <div class="pill pill-2" data-step="2" hidden>
+              <button type="button" class="pill-back" data-back><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg><span data-i18n="form.back">Back</span></button>
+              <span class="pill-sep" aria-hidden="true"></span>
+              <svg class="ico pill-ico" aria-hidden="true"><use href="#i-mail"/></svg>
+              <label class="sr" for="geoEmail" data-i18n="form.email">Work email</label>
+              <input class="pill-in" id="geoEmail" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Work email" data-i18n-ph="form.email" aria-describedby="geoErrEmail">
+              <button type="submit" class="btn btn-dark pill-btn" data-send><span data-i18n="form.send">Send</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            </div>
+            <label class="consent" data-step="2" hidden><input type="checkbox" id="geoConsent" name="consent" aria-describedby="geoErrConsent"><span data-i18n="form.consent">I agree that my email is used to send this report.</span></label>
+            <p class="f-err" id="geoErrUrl" data-err="url" role="alert" hidden data-i18n="form.errUrl">Enter your website address.</p>
+            <p class="f-err" id="geoErrEmail" data-err="email" role="alert" hidden data-i18n="form.errEmail">Enter a valid email address.</p>
+            <p class="f-err" id="geoErrConsent" data-err="consent" role="alert" hidden data-i18n="form.errConsent">Please agree to the use of your email.</p>
+          </form>
+          <div class="f-done" role="status" tabindex="-1" hidden>
+            <span class="f-done-ico" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+            <p><span data-i18n="form.done1">Request received.</span> <span class="f-done-mk" data-i18n="form.done2">I start your questions from <strong class="done-market"></strong>.</span> <span data-i18n="form.done3">Your report arrives within 48 hours.</span></p>
+          </div>
+          <p class="f-note" data-i18n="form.note">Free · No account · Your report arrives within 48 hours</p>
+        </div>
+
+        <div class="markets">
+          <p class="markets-l" id="marketsL" data-i18n="mk.label">Measured from</p>
+          <ul class="markets-list" aria-labelledby="marketsL">
+            <li><span class="flag" aria-hidden="true">&#127482;&#127480;</span><span data-i18n="mk.us">US</span></li>
+            <li><span class="flag" aria-hidden="true">&#127471;&#127477;</span><span data-i18n="mk.jp">Japan</span></li>
+            <li><span class="flag" aria-hidden="true">&#127480;&#127468;</span><span data-i18n="mk.sg">Singapore</span></li>
+            <li><span class="flag" aria-hidden="true">&#127467;&#127479;</span><span data-i18n="mk.fr">France</span></li>
+            <li><span class="flag" aria-hidden="true">&#127468;&#127463;</span><span data-i18n="mk.uk">UK</span></li>
+            <li><span class="flag" aria-hidden="true">&#127465;&#127466;</span><span data-i18n="mk.de">Germany</span></li>
+            <li><span class="flag" aria-hidden="true">&#127462;&#127466;</span><span data-i18n="mk.ae">UAE</span></li>
+            <li><span class="flag" aria-hidden="true">&#127483;&#127475;</span><span data-i18n="mk.vn">Vietnam</span></li>
+            <li><span class="flag" aria-hidden="true">&#127481;&#127469;</span><span data-i18n="mk.th">Thailand</span></li>
+            <li><span class="flag" aria-hidden="true">&#127462;&#127482;</span><span data-i18n="mk.au">Australia</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1b. PROOF: the Korean track record right under the hero (v4) -->
+    <section class="sec rule proof" aria-labelledby="proofL">
+      <div class="wrap">
+        <p class="proof-n" data-i18n="proof.n">240+ Korean startups coached since 2022</p>
+        <p class="eyebrow" id="proofL" data-i18n="proof.label">Institutions I have worked with on overseas expansion programs</p>
+        <ul class="logo-strip">
+          <li><img src="logos-white/kised.png" alt="KISED" title="KISED"></li>
+          <li><img src="logos-white/nipa.png" alt="NIPA" title="NIPA" class="lg-sq"></li>
+          <li><img src="logos-white/kto.png" alt="KTO" title="KTO" class="lg-mid"></li>
+          <li><img src="logos-white/innopolis.png" alt="Innopolis" title="Innopolis"></li>
+          <li><img src="logos-white/kocca.png" alt="KOCCA" title="KOCCA" class="lg-sm"></li>
+          <li><img src="logos-white/kita.png" alt="KITA" title="KITA" class="lg-mid"></li>
+          <li><img src="logos-white/msit.webp" alt="Ministry of Science and ICT" title="Ministry of Science and ICT (K-Global)" class="lg-xl"></li>
+          <li><img src="logos-white/gbsa-logo-600x260.png" alt="GBSA" title="GBSA" class="lg-mid"></li>
+          <li><img src="logos-white/kvca.png" alt="KVCA" title="KVCA"></li>
+          <li><img src="logos-white/kb-financial.png" alt="KB Holding" title="KB Holding"></li>
+          <li><img src="logos-white/KSPO_logo.png" alt="Korea Sports Promotion Foundation" title="Korea Sports Promotion Foundation"></li>
+          <li><img src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI" title="Daejeon CCEI"></li>
+          <li><img src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI" title="Gyeongbuk CCEI" class="lg-mid"></li>
+          <li><img src="logos-white/Chungnam CCEI.svg" alt="Chungnam CCEI" title="Chungnam CCEI"></li>
+          <li><img src="logos-white/keri.png" alt="KERI" title="KERI"></li>
+          <li><img src="logos-white/kosme.png" alt="KOSME" title="KOSME" class="lg-mid"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. PROBLEM -->
+    <section class="sec rule" id="problem">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-i18n="prob.eyebrow">The problem</p>
+          <h2 class="h2" data-i18n="prob.title">Before they open your website, <span class="plat br">they ask AI</span></h2>
+        </div>
+        <div class="asks">
+          <figure class="ask">
+            <figcaption class="ask-who"><svg class="ico" aria-hidden="true"><use href="#i-trend"/></svg><span data-i18n="prob.whoInv">Investors</span></figcaption>
+            <p class="ask-q" data-i18n="prob.qInv">Which startups lead in AI drug discovery?</p>
+          </figure>
+          <figure class="ask">
+            <figcaption class="ask-who"><svg class="ico" aria-hidden="true"><use href="#i-package"/></svg><span data-i18n="prob.whoBuy">Buyers</span></figcaption>
+            <p class="ask-q" data-i18n="prob.qBuy">Who makes the best IP67 industrial sensors?</p>
+          </figure>
+          <figure class="ask">
+            <figcaption class="ask-who"><svg class="ico" aria-hidden="true"><use href="#i-handshake"/></svg><span data-i18n="prob.whoPar">Partners</span></figcaption>
+            <p class="ask-q" data-i18n="prob.qPar">Which AI vision inspection solution should we test in our plants?</p>
+          </figure>
+        </div>
+        <p class="prob-line" data-i18n="prob.line">AI answers with company names. <strong>If it names your competitors and not you, they conclude you are not one of the leaders.</strong></p>
+
+        <div class="panel">
+          <div class="panel-head">
+            <h3 class="h3" data-i18n="ex.title">Known in Seoul, invisible in LA</h3>
+            <span class="tag" data-i18n="ex.tag">Example · fictional companies</span>
+          </div>
+          <p class="ex-lead" data-i18n="ex.lead">In Korea, buyers know your name. In LA, a buyer asks without mentioning Korea. ChatGPT names 2 US companies and one of your Korean competitors. Not you.</p>
+          <div class="ex-cards">
+            <div class="mock">
+              <div class="mock-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="ex.bar">ChatGPT · Los Angeles · English</span></div>
+              <div class="ex-q"><p lang="en">Who makes the best IP67 industrial sensors for factory automation?</p><p class="ex-q-ko" data-i18n="ex.qKo">Asked in English</p></div>
+              <ol class="ans" aria-label="Companies named in the answer" data-i18n-aria="ex.ansAria">
+                <li><span class="n">1</span><span data-i18n="ex.bA">Brand A</span><span class="ans-c" data-i18n="ex.us">US</span></li>
+                <li><span class="n">2</span><span data-i18n="ex.bB">Brand B</span><span class="ans-c" data-i18n="ex.us">US</span></li>
+                <li class="is-rival"><span class="n">3</span><span data-i18n="ex.bC">Brand C</span><span class="ans-c" data-i18n="ex.kr">Korea · your competitor</span></li>
+              </ol>
+              <p class="ans-absent"><svg class="ico" aria-hidden="true"><use href="#i-x-circle"/></svg><span data-i18n="ex.absent">Your company · not in the answer</span></p>
+              <p class="ex-src"><svg class="ico" aria-hidden="true"><use href="#i-news"/></svg><span data-i18n="ex.src">Sources cited: a US distributor page, an industry directory</span></p>
+            </div>
+            <div class="ex-read">
+              <div class="ex-row"><p class="ex-k"><svg class="ico" aria-hidden="true"><use href="#i-news"/></svg><span data-i18n="ex.k1">Why your competitor is named</span></p><p class="ex-v" data-i18n="ex.v1">Its US distributor's page states the IP67 rating and the factory use case in English. ChatGPT cites that page.</p></div>
+              <div class="ex-row"><p class="ex-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="ex.k2">Problem found</span></p><p class="ex-v" data-i18n="ex.v2">Your IP67 certification and test results sit in a PDF datasheet. Your English pages name the product, not the use case buyers ask about.</p></div>
+              <div class="ex-row"><p class="ex-k"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span data-i18n="ex.k3">Fix proposed</span></p><p class="ex-v" data-i18n="ex.v3">An English answer page for the use case, with the certification and test data as text. Then a listing on the 2 directories ChatGPT cites.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SOLUTION -->
+    <section class="sec rule" id="solution">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-i18n="sol.eyebrow">The solution</p>
+          <h2 class="h2" data-i18n="sol.title">GEO, <span class="plat">measured from your target market</span></h2>
+          <p class="lead" data-i18n="sol.lead">GEO (generative engine optimization) gets your company cited and described accurately in AI answers. I do it market by market, from the market itself, because AI answers change with language, location and context.</p>
+        </div>
+        <div class="pillars">
+          <article class="pillar">
+            <svg class="ico" aria-hidden="true"><use href="#i-target"/></svg>
+            <h3 data-i18n="sol.p1t">Ask the questions that lead to deals</h3>
+            <p data-i18n="sol.p1d">The 25 questions your buyers, distributors and investors ask AI before they contact a company like yours, chosen with you, then asked from the market itself, several runs each.</p>
+          </article>
+          <article class="pillar">
+            <svg class="ico" aria-hidden="true"><use href="#i-lang"/></svg>
+            <h3 data-i18n="sol.p2t">Fix the pages AI reads</h3>
+            <p data-i18n="sol.p2d">Pages, FAQs and listings in the local language, built on your proof: certifications, test results, clients, often stuck today in a PDF or an image.</p>
+          </article>
+          <article class="pillar">
+            <svg class="ico" aria-hidden="true"><use href="#i-news"/></svg>
+            <h3 data-i18n="sol.p3t">Get into the local sources AI already trusts</h3>
+            <p data-i18n="sol.p3d">Distributor pages, directories, trade publications, partner sites and category guides that AI cites in your category, in that market.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. HOW IT WORKS -->
+    <section class="sec rule" id="how">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-i18n="how.eyebrow">How it works</p>
+          <h2 class="h2" data-i18n="how.title">12 weeks per market, <span class="reveal br">from invisible to findable</span></h2>
+        </div>
+        <ol class="tl">
+          <li class="tl-st s1">
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-state"><span class="chip" data-i18n="s1.state">Invisible</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <p class="tl-when" data-i18n="s1.when">Weeks 0 to 2</p>
+            <h3 class="tl-title" data-i18n="s1.title">Diagnose</h3>
+            <p class="tl-do" data-i18n="s1.do">25&nbsp;buyer questions, asked 3&nbsp;times each from your market.</p>
+            <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s1.win">A baseline: who is named, what AI says about you, which sources it trusts</p></div>
+            <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s1.goal">Know exactly where you stand</p></div>
+          </li>
+          <li class="tl-st s2">
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-state"><span class="chip" data-i18n="s2.state">Readable</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <p class="tl-when" data-i18n="s2.when">Weeks 3 to 6</p>
+            <h3 class="tl-title" data-i18n="s2.title">Publish</h3>
+            <p class="tl-do" data-i18n="s2.do">Up to 3 pages for your site in the local language, written by me, published by your team by week 4. One brand name everywhere.</p>
+            <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s2.win">Up to 3 pages, written and ready to publish</p></div>
+            <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s2.goal">AI describes you accurately</p></div>
+          </li>
+          <li class="tl-st s3">
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-state"><span class="chip" data-i18n="s3.state">Cited</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <p class="tl-when" data-i18n="s3.when">Weeks 7 to 11</p>
+            <h3 class="tl-title" data-i18n="s3.title">Get into local sources</h3>
+            <p class="tl-do" data-i18n="s3.do">Distributor pages, directories and trade media that AI cites in your category.</p>
+            <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s3.win">A map of the local sources AI cites, and a ready-to-send pitch for each</p></div>
+            <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s3.goal">The local sources AI trusts carry your name</p></div>
+          </li>
+          <li class="tl-st s4">
+            <span class="tl-node" aria-hidden="true"></span>
+            <div class="tl-state"><span class="chip" data-i18n="s4.state">Findable</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+            <p class="tl-when" data-i18n="s4.when">Week 12</p>
+            <h3 class="tl-title" data-i18n="s4.title">Decide what comes next</h3>
+            <p class="tl-do" data-i18n="s4.do">Final review across ChatGPT, Google AI Overviews, Gemini and Perplexity.</p>
+            <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s4.win">Results against the baseline, a playbook, and the choice: extend, open another market, or stop</p></div>
+            <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s4.goal">Named and described accurately where investors, buyers and partners search</p></div>
+          </li>
+        </ol>
+
+        <p class="how-line" data-i18n="how.line">Every Monday, you know what to fix.</p>
+        <div class="rhythm">
+          <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-file"/></svg><div><p class="rh-w" data-i18n="rhy.monW">Every Monday</p><p class="rh-t" data-i18n="rhy.mon">An action pack: what moved, and up to 3 ranked actions</p></div></div>
+          <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><div><p class="rh-w" data-i18n="rhy.friW">Every Friday</p><p class="rh-t" data-i18n="rhy.fri">The week's content, written in full, ready to publish</p></div></div>
+          <div class="rh"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg><div><p class="rh-w" data-i18n="rhy.monthW">Every month</p><p class="rh-t" data-i18n="rhy.month">A site review and a 30-minute call</p></div></div>
+        </div>
+        <div class="fit roles">
+          <div class="fit-col">
+            <p class="fit-k"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span data-i18n="roles.meT">What I do</span></p>
+            <p class="fit-d" data-i18n="roles.meD">I choose the 25 questions with you, measure every week and rank the actions. I write every page, text and pitch in the local language. Every Monday, I check what went live, what is still pending, and whether AI picks it up.</p>
+          </div>
+          <div class="fit-col">
+            <p class="fit-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="roles.youT">What your team does</span></p>
+            <p class="fit-d" data-i18n="roles.youD">Your team approves the facts and decides each week, in about 1&nbsp;hour. Then it publishes the pages on your site and sends the pitches from your company address.</p>
+          </div>
+        </div>
+        <p class="how-note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="how.note">I commit to the measurement, the actions and the written content. No one controls what an AI answers, so outcomes are measured, never guaranteed.</span></p>
+        <div class="how-talk">
+          <p class="how-talk-q" data-i18n="how.talkQ">Already selling abroad?</p>
+          <a class="btn btn-light btn-sm" href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener"><svg class="kk" viewBox="0 0 256 256" aria-hidden="true"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg><span data-i18n="how.talk">Discuss your target market</span></a>
+          <a class="how-mail" href="mailto:sofian@hack40.com"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>sofian@hack40.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. WHAT YOU GET -->
+    <section class="sec rule" id="get">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-i18n="get.eyebrow">What you get</p>
+          <h2 class="h2" data-i18n="get.title">A free report first, <span class="plat br">then the 12&#8209;week program</span></h2>
+        </div>
+        <div class="get">
+          <div class="get-col">
+            <div class="get-h"><h3 data-i18n="get.freeT">Free AI visibility report</h3><span class="meta" data-i18n="get.freeM">within 48 hours</span></div>
+            <ul class="checks">
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f1">5 buyer questions asked from your market</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f2">Your visibility snapshot and the competitors that show up</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f3">The sources AI cites</span></li>
+              <li><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="get.f4">Your 3 biggest gaps, with 1 example fix drafted</span></li>
+            </ul>
+            <a href="#diagnostic-form" class="btn btn-light get-cta js-to-form"><span data-i18n="form.go">Get your free AI visibility report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          </div>
+          <div class="get-col">
+            <div class="get-h"><h3 data-i18n="get.progT">12-week program</h3><span class="meta" data-i18n="get.progM">per market</span></div>
+            <div class="nums">
+              <p class="num"><span class="num-v">12</span><span class="num-l" data-i18n="get.n1">weekly action packs</span></p>
+              <p class="num"><span class="num-v">12</span><span class="num-l" data-i18n="get.n2">pieces of content, ready to publish</span></p>
+              <p class="num"><span class="num-v">25</span><span class="num-l" data-i18n="get.n3">tracked buyer questions</span></p>
+              <p class="num"><span class="num-v">3</span><span class="num-l" data-i18n="get.n4">site reviews</span></p>
+            </div>
+            <p class="get-price" data-i18n="get.price">GEO 3-month package: <strong>from&nbsp;₩4,990,000</strong> per market.</p>
+            <p class="get-plus" data-i18n="get.plus">Plus a playbook for your next market, and all your files.</p>
+          </div>
+        </div>
+
+        <div class="panel brief-panel">
+          <h3 class="h3 brief-intro" data-i18n="brief.intro">Every Monday, know exactly what to fix in your target market.</h3>
+          <article class="mock brief">
+            <div class="mock-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="tag" data-i18n="brief.tag">Example · fictional company</span></div>
+            <div class="brief-body">
+              <h3 class="brief-h" data-i18n="brief.head">Action pack&nbsp;· United&nbsp;States&nbsp;· week&nbsp;5</h3>
+              <p class="brief-line" data-i18n="brief.line">Named in 3 of 25 questions this week (2 last week, within normal variation).</p>
+              <ol class="brief-rows">
+                <li><span class="br-n">01</span><span class="br-ce"><span class="br-c" data-i18n="brief.r1c">Website</span><span class="br-e" data-i18n="brief.r1e">1 day</span></span><span class="br-a" data-i18n="brief.r1a">English answer page on IP67 sensors</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span data-i18n="brief.d1">Written by Friday</span></span></li>
+                <li><span class="br-n">02</span><span class="br-ce"><span class="br-c" data-i18n="brief.r2c">Distributor</span><span class="br-e" data-i18n="brief.r2e">half a day</span></span><span class="br-a" data-i18n="brief.r2a">Add the missing certification</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span data-i18n="brief.d2">Text ready · you send</span></span></li>
+                <li><span class="br-n">03</span><span class="br-ce"><span class="br-c" data-i18n="brief.r3c">Trade media</span><span class="br-e" data-i18n="brief.r3e">1 week</span></span><span class="br-a" data-i18n="brief.r3a">Pitch the 2 sites ChatGPT cites most</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span data-i18n="brief.d3">Pitch ready · you send</span></span></li>
+              </ol>
+            </div>
+          </article>
+        </div>
+
+        <div class="fit">
+          <div class="fit-col">
+            <p class="fit-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="fit.forT">Best for</span></p>
+            <p class="fit-d" data-i18n="fit.forD">Companies that already have a product, proof and a target market, but are still poorly represented in local AI answers.</p>
+          </div>
+          <div class="fit-col fit-not">
+            <p class="fit-k"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="fit.notT">Not the first step</span></p>
+            <p class="fit-d" data-i18n="fit.notD">If you are still testing product-market fit or have no local entry plan yet, start with market entry basics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. WHO YOU WORK WITH -->
+    <section class="sec rule" id="who">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="eyebrow" data-i18n="who.eyebrow">Who you work with</p>
+          <h2 class="h2" data-i18n="who.title">A GEO consultant <span class="plat br">who knows Korean companies abroad</span></h2>
+          <p class="lead" data-i18n="who.lead">GEO is one step of a market entry. Since 2022 I have worked on the other steps with Korean companies: market research, business matching, PoCs, investor pitches. Tom&nbsp;Coquereau runs the AI visibility measurement.</p>
+        </div>
+        <div class="stats">
+          <p class="stat"><span class="stat-v">240+</span><span class="stat-l" data-i18n="who.s1">Korean startups coached since 2022</span></p>
+          <p class="stat"><span class="stat-v">20+</span><span class="stat-l" data-i18n="who.s2">Korean partner institutions</span></p>
+          <p class="stat"><span class="stat-v">50+</span><span class="stat-l" data-i18n="who.s3">market studies for companies going overseas</span></p>
+          <p class="stat"><span class="stat-v">130+</span><span class="stat-l" data-i18n="who.s4">business matching meetings</span></p>
+        </div>
+
+
+        <div class="team">
+          <article class="person">
+            <div class="person-top">
+              <img src="photos/team-sofian.jpg" width="480" height="480" alt="Sofian Meguellati">
+              <div><h3>Sofian Meguellati</h3><p class="role" data-i18n="team.sofianRole">GEO consultant, global expansion</p></div>
+            </div>
+            <p class="bio" data-i18n="team.sofianBio">13+ years building businesses in Paris, Singapore, Seoul and Tokyo. 240+ Korean startups coached since 2022.</p>
+          </article>
+          <article class="person">
+            <div class="person-top">
+              <img src="photos/team-tom.jpg" width="460" height="460" alt="Tom Coquereau">
+              <div><h3>Tom Coquereau</h3><p class="role" data-i18n="team.tomRole">AI visibility expert</p></div>
+            </div>
+            <p class="bio" data-i18n="team.tomBio">In enterprise software since 2014; founded Metriq (AI automation) and Tokamai (AI security). Runs the AI visibility measurement: the runs from each market, the archived answers, the cited sources.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="sec rule" id="faq">
+      <div class="wrap">
+        <div class="faq">
+          <p class="eyebrow" data-i18n="faq.label">FAQ</p>
+          <h2 class="h2" data-i18n="faq.title">Common questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q1">Is the report really free?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a1">Yes. One report is free, with no account and no payment details.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q2">How is this different from SEO?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a2">SEO works on where your pages rank in a list of links. GEO works on what AI answers: whether it names you, how it describes you, and which sources it cites. A page can rank well and never be cited; the report shows that gap from real answers.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q3">Why can't we just ask ChatGPT ourselves?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a3">You can, and you should. But one answer, asked from Seoul and logged in, tells you little: answers change with location, language, account and run. I ask from your target market, logged out, 3 times per question, every week, archive every answer, and read the sources behind it.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q4">Is GEO useful if we have no local distributor yet?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a4">Yes, if you already have a product, proof and a target market: the report shows which distributors, directories and media AI trusts there, which helps you choose. If you are still testing product-market fit, start with market entry basics first.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q5">Which AI assistants do you measure?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a5">ChatGPT every week, under fixed conditions; Google AI Overviews, Gemini and Perplexity once a month. China is not included, because buyers there mostly use local AI assistants.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q6">Do you guarantee results?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a6">No. No one controls what an AI answers. I commit to the measurement, the actions and the written content. The first signs are answers that reuse your new wording or cite your new page, read over several weeks.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q7">How much does it cost?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a7">The GEO 3-month package starts at ₩4,990,000 per market. The final price depends on the number of markets and the scope. Paid ads, fake reviews and mass-produced content are never part of it.</div>
+            </details>
+            <details class="faq-item">
+              <summary><span data-i18n="faq.q8">How do contracts and invoicing work?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+              <div class="faq-answer" data-i18n="faq.a8">Contracts and invoices go through Carte Blanche SAS, my French company. I invoice your company directly, with an international commercial invoice instead of a Korean tax invoice (<span lang="ko">&#49464;&#44552;&#44228;&#49328;&#49436;</span>). Korean program operators already accept it. When a public support program funds the work, I also provide the administrative documents it requires, including documents in Korean.</div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FINAL CTA -->
+    <section class="cta" id="start">
+      <div class="wrap">
+        <div class="cta-panel">
+          <h2 class="h2" data-i18n="cta.title">See what buyers in your target market <span class="plat br">hear from AI</span></h2>
+          <p class="cta-sub" data-i18n="cta.sub">Give me your domain and your market. In 48 hours, I show you what they see.</p>
+
+          <div class="gf" id="cta-form" data-geo-form>
+            <form novalidate>
+              <div class="pill" data-step="1">
+                <svg class="ico pill-ico" aria-hidden="true"><use href="#i-globe"/></svg>
+                <label class="sr" for="geoUrl2" data-i18n="form.url">Website</label>
+                <input class="pill-in" id="geoUrl2" name="website" type="url" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourcompany.com" data-i18n-ph="form.urlPh" aria-describedby="geoErrUrl2">
+                <span class="pill-sep" aria-hidden="true"></span>
+                <label class="pill-mk">
+                  <span class="pill-mk-l" id="geoMarketL2" data-i18n="form.market">Target market</span>
+                  <span class="pill-mk-v">
+                    <select id="geoMarket2" name="market" aria-labelledby="geoMarketL2">
+                      <option value="US" data-i18n="form.mUS">United States</option>
+                      <option value="JP" data-i18n="form.mJP">Japan</option>
+                      <option value="SG" data-i18n="form.mSG">Singapore</option>
+                      <option value="FR" data-i18n="form.mFR">France</option>
+                      <option value="UK" data-i18n="form.mUK">United Kingdom</option>
+                      <option value="DE" data-i18n="form.mDE">Germany</option>
+                      <option value="AE" data-i18n="form.mAE">UAE</option>
+                      <option value="VN" data-i18n="form.mVN">Vietnam</option>
+                      <option value="TH" data-i18n="form.mTH">Thailand</option>
+                      <option value="AU" data-i18n="form.mAU">Australia</option>
+                      <option value="OT" data-i18n="form.mOT">Other</option>
+                    </select>
+                    <svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg>
+                  </span>
+                </label>
+                <button type="submit" class="btn btn-dark pill-btn"><span data-i18n="form.go">Get your free AI visibility report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              </div>
+              <div class="pill pill-2" data-step="2" hidden>
+                <button type="button" class="pill-back" data-back><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg><span data-i18n="form.back">Back</span></button>
+                <span class="pill-sep" aria-hidden="true"></span>
+                <svg class="ico pill-ico" aria-hidden="true"><use href="#i-mail"/></svg>
+                <label class="sr" for="geoEmail2" data-i18n="form.email">Work email</label>
+                <input class="pill-in" id="geoEmail2" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Work email" data-i18n-ph="form.email" aria-describedby="geoErrEmail2">
+                <button type="submit" class="btn btn-dark pill-btn" data-send><span data-i18n="form.send">Send</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              </div>
+              <label class="consent" data-step="2" hidden><input type="checkbox" id="geoConsent2" name="consent" aria-describedby="geoErrConsent2"><span data-i18n="form.consent">I agree that my email is used to send this report.</span></label>
+              <p class="f-err" id="geoErrUrl2" data-err="url" role="alert" hidden data-i18n="form.errUrl">Enter your website address.</p>
+              <p class="f-err" id="geoErrEmail2" data-err="email" role="alert" hidden data-i18n="form.errEmail">Enter a valid email address.</p>
+              <p class="f-err" id="geoErrConsent2" data-err="consent" role="alert" hidden data-i18n="form.errConsent">Please agree to the use of your email.</p>
+            </form>
+            <div class="f-done" role="status" tabindex="-1" hidden>
+              <span class="f-done-ico" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
+              <p><span data-i18n="form.done1">Request received.</span> <span class="f-done-mk" data-i18n="form.done2">I start your questions from <strong class="done-market"></strong>.</span> <span data-i18n="form.done3">Your report arrives within 48 hours.</span></p>
+            </div>
+            <p class="f-note" data-i18n="form.note">Free · No account · Your report arrives within 48 hours</p>
+          </div>
+
+          <a class="cta-kakao" href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg><span data-i18n="cta.kakao">Questions? KakaoTalk</span></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="ft-top">
+        <a href="/" class="logo js-fade">sofian<span>.global</span></a>
+      </div>
+      <div class="ft-contact">
+        <a href="mailto:sofian@hack40.com">sofian@hack40.com</a>
+        <a href="https://www.linkedin.com/in/sofianmeguellati/" target="_blank" rel="noopener">LinkedIn</a>
+        <span><span data-i18n="footer.kakao">KakaoTalk</span>: <strong>sofianmegue</strong></span>
+      </div>
+      <p class="ft-copy" data-i18n="footer.copy">&copy; 2026 Sofian Meguellati &middot; All rights reserved</p>
+      <p class="ft-legal" data-i18n="footer.legal"><strong>Carte Blanche SAS</strong> &nbsp;|&nbsp; CEO: Sofian Meguellati &nbsp;|&nbsp; Business Registration Number 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France</p>
+    </div>
+  </footer>
+
+  <script>
+    // Free AI visibility report form: paste the Google Apps Script web app URL here (https://script.google.com/macros/s/.../exec,
+    // script in tasks/geo-leads-apps-script.gs). Each request becomes a row in the GEO leads sheet, plus an email alert.
+    // While it is empty, the form opens a pre-filled email to sofian@hack40.com instead.
+    var GEO_FORM_ENDPOINT = '';
+
+    // English originals are scraped from the HTML on load (single source of truth).
+    // Only Korean translations need to be maintained here. Keys are shared by
+    // data-i18n (inner HTML), data-i18n-ph (placeholder) and data-i18n-aria (aria-label).
+    var englishOriginals = {};
+
+    var koTranslations = {
+      'meta.title': 'Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅',
+      'meta.desc': '보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장 현지에서 AI가 해외 바이어에게 귀사를 어떻게 소개하는지 측정하고, AI가 읽는 페이지를 개선하고 AI가 신뢰하는 현지 출처를 공략해 귀사가 인용되고 정확하게 소개되도록 만듭니다.',
+      'nav.how': '진행 방식',
+      'nav.get': '제공 내용',
+      'nav.who': '함께 일하는 사람',
+      'nav.faq': 'FAQ',
+      'nav.cta': '무료 AI 리포트',
+      'nav.menu': '메뉴',
+      'nav.lang': '언어',
+      'hero.eyebrow': '한국 기업의 해외 진출을 위한 GEO(생성형 AI 검색 최적화) 컨설팅',
+      'hero.title': '<span class="l reveal">보이지 않던 기업을,</span> <span class="l">타깃 시장에서 발견되는 기업으로</span>',
+      'hero.sub': '타깃 시장 현지에서 AI가 바이어에게 귀사를 어떻게 소개하는지&nbsp;측정합니다. 이어서 AI가 읽는 페이지를 개선하고 AI가 신뢰하는 현지&nbsp;출처를 공략해, 귀사가 인용되고 정확하게 소개되도록 만듭니다.',
+      'form.url': '웹사이트 주소',
+      'form.urlPh': '회사 웹사이트 주소',
+      'form.market': '타깃 시장',
+      'form.mUS': '미국',
+      'form.mJP': '일본',
+      'form.mSG': '싱가포르',
+      'form.mFR': '프랑스',
+      'form.mUK': '영국',
+      'form.mDE': '독일',
+      'form.mAE': 'UAE',
+      'form.mVN': '베트남',
+      'form.mTH': '태국',
+      'form.mAU': '호주',
+      'form.mOT': '기타',
+      'form.go': '무료 AI 가시성 리포트 받기',
+      'form.back': '이전',
+      'form.email': '업무용 이메일',
+      'form.send': '신청하기',
+      'form.consent': '리포트 발송을 위한 이메일 수집·이용에 동의합니다.',
+      'form.errUrl': '웹사이트 주소를 입력해 주세요.',
+      'form.errEmail': '올바른 이메일 주소를 입력해 주세요.',
+      'form.errConsent': '이메일 수집·이용에 동의해 주세요.',
+      'form.done1': '신청이 접수되었습니다.',
+      'form.done2': '<strong class="done-market"></strong> 현지에서 질문을 시작합니다.',
+      'form.done3': '리포트는 48시간 안에 이메일로 보내 드립니다.',
+      'form.note': '무료 · 회원가입 없음 · 48시간 안에 이메일로 발송',
+      'mk.label': '현지 측정 시장',
+      'proof.n': '2022년부터 한국 스타트업 240개사 이상 코칭',
+      'proof.label': '해외 진출 프로그램을 함께한 기관',
+      'mk.us': '미국',
+      'mk.jp': '일본',
+      'mk.sg': '싱가포르',
+      'mk.fr': '프랑스',
+      'mk.uk': '영국',
+      'mk.de': '독일',
+      'mk.ae': 'UAE',
+      'mk.vn': '베트남',
+      'mk.th': '태국',
+      'mk.au': '호주',
+      'prob.eyebrow': '문제',
+      'prob.title': '귀사 웹사이트를 열어 보기 전에, <span class="plat br">AI에게 먼저 묻습니다</span>',
+      'prob.whoInv': '투자자',
+      'prob.qInv': 'AI 신약 개발을 선도하는 스타트업은 어디인가요?',
+      'prob.whoBuy': '바이어',
+      'prob.qBuy': 'IP67 산업용 센서를 가장 잘 만드는 기업은 어디인가요?',
+      'prob.whoPar': '파트너',
+      'prob.qPar': '우리 공장에서 실증해 볼 AI 비전 검사 솔루션은 어디가 좋을까요?',
+      'prob.line': 'AI는 기업 이름으로 답합니다. <strong>경쟁사는 언급되는데 귀사는 빠져 있다면, 투자자와 바이어, 파트너는 귀사를 업계를 이끄는 기업으로 보지 않습니다.</strong>',
+      'ex.title': '서울에서는 알려져 있어도, LA에서는 보이지 않습니다',
+      'ex.tag': '예시 · 가상의 기업',
+      'ex.lead': '한국에서는 바이어가 귀사 이름을 압니다. LA의 바이어는 질문에 ‘한국’을 넣지 않습니다. ChatGPT는 미국 기업 2곳과 귀사의 한국 경쟁사 1곳을 답합니다. 귀사는 없습니다.',
+      'ex.bar': 'ChatGPT · LA · 영어',
+      'ex.qKo': '번역: 공장 자동화용 IP67 산업용 센서는 어느 기업 제품이 가장 좋나요?',
+      'ex.ansAria': '답변에 언급된 기업',
+      'ex.bA': '브랜드 A',
+      'ex.bB': '브랜드 B',
+      'ex.bC': '브랜드 C',
+      'ex.us': '미국',
+      'ex.kr': '한국 · 귀사의 경쟁사',
+      'ex.absent': '귀사 · 답변에 없음',
+      'ex.src': '인용 출처: 미국 유통사 페이지, 업계 디렉터리',
+      'ex.k1': '경쟁사가 언급되는 이유',
+      'ex.v1': '미국 유통사 페이지에 IP67 등급과 공장 적용 사례가 영어로 적혀 있고, ChatGPT가 그 페이지를 인용합니다.',
+      'ex.k2': '발견한 문제',
+      'ex.v2': '귀사의 IP67 인증과 시험 결과는 PDF 데이터시트 안에만 있습니다. 영문 페이지는 제품명만 말하고, 바이어가 묻는 적용 사례는 다루지 않습니다.',
+      'ex.k3': '제안한 개선안',
+      'ex.v3': '적용 사례에 답하는 영문 페이지를 만들고, 인증과 시험 데이터를 텍스트로 넣습니다. 이어서 ChatGPT가 인용하는 디렉터리 2곳에 등록합니다.',
+      'sol.eyebrow': '해결 방법',
+      'sol.title': 'GEO, <span class="plat">타깃 시장 현지에서 측정합니다</span>',
+      'sol.lead': 'GEO는 귀사가 AI 답변에 인용되고 정확하게 소개되도록 만듭니다. AI 답변은 언어, 접속 위치, 맥락에 따라 달라지므로, 이 작업을 시장별로 그 시장 현지에서 진행합니다.',
+      'sol.p1t': '거래로 이어지는 질문 선정',
+      'sol.p1d': '바이어, 유통사, 투자자가 귀사 같은 기업에 연락하기 전에 AI에게 묻는 질문 25개를 귀사와 함께 고르고, 그 시장 현지에서 질문마다 여러&nbsp;번 묻습니다.',
+      'sol.p2t': 'AI가 읽는 페이지 개선',
+      'sol.p2d': '인증, 시험 결과, 고객사처럼 지금은 PDF나 이미지 안에만 있는 귀사의 근거를 바탕으로 사이트&nbsp;페이지, FAQ, 제품·유통사 페이지를 현지&nbsp;언어로 작성합니다.',
+      'sol.p3t': 'AI가 이미 신뢰하는 현지 출처 공략',
+      'sol.p3d': '그 시장에서 귀사 분야를 물으면 AI가 인용하는 유통사&nbsp;페이지, 디렉터리, 업계 매체, 파트너사&nbsp;사이트, 카테고리&nbsp;가이드를 공략합니다.',
+      'how.eyebrow': '진행 방식',
+      'how.title': '시장별 12주, <span class="reveal br">보이지 않던 기업에서 발견되는 기업으로</span>',
+      'how.win': '산출물',
+      'how.goal': '목표',
+      's1.state': '보이지 않음',
+      's1.when': '0~2주 차',
+      's1.title': '진단',
+      's1.do': '바이어 질문 25개를 타깃 시장 현지에서 질문마다 3회씩 묻습니다.',
+      's1.win': '기준선: 언급되는 기업, AI가 귀사를 소개하는&nbsp;방식, AI가 신뢰하는 출처',
+      's1.goal': '현재 위치를 정확히 파악',
+      's2.state': '인식됨',
+      's2.when': '3~6주 차',
+      's2.title': '게시',
+      's2.do': '현지 언어 페이지 최대 3개를 작성해 드리고, 귀사 팀이 4주 차까지 사이트에 게시합니다. 브랜드명은 어디서나 하나로 통일합니다.',
+      's2.win': '바로 게시할 수 있게 작성한 페이지 최대 3개',
+      's2.goal': 'AI가 귀사를 정확하게 소개',
+      's3.state': '인용됨',
+      's3.when': '7~11주 차',
+      's3.title': '현지 출처 공략',
+      's3.do': '귀사 분야를 물으면 AI가 인용하는 유통사&nbsp;페이지, 디렉터리, 업계 매체를 공략합니다.',
+      's3.win': 'AI가 인용하는 현지 출처 맵과 출처별 발송용 제안문',
+      's3.goal': 'AI가 신뢰하는 현지 출처에 귀사 이름 게재',
+      's4.state': '발견됨',
+      's4.when': '12주 차',
+      's4.title': '다음 단계 결정',
+      's4.do': 'ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity에서 최종 점검합니다.',
+      's4.win': '기준선 대비 결과와 플레이북, 그리고 연장, 시장&nbsp;추가, 종료 중 선택',
+      's4.goal': '투자자, 바이어, 파트너가 찾는 곳에서 귀사가 언급되고 정확하게 소개됨',
+      'how.line': '매주 월요일, 무엇을&nbsp;고쳐야&nbsp;할지 알&nbsp;수&nbsp;있습니다.',
+      'rhy.monW': '매주 월요일',
+      'rhy.mon': '실행안: 이번 주 변화와 우선순위를 정한 실행 항목 최대 3개',
+      'rhy.friW': '매주 금요일',
+      'rhy.fri': '바로 게시할 수 있게 완성한 이번 주 콘텐츠',
+      'rhy.monthW': '매월',
+      'rhy.month': '사이트 점검과 30분 리뷰 미팅',
+      'roles.meT': '제가 하는 일',
+      'roles.meD': '귀사와 함께 질문 25개를 고르고, 매주 측정해 실행 항목의 우선순위를 정합니다. 페이지, 문구, 제안문은 모두 현지 언어로 작성합니다. 매주 월요일에는 무엇이 게시되었고 무엇이 남았는지, AI가 이를 반영했는지 확인합니다.',
+      'roles.youT': '귀사 팀이 하는 일',
+      'roles.youD': '매주 사실 정보를 확인하고 진행 여부를 결정합니다(약 1시간). 이어서 페이지를 귀사 사이트에 게시하고, 제안문을 회사 이메일로 발송합니다.',
+      'how.note': '측정, 실행안, 작성 콘텐츠는 약속합니다. AI 답변은 누구도 통제할 수 없으므로, 결과는 측정하되 보장하지 않습니다.',
+      'how.talkQ': '이미 해외에서 판매 중이신가요?',
+      'how.talk': '타깃 시장 상담하기',
+      'get.eyebrow': '제공 내용',
+      'get.title': '무료 리포트가 먼저, <span class="plat br">12주 프로그램은 그다음</span>',
+      'get.freeT': '무료 AI 가시성 리포트',
+      'get.freeM': '48시간 안에',
+      'get.f1': '타깃 시장 현지에서 물은 바이어 질문 5개',
+      'get.f2': '귀사의 AI 가시성 현황과 함께 언급되는 경쟁사',
+      'get.f3': 'AI가 인용하는 출처',
+      'get.f4': '우선 개선 과제 3가지와 예시 개선안 초안 1건',
+      'get.progT': '12주 프로그램',
+      'get.progM': '시장별',
+      'get.n1': '주간 실행안',
+      'get.n2': '바로 게시할 수 있는 콘텐츠',
+      'get.n3': '추적하는 바이어 질문',
+      'get.n4': '사이트 점검',
+      'get.price': 'GEO 3개월 패키지: 시장 1곳 기준 <strong>499만 원부터</strong>',
+      'get.plus': '다음 시장을 위한 플레이북과 모든 작업 파일도 함께 드립니다.',
+      'brief.intro': '매주 월요일, 타깃 시장에서 무엇을&nbsp;고쳐야&nbsp;할지 정확히 알&nbsp;수&nbsp;있습니다.',
+      'brief.tag': '예시 · 가상의 기업',
+      'brief.head': '주간 실행안 · 미국 · 5주 차',
+      'brief.line': '이번 주 질문 25개 중 3개에서 언급(지난주&nbsp;2개, 정상 변동 범위 내)',
+      'brief.r1c': '웹사이트',
+      'brief.r1e': '1일',
+      'brief.r1a': 'IP67 센서 질문에 답하는 영어 페이지',
+      'brief.r2c': '유통사',
+      'brief.r2e': '반나절',
+      'brief.r2a': '빠진 인증 정보 추가',
+      'brief.r3c': '업계 매체',
+      'brief.r3e': '1주',
+      'brief.r3a': 'ChatGPT가 가장 자주 인용하는 사이트&nbsp;2곳에 기고 제안',
+      'brief.d1': '금요일까지 작성',
+      'brief.d2': '문구 준비 · 귀사 발송',
+      'brief.d3': '제안문 준비 · 귀사 발송',
+      'fit.forT': '추천 대상',
+      'fit.forD': '이미 제품과 실적, 타깃 시장이 있지만 현지 AI&nbsp;답변에서는 아직 제대로 소개되지&nbsp;않는&nbsp;기업',
+      'fit.notT': '먼저 할 일이 있는 경우',
+      'fit.notD': '아직 제품-시장 적합성(PMF)을 검증하는 단계이거나 해외 진출 계획이 없다면, 시장 진출의 기본부터 시작하시길 권합니다.',
+      'who.eyebrow': '함께 일하는 사람',
+      'who.title': 'GEO 컨설턴트, <span class="plat br">해외로 진출하는 한국&nbsp;기업을 잘 압니다</span>',
+      'who.lead': 'GEO는 시장 진출의 한 단계입니다. 2022년부터 한국 기업과 함께 시장조사, 비즈니스 매칭, POC(실증), IR&nbsp;피칭까지 나머지 단계를 진행해 왔습니다. AI 가시성 측정은 Tom&nbsp;Coquereau가 맡습니다.',
+      'who.s1': '2022년부터 코칭한 한국&nbsp;스타트업',
+      'who.s2': '한국 파트너 기관',
+      'who.s3': '해외 진출 기업을&nbsp;위한 시장조사',
+      'who.s4': '비즈니스 매칭 미팅',
+      'team.sofianRole': 'GEO·해외 진출 컨설턴트',
+      'team.sofianBio': '13년 넘게 파리, 싱가포르, 서울, 도쿄에서 사업을 일구어 왔고, 2022년부터 한국&nbsp;스타트업 240개사&nbsp;이상을 코칭했습니다.',
+      'team.tomRole': 'AI 가시성 전문가',
+      'team.tomBio': '2014년부터 기업용 소프트웨어 분야에서 일해&nbsp;왔고, Metriq(AI&nbsp;자동화)와 Tokamai(AI&nbsp;보안)를 창업했습니다. 각&nbsp;시장&nbsp;현지에서의 측정부터 답변&nbsp;보관, 인용&nbsp;출처&nbsp;확인까지 AI&nbsp;가시성 측정을 총괄합니다.',
+      'faq.label': 'FAQ',
+      'faq.title': '자주 묻는 질문',
+      'faq.q1': '리포트는 정말 무료인가요?',
+      'faq.a1': '네. 리포트 1건은 무료이며, 회원가입이나 결제 정보가 필요 없습니다.',
+      'faq.q2': 'SEO와는 무엇이 다른가요?',
+      'faq.a2': 'SEO는 링크 목록에서 귀사 페이지의 검색 순위를 다룹니다. GEO는 AI가 무엇을 답하는지, 즉 귀사를 언급하는지, 어떻게 소개하는지, 어떤 출처를 인용하는지를 다룹니다. 검색 순위가 높은 페이지도 AI 답변에는 전혀 인용되지 않을 수 있으며, 리포트는 실제 답변으로 그 차이를 보여 드립니다.',
+      'faq.q3': 'ChatGPT에 직접 물어보면 되지 않나요?',
+      'faq.a3': '물론 직접 물어보셔도 되고, 그렇게 하시길 권합니다. 다만 서울에서 로그인한 상태로 받은 답변 하나로는 알 수 있는 것이 많지 않습니다. 답변은 접속 위치, 언어, 계정에 따라, 그리고 물을 때마다 달라지기 때문입니다. GEO&nbsp;측정은 타깃 시장 현지에서, 비로그인 상태로, 질문마다 3회씩 매주 진행하며, 모든 답변을 보관하고 답변이 인용한 출처까지 확인합니다.',
+      'faq.q4': '아직 현지 유통사가 없어도 GEO가 도움이 되나요?',
+      'faq.a4': '네, 이미 제품과 실적, 타깃 시장이 있다면 도움이 됩니다. 리포트는 그 시장의 AI가 신뢰하는 유통사, 디렉터리, 매체를 보여 주므로 현지 파트너를 고르는 데 참고가 됩니다. 아직 제품-시장 적합성(PMF)을 검증하는 단계라면 시장 진출의 기본부터 시작하시길 권합니다.',
+      'faq.q5': '어떤 AI를 측정하나요?',
+      'faq.a5': 'ChatGPT는 매주 같은 조건으로 측정하고, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity는 매월 1회 확인합니다. 중국은 현지 바이어가 주로 중국 AI를 쓰기&nbsp;때문에 측정&nbsp;대상에서 제외합니다.',
+      'faq.q6': '성과를 보장하나요?',
+      'faq.a6': '아니요. AI 답변은 누구도 통제할 수 없습니다. 측정, 실행안, 작성 콘텐츠는 약속합니다. 첫 신호는 귀사의 새&nbsp;문구를 그대로 쓰거나 새&nbsp;페이지를 인용하는 AI&nbsp;답변이며, 몇 주에 걸쳐&nbsp;판단합니다.',
+      'faq.q7': '비용은 얼마인가요?',
+      'faq.a7': 'GEO 3개월 패키지는 시장 1곳 기준 499만 원부터 시작합니다. 최종 비용은 시장 수와 작업 범위에 따라 정해집니다. 유료 광고, 가짜 리뷰, 대량 생성 콘텐츠는 어떤 경우에도 포함하지 않습니다.',
+      'faq.q8': '계약과 인보이스는 어떻게 진행되나요?',
+      'faq.a8': '계약 체결과 인보이스 발행은 제가 운영하는 프랑스 법인 Carte Blanche SAS 명의로 합니다. 세금계산서 대신 국제&nbsp;상업&nbsp;인보이스(international commercial invoice)를 귀사 앞으로 직접 발행하며, 한국의 지원사업 운영&nbsp;기관에서도 이 인보이스로 정산 처리한 실적이 있습니다. 정부지원사업 예산으로 진행하는 경우에는 사업에 필요한 행정 서류도 제공하며, 한국어로 작성해야&nbsp;하는 서류도&nbsp;준비합니다.',
+      'cta.title': '타깃 시장의 바이어가 <span class="plat br">AI에게 듣는 답변</span>',
+      'cta.sub': '웹사이트 주소와 타깃 시장을 알려&nbsp;주시면, 48시간&nbsp;안에 그 시장의 바이어가 보는 답변을 보여&nbsp;드립니다.',
+      'cta.kakao': '카카오톡으로 문의하기',
+      'footer.kakao': '카카오톡',
+      'footer.copy': '&copy; 2026 Sofian Meguellati &middot; All rights reserved',
+      'footer.legal': '<strong>Carte Blanche SAS</strong> &nbsp;|&nbsp; 대표: Sofian Meguellati &nbsp;|&nbsp; 프랑스 사업자등록번호(SIREN) 821 313 004 &nbsp;|&nbsp; 14 Rue Albert Einstein, 77420 Champs-sur-Marne, France'
+    };
+
+    // On load: scrape all English originals from the HTML (single source of truth),
+    // plus the page title and meta description, which switch with the language too.
+    var metaDesc = document.querySelector('meta[name="description"]');
+    var I18N_ATTRS = [['data-i18n-ph', 'placeholder'], ['data-i18n-aria', 'aria-label']];
+    document.querySelectorAll('[data-i18n]').forEach(function(el) {
+      englishOriginals[el.getAttribute('data-i18n')] = el.innerHTML;
+    });
+    I18N_ATTRS.forEach(function(a) {
+      document.querySelectorAll('[' + a[0] + ']').forEach(function(el) {
+        englishOriginals[a[0] + ':' + el.getAttribute(a[0])] = el.getAttribute(a[1]);
+      });
+    });
+    englishOriginals['meta.title'] = document.title;
+    englishOriginals['meta.desc'] = metaDesc ? metaDesc.getAttribute('content') : '';
+
+    function setLang(lang) {
+      var ko = (lang === 'ko');
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        var text = ko ? koTranslations[key] : englishOriginals[key];
+        if (text) el.innerHTML = text;
+      });
+      I18N_ATTRS.forEach(function(a) {
+        document.querySelectorAll('[' + a[0] + ']').forEach(function(el) {
+          var key = el.getAttribute(a[0]);
+          var text = ko ? koTranslations[key] : englishOriginals[a[0] + ':' + key];
+          if (text) el.setAttribute(a[1], text);
+        });
+      });
+      var title = ko ? koTranslations['meta.title'] : englishOriginals['meta.title'];
+      var desc = ko ? koTranslations['meta.desc'] : englishOriginals['meta.desc'];
+      if (title) document.title = title;
+      if (metaDesc && desc) metaDesc.setAttribute('content', desc);
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+
+      // Update toggle button states
+      var en = document.getElementById('langEn');
+      var kr = document.getElementById('langKo');
+      if (en) { en.classList.toggle('active', !ko); en.setAttribute('aria-pressed', String(!ko)); }
+      if (kr) { kr.classList.toggle('active', ko); kr.setAttribute('aria-pressed', String(ko)); }
+      geoFormRefresh();
+    }
+
+    // The confirmation names the chosen market in the page language; refill it after a language switch.
+    function geoFormRefresh() {
+      document.querySelectorAll('[data-geo-form]').forEach(function(root) {
+        var sel = root.querySelector('select[name="market"]');
+        if (!sel) return;
+        var opt = sel.options[sel.selectedIndex];
+        root.querySelectorAll('.done-market').forEach(function(s) { s.textContent = opt ? opt.textContent.trim() : ''; });
+        var line = root.querySelector('.f-done-mk');
+        if (line) line.hidden = (sel.value === 'OT');
+      });
+    }
+
+    document.getElementById('langEn').addEventListener('click', function() { setLang('en'); });
+    document.getElementById('langKo').addEventListener('click', function() { setLang('ko'); });
+
+    // On page load: respect saved toggle; else auto-detect from browser language
+    (function() {
+      var saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      if (saved === 'en' || saved === 'ko') {
+        if (saved === 'ko') setLang('ko');
+        return;
+      }
+      // No saved preference, auto-detect from navigator.language
+      var browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+      if (browserLang.indexOf('ko') === 0) setLang('ko');
+    })();
+
+    // FAQ: smooth accordion open/close. Height and bottom padding move together, so an item
+    // closes in one continuous motion with no pause or jump at the end.
+    (function() {
+      var DURATION = 280;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('.faq-item').forEach(function(item) {
+        var sum = item.querySelector('summary');
+        var ans = item.querySelector('.faq-answer');
+        if (!sum || !ans) return;
+        var timer = null;
+        function clean() { ans.style.height = ''; ans.style.paddingBottom = ''; }
+
+        sum.addEventListener('click', function(e) {
+          e.preventDefault();
+          clearTimeout(timer);
+          if (reduce) {
+            item.classList.remove('is-closing'); clean();
+            if (item.hasAttribute('open')) item.removeAttribute('open'); else item.setAttribute('open', '');
+            return;
+          }
+          if (item.hasAttribute('open') && !item.classList.contains('is-closing')) {
+            // Close: from the current height (padding included) down to 0
+            item.classList.add('is-closing');
+            ans.style.height = ans.offsetHeight + 'px';
+            ans.offsetHeight; // commit the start value
+            ans.style.paddingBottom = '0px';
+            ans.style.height = '0px';
+            timer = setTimeout(function() {
+              item.removeAttribute('open');
+              item.classList.remove('is-closing');
+              clean();
+            }, DURATION);
+          } else {
+            // Open (or re-open while closing): from the current height up to the full answer
+            var start = item.hasAttribute('open') ? ans.offsetHeight : 0;
+            item.classList.remove('is-closing');
+            item.setAttribute('open', '');
+            clean();
+            var target = ans.scrollHeight;
+            ans.style.transition = 'none';          // place the start state without animating it
+            ans.style.height = start + 'px';
+            if (!start) ans.style.paddingBottom = '0px';
+            ans.offsetHeight; // commit the start value
+            ans.style.transition = '';
+            ans.style.paddingBottom = '';
+            ans.style.height = target + 'px';
+            timer = setTimeout(clean, DURATION);
+          }
+        });
+      });
+    })();
+
+    // Logo links to the home page: fade out before navigating (the next page fades in)
+    (function() {
+      var fade = document.getElementById('pageFade');
+      if (!fade) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('a.js-fade').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          var href = a.getAttribute('href');
+          if (reduce || !href || href.charAt(0) === '#') return;
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          e.preventDefault();
+          try { sessionStorage.setItem('pageFade', '1'); } catch (err) {}
+          fade.classList.add('active');
+          setTimeout(function() { window.location.href = href; }, 360);
+        });
+      });
+    })();
+
+    // "Free diagnostic" buttons: scroll to the hero form, then put the cursor in its first field
+    (function() {
+      var card = document.getElementById('diagnostic-form');
+      if (!card) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      document.querySelectorAll('a.js-to-form').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+          e.preventDefault();
+          card.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'center' });
+          if (!(window.matchMedia && window.matchMedia('(hover: hover)').matches)) return;
+          setTimeout(function() {
+            var f = card.querySelector('.pill:not([hidden]) .pill-in');
+            if (f) f.focus({ preventScroll: true });
+          }, reduce ? 0 : 600);
+        });
+      });
+    })();
+
+    // Free diagnostic form, 2 steps, in the hero and in the final band. With GEO_FORM_ENDPOINT set,
+    // the fields are posted there (Google Apps Script web app); while it is empty, or if the post fails, a pre-filled
+    // email to sofian@hack40.com opens instead. Nothing is sent anywhere else.
+    (function() {
+      var MARKETS_EN = { US: 'United States', JP: 'Japan', SG: 'Singapore', FR: 'France', UK: 'United Kingdom', DE: 'Germany', AE: 'United Arab Emirates', VN: 'Vietnam', TH: 'Thailand', AU: 'Australia', OT: 'Other' };
+      var MAIL = {
+        en: { subject: 'Free AI visibility report request', site: 'Website', market: 'Target market', email: 'Work email', lang: 'Page language', page: 'Page URL' },
+        ko: { subject: '무료 AI 가시성 리포트 신청', site: '웹사이트 주소', market: '타깃 시장', email: '업무용 이메일', lang: '페이지 언어', page: '페이지 주소' }
+      };
+      function urlOk(v) { return /^(https?:\/\/)?[^\s\/.@]+(\.[^\s\/.@]+)+(:\d+)?([\/?#]\S*)?$/i.test(v.trim()); }
+      function emailOk(v) { return /^[^\s@]+@[^\s@.]+(\.[^\s@.]+)+$/.test(v.trim()); }
+      function normUrl(v) { v = v.trim(); return /^https?:\/\//i.test(v) ? v : 'https://' + v; }
+
+      document.querySelectorAll('[data-geo-form]').forEach(function(root) {
+        var form = root.querySelector('form');
+        var pill1 = root.querySelector('.pill[data-step="1"]');
+        var pill2 = root.querySelector('.pill[data-step="2"]');
+        var step1 = root.querySelectorAll('[data-step="1"]');
+        var step2 = root.querySelectorAll('[data-step="2"]');
+        var url = form.elements.website;
+        var market = form.elements.market;
+        var email = form.elements.email;
+        var consent = form.elements.consent;
+        var errUrl = root.querySelector('[data-err="url"]');
+        var errEmail = root.querySelector('[data-err="email"]');
+        var errConsent = root.querySelector('[data-err="consent"]');
+        var sendBtn = root.querySelector('[data-send]');
+        var done = root.querySelector('.f-done');
+        var note = root.querySelector('.f-note');
+        var step = 1, sending = false;
+
+        function flag(input, err, bad, pill) {
+          err.hidden = !bad;
+          input.setAttribute('aria-invalid', bad ? 'true' : 'false');
+          if (pill) pill.classList.toggle('is-bad', bad);
+        }
+        function show(n) {
+          step = n;
+          step1.forEach(function(el) { el.hidden = (n !== 1); });
+          step2.forEach(function(el) { el.hidden = (n !== 2); });
+          if (n === 1) { flag(email, errEmail, false, pill2); flag(consent, errConsent, false); }
+        }
+
+        url.addEventListener('input', function() { if (!errUrl.hidden && urlOk(url.value)) flag(url, errUrl, false, pill1); });
+        email.addEventListener('input', function() { if (!errEmail.hidden && emailOk(email.value)) flag(email, errEmail, false, pill2); });
+        consent.addEventListener('change', function() { if (consent.checked) flag(consent, errConsent, false); });
+        root.querySelector('[data-back]').addEventListener('click', function() { show(1); url.focus(); });
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          if (sending) return;
+          if (step === 1) {
+            if (!urlOk(url.value)) { flag(url, errUrl, true, pill1); url.focus(); return; }
+            flag(url, errUrl, false, pill1);
+            show(2);
+            email.focus();
+            return;
+          }
+          var okEmail = emailOk(email.value), okConsent = consent.checked;
+          flag(email, errEmail, !okEmail, pill2);
+          flag(consent, errConsent, !okConsent);
+          if (!okEmail) { email.focus(); return; }
+          if (!okConsent) { consent.focus(); return; }
+          send();
+        });
+
+        function fields() {
+          var lang = document.documentElement.lang === 'ko' ? 'ko' : 'en';
+          var opt = market.options[market.selectedIndex];
+          return {
+            lang: lang,
+            website: normUrl(url.value),
+            code: market.value,
+            marketLocal: opt ? opt.textContent.trim() : market.value,
+            email: email.value.trim(),
+            page: window.location.href
+          };
+        }
+
+        function openMail(f) {
+          var m = MAIL[f.lang];
+          var body = [
+            m.site + ': ' + f.website,
+            m.market + ': ' + f.marketLocal,
+            m.email + ': ' + f.email,
+            m.lang + ': ' + f.lang.toUpperCase(),
+            m.page + ': ' + f.page
+          ].join('\n');
+          var a = document.createElement('a');
+          a.href = 'mailto:sofian@hack40.com?subject=' + encodeURIComponent(m.subject) + '&body=' + encodeURIComponent(body);
+          a.click();
+        }
+
+        function finish() {
+          sending = false;
+          sendBtn.disabled = false;
+          form.hidden = true;
+          note.hidden = true;
+          done.hidden = false;
+          geoFormRefresh();
+          try { done.focus({ preventScroll: true }); } catch (err) { done.focus(); }
+        }
+
+        function send() {
+          var f = fields();
+          if (!GEO_FORM_ENDPOINT) { openMail(f); finish(); return; }
+          sending = true;
+          sendBtn.disabled = true;
+          var data = new FormData();
+          data.append('website', f.website);
+          data.append('market', MARKETS_EN[f.code] || f.code);
+          data.append('email', f.email);
+          data.append('language', f.lang);
+          data.append('page_url', f.page);
+          data.append('_subject', MAIL[f.lang].subject);
+          fetch(GEO_FORM_ENDPOINT, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+            .then(function(r) { if (!r.ok) throw new Error('HTTP ' + r.status); finish(); })
+            .catch(function() { openMail(f); finish(); });
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
