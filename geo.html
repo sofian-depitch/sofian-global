@@ -28,7 +28,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <script>
+    // The page opens in Korean: keep the English HTML hidden until the script has switched it (1.5 s at most).
+    (function () {
+      var en = false;
+      try { en = localStorage.getItem('lang-geo') === 'en'; } catch (e) {}
+      if (!en) {
+        document.documentElement.classList.add('ko-pending');
+        setTimeout(function () { document.documentElement.classList.remove('ko-pending'); }, 1500);
+      }
+    })();
+  </script>
   <style>
+    .ko-pending body { visibility: hidden; }
     /* GEO page v2 (9 Nov 2026): its own minimal design, black, white, greys and a platinum accent.
        The other pages of sofian.global keep their own design system. */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1538,7 +1550,7 @@
       if (title) document.title = title;
       if (metaDesc && desc) metaDesc.setAttribute('content', desc);
       document.documentElement.lang = lang;
-      try { localStorage.setItem('lang', lang); } catch (e) {}
+      try { localStorage.setItem('lang-geo', lang); } catch (e) {}
 
       // Update toggle button states
       var en = document.getElementById('langEn');
@@ -1572,17 +1584,13 @@
     document.getElementById('langEn').addEventListener('click', function() { setLang('en'); });
     document.getElementById('langKo').addEventListener('click', function() { setLang('ko'); });
 
-    // On page load: respect saved toggle; else auto-detect from browser language
+    // On page load: this page opens in Korean (Sofian, 10 Nov 2026), unless the visitor chose English here before.
+    // It keeps its own key ('lang-geo'), so the other pages of sofian.global keep their own language.
     (function() {
       var saved = null;
-      try { saved = localStorage.getItem('lang'); } catch (e) {}
-      if (saved === 'en' || saved === 'ko') {
-        if (saved === 'ko') setLang('ko');
-        return;
-      }
-      // No saved preference, auto-detect from navigator.language
-      var browserLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
-      if (browserLang.indexOf('ko') === 0) setLang('ko');
+      try { saved = localStorage.getItem('lang-geo'); } catch (e) {}
+      if (saved !== 'en') setLang('ko');
+      document.documentElement.classList.remove('ko-pending');
     })();
 
     // FAQ: smooth accordion open/close. Height and bottom padding move together, so an item
