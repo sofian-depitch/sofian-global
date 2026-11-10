@@ -417,6 +417,23 @@
     .role { margin-top: 3px; font-size: 14.5px; line-height: 1.45; color: var(--muted); }
     .bio { margin-top: 22px; font-size: 15.5px; line-height: 1.7; color: var(--dark); }
     html[lang="ko"] .bio { line-height: 1.8; }
+    /* Official roles, MOUs and media: the 4 cards of the home page (10 Nov) */
+    .recog { margin-top: 72px; }
+    .recog-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 22px; list-style: none; }
+    .recog-grid > li { display: flex; }
+    .recog-card { display: flex; align-items: center; flex: 1; overflow: hidden; background: #fff; border: 1px solid var(--hair); border-radius: 22px; color: inherit; text-decoration: none; transition: border-color 0.2s var(--ease), transform 0.2s var(--ease); }
+    a.recog-card:hover { border-color: var(--hair-2); transform: translateY(-2px); }
+    .recog-img { flex-shrink: 0; width: 200px; height: auto; aspect-ratio: 4 / 3; margin: 14px 0 14px 14px; border-radius: 14px; object-fit: cover; }
+    .recog-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 18px 22px; }
+    .recog-meta { display: flex; align-items: center; gap: 12px; }
+    .recog-logo { display: inline-flex; align-items: center; height: 26px; }
+    .recog-logo img { width: auto; max-width: 130px; max-height: 26px; object-fit: contain; }
+    .recog-year { padding-left: 12px; border-left: 1px solid var(--hair); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: var(--gold-tx); }
+    .recog-t { font-size: 17px; font-weight: 600; line-height: 1.4; letter-spacing: -0.01em; color: var(--ink); }
+    .recog-link { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); }
+    html[lang="ko"] .recog-link { font-size: 14px; letter-spacing: 0; }
+    .recog-link svg { width: 14px; height: 14px; }
+    a.recog-card:hover .recog-link > span { text-decoration: underline; text-underline-offset: 3px; }
     /* Testimonials (in v1, back on 9 Nov) */
     .quotes { margin-top: 72px; }
     .quote-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 22px; }
@@ -600,6 +617,12 @@
       .person { padding: 24px 22px; border-radius: 20px; }
       .person img { width: 64px; height: 64px; }
       .bio { margin-top: 18px; }
+      .recog { margin-top: 48px; }
+      .recog-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+      .recog-img { width: 112px; margin: 12px 0 12px 12px; border-radius: 12px; }
+      .recog-body { gap: 6px; padding: 14px 16px; }
+      .recog-logo, .recog-logo img { max-height: 22px; height: 22px; }
+      .recog-t { font-size: 15.5px; }
       .quotes { margin-top: 48px; }
       .quote-grid { grid-template-columns: minmax(0, 1fr); gap: 14px; }
       .quote { padding: 24px 22px; }
@@ -1056,9 +1079,9 @@
           <article class="person">
             <div class="person-top">
               <img src="photos/team-sofian.jpg" width="480" height="480" alt="Sofian Meguellati">
-              <div><h3>Sofian Meguellati</h3><p class="role" data-i18n="team.sofianRole">GEO consultant, global expansion</p></div>
+              <div><h3>Sofian Meguellati</h3><p class="role" data-i18n="team.sofianRole">Global expansion &amp; GEO expert</p></div>
             </div>
-            <p class="bio" data-i18n="team.sofianBio">13+ years building businesses in Paris, Singapore, Seoul and Tokyo. 240+ Korean startups coached since 2022.</p>
+            <p class="bio" data-i18n="team.sofianBio">13+ years building and running multi-million dollar businesses in Paris, Singapore, Seoul and Tokyo, including 3 years living in Korea. 240+ Korean startups coached since 2022, and a network of 100+ international VCs and 50+ corporates.</p>
           </article>
           <article class="person">
             <div class="person-top">
@@ -1068,6 +1091,42 @@
             <p class="bio" data-i18n="team.tomBio">In enterprise software since 2014; founded Metriq (AI automation) and Tokamai (AI security). Runs the AI visibility measurement: the runs from each market, the archived answers, the cited sources.</p>
           </article>
         </div>
+        <div class="recog">
+          <p class="eyebrow" id="recogL" data-i18n="recog.label">Official roles, partnerships and media</p>
+          <ul class="recog-grid" aria-labelledby="recogL">
+            <li><a class="recog-card" href="https://www.ccnnews.co.kr/news/articleView.html?idxno=325806" target="_blank" rel="noopener">
+              <img class="recog-img" src="photos/rec-daejeon.jpg" width="640" height="480" alt="Sofian at Daejeon CCEI Global Committee">
+              <div class="recog-body">
+                <div class="recog-meta"><span class="recog-logo"><img src="logos-white/daejeon-ccei.png" alt="Daejeon CCEI"></span><span class="recog-year">2024</span></div>
+                <h3 class="recog-t" data-i18n="recog.c1">Global Committee Member, Daejeon CCEI</h3>
+                <span class="recog-link"><span data-i18n="recog.read">Read the article</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a></li>
+            <li><div class="recog-card">
+              <img class="recog-img" src="photos/rec-gyeongbuk.jpg" width="640" height="480" alt="MOU signing with Gyeongbuk CCEI">
+              <div class="recog-body">
+                <div class="recog-meta"><span class="recog-logo"><img src="logos-white/gyeongbuk-ccei.png" alt="Gyeongbuk CCEI"></span><span class="recog-year">2024</span></div>
+                <h3 class="recog-t" data-i18n="recog.c2">MOU, Gyeongbuk CCEI</h3>
+              </div>
+            </div></li>
+            <li><a class="recog-card" href="https://www.podbbang.com/channels/1779978/episodes/24773561" target="_blank" rel="noopener">
+              <img class="recog-img" src="photos/rec-tbs.jpg" width="640" height="480" alt="TBS interview on global business etiquette">
+              <div class="recog-body">
+                <div class="recog-meta"><span class="recog-logo"><img src="logos-white/Logo_TBS.svg.png" alt="TBS"></span><span class="recog-year">2023</span></div>
+                <h3 class="recog-t" data-i18n="recog.c3">TBS interview on global business etiquette</h3>
+                <span class="recog-link"><span data-i18n="recog.listen">Listen to the interview</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg></span>
+              </div>
+            </a></li>
+            <li><div class="recog-card">
+              <img class="recog-img" src="photos/rec-wbaw.jpg" width="640" height="480" alt="World Business Angels Investors Week, Seoul Chapter">
+              <div class="recog-body">
+                <div class="recog-meta"><span class="recog-logo"><img src="logos-white/wba%20week.jpg" alt="WBAF"></span><span class="recog-year">2023</span></div>
+                <h3 class="recog-t" data-i18n="recog.c4">Speaker, World Business Angels Investors Week, Seoul Chapter</h3>
+              </div>
+            </div></li>
+          </ul>
+        </div>
+
         <div class="quotes">
           <p class="eyebrow" data-i18n="quotes.label">From founders I have coached</p>
           <div class="quote-grid">
@@ -1403,10 +1462,17 @@
       'who.s2': '한국 파트너 기관',
       'who.s3': '해외 진출 기업을&nbsp;위한 시장조사',
       'who.s4': '비즈니스 매칭 미팅',
-      'team.sofianRole': 'GEO·해외 진출 컨설턴트',
-      'team.sofianBio': '13년 넘게 파리, 싱가포르, 서울, 도쿄에서 사업을 일구어 왔고, 2022년부터 한국&nbsp;스타트업 240개사&nbsp;이상을 코칭했습니다.',
+      'team.sofianRole': '해외 진출·GEO 전문가',
+      'team.sofianBio': '파리, 싱가포르, 서울, 도쿄에서 13년 넘게 수백만 달러 규모의 사업을 일구고 운영해 왔으며, 그중 3년은 한국에서 살았습니다. 2022년부터 한국&nbsp;스타트업 240개사&nbsp;이상을 코칭했고, 해외 VC 100곳 이상, 기업 50곳 이상과 네트워크를 이어 가고 있습니다.',
       'team.tomRole': 'AI 가시성 전문가',
       'team.tomBio': '2014년부터 기업용 소프트웨어 분야에서 일해&nbsp;왔고, Metriq(AI&nbsp;자동화)와 Tokamai(AI&nbsp;보안)를 창업했습니다. 각&nbsp;시장 현지에서 묻는 질문부터 답변&nbsp;보관, 인용&nbsp;출처&nbsp;확인까지 AI&nbsp;가시성 측정을 총괄합니다.',
+      'recog.label': '공식 직책, MOU, 미디어 출연',
+      'recog.c1': '대전창조경제혁신센터 글로벌위원회 위원',
+      'recog.c2': '경북창조경제혁신센터 MOU',
+      'recog.c3': 'TBS 글로벌 비즈니스 에티켓 인터뷰',
+      'recog.c4': 'World Business Angels Investors Week 서울 챕터 연사',
+      'recog.read': '기사 읽기',
+      'recog.listen': '인터뷰 듣기',
       'quotes.label': '코칭한 창업자의 후기',
       'quotes.q1': '유럽 시장에 어떻게 접근해야 하는지, 매우 값진 인사이트를&nbsp;주셨습니다.',
       'quotes.r1': 'Bottless 대표',
