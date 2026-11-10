@@ -11,14 +11,14 @@
   <meta property="og:locale" content="ko_KR">
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:title" content="Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅">
-  <meta property="og:description" content="보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장 현지에서 측정한 무료 AI 가시성 리포트를 48시간 안에 보내 드립니다. 2022년부터 한국 스타트업 240개사 이상 코칭.">
+  <meta property="og:description" content="보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 그 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다. 현지에서 측정한 무료 AI 가시성 리포트를 48시간 안에 보내 드립니다.">
   <meta property="og:image" content="https://sofian.global/og-share-geo-2026.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="ChatGPT에 같은 질문을 했을 때의 답변 예시: 서울에서는 귀사가 나오지만, LA에서는 나오지 않습니다.">
+  <meta property="og:image:alt" content="ChatGPT 답변 예시: 같은 질문에 서울(한국어)에서는 귀사가 언급되지만, LA(영어)에서는 답변에 없습니다.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅">
-  <meta name="twitter:description" content="보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장 현지에서 측정한 무료 AI 가시성 리포트를 48시간 안에 보내 드립니다.">
+  <meta name="twitter:description" content="보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 그 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다.">
   <meta name="twitter:image" content="https://sofian.global/og-share-geo-2026.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -124,6 +124,7 @@
     .lang .flag { font-size: 1rem; line-height: 1; }
     .hdr-toggle { display: none; margin-left: 10px; padding: 4px 6px; border: 0; background: none; cursor: pointer; font-size: 1.5rem; line-height: 1; color: var(--ink); transition: transform 0.25s ease; }
     .hdr-toggle[aria-expanded="true"] { transform: rotate(90deg); }
+    .hdr-cta-m { display: none; }
 
     /* --- BUTTONS --- */
     .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 48px; padding: 0 22px; border: 1px solid transparent; border-radius: 999px; font-size: 15.5px; font-weight: 600; letter-spacing: -0.005em; text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease); }
@@ -164,6 +165,9 @@
     .hero h1 .l { display: block; width: fit-content; max-width: 100%; margin: 0 auto; }
     .hero-sub { max-width: 700px; margin: 28px auto 0; font-size: 19px; line-height: 1.6; color: var(--dark); text-wrap: balance; }
     html[lang="ko"] .hero-sub { line-height: 1.7; }
+    /* The solution right under the tension (Sofian, 10 Nov: « garde la tension peur mais ajoute quand même la solution ») */
+    .hero-sol { max-width: 700px; margin: 14px auto 0; font-size: 19px; font-weight: 600; line-height: 1.55; letter-spacing: -0.01em; color: var(--ink); text-wrap: balance; }
+    html[lang="ko"] .hero-sol { line-height: 1.7; letter-spacing: 0; }
     /* Two-tone titles: the platinum part on its own line where the copy marks it (.br) */
     .h2 .plat.br { display: block; width: fit-content; max-width: 100%; }
     /* « from invisible to findable » in the How it works title: light to dark, like the hero (Sofian, 9 Nov) */
@@ -203,6 +207,7 @@
     .f-other-in[aria-invalid="true"] { border-color: rgba(185, 28, 28, 0.55); }
     .f-err { margin-top: 12px; font-size: 14px; font-weight: 500; line-height: 1.45; color: var(--bad); text-align: center; }
     .f-note { margin-top: 16px; font-size: 14px; line-height: 1.5; color: var(--muted); text-align: center; text-wrap: balance; }
+    .f-what { max-width: 600px; margin: 12px auto 0; font-size: 14px; line-height: 1.5; color: var(--dark); text-align: center; text-wrap: balance; }
     .f-done { display: flex; align-items: flex-start; gap: 14px; padding: 20px 24px; background: #fff; border: 1px solid var(--hair); border-radius: 22px; text-align: left; outline: none; }
     .f-done-ico { display: grid; place-items: center; flex-shrink: 0; width: 28px; height: 28px; margin-top: 1px; border-radius: 50%; background: var(--ink); color: #fff; }
     .f-done-ico .ico { width: 16px; height: 16px; stroke-width: 2.5; }
@@ -366,6 +371,7 @@
     .get-price { margin-top: 26px; font-size: 18.5px; font-weight: 500; line-height: 1.5; letter-spacing: -0.01em; color: var(--ink); }
     .get-price strong { font-weight: 700; }
     .get-price + .get-plus { margin-top: 6px; }
+    .get-note { margin-top: 14px; font-size: 14px; line-height: 1.55; color: var(--muted); }
 
     .brief-panel { padding: 64px 56px; }
     .brief { max-width: 780px; margin: 0 auto; }
@@ -492,7 +498,8 @@
       .hdr-nav.open { display: flex; }
       .hdr-nav a { font-size: 15px; }
       .hdr-nav a.hdr-cta { justify-content: center; padding: 13px 18px; }
-      .lang { margin-left: auto; }
+      .lang { margin-left: 8px; }
+      .hdr-cta-m { display: inline-flex; align-items: center; height: 34px; padding: 0 13px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 13px; font-weight: 600; line-height: 1; text-decoration: none; white-space: nowrap; }
       .hdr-toggle { display: block; }
     }
     @media (max-width: 767px) {
@@ -508,6 +515,7 @@
       .hero > .wrap { padding-top: 56px; padding-bottom: 64px; }
       .hero .eyebrow { margin-bottom: 20px; }
       .hero-sub { margin-top: 20px; }
+      .hero-sol { margin-top: 12px; font-size: 17px; }
 
       /* Pill form becomes a stacked card */
       .gf { margin-top: 32px; }
@@ -614,6 +622,11 @@
 
       .ft-top { flex-direction: column; align-items: flex-start; }
     }
+    @media (max-width: 480px) {
+      .lang .flag { display: none; }
+      .lang button { padding: 5px 7px; }
+      .hdr-toggle { margin-left: 6px; }
+    }
     @media (max-width: 380px) {
       :root { --pad: 16px; }
       .logo { font-size: 16px; }
@@ -685,6 +698,7 @@
         <a href="#faq" data-i18n="nav.faq">FAQ</a>
         <a href="#diagnostic-form" class="hdr-cta js-to-form"><span data-i18n="nav.cta">Free AI report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></a>
       </nav>
+      <a href="#diagnostic-form" class="hdr-cta-m js-to-form" data-i18n="nav.ctaM">Free report</a>
       <div class="lang" role="group" aria-label="Language" data-i18n-aria="nav.lang">
         <button type="button" id="langEn" class="active" aria-pressed="true"><span class="flag">&#127468;&#127463;</span><span>EN</span></button>
         <button type="button" id="langKo" aria-pressed="false"><span class="flag">&#127472;&#127479;</span><span>KR</span></button>
@@ -701,6 +715,7 @@
         <p class="eyebrow" data-i18n="hero.eyebrow">GEO (AI search optimization) consulting for Korean companies expanding abroad</p>
         <h1 class="h1" data-i18n="hero.title"><span class="l reveal">From invisible to findable</span> <span class="l">in your target market</span></h1>
         <p class="hero-sub" data-i18n="hero.sub">When investors, buyers and partners in your target market look for a company like yours, they ask AI. If it does not name you, they will not find you. All your work in that market stays invisible, and the opportunities go to your competitors.</p>
+        <p class="hero-sol" data-i18n="hero.sol">I identify what is missing, write the content to address it, and track how your visibility changes in your target market.</p>
 
         <div class="gf" id="diagnostic-form" data-geo-form>
           <form novalidate>
@@ -740,8 +755,9 @@
               <svg class="ico pill-ico" aria-hidden="true"><use href="#i-mail"/></svg>
               <label class="sr" for="geoEmail" data-i18n="form.email">Work email</label>
               <input class="pill-in" id="geoEmail" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Work email" data-i18n-ph="form.email" aria-describedby="geoErrEmail">
-              <button type="submit" class="btn btn-dark pill-btn" data-send><span data-i18n="form.send">Send</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+              <button type="submit" class="btn btn-dark pill-btn" data-send><span data-i18n="form.send">Get my report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
             </div>
+            <p class="f-what" data-step="2" hidden data-i18n="form.what">In your report: 5 buyer questions asked on ChatGPT from your market, who it names, the sources it cites, and your 3 biggest gaps.</p>
             <label class="consent" data-step="2" hidden><input type="checkbox" id="geoConsent" name="consent" aria-describedby="geoErrConsent"><span data-i18n="form.consent">I agree that my email is used to send this report.</span></label>
             <p class="f-err" id="geoErrUrl" data-err="url" role="alert" hidden data-i18n="form.errUrl">Enter your website address.</p>
             <p class="f-err" id="geoErrCountry" data-err="country" role="alert" hidden data-i18n="form.errCountry">Enter the country.</p>
@@ -752,7 +768,7 @@
             <span class="f-done-ico" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
             <p><span data-i18n="form.done1">Request received.</span> <span class="f-done-mk" data-i18n="form.done2">I start your questions from <strong class="done-market"></strong>.</span> <span data-i18n="form.done3">Your report arrives within 48 hours.</span></p>
           </div>
-          <p class="f-note" data-i18n="form.note">Free · No account · Your report arrives within 48 hours</p>
+          <p class="f-note" data-i18n="form.note">Free · ChatGPT, asked from <span class="note-mk">the United States</span> · No account · Within 48 hours</p>
         </div>
 
         <div class="engines">
@@ -848,7 +864,7 @@
                 <li class="is-rival"><span class="n">3</span><span data-i18n="ex.bC">Brand C</span><span class="ans-c" data-i18n="ex.kr">Korea · your competitor</span></li>
               </ol>
               <p class="ans-absent"><svg class="ico" aria-hidden="true"><use href="#i-x-circle"/></svg><span data-i18n="ex.absent">Your company · not in the answer</span></p>
-              <p class="ex-src"><svg class="ico" aria-hidden="true"><use href="#i-news"/></svg><span data-i18n="ex.src">Sources cited: a US distributor page, an industry directory</span></p>
+              <p class="ex-src"><svg class="ico" aria-hidden="true"><use href="#i-news"/></svg><span data-i18n="ex.src">Sources cited: a US distributor page, 2 industry directories</span></p>
             </div>
             <div class="ex-read">
               <div class="ex-row"><p class="ex-k"><svg class="ico" aria-hidden="true"><use href="#i-news"/></svg><span data-i18n="ex.k1">Why your competitor is named</span></p><p class="ex-v" data-i18n="ex.v1">Its US distributor's page states the IP67 rating and the factory use case in English. ChatGPT cites that page.</p></div>
@@ -899,7 +915,7 @@
           <li class="tl-st s1">
             <span class="tl-node" aria-hidden="true"></span>
             <div class="tl-state"><span class="chip" data-i18n="s1.state">Invisible</span><span class="meter" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
-            <p class="tl-when" data-i18n="s1.when">Weeks 0 to 2</p>
+            <p class="tl-when" data-i18n="s1.when">Weeks 1 and 2</p>
             <h3 class="tl-title" data-i18n="s1.title">Diagnose</h3>
             <p class="tl-do" data-i18n="s1.do">25&nbsp;buyer questions, asked from your market on all 5&nbsp;AI assistants, several runs each.</p>
             <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s1.win">A baseline: who is named, what AI says about you, which sources it trusts</p></div>
@@ -920,7 +936,7 @@
             <p class="tl-when" data-i18n="s3.when">Weeks 7 to 11</p>
             <h3 class="tl-title" data-i18n="s3.title">Get into local sources</h3>
             <p class="tl-do" data-i18n="s3.do">Distributor pages, directories and trade media that AI cites in your category.</p>
-            <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s3.win">A map of the local sources AI cites, and a ready-to-send pitch for each</p></div>
+            <div class="tl-win"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="how.win">Delivered</span></p><p class="tl-v" data-i18n="s3.win">A map of the local sources AI cites, with ready-to-send texts and pitches for the ones that matter most</p></div>
             <div class="tl-goal"><p class="tl-k"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg><span data-i18n="how.goal">Goal</span></p><p class="tl-v" data-i18n="s3.goal">The local sources AI trusts carry your name</p></div>
           </li>
           <li class="tl-st s4">
@@ -947,7 +963,7 @@
           </div>
           <div class="fit-col">
             <p class="fit-k"><svg class="ico" aria-hidden="true"><use href="#i-check-circle"/></svg><span data-i18n="roles.youT">What your team does</span></p>
-            <p class="fit-d" data-i18n="roles.youD">Your team approves the facts and decides each week, in about 1&nbsp;hour. Then it publishes the pages on your site and sends the pitches from your company address.</p>
+            <p class="fit-d" data-i18n="roles.youD">About 1&nbsp;hour a week to approve the facts and decide. Then your team publishes the pages on your site and sends the pitches from your company address; each action in the Monday pack says who does it.</p>
           </div>
         </div>
         <p class="how-note"><svg class="ico" aria-hidden="true"><use href="#i-info"/></svg><span data-i18n="how.note">I commit to the measurement, the actions and the written content. No one controls what an AI answers, so outcomes are measured, never guaranteed.</span></p>
@@ -985,7 +1001,8 @@
               <p class="num"><span class="num-v">25</span><span class="num-l" data-i18n="get.n3">tracked buyer questions</span></p>
               <p class="num"><span class="num-v">3</span><span class="num-l" data-i18n="get.n4">site reviews</span></p>
             </div>
-            <p class="get-price" data-i18n="get.price">GEO 3-month package: <strong>from&nbsp;₩4,990,000</strong> per market.</p>
+            <p class="get-note" data-i18n="get.note">The 12 pieces include the up to 3 pages for your site. A page, a listing text or a media pitch each count as one.</p>
+            <p class="get-price" data-i18n="get.price">GEO 3-month package: <strong>from&nbsp;₩4,990,000</strong> per market, 3&#8209;month&nbsp;total.</p>
             <p class="get-plus" data-i18n="get.plus">Plus a playbook for your next market, and all your files.</p>
           </div>
         </div>
@@ -996,11 +1013,11 @@
             <div class="mock-bar"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="tag" data-i18n="brief.tag">Example · fictional company</span></div>
             <div class="brief-body">
               <h3 class="brief-h" data-i18n="brief.head">Action pack&nbsp;· United&nbsp;States&nbsp;· week&nbsp;5</h3>
-              <p class="brief-line" data-i18n="brief.line">Named in 3 of 25 questions this week (2 last week, within normal variation).</p>
+              <p class="brief-line" data-i18n="brief.line">Named by ChatGPT in 3 of 25 questions this week (2 last week, within normal variation).</p>
               <ol class="brief-rows">
-                <li><span class="br-n">01</span><span class="br-ce"><span class="br-c" data-i18n="brief.r1c">Website</span><span class="br-e" data-i18n="brief.r1e">1 day</span></span><span class="br-a" data-i18n="brief.r1a">English answer page on IP67 sensors</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span data-i18n="brief.d1">Written by Friday</span></span></li>
-                <li><span class="br-n">02</span><span class="br-ce"><span class="br-c" data-i18n="brief.r2c">Distributor</span><span class="br-e" data-i18n="brief.r2e">half a day</span></span><span class="br-a" data-i18n="brief.r2a">Add the missing certification</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span data-i18n="brief.d2">Text ready · you send</span></span></li>
-                <li><span class="br-n">03</span><span class="br-ce"><span class="br-c" data-i18n="brief.r3c">Trade media</span><span class="br-e" data-i18n="brief.r3e">1 week</span></span><span class="br-a" data-i18n="brief.r3a">Pitch the 2 sites ChatGPT cites most</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span data-i18n="brief.d3">Pitch ready · you send</span></span></li>
+                <li><span class="br-n">01</span><span class="br-ce"><span class="br-c" data-i18n="brief.r1c">Website</span></span><span class="br-a" data-i18n="brief.r1a">English answer page on IP67 sensors</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-pen"/></svg><span data-i18n="brief.d1">Written by Friday</span></span></li>
+                <li><span class="br-n">02</span><span class="br-ce"><span class="br-c" data-i18n="brief.r2c">Distributor</span></span><span class="br-a" data-i18n="brief.r2a">Add the missing certification</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span data-i18n="brief.d2">Text ready · you send</span></span></li>
+                <li><span class="br-n">03</span><span class="br-ce"><span class="br-c" data-i18n="brief.r3c">Trade media</span></span><span class="br-a" data-i18n="brief.r3a">Pitch the 2 sites ChatGPT cites most</span><span class="br-d"><svg class="ico" aria-hidden="true"><use href="#i-clip"/></svg><span data-i18n="brief.d3">Pitch ready · you send</span></span></li>
               </ol>
             </div>
           </article>
@@ -1025,7 +1042,7 @@
         <div class="sec-head">
           <p class="eyebrow" data-i18n="who.eyebrow">Who you work with</p>
           <h2 class="h2" data-i18n="who.title">GEO experts <span class="plat br">who know Korean companies abroad</span></h2>
-          <p class="lead" data-i18n="who.lead">GEO is one step of a market entry. Since 2022 I have worked on the other steps with Korean companies: market research, business matching, PoCs, investor pitches. Tom&nbsp;Coquereau runs the AI visibility measurement.</p>
+          <p class="lead" data-i18n="who.lead">GEO is one step of a market entry, and I know the others. Since 2022 I have worked with Korean companies on market research, business matching, PoCs and investor pitches. That work shows me which questions buyers ask abroad and which local sources they trust. Tom&nbsp;Coquereau runs the AI visibility measurement.</p>
         </div>
         <div class="stats">
           <p class="stat"><span class="stat-v">240+</span><span class="stat-l" data-i18n="who.s1">Korean startups coached since 2022</span></p>
@@ -1080,11 +1097,11 @@
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q2">How is this different from SEO?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-              <div class="faq-answer" data-i18n="faq.a2">SEO works on where your pages rank in a list of links. GEO works on what AI answers: whether it names you, how it describes you, and which sources it cites. A page can rank well and never be cited; the report shows that gap from real answers.</div>
+              <div class="faq-answer" data-i18n="faq.a2">SEO works on where your pages rank in a list of links. GEO works on what AI answers: whether it names you, how it describes you, and which sources it cites. A page can rank well and never be cited. The report shows what AI cites instead, from real answers.</div>
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q3">Why can't we just ask ChatGPT ourselves?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-              <div class="faq-answer" data-i18n="faq.a3">You can, and you should. But one answer, asked from Seoul and logged in, tells you little: answers change with location, language, account and run. I ask from your target market, logged out, 3 times per question, every week, archive every answer, and read the sources behind it.</div>
+              <div class="faq-answer" data-i18n="faq.a3">You can run the searches yourself, and you should. The work is deciding what to change, turning your evidence into publishable content, and tracking what happens after it goes live. I manage that process with your team. And one answer, asked from Seoul and logged in, says little about what buyers abroad see.</div>
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q4">Is GEO useful if we have no local distributor yet?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -1092,7 +1109,7 @@
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q5">Which AI assistants do you measure?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-              <div class="faq-answer" data-i18n="faq.a5">All five from the baseline: ChatGPT, Google AI Overviews, Gemini, Perplexity and Claude. Then ChatGPT every week, under fixed conditions, and the four others every month. Claude is asked from a fresh account, since it cannot be used logged out. The free report covers ChatGPT. China is not included, because buyers there mostly use local AI assistants.</div>
+              <div class="faq-answer" data-i18n="faq.a5">All five from the baseline: ChatGPT, Google AI Overviews, Gemini, Perplexity and Claude. Then ChatGPT every week, under fixed conditions: from your market, logged out, 3 runs per question, every answer kept with the sources it cites. The four others every month. Claude is asked from a fresh account, since it cannot be used logged out. The free report covers ChatGPT. China is not included, because buyers there mostly use local AI assistants.</div>
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q6">Do you guarantee results?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -1100,7 +1117,7 @@
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q7">How much does it cost?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-              <div class="faq-answer" data-i18n="faq.a7">The GEO 3-month package starts at ₩4,990,000 per market. The final price depends on the number of markets and the scope. Paid ads, fake reviews and mass-produced content are never part of it.</div>
+              <div class="faq-answer" data-i18n="faq.a7">The GEO 3-month package starts at ₩4,990,000 per market, for the full 3 months. The final price depends on the number of markets and the scope. Paid ads, fake reviews and mass-produced content are never part of it.</div>
             </details>
             <details class="faq-item">
               <summary><span data-i18n="faq.q8">How do contracts and invoicing work?</span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -1156,8 +1173,9 @@
                 <svg class="ico pill-ico" aria-hidden="true"><use href="#i-mail"/></svg>
                 <label class="sr" for="geoEmail2" data-i18n="form.email">Work email</label>
                 <input class="pill-in" id="geoEmail2" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" spellcheck="false" placeholder="Work email" data-i18n-ph="form.email" aria-describedby="geoErrEmail2">
-                <button type="submit" class="btn btn-dark pill-btn" data-send><span data-i18n="form.send">Send</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+                <button type="submit" class="btn btn-dark pill-btn" data-send><span data-i18n="form.send">Get my report</span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
               </div>
+              <p class="f-what" data-step="2" hidden data-i18n="form.what">In your report: 5 buyer questions asked on ChatGPT from your market, who it names, the sources it cites, and your 3 biggest gaps.</p>
               <label class="consent" data-step="2" hidden><input type="checkbox" id="geoConsent2" name="consent" aria-describedby="geoErrConsent2"><span data-i18n="form.consent">I agree that my email is used to send this report.</span></label>
               <p class="f-err" id="geoErrUrl2" data-err="url" role="alert" hidden data-i18n="form.errUrl">Enter your website address.</p>
               <p class="f-err" id="geoErrCountry2" data-err="country" role="alert" hidden data-i18n="form.errCountry">Enter the country.</p>
@@ -1168,7 +1186,7 @@
               <span class="f-done-ico" aria-hidden="true"><svg class="ico"><use href="#i-check"/></svg></span>
               <p><span data-i18n="form.done1">Request received.</span> <span class="f-done-mk" data-i18n="form.done2">I start your questions from <strong class="done-market"></strong>.</span> <span data-i18n="form.done3">Your report arrives within 48 hours.</span></p>
             </div>
-            <p class="f-note" data-i18n="form.note">Free · No account · Your report arrives within 48 hours</p>
+            <p class="f-note" data-i18n="form.note">Free · ChatGPT, asked from <span class="note-mk">the United States</span> · No account · Within 48 hours</p>
           </div>
 
           <a class="cta-kakao" href="https://open.kakao.com/o/sr4PdQvi" target="_blank" rel="noopener"><svg viewBox="0 0 256 256" aria-hidden="true"><path d="M128 36C70.6 36 24 71.8 24 116c0 28.5 19.4 53.5 48.6 67.6-1.4 5.4-9 33.6-9.7 36.1 0 0 0 1.6.8 2.2.9.6 1.7.5 2.6.4 1.2-.2 38.6-25.2 42.8-28 6.7 1 13.6 1.6 20.9 1.6 57.4 0 104-35.8 104-80S185.4 36 128 36z"/></svg><span data-i18n="cta.kakao">Questions? KakaoTalk</span></a>
@@ -1207,17 +1225,19 @@
 
     var koTranslations = {
       'meta.title': 'Sofian Meguellati · 한국 기업의 해외 진출을 위한 GEO 컨설팅',
-      'meta.desc': '보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 타깃 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다.',
+      'meta.desc': '보이지 않던 기업을, 타깃 시장에서 발견되는 기업으로. 그 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다.',
       'nav.how': '진행 방식',
       'nav.get': '제공 내용',
-      'nav.who': '함께 일하는 사람',
+      'nav.who': '전문가 소개',
       'nav.faq': 'FAQ',
-      'nav.cta': '무료 AI 리포트',
+      'nav.cta': '무료 AI 리포트 받기',
+      'nav.ctaM': '무료 리포트',
       'nav.menu': '메뉴',
       'nav.lang': '언어',
       'hero.eyebrow': '한국 기업의 해외 진출을 위한 GEO(생성형 AI 검색 최적화) 컨설팅',
       'hero.title': '<span class="l reveal">보이지 않던 기업을,</span> <span class="l">타깃 시장에서 발견되는 기업으로</span>',
-      'hero.sub': '타깃 시장의 투자자, 바이어, 파트너는 귀사 같은 기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지 못합니다. 그 시장에서 쌓아 온 노력은 보이지 않게 되고, 기회는 경쟁사에게 돌아갑니다.',
+      'hero.sub': '타깃 시장의 투자자, 바이어, 파트너는 귀사&nbsp;같은&nbsp;기업을 찾을 때 AI에게 묻습니다. AI가 귀사를 언급하지 않으면 귀사를 찾지&nbsp;못합니다. 그&nbsp;시장에서 쌓아 온 노력은 보이지&nbsp;않고, 기회는 경쟁사에게 돌아갑니다.',
+      'hero.sol': '무엇이 빠져 있는지 찾고, 그 빈자리를 채울 원고를 작성하며, 타깃 시장에서 귀사의 AI&nbsp;가시성이 어떻게 달라지는지 추적합니다.',
       'form.url': '웹사이트 주소',
       'form.urlPh': '회사 웹사이트 주소',
       'form.market': '타깃 시장',
@@ -1235,10 +1255,10 @@
       'form.go': '무료 AI 가시성 리포트 받기',
       'form.back': '이전',
       'form.email': '업무용 이메일',
-      'form.send': '신청하기',
+      'form.send': '리포트 받기',
       'form.consent': '리포트 발송을 위한 이메일 수집·이용에 동의합니다.',
       'form.errUrl': '웹사이트 주소를 입력해 주세요.',
-      'form.country': '진출하려는 국가',
+      'form.country': '국가명',
       'form.countryPh': '예: 캐나다',
       'form.errCountry': '국가를 입력해 주세요.',
       'form.errEmail': '올바른 이메일 주소를 입력해 주세요.',
@@ -1246,8 +1266,9 @@
       'form.done1': '신청이 접수되었습니다.',
       'form.done2': '<strong class="done-market"></strong> 현지에서 질문을 시작합니다.',
       'form.done3': '리포트는 48시간 안에 이메일로 보내 드립니다.',
-      'form.note': '무료 · 회원가입 없음 · 48시간 안에 이메일로 발송',
-      'mk.label': '현지 측정 시장',
+      'form.note': '무료 · <span class="note-mk">미국</span> 현지 ChatGPT 기준 · 회원가입 없음 · 48시간 안에 이메일로 발송',
+      'form.what': '리포트에 담기는 내용: 타깃 시장 현지에서 ChatGPT에 물은 바이어 질문 5개, 답변에 언급되는 기업, 인용 출처, 우선 개선 과제 3가지',
+      'mk.label': '현지에서 측정하는 시장',
       'ai.label': '프로그램에서 측정하는 AI',
       'ai.aio': 'Google AI 개요',
       'proof.n': '2022년부터 한국 스타트업 240개사 이상 코칭',
@@ -1270,12 +1291,12 @@
       'prob.qBuy': 'IP67 산업용 센서를 가장 잘 만드는 기업은 어디인가요?',
       'prob.whoPar': '파트너',
       'prob.qPar': '우리 공장에서 실증해 볼 AI 비전 검사 솔루션은 어디가 좋을까요?',
-      'prob.line': 'AI는 기업 이름으로 답합니다. <strong>경쟁사는 언급되는데 귀사는 빠져 있다면, 투자자와 바이어, 파트너는 귀사를 업계를 이끄는 기업으로 보지 않습니다.</strong>',
+      'prob.line': 'AI는 기업 이름으로 답합니다. <strong>경쟁사는 언급되는데 귀사는 빠져 있다면, 투자자, 바이어, 파트너는 귀사를 업계를 이끄는 기업으로 보지 않습니다.</strong>',
       'ex.title': '서울에서는 알려져 있어도, LA에서는 보이지 않습니다',
       'ex.tag': '예시 · 가상의 기업',
-      'ex.lead': '한국에서는 바이어가 귀사 이름을 압니다. LA의 바이어는 질문에 ‘한국’을 넣지 않습니다. ChatGPT는 미국 기업 2곳과 귀사의 한국 경쟁사 1곳을 답합니다. 귀사는 없습니다.',
+      'ex.lead': '한국에서는 바이어가 귀사 이름을 압니다. LA의&nbsp;바이어는 질문에 ‘한국’을 넣지 않습니다. ChatGPT는 미국 기업 2곳과 귀사의 한국&nbsp;경쟁사&nbsp;1곳을 언급합니다. 귀사는 없습니다.',
       'ex.bar': 'ChatGPT · LA · 영어',
-      'ex.qKo': '번역: 공장 자동화용 IP67 산업용 센서는 어느 기업 제품이 가장 좋나요?',
+      'ex.qKo': '번역: 공장 자동화용 IP67 산업용 센서를 가장&nbsp;잘 만드는 기업은 어디인가요?',
       'ex.ansAria': '답변에 언급된 기업',
       'ex.bA': '브랜드 A',
       'ex.bB': '브랜드 B',
@@ -1283,28 +1304,28 @@
       'ex.us': '미국',
       'ex.kr': '한국 · 귀사의 경쟁사',
       'ex.absent': '귀사 · 답변에 없음',
-      'ex.src': '인용 출처: 미국 유통사 페이지, 업계 디렉터리',
+      'ex.src': '인용 출처: 미국 유통사 페이지, 업계 디렉터리 2곳',
       'ex.k1': '경쟁사가 언급되는 이유',
-      'ex.v1': '미국 유통사 페이지에 IP67 등급과 공장 적용 사례가 영어로 적혀 있고, ChatGPT가 그 페이지를 인용합니다.',
+      'ex.v1': '미국 유통사 페이지에 IP67 등급과 공장 적용 사례가 영어로 적혀 있고, ChatGPT가 그&nbsp;페이지를 인용합니다.',
       'ex.k2': '발견한 문제',
-      'ex.v2': '귀사의 IP67 인증과 시험 결과는 PDF 데이터시트 안에만 있습니다. 영문 페이지는 제품명만 말하고, 바이어가 묻는 적용 사례는 다루지 않습니다.',
+      'ex.v2': '귀사의 IP67 인증과 시험 결과는 PDF 데이터시트 안에만 있습니다. 영문 페이지에는 제품명만 나와 있고, 바이어가 묻는 적용&nbsp;사례는 없습니다.',
       'ex.k3': '제안한 개선안',
-      'ex.v3': '적용 사례에 답하는 영문 페이지를 만들고, 인증과 시험 데이터를 텍스트로 넣습니다. 이어서 ChatGPT가 인용하는 디렉터리 2곳에 등록합니다.',
+      'ex.v3': '적용 사례 질문에 답하는 영문 페이지를 만들고, 인증과 시험 데이터를 텍스트로 넣습니다. 이어서 ChatGPT가 인용하는 디렉터리&nbsp;2곳에 등록합니다.',
       'sol.eyebrow': '해결 방법',
       'sol.title': 'GEO, <span class="plat">타깃 시장 현지에서 측정합니다</span>',
-      'sol.lead': 'GEO는 귀사가 AI 답변에 인용되고 정확하게 소개되도록 만듭니다. AI 답변은 언어, 접속 위치, 맥락에 따라 달라지므로, 이 작업을 시장별로 그 시장 현지에서 진행합니다.',
+      'sol.lead': 'GEO는 귀사가 AI 답변에 인용되고 정확하게 소개되도록 하는 일입니다. AI 답변은 언어, 접속&nbsp;위치, 맥락에 따라 달라지므로, 이 작업을 시장별로, 그&nbsp;시장 현지에서 진행합니다.',
       'sol.p1t': '거래로 이어지는 질문 선정',
-      'sol.p1d': '바이어, 유통사, 투자자가 귀사 같은 기업에 연락하기 전에 AI에게 묻는 질문 25개를 귀사와 함께 고르고, 그 시장 현지에서 질문마다 여러&nbsp;번 묻습니다.',
+      'sol.p1d': '바이어, 유통사, 투자자가 귀사 같은 기업에 연락하기 전에 AI에게 묻는 질문 25개를 귀사와 함께 고르고, 그&nbsp;시장 현지에서 질문마다 여러&nbsp;번 묻습니다.',
       'sol.p2t': 'AI가 읽는 페이지 개선',
-      'sol.p2d': '인증, 시험 결과, 고객사처럼 지금은 PDF나 이미지 안에만 있는 귀사의 근거를 바탕으로 사이트&nbsp;페이지, FAQ, 제품·유통사 페이지를 현지&nbsp;언어로 작성합니다.',
+      'sol.p2d': '인증, 시험 결과, 고객사처럼 흔히 PDF나 이미지 안에 갇혀 있는 귀사의 근거를 바탕으로 사이트&nbsp;페이지, FAQ, 유통사 제품&nbsp;페이지를 현지&nbsp;언어로 작성합니다.',
       'sol.p3t': 'AI가 이미 신뢰하는 현지 출처 공략',
-      'sol.p3d': '그 시장에서 귀사 분야를 물으면 AI가 인용하는 유통사&nbsp;페이지, 디렉터리, 업계 매체, 파트너사&nbsp;사이트, 카테고리&nbsp;가이드를 공략합니다.',
+      'sol.p3d': '그 시장에서 귀사 분야를 물으면 AI가 인용하는 유통사&nbsp;페이지, 디렉터리, 업계 매체, 파트너사&nbsp;사이트, 분야별 구매&nbsp;가이드를 공략합니다.',
       'how.eyebrow': '진행 방식',
       'how.title': '시장별 12주, <span class="reveal br">보이지 않던 기업에서 발견되는 기업으로</span>',
       'how.win': '산출물',
       'how.goal': '목표',
       's1.state': '보이지 않음',
-      's1.when': '0~2주 차',
+      's1.when': '1~2주 차',
       's1.title': '진단',
       's1.do': '바이어 질문 25개를 타깃 시장 현지에서 5개 AI 모두에 질문마다 여러&nbsp;번 묻습니다.',
       's1.win': '기준선: 언급되는 기업, AI가 귀사를 소개하는&nbsp;방식, AI가 신뢰하는 출처',
@@ -1312,14 +1333,14 @@
       's2.state': '인식됨',
       's2.when': '3~6주 차',
       's2.title': '게시',
-      's2.do': '현지 언어 페이지 최대 3개를 작성해 드리고, 귀사 팀이 4주 차까지 사이트에 게시합니다. 브랜드명은 어디서나 하나로 통일합니다.',
+      's2.do': '현지 언어 페이지 최대 3개를 작성해&nbsp;드리고, 귀사&nbsp;팀이 4주 차까지 사이트에 게시합니다. 브랜드명은 어디서나 하나로 통일합니다.',
       's2.win': '바로 게시할 수 있게 작성한 페이지 최대 3개',
       's2.goal': 'AI가 귀사를 정확하게 소개',
       's3.state': '인용됨',
       's3.when': '7~11주 차',
       's3.title': '현지 출처 공략',
-      's3.do': '귀사 분야를 물으면 AI가 인용하는 유통사&nbsp;페이지, 디렉터리, 업계 매체를 공략합니다.',
-      's3.win': 'AI가 인용하는 현지 출처 맵과 출처별 발송용 제안문',
+      's3.do': '귀사 분야를 물으면 AI가 인용하는 유통사&nbsp;페이지, 디렉터리, 업계&nbsp;매체를 공략합니다.',
+      's3.win': 'AI가 인용하는 현지 출처 맵과, 그중 중요한 곳에 바로 보낼 원고와 제안문',
       's3.goal': 'AI가 신뢰하는 현지 출처에 귀사 이름 게재',
       's4.state': '발견됨',
       's4.when': '12주 차',
@@ -1327,48 +1348,46 @@
       's4.do': 'ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity, Claude 5개 AI에서 최종 점검합니다.',
       's4.win': '기준선 대비 결과와 플레이북, 그리고 연장, 시장&nbsp;추가, 종료 중 선택',
       's4.goal': '투자자, 바이어, 파트너가 찾는 곳에서 귀사가 언급되고 정확하게 소개됨',
-      'how.line': '매주 월요일, 무엇을&nbsp;고쳐야&nbsp;할지 알&nbsp;수&nbsp;있습니다.',
+      'how.line': '매주 월요일, 무엇을&nbsp;고칠지 알려&nbsp;드립니다.',
       'rhy.monW': '매주 월요일',
-      'rhy.mon': '실행안: 이번 주 변화와 우선순위를 정한 실행 항목 최대 3개',
+      'rhy.mon': '실행안: 이번 주 변화와 우선순위를 정한 실행&nbsp;과제 최대&nbsp;3개',
       'rhy.friW': '매주 금요일',
-      'rhy.fri': '바로 게시할 수 있게 완성한 이번 주 콘텐츠',
+      'rhy.fri': '바로 발행할 수 있게 완성한 이번 주 콘텐츠',
       'rhy.monthW': '매월',
       'rhy.month': '5개 AI 측정, 사이트 점검, 30분 리뷰 미팅',
       'roles.meT': '제가 하는 일',
-      'roles.meD': '귀사와 함께 질문 25개를 고르고, 매주 측정해 실행 항목의 우선순위를 정합니다. 페이지, 문구, 제안문은 모두 현지 언어로 작성합니다. 매주 월요일에는 무엇이 게시되었고 무엇이 남았는지, AI가 이를 반영했는지 확인합니다.',
+      'roles.meD': '귀사와 함께 질문 25개를 고르고, 매주 측정해 실행&nbsp;과제의 우선순위를 정합니다. 페이지, 문구, 제안문은 모두 현지 언어로 작성합니다. 매주 월요일에는 무엇이 게시되었고 무엇이 남았는지, AI 답변에 반영되었는지 확인합니다.',
       'roles.youT': '귀사 팀이 하는 일',
-      'roles.youD': '매주 사실 정보를 확인하고 진행 여부를 결정합니다(약 1시간). 이어서 페이지를 귀사 사이트에 게시하고, 제안문을 회사 이메일로 발송합니다.',
-      'how.note': '측정, 실행안, 작성 콘텐츠는 약속합니다. AI 답변은 누구도 통제할 수 없으므로, 결과는 측정하되 보장하지 않습니다.',
+      'roles.youD': '매주 1시간 정도 들여 사실 정보를 승인하고 진행 여부를 결정합니다. 이어서 페이지를 귀사 사이트에 게시하고, 제안문을 회사 이메일로 발송합니다. 월요일 실행안의 실행&nbsp;과제마다 담당이 표시됩니다.',
+      'how.note': '측정, 실행&nbsp;과제, 원고는 약속합니다. AI 답변은 누구도 통제할 수 없으므로, 결과는 측정하되 보장하지 않습니다.',
       'how.talkQ': '이미 해외에서 판매 중이신가요?',
       'how.talk': '타깃 시장 상담하기',
       'get.eyebrow': '제공 내용',
       'get.title': '무료 리포트가 먼저, <span class="plat br">12주 프로그램은 그다음</span>',
       'get.freeT': '무료 AI 가시성 리포트',
       'get.freeM': '48시간 안에',
-      'get.f1': '타깃 시장 현지에서 ChatGPT에 물은 바이어 질문 5개',
-      'get.f2': '귀사의 AI 가시성 현황과 함께 언급되는 경쟁사',
+      'get.f1': '타깃 시장 현지에서 ChatGPT에 물은 바이어&nbsp;질문 5개',
+      'get.f2': '귀사의 AI 가시성 현황과 답변에 언급되는 경쟁사',
       'get.f3': 'AI가 인용하는 출처',
       'get.f4': '우선 개선 과제 3가지와 예시 개선안 초안 1건',
       'get.progT': '12주 프로그램',
       'get.progM': '시장별',
       'get.n1': '주간 실행안',
-      'get.n2': '바로 게시할 수 있는 콘텐츠',
+      'get.n2': '바로 발행할 콘텐츠',
       'get.n3': '추적하는 바이어 질문',
       'get.n4': '사이트 점검',
-      'get.price': 'GEO 3개월 패키지: 시장 1곳 기준 <strong>499만 원부터</strong>',
+      'get.note': '콘텐츠 12건에는 귀사 사이트용 페이지(최대 3개)가 포함되며, 페이지, 유통사 제품&nbsp;페이지 문구, 매체 제안문은 각각 1건으로 계산합니다.',
+      'get.price': 'GEO 3개월 패키지: 시장 1곳 기준 <strong>499만 원부터</strong> (3개월 총액)',
       'get.plus': '다음 시장을 위한 플레이북과 모든 작업 파일도 함께 드립니다.',
-      'brief.intro': '매주 월요일, 타깃 시장에서 무엇을&nbsp;고쳐야&nbsp;할지 정확히 알&nbsp;수&nbsp;있습니다.',
+      'brief.intro': '매주 월요일, 타깃 시장에서 무엇을&nbsp;고칠지 정확히 알려&nbsp;드립니다',
       'brief.tag': '예시 · 가상의 기업',
       'brief.head': '주간 실행안 · 미국 · 5주 차',
-      'brief.line': '이번 주 질문 25개 중 3개에서 언급(지난주&nbsp;2개, 정상 변동 범위 내)',
+      'brief.line': 'ChatGPT 기준 이번 주 질문 25개 중 3개에서 언급(지난주&nbsp;2개, 정상 변동 범위 내)',
       'brief.r1c': '웹사이트',
-      'brief.r1e': '1일',
-      'brief.r1a': 'IP67 센서 질문에 답하는 영어 페이지',
+      'brief.r1a': 'IP67 센서 질문에 답하는 영문 페이지',
       'brief.r2c': '유통사',
-      'brief.r2e': '반나절',
       'brief.r2a': '빠진 인증 정보 추가',
       'brief.r3c': '업계 매체',
-      'brief.r3e': '1주',
       'brief.r3a': 'ChatGPT가 가장 자주 인용하는 사이트&nbsp;2곳에 기고 제안',
       'brief.d1': '금요일까지 작성',
       'brief.d2': '문구 준비 · 귀사 발송',
@@ -1379,7 +1398,7 @@
       'fit.notD': '아직 제품-시장 적합성(PMF)을 검증하는 단계이거나 해외 진출 계획이 없다면, 시장 진출의 기본부터 시작하시길 권합니다.',
       'who.eyebrow': '함께 일하는 사람',
       'who.title': 'GEO 전문가, <span class="plat br">해외로 진출하는 한국&nbsp;기업을 잘 압니다</span>',
-      'who.lead': 'GEO는 시장 진출의 한 단계입니다. 2022년부터 한국 기업과 함께 시장조사, 비즈니스 매칭, POC(실증), IR&nbsp;피칭까지 나머지 단계를 진행해 왔습니다. AI 가시성 측정은 Tom&nbsp;Coquereau가 맡습니다.',
+      'who.lead': 'GEO는 시장 진출의 한 단계이고, 나머지 단계도 잘 압니다. 2022년부터 한국 기업과 함께 시장조사, 비즈니스&nbsp;매칭, POC(실증), IR&nbsp;피칭을 진행해 왔습니다. 그 경험으로 해외 바이어가 어떤 질문을 하고 어떤 현지 출처를 신뢰하는지 압니다. AI 가시성 측정은 Tom&nbsp;Coquereau가 맡습니다.',
       'who.s1': '2022년부터 코칭한 한국&nbsp;스타트업',
       'who.s2': '한국 파트너 기관',
       'who.s3': '해외 진출 기업을&nbsp;위한 시장조사',
@@ -1387,32 +1406,32 @@
       'team.sofianRole': 'GEO·해외 진출 컨설턴트',
       'team.sofianBio': '13년 넘게 파리, 싱가포르, 서울, 도쿄에서 사업을 일구어 왔고, 2022년부터 한국&nbsp;스타트업 240개사&nbsp;이상을 코칭했습니다.',
       'team.tomRole': 'AI 가시성 전문가',
-      'team.tomBio': '2014년부터 기업용 소프트웨어 분야에서 일해&nbsp;왔고, Metriq(AI&nbsp;자동화)와 Tokamai(AI&nbsp;보안)를 창업했습니다. 각&nbsp;시장&nbsp;현지에서의 측정부터 답변&nbsp;보관, 인용&nbsp;출처&nbsp;확인까지 AI&nbsp;가시성 측정을 총괄합니다.',
-      'quotes.label': '코칭을 받은 창업자들의 후기',
-      'quotes.q1': '유럽 시장에 어떻게 접근해야 하는지, 매우 값진 인사이트를 주셨습니다.',
+      'team.tomBio': '2014년부터 기업용 소프트웨어 분야에서 일해&nbsp;왔고, Metriq(AI&nbsp;자동화)와 Tokamai(AI&nbsp;보안)를 창업했습니다. 각&nbsp;시장 현지에서 묻는 질문부터 답변&nbsp;보관, 인용&nbsp;출처&nbsp;확인까지 AI&nbsp;가시성 측정을 총괄합니다.',
+      'quotes.label': '코칭한 창업자의 후기',
+      'quotes.q1': '유럽 시장에 어떻게 접근해야 하는지, 매우 값진 인사이트를&nbsp;주셨습니다.',
       'quotes.r1': 'Bottless 대표',
-      'quotes.q2': '1시간 세션이 정말 값졌고, 글로벌 전략을 세우는 데 큰 도움이 되었습니다.',
+      'quotes.q2': '1시간 세션이 정말 값졌고, 글로벌 전략을 세우는 데 큰 도움이&nbsp;되었습니다.',
       'quotes.r2': 'apoc CMO',
       'faq.label': 'FAQ',
       'faq.title': '자주 묻는 질문',
       'faq.q1': '리포트는 정말 무료인가요?',
       'faq.a1': '네. 리포트 1건은 무료이며, 회원가입이나 결제 정보가 필요 없습니다.',
       'faq.q2': 'SEO와는 무엇이 다른가요?',
-      'faq.a2': 'SEO는 링크 목록에서 귀사 페이지의 검색 순위를 다룹니다. GEO는 AI가 무엇을 답하는지, 즉 귀사를 언급하는지, 어떻게 소개하는지, 어떤 출처를 인용하는지를 다룹니다. 검색 순위가 높은 페이지도 AI 답변에는 전혀 인용되지 않을 수 있으며, 리포트는 실제 답변으로 그 차이를 보여 드립니다.',
+      'faq.a2': 'SEO는 링크 목록에서 귀사 페이지의 검색 순위를 다룹니다. GEO는 AI가 무엇을 답하는지, 즉 귀사를 언급하는지, 어떻게 소개하는지, 어떤 출처를 인용하는지를 다룹니다. 검색 순위가 높은 페이지도 AI&nbsp;답변에는 전혀 인용되지 않을 수 있습니다. 리포트는 AI가 대신 인용하는 출처를 실제 답변으로 보여&nbsp;드립니다.',
       'faq.q3': 'ChatGPT에 직접 물어보면 되지 않나요?',
-      'faq.a3': '물론 직접 물어보셔도 되고, 그렇게 하시길 권합니다. 다만 서울에서 로그인한 상태로 받은 답변 하나로는 알 수 있는 것이 많지 않습니다. 답변은 접속 위치, 언어, 계정에 따라, 그리고 물을 때마다 달라지기 때문입니다. GEO&nbsp;측정은 타깃 시장 현지에서, 비로그인 상태로, 질문마다 3회씩 매주 진행하며, 모든 답변을 보관하고 답변이 인용한 출처까지 확인합니다.',
+      'faq.a3': '물론 직접 검색해 보셔도 되고, 그렇게 하시길 권합니다. 핵심은 무엇을 바꿀지 판단하고, 귀사의 근거를 바로 발행할 원고로 만들고, 게시 후 무엇이 달라지는지 추적하는 일입니다. 이 과정을 귀사 팀과 함께 관리합니다. 또한 서울에서 로그인한 상태로 받은 답변 하나로는 해외 바이어가 보는 답변을 알기&nbsp;어렵습니다.',
       'faq.q4': '아직 현지 유통사가 없어도 GEO가 도움이 되나요?',
-      'faq.a4': '네, 이미 제품과 실적, 타깃 시장이 있다면 도움이 됩니다. 리포트는 그 시장의 AI가 신뢰하는 유통사, 디렉터리, 매체를 보여 주므로 현지 파트너를 고르는 데 참고가 됩니다. 아직 제품-시장 적합성(PMF)을 검증하는 단계라면 시장 진출의 기본부터 시작하시길 권합니다.',
+      'faq.a4': '네, 이미 제품과 실적, 타깃 시장이 있다면 도움이 됩니다. 리포트는 그 시장에서 AI가 신뢰하는 유통사, 디렉터리, 매체를 보여 주므로 현지 파트너를 고르는 데 참고가 됩니다. 아직 제품-시장 적합성(PMF)을 검증하는 단계라면 시장 진출의 기본부터 시작하시길 권합니다.',
       'faq.q5': '어떤 AI를 측정하나요?',
-      'faq.a5': '기준선 측정부터 ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity, Claude 5개 AI를 모두 측정합니다. 이후 ChatGPT는 매주 같은 조건으로, 나머지 4개는 매월 측정합니다. Claude는 로그인 없이 쓸 수 없어 새 계정으로 묻습니다. 무료 리포트는 ChatGPT 기준입니다. 중국은 현지 바이어가 주로 중국 AI를 쓰기&nbsp;때문에 측정&nbsp;대상에서 제외합니다.',
+      'faq.a5': '기준선부터 ChatGPT, Google&nbsp;AI&nbsp;개요, Gemini, Perplexity, Claude 5개 AI를 모두 측정합니다. 이후 ChatGPT는 매주 같은 조건으로 측정합니다. 타깃 시장 현지에서 비로그인 상태로 질문마다 3회씩 묻고, 모든 답변을 인용 출처와 함께 보관합니다. 나머지 4개는 매월 측정합니다. Claude는 로그인 없이 쓸 수 없어 새&nbsp;계정으로 묻습니다. 무료 리포트는 ChatGPT 기준입니다. 중국은 현지 바이어가 주로 중국 AI를 쓰기&nbsp;때문에 측정&nbsp;대상에서 제외합니다.',
       'faq.q6': '성과를 보장하나요?',
-      'faq.a6': '아니요. AI 답변은 누구도 통제할 수 없습니다. 측정, 실행안, 작성 콘텐츠는 약속합니다. 첫 신호는 귀사의 새&nbsp;문구를 그대로 쓰거나 새&nbsp;페이지를 인용하는 AI&nbsp;답변이며, 몇 주에 걸쳐&nbsp;판단합니다.',
+      'faq.a6': '아니요. AI 답변은 누구도 통제할 수 없습니다. 측정, 실행&nbsp;과제, 원고는 약속합니다. 첫 신호는 귀사의 새&nbsp;문구를 그대로 쓰거나 새&nbsp;페이지를 인용하는 AI&nbsp;답변이며, 몇&nbsp;주에 걸쳐&nbsp;판단합니다.',
       'faq.q7': '비용은 얼마인가요?',
-      'faq.a7': 'GEO 3개월 패키지는 시장 1곳 기준 499만 원부터 시작합니다. 최종 비용은 시장 수와 작업 범위에 따라 정해집니다. 유료 광고, 가짜 리뷰, 대량 생성 콘텐츠는 어떤 경우에도 포함하지 않습니다.',
+      'faq.a7': 'GEO 3개월 패키지는 시장 1곳 기준 499만 원부터이며, 3개월 총액입니다. 최종 비용은 시장 수와 작업 범위에 따라 정해집니다. 유료 광고, 가짜 리뷰, 대량 생성 콘텐츠는 어떤 경우에도 포함하지 않습니다.',
       'faq.q8': '계약과 인보이스는 어떻게 진행되나요?',
-      'faq.a8': '계약 체결과 인보이스 발행은 제가 운영하는 프랑스 법인 Carte Blanche SAS 명의로 합니다. 세금계산서 대신 국제&nbsp;상업&nbsp;인보이스(international commercial invoice)를 귀사 앞으로 직접 발행하며, 한국의 지원사업 운영&nbsp;기관에서도 이 인보이스로 정산 처리한 실적이 있습니다. 정부지원사업 예산으로 진행하는 경우에는 사업에 필요한 행정 서류도 제공하며, 한국어로 작성해야&nbsp;하는 서류도&nbsp;준비합니다.',
-      'cta.title': '타깃 시장의 바이어가 <span class="plat br">AI에게 듣는 답변</span>',
-      'cta.sub': '웹사이트 주소와 타깃 시장을 알려&nbsp;주시면, 48시간&nbsp;안에 그 시장의 바이어가 보는 답변을 보여&nbsp;드립니다.',
+      'faq.a8': '계약 체결과 인보이스 발행은 대표로 있는 프랑스 법인 Carte Blanche SAS 명의로 합니다. 세금계산서 대신 국제&nbsp;상업&nbsp;인보이스(international commercial invoice)를 귀사 앞으로 직접 발행하며, 한국의 지원사업 운영&nbsp;기관에서도 이 인보이스로 정산 처리한 실적이 있습니다. 정부지원사업 예산으로 진행하는 경우에는 사업에 필요한 행정 서류도 제공하며, 한국어로 작성해야&nbsp;하는 서류도&nbsp;준비합니다.',
+      'cta.title': '타깃 시장의 바이어는 <span class="plat br">AI에게 무엇을 들을까요?</span>',
+      'cta.sub': '웹사이트 주소와 타깃 시장을 알려&nbsp;주시면, 48시간&nbsp;안에 그 답변을 보여&nbsp;드립니다.',
       'cta.kakao': '카카오톡으로 문의하기',
       'footer.kakao': '카카오톡',
       'footer.copy': '&copy; 2026 Sofian Meguellati &middot; All rights reserved',
@@ -1465,13 +1484,20 @@
 
     // The confirmation names the chosen market in the page language; refill it after a language switch.
     function geoFormRefresh() {
+      var ko = document.documentElement.lang === 'ko';
+      var EN_THE = { US: 'the United States', UK: 'the United Kingdom', AE: 'the UAE' };
       document.querySelectorAll('[data-geo-form]').forEach(function(root) {
         var sel = root.querySelector('select[name="market"]');
         if (!sel) return;
         var opt = sel.options[sel.selectedIndex];
         var ctry = root.querySelector('input[name="country"]');
         var other = (sel.value === 'OT' && ctry) ? ctry.value.trim() : '';
-        root.querySelectorAll('.done-market').forEach(function(s) { s.textContent = sel.value === 'OT' ? other : (opt ? opt.textContent.trim() : ''); });
+        var name;
+        if (sel.value === 'OT') name = other;
+        else if (!ko && EN_THE[sel.value]) name = EN_THE[sel.value];
+        else name = opt ? opt.textContent.trim() : '';
+        root.querySelectorAll('.done-market').forEach(function(s) { s.textContent = name; });
+        root.querySelectorAll('.note-mk').forEach(function(s) { s.textContent = name || (ko ? '타깃 시장' : 'your market'); });
         var line = root.querySelector('.f-done-mk');
         if (line) line.hidden = (sel.value === 'OT' && !other);
       });
@@ -1633,9 +1659,10 @@
           other.hidden = !on;
           if (!on) flag(country, errCountry, false);
         }
-        market.addEventListener('change', function() { syncOther(); if (market.value === 'OT') country.focus(); });
-        country.addEventListener('input', function() { if (!errCountry.hidden && country.value.trim()) flag(country, errCountry, false); });
+        market.addEventListener('change', function() { syncOther(); geoFormRefresh(); if (market.value === 'OT') country.focus(); });
+        country.addEventListener('input', function() { if (!errCountry.hidden && country.value.trim()) flag(country, errCountry, false); geoFormRefresh(); });
         syncOther();
+        geoFormRefresh();
 
         url.addEventListener('input', function() { if (!errUrl.hidden && urlOk(url.value)) flag(url, errUrl, false, pill1); });
         email.addEventListener('input', function() { if (!errEmail.hidden && emailOk(email.value)) flag(email, errEmail, false, pill2); });
